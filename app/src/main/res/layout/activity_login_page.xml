@@ -60,7 +60,7 @@
         android:ems="10"
         android:layout_marginTop="145dp"
         android:id="@+id/etUsername"
-        android:hint="Username"
+        android:hint="Usernam"
         android:textColorHint="@android:color/white"
         android:textColor="@android:color/white"
         android:layout_alignParentTop="true"
