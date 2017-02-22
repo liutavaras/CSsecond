@@ -12,7 +12,7 @@
     tools:context="com.example.liutaurasmazonas.cslogintrying.LoginPage"
     android:background="@drawable/loginbckg">
 
-    <TextView
+     <TextView
         android:text="If you do not have an account yet, please click here"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
