@@ -64,7 +64,7 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/etCompanysID"
-        android:hint="User ID"
+        android:hint="User I"
         android:textColorHint="@android:color/white"
         android:textColor="@android:color/white"
         android:layout_marginBottom="27dp"
