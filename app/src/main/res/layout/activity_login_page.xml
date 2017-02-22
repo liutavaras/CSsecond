@@ -9,19 +9,24 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.liutaurasmazonas.cslogintrying.RegisterActivity"
-    android:background="@drawable/jaf">
+    tools:context="com.example.liutaurasmazonas.cslogintrying.LoginPage"
+    android:background="@drawable/loginbckg">
+
 
     <TextView
-        android:text="Register here"
+        android:text="If you do not have an account yet, please click here"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tvRegisterHere"
         android:textColor="@android:color/holo_blue_light"
         android:textSize="16sp"
-        android:layout_marginTop="38dp"
-        android:layout_below="@+id/bLogin"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginBottom="12dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:text="LOGIN"
@@ -30,8 +35,8 @@
         android:id="@+id/bLogin"
         android:textColor="@android:color/white"
         android:background="@color/colorPrimaryDark"
-        android:layout_marginTop="52dp"
-        android:layout_below="@+id/etPassword"
+        android:layout_marginBottom="125dp"
+        android:layout_above="@+id/tvRegisterHere"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
@@ -42,12 +47,12 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:layout_marginTop="17dp"
         android:id="@+id/etPassword"
         android:hint="Password"
         android:textColorHint="@android:color/white"
         android:textColor="@android:color/white"
-        android:layout_below="@+id/etUsername"
+        android:layout_marginBottom="51dp"
+        android:layout_above="@+id/bLogin"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
@@ -58,25 +63,24 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:layout_marginTop="145dp"
-        android:id="@+id/etUsername"
-        android:hint="Usernam"
+        android:id="@+id/etCompanysID"
+        android:hint="User ID"
         android:textColorHint="@android:color/white"
         android:textColor="@android:color/white"
-        android:layout_alignParentTop="true"
+        android:layout_marginBottom="27dp"
+        android:layout_above="@+id/etPassword"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
-
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/kjasd"
         android:id="@+id/imageView2"
-        android:layout_marginBottom="64dp"
-        android:layout_above="@+id/etPassword"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@+id/etCompanysID"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 </RelativeLayout>
