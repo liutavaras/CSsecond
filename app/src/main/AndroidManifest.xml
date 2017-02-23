@@ -18,7 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".SettingsActivity" />
-        <activity android:name=".RegisterActivity" />
+        <activity android:name=".RegisterActivity" />dgdgfd
         <activity android:name=".UserAreaActivity" />
         <!--
  ATTENTION: This was auto-generated to add Google Play services to your project for
