@@ -12,21 +12,6 @@
     tools:context="com.example.liutaurasmazonas.cslogintrying.LoginPage"
     android:background="@drawable/loginbckg">
 
-     <TextView
-        android:text="If you do not have an account yet, please click here"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvRegisterHere"
-        android:textColor="@android:color/holo_blue_light"
-        android:textSize="16sp"
-        android:layout_marginBottom="12dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
     <Button
         android:text="LOGIN"
         android:layout_width="wrap_content"
@@ -63,14 +48,13 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/etCompanysID"
-        android:hint="User ID"
+        android:hint="user_id"
         android:textColorHint="@android:color/white"
         android:textColor="@android:color/white"
         android:layout_marginBottom="27dp"
         android:layout_above="@+id/etPassword"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="17dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
@@ -83,4 +67,16 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="11dp" />
+
+    <TextView
+       android:text="If you do not have an account yet, please click here"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/tvRegisterHere"
+       android:textColor="@android:color/holo_blue_light"
+       android:textSize="16sp"
+       android:layout_marginBottom="13dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
