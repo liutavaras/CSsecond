@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.security.AuthProvider;
+
 public class LoginPage extends AppCompatActivity {
 
     @Override
@@ -30,4 +32,6 @@ public class LoginPage extends AppCompatActivity {
             }
         });
     }
+
+
 }
