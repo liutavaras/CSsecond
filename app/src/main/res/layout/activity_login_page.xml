@@ -12,22 +12,22 @@
     tools:context="com.example.liutaurasmazonas.cslogintrying.LoginPage"
     android:background="@drawable/loginbckg">
 
-    <Button
-        android:text="LOGIN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/bLogin"
-        android:textColor="@android:color/white"
-        android:background="@color/colorPrimaryDark"
-        android:layout_marginBottom="125dp"
-        android:layout_above="@+id/tvRegisterHere"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+
+    <TextView
+
+       android:text="If you do not have an account yet, please click here"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/tvRegisterHere"
+       android:textColor="@android:color/holo_blue_light"
+       android:textSize="14sp"
+       android:layout_marginBottom="7dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
@@ -35,48 +35,46 @@
         android:hint="Password"
         android:textColorHint="@android:color/white"
         android:textColor="@android:color/white"
-        android:layout_marginBottom="24dp"
-        android:layout_above="@+id/bLogin"
+        android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/etCompanysID"
-        android:hint="user_id"
+        android:hint="User ID"
         android:textColorHint="@android:color/white"
         android:textColor="@android:color/white"
-        android:layout_marginBottom="27dp"
         android:layout_above="@+id/etPassword"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_marginBottom="11dp"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content" />
 
     <ImageView
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/kjasd"
+        app:srcCompat="@drawable/hsdgdgsdg"
         android:id="@+id/imageView2"
+        android:layout_width="300dp"
+        android:layout_marginBottom="10dp"
         android:layout_above="@+id/etCompanysID"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="11dp" />
+        android:layout_centerHorizontal="true" />
 
-    <TextView
-       android:text="If you do not have an account yet, please click here"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:id="@+id/tvRegisterHere"
-       android:textColor="@android:color/holo_blue_light"
-       android:textSize="16sp"
-       android:layout_marginBottom="13dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+    <ImageButton
+        app:srcCompat="@drawable/tfty"
+        android:id="@+id/bLogin"
+        android:scaleType="fitXY"
+        android:backgroundTint="#00FFFFFF"
+        android:layout_marginTop="43dp"
+        android:layout_width="200dp"
+        android:layout_below="@+id/etPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_height="65dp" />
+
 </RelativeLayout>

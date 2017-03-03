@@ -7,6 +7,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.app.Activity;
+import android.app.Dialog;
+import android.app.ProgressDialog;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -28,46 +38,61 @@ public class RegisterActivity extends AppCompatActivity {
         final EditText etPassword = (EditText) findViewById(R.id.etPassword);
         final EditText etRepeatpassword = (EditText) findViewById(R.id.etRepeatpassword);
         final Button bRegister = (Button) findViewById(R.id.bRegister);
+        final TextView backtoLoginPageLink = (TextView) findViewById(R.id.tvBacktologin);
 
 
-        bRegister.setOnClickListener(new View.OnClickListener() {
+        backtoLoginPageLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final String name = etName.getText().toString();
-                final String surname = etSurname.getText().toString();
-                final String companysID = etCompanysID.getText().toString();
-                final String password = etPassword.getText().toString();
-                final String repeatpassword = etRepeatpassword.getText().toString();
+                Intent backtoLoginPageIntent = new Intent(RegisterActivity.this, LoginPage.class);
+                RegisterActivity.this.startActivity(backtoLoginPageIntent);
 
-                Response.Listener<String> responseListener = new Response.Listener<String>() {
 
+                bRegister.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onResponse(String response) {
-                        try {
-                            JSONObject jsonResponse = new JSONObject(response);
-                            boolean success = jsonResponse.getBoolean("success");
+                    public void onClick(View v) {
+                        final String name = etName.getText().toString();
+                        final String surname = etSurname.getText().toString();
+                        final String companysID = etCompanysID.getText().toString();
+                        final String password = etPassword.getText().toString();
+                        final String repeatpassword = etRepeatpassword.getText().toString();
 
-                            if (success) {
-                                Intent intent = new Intent(RegisterActivity.this, LoginPage.class);
-                                RegisterActivity.this.startActivity(intent);
-                            } else {
-                                AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
-                                builder.setMessage("Register Failed")
-                                        .setNegativeButton("Retry", null)
-                                        .create()
-                                        .show();
+                        Response.Listener<String> responseListener = new Response.Listener<String>() {
+
+                            @Override
+                            public void onResponse(String response) {
+                                try {
+                                    JSONObject jsonResponse = new JSONObject(response);
+                                    boolean success = jsonResponse.getBoolean("success");
+
+                                    if (success) {
+                                        Intent intent = new Intent(RegisterActivity.this, LoginPage.class);
+                                        RegisterActivity.this.startActivity(intent);
+                                    } else {
+                                        AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
+                                        builder.setMessage("Register Failed")
+                                                .setNegativeButton("Retry", null)
+                                                .create()
+                                                .show();
+                                    }
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
                             }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
+                        };
+
+                        RegisterRequest registerRequest = new RegisterRequest(name, surname, companysID, password, repeatpassword, responseListener);
+                        RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
+                        queue.add(registerRequest);
+
                     }
-                };
-
-                RegisterRequest registerRequest = new RegisterRequest(name, surname, companysID, password, repeatpassword, responseListener);
-                RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
-                queue.add(registerRequest);
-
+                });
             }
         });
+
     }
+
+
 }
+
+

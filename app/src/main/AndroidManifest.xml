@@ -10,9 +10,14 @@
         android:label="Uptick"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginPage"/>
+        <activity
+            android:name=".LoginPage">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+            </activity>
         <activity android:name=".SettingsActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".UserAreaActivity" />
@@ -43,11 +48,7 @@
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile"
             android:theme="@style/AppTheme.NoActionBar">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter> </activity>
+        </activity>
         <activity android:name=".EconomicCalendarActivity" />
         <activity android:name=".MainActivity14" />
         <activity android:name=".MainActivity15" />
