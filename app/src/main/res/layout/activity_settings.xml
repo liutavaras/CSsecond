@@ -21,20 +21,6 @@
 
     // News buttons
 
-    <Button
-        android:text="Change password"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/bChangePassword"
-        android:textSize="30sp"
-        android:textAllCaps="false"
-        android:layout_marginBottom="23dp"
-        android:layout_above="@+id/ibEconCal"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
     // Dark and Light buttons
 
     <ImageView
@@ -48,144 +34,6 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
-
-    <RelativeLayout
-        android:layout_width="300dp"
-        android:layout_height="90dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true">
-
-        <ImageButton
-            app:srcCompat="@drawable/newsbutton"
-            android:scaleType="fitEnd"
-            android:background="#00ffffff"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:id="@+id/ibNews" />
-
-        <ImageButton
-        app:srcCompat="@drawable/economiccalendarbuttongrey"
-        android:id="@+id/ibEconCal"
-        android:background="#00ffffff"
-        android:scaleType="fitEnd"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:cropToPadding="false"
-        android:layout_alignParentBottom="true"
-
-        android:layout_marginRight="-6dp" />
-
-    // Notifications buttons
-
-    <Button
-        android:text="ON"
-        android:layout_width="160dp"
-        android:layout_height="60dp"
-        android:layout_above="@+id/bChangePassword"
-        app:backgroundTint="#003662"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/bNotOn"
-        android:textSize="30sp"
-        android:textColor="#FFFFFF" />
-
-    <Button
-        android:text="Notifications"
-        android:layout_width="160dp"
-        android:layout_height="60dp"
-        android:id="@+id/bNot"
-        android:textAllCaps="false"
-        android:layout_above="@+id/bChangePassword"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textSize="23sp" />
-      
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="90dp"
-        android:layout_marginStart="90dp" />
-
-    <Button
-        android:text="ON"
-        android:layout_width="160dp"
-        android:layout_height="60dp"
-        android:id="@+id/bNewsOn"
-        app:backgroundTint="#003662"
-        android:textSize="30sp"
-        android:layout_above="@+id/bNotOn"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textColor="#FFFFFF" />
-
-    <Button
-        android:text="News"
-        android:layout_width="160dp"
-        android:layout_height="60dp"
-        android:id="@+id/bNews"
-        android:textSize="30sp"
-        android:textAllCaps="false"
-        android:layout_above="@+id/bNot"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    // Dark and Light buttons
-
-    <Button
-        android:text="OFF"
-        android:layout_height="60dp"
-        android:id="@+id/button3"
-        app:backgroundTint="#2B292A"
-        android:textSize="30sp"
-        android:textAllCaps="false"
-        android:layout_width="160dp"
-        android:layout_above="@+id/bNews"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textColor="#FFFFFF"
-        android:onClick="true"
-        />
-
-    <Button
-        android:text="Dark"
-        android:id="@+id/bDark"
-        android:layout_height="60dp"
-        android:layout_width="160dp"
-        android:textAllCaps="false"
-        android:textSize="30sp"
-        android:layout_above="@+id/bNewsOn"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:onClick="true"
-        />
-
-    <ImageButton
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        app:srcCompat="@drawable/liveratesbuttongrey"
-        android:id="@+id/ibLiveRates"
-        android:background="#00ffffff"
-        android:scaleType="fitEnd"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/ibEconCal"
-        android:layout_toEndOf="@+id/ibEconCal" />
-
-        <ImageButton
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            app:srcCompat="@drawable/settingsbuttonblue"
-            android:id="@+id/ibSettings"
-            android:background="#00ffffff"
-            android:scaleType="fitEnd"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/ibLiveRates"
-            android:layout_toEndOf="@+id/ibLiveRates" />
-    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -243,54 +91,107 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_below="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_height="260dp">
+        android:layout_alignParentStart="true">
 
-        <Button
-            android:text="ON"
-            android:layout_width="160dp"
-            android:layout_height="60dp"
-            android:id="@+id/bNewsOn"
-            android:textSize="30sp"
-            android:layout_above="@+id/bNotOn"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <Button
-            android:text="Notifications"
-            android:layout_width="160dp"
-            android:layout_height="60dp"
-            android:id="@+id/bNot"
-            android:textAllCaps="false"
-            android:layout_above="@+id/bChangePassword"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:textSize="23sp" />
-
-        <Button
-            android:text="ON"
-            android:layout_width="160dp"
-            android:layout_height="60dp"
-            android:layout_above="@+id/bChangePassword"
+        <ImageButton
+            app:srcCompat="@drawable/newsbutton"
+            android:scaleType="fitEnd"
+            android:background="#00ffffff"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:id="@+id/bNotOn"
-            android:textSize="30sp" />
+            android:id="@+id/ibNews" />
 
-        <Button
-            android:text="OFF"
-            android:layout_height="60dp"
-            android:id="@+id/button3"
-            android:textSize="30sp"
-            android:textAllCaps="false"
-            android:onClick="bLight"
-            android:layout_width="160dp"
-            android:layout_above="@+id/bNews"
+        <ImageButton
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            app:srcCompat="@drawable/liveratesbuttongrey"
+            android:id="@+id/ibLiveRates"
+            android:background="#00ffffff"
+            android:scaleType="fitEnd"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/ibNews"
+            android:layout_toEndOf="@+id/ibNews" />
+
+        <ImageButton
+        app:srcCompat="@drawable/economiccalendarbuttongrey"
+        android:id="@+id/ibEconCal"
+        android:background="#00ffffff"
+        android:scaleType="fitEnd"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:cropToPadding="false"
+
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/ibLiveRates"
+            android:layout_toEndOf="@+id/ibLiveRates" />
+
+        <ImageButton
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            app:srcCompat="@drawable/settingsbuttonblue"
+            android:id="@+id/ibSettings"
+            android:background="#00ffffff"
+            android:scaleType="fitEnd"
+            android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="270dp"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"><![CDATA[
+
+        // Notifications buttons
+
+
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="90dp"
+        android:layout_marginStart="90dp" />
+
+
+
+        // Dark and Light buttons
+
+
+
+        ]]>
+
+        <Button
+            android:text="Change password"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/bChangePassword"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/bNotOn"
+            android:layout_alignStart="@+id/bNotOn"
+            android:layout_alignRight="@+id/bNot"
+            android:layout_alignEnd="@+id/bNot" />
+
+        <Button
+        android:text="ON"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+            app:backgroundTint="#003662"
+            android:id="@+id/bNotOn"
+        android:textSize="30sp"
+        android:textColor="#FFFFFF"
+            android:layout_above="@+id/bChangePassword"
+            android:layout_alignLeft="@+id/bNewsOn"
+            android:layout_alignStart="@+id/bNewsOn" />
 
         <Button
             android:text="Dark"
@@ -299,35 +200,63 @@
             android:layout_width="160dp"
             android:textAllCaps="false"
             android:textSize="30sp"
-            android:layout_above="@+id/bNews"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:onClick="true"
+            android:layout_above="@+id/bNewsOn"
+            android:layout_toLeftOf="@+id/button3"
+            android:layout_toStartOf="@+id/button3"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp" />
 
         <Button
-            android:text="Change password"
-            android:layout_height="wrap_content"
-            android:id="@+id/bChangePassword"
-            android:textSize="30sp"
-            android:textAllCaps="false"
-            android:onClick="bLight"
-            android:layout_marginBottom="7dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_width="220dp" />
+        android:text="News"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:id="@+id/bNews"
+        android:textSize="30sp"
+        android:textAllCaps="false"
+            android:layout_above="@+id/bNot"
+            android:layout_alignLeft="@+id/button3"
+            android:layout_alignStart="@+id/button3" />
 
         <Button
-            android:text="News"
+            android:text="ON"
             android:layout_width="160dp"
             android:layout_height="60dp"
-            android:id="@+id/bNews"
+            android:id="@+id/bNewsOn"
+            app:backgroundTint="#003662"
+            android:textSize="30sp"
+            android:textColor="#FFFFFF"
+            android:layout_above="@+id/bNotOn"
+            android:layout_alignLeft="@+id/bDark"
+            android:layout_alignStart="@+id/bDark" />
+
+        <Button
+        android:text="Notifications"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:id="@+id/bNot"
+        android:textAllCaps="false"
+            android:textSize="23sp"
+            android:layout_above="@+id/bChangePassword"
+            android:layout_alignLeft="@+id/bNews"
+            android:layout_alignStart="@+id/bNews" />
+
+        <Button
+            android:text="OFF"
+            android:layout_height="60dp"
+            android:id="@+id/button3"
+            app:backgroundTint="#2B292A"
             android:textSize="30sp"
             android:textAllCaps="false"
-            android:layout_above="@+id/bNot"
+            android:layout_width="160dp"
+            android:textColor="#FFFFFF"
+            android:onClick="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_above="@+id/bNews"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
+
     </RelativeLayout>
 
 
