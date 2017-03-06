@@ -54,6 +54,6 @@
         <activity android:name=".MainActivity15" />
         <activity android:name=".MainActivity16" />
         <activity android:name=".MainActivity17" />
-        <activity android:name=".MainActivity18"></activity>
+        <activity android:name=".MainActivity18"/>
     </application>
     </manifest>
