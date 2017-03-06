@@ -28,7 +28,7 @@ public class ProfileActivity extends AppCompatActivity {
         });
     }
 
-    //I create menu here. Ksenia
+    //I create Logout feature here. Ksenia
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

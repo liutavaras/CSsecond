@@ -14,7 +14,7 @@
         <activity android:name=".SettingsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
+              
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -41,13 +41,14 @@
             android:name=".AddProfileActivity"
             android:label="@string/title_activity_add_profile"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ChangePasswordActivity" />
+        <activity android:name=".ChangePasswordActivity"/>
+
         <activity android:name=".LogOutActivity" />
         <activity
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
+
         <activity android:name=".EconomicCalendarActivity" />
         <activity android:name=".MainActivity14" />
         <activity android:name=".MainActivity15" />
