@@ -10,16 +10,15 @@
         android:label="Uptick"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".LoginPage">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".LoginPage"/>
+        <activity android:name=".SettingsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-            </activity>
-        <activity android:name=".SettingsActivity" />
-        <activity android:name=".RegisterActivity" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".RegisterActivity" />dgdgfd
         <activity android:name=".UserAreaActivity" />
         <!--
  ATTENTION: This was auto-generated to add Google Play services to your project for
@@ -56,5 +55,4 @@
         <activity android:name=".MainActivity17" />
         <activity android:name=".MainActivity18"></activity>
     </application>
-
-</manifest>
+    </manifest>
