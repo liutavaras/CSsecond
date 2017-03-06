@@ -46,7 +46,8 @@
         <activity
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
         <activity android:name=".EconomicCalendarActivity" />
         <activity android:name=".MainActivity14" />
         <activity android:name=".MainActivity15" />

@@ -27,6 +27,7 @@
         android:layout_marginBottom="9dp" />
 
     <EditText
+
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
@@ -95,5 +96,16 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_width="250dp" />
+
+    <TextView
+        android:text="Back to Login Page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/tvBacktologin"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center" />
 
 </RelativeLayout>
