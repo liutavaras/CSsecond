@@ -54,5 +54,4 @@
         <activity android:name=".MainActivity17" />
         <activity android:name=".MainActivity18"></activity>
     </application>
-
-</manifest>
+    </manifest>
