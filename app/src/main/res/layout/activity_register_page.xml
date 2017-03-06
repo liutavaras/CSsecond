@@ -12,40 +12,8 @@
     android:background="@drawable/loginbckg"
     >
 
-    <Button
-        android:text="REGISTER"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/bRegister"
-        android:textColorLink="?attr/colorPrimaryDark"
-        android:textColor="@android:color/white"
-        android:contextClickable="true"
-        android:background="@color/colorPrimaryDark"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="72dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/etSurname"
-        android:hint="Surname"
-        android:textColorHint="@android:color/background_light"
-        android:layout_below="@+id/etName"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textColor="@android:color/white" />
-
-    <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
@@ -53,48 +21,40 @@
         android:hint="User ID"
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/white"
-        android:layout_below="@+id/etSurname"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="11dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_above="@+id/etPassword"
+        android:layout_alignLeft="@+id/etPassword"
+        android:layout_alignStart="@+id/etPassword"
+        android:layout_marginBottom="9dp" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
+        android:inputType="textPersonName"
         android:ems="10"
-        android:layout_marginTop="11dp"
-        android:id="@+id/etPassword"
-        android:hint="Password"
+        android:id="@+id/etSurname"
+        android:hint="Surname"
+        android:textColorHint="@android:color/background_light"
         android:textColor="@android:color/white"
-        android:textColorHint="@android:color/white"
-        android:selectAllOnFocus="false"
-        android:layout_below="@+id/etCompanysID"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_above="@+id/etCompanysID"
+        android:layout_alignLeft="@+id/etCompanysID"
+        android:layout_alignStart="@+id/etCompanysID"
+        android:layout_marginBottom="10dp" />
 
     <EditText
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:layout_marginTop="10dp"
         android:id="@+id/etRepeatpassword"
-        android:layout_below="@+id/etPassword"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
         android:hint="Repeat Password"
         android:textColorHint="@android:color/background_light"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:layout_width="300dp"
+        android:layout_above="@+id/bRegister"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="103dp" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
@@ -103,11 +63,37 @@
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/white"
         android:textIsSelectable="false"
-        android:layout_marginTop="20dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/etSurname"
+        android:layout_alignLeft="@+id/etSurname"
+        android:layout_alignStart="@+id/etSurname" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/etPassword"
+        android:hint="Password"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:selectAllOnFocus="false"
+        android:layout_marginBottom="9dp"
+        android:layout_above="@+id/etRepeatpassword"
+        android:layout_alignLeft="@+id/etRepeatpassword"
+        android:layout_alignStart="@+id/etRepeatpassword" />
+
+    <Button
+        android:text="REGISTER"
+        android:layout_height="wrap_content"
+        android:id="@+id/bRegister"
+        android:textColorLink="?attr/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        android:contextClickable="true"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginBottom="72dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="250dp" />
 
 </RelativeLayout>

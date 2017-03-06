@@ -10,14 +10,14 @@
         android:label="Uptick"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginPage">
+        <activity android:name=".LoginPage"/>
+        <activity android:name=".SettingsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SettingsActivity" />
         <activity android:name=".RegisterActivity" />dgdgfd
         <activity android:name=".UserAreaActivity" />
         <!--
