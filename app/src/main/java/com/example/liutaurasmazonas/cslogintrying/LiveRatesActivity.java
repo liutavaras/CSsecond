@@ -6,27 +6,53 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 
 public class LiveRatesActivity extends AppCompatActivity {
 
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_change_password);
-        //NURODOME VISUS MYGTUKUS
-        ImageButton b1=(ImageButton)findViewById(R.id.ibSettingsBlack);
-        //PIRMAS MYGTUKAS
-        b1.setOnClickListener(new View.OnClickListener() {
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_live_rates);
+            final ImageButton bCurrencies = (ImageButton) findViewById(R.id.ibCurrencies);
+            final ImageButton bShares = (ImageButton) findViewById(R.id.ibShares);
+            final ImageButton bSettingsBlack = (ImageButton) findViewById(R.id.ibSettingsBlack);
+            final ImageButton bEconCal = (ImageButton) findViewById(R.id.ibEconCal);
+            final ImageButton bNews = (ImageButton) findViewById(R.id.ibNews);
 
-            public void onClick(View v) {
-                Intent myintent2 = new Intent(LiveRatesActivity.this,SettingsActivity.class);
-                startActivity(myintent2);
-
-            }
-        });
-
-    }
+            bCurrencies.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Intent myintent2 = new Intent(LiveRatesActivity.this,CurrenciesActivity.class);
+                    startActivity(myintent2);
+                }
+            });
+            bShares.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Intent myintent3 = new Intent(LiveRatesActivity.this,SharesActivity.class);
+                    startActivity(myintent3);
+                }
+            });
+            bSettingsBlack.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Intent myintent4 = new Intent(LiveRatesActivity.this,SettingsActivity.class);
+                    startActivity(myintent4);
+                }
+            });
+            bEconCal.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Intent myintent5 = new Intent(LiveRatesActivity.this,EconomicCalendarActivity.class);
+                    startActivity(myintent5);
+                }
+            });
+            bNews.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Intent myintent6 = new Intent(LiveRatesActivity.this,HomeActivity.class);
+                    startActivity(myintent6);
+                }
+            });
+        }
 
     //I create Logout feature here. Ksenia
 

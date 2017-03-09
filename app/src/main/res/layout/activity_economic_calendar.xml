@@ -10,4 +10,15 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.liutaurasmazonas.cslogintrying.EconomicCalendarActivity">
 
+    <TextView
+        android:text="hello "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="129dp"
+        android:layout_marginEnd="129dp"
+        android:layout_marginTop="197dp"
+        android:id="@+id/textView" />
 </RelativeLayout>

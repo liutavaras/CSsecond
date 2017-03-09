@@ -52,8 +52,8 @@
             android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity android:name=".EconomicCalendarActivity" />
-        <activity android:name=".MainActivity14" />
-        <activity android:name=".MainActivity15" />
+        <activity android:name=".CurrenciesActivity" />
+        <activity android:name=".SharesActivity" />
         <activity android:name=".MainActivity16" />
         <activity android:name=".MainActivity17" />
         <activity android:name=".MainActivity18" />
