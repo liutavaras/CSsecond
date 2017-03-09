@@ -11,19 +11,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.TextView;
-import android.graphics.ColorFilter;
-import android.view.View.OnClickListener;
 
 import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
-import com.google.android.gms.common.api.GoogleApiClient;
 
 import static android.graphics.Color.BLACK;
-import static android.graphics.Color.GRAY;
 import static android.graphics.Color.WHITE;
-import static android.graphics.Color.parseColor;
 
 
 public class SettingsActivity extends AppCompatActivity {
@@ -38,9 +31,10 @@ public class SettingsActivity extends AppCompatActivity {
         final Button button3 = (Button) findViewById(R.id.bNews);
         final Button button4 = (Button) findViewById(R.id.bNotOn);
         final Button button5 = (Button) findViewById(R.id.bNot);
-        final ImageButton bLiveRates = (ImageButton) findViewById(R.id.ibLiveRates);
-        final ImageButton bEconCal = (ImageButton) findViewById(R.id.ibEconCal);
-        final ImageButton bNews = (ImageButton) findViewById(R.id.ibNews);
+        final Button bChangePassword = (Button) findViewById(R.id.bChangePassword);
+        final ImageButton bLiveRatesBlack = (ImageButton) findViewById(R.id.ibLiveRatesBlack);
+        final ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
+        final ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
 
         button.setOnClickListener(
                 new Button.OnClickListener() {
@@ -94,22 +88,28 @@ public class SettingsActivity extends AppCompatActivity {
 
         );
 
-        bLiveRates.setOnClickListener(new View.OnClickListener() {
+        bLiveRatesBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent myintent2 = new Intent(SettingsActivity.this,LiveRatesActivity.class);
                 startActivity(myintent2);
             }
         });
-        bEconCal.setOnClickListener(new View.OnClickListener() {
+        bEconCalBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent myintent3 = new Intent(SettingsActivity.this,EconomicCalendarActivity.class);
                 startActivity(myintent3);
             }
         });
-        bNews.setOnClickListener(new View.OnClickListener() {
+        bNewsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent myintent4 = new Intent(SettingsActivity.this,HomeActivity.class);
                 startActivity(myintent4);
+            }
+        });
+        bChangePassword.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent openchangepassword = new Intent(SettingsActivity.this,ChangePasswordActivity.class);
+                startActivity(openchangepassword);
             }
         });
 

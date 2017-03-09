@@ -106,31 +106,7 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:id="@+id/ibNews" />
-
-        <ImageButton
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            app:srcCompat="@drawable/liveratesbuttongrey"
-            android:id="@+id/ibLiveRates"
-            android:background="#00ffffff"
-            android:scaleType="fitEnd"
-            android:layout_alignParentBottom="true"
-            android:layout_toRightOf="@+id/ibNews"
-            android:layout_toEndOf="@+id/ibNews" />
-
-        <ImageButton
-        app:srcCompat="@drawable/economiccalendarbuttongrey"
-        android:id="@+id/ibEconCal"
-        android:background="#00ffffff"
-        android:scaleType="fitEnd"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:cropToPadding="false"
-
-            android:layout_alignParentBottom="true"
-            android:layout_toRightOf="@+id/ibLiveRates"
-            android:layout_toEndOf="@+id/ibLiveRates" />
+            android:id="@+id/ibNewsBlack" />
 
         <ImageButton
             android:layout_width="90dp"
@@ -142,6 +118,30 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
+
+        <ImageButton
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            app:srcCompat="@drawable/liveratesbuttongrey"
+            android:id="@+id/ibLiveRatesBlack"
+            android:background="#00ffffff"
+            android:scaleType="fitEnd"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/ibSettings"
+            android:layout_toStartOf="@+id/ibSettings" />
+
+        <ImageButton
+        app:srcCompat="@drawable/economiccalendarbuttongrey"
+        android:id="@+id/ibEconCalBlack"
+        android:background="#00ffffff"
+        android:scaleType="fitEnd"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:cropToPadding="false"
+
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/ibNewsBlack"
+            android:layout_toEndOf="@+id/ibNewsBlack" />
     </RelativeLayout>
 
     <RelativeLayout

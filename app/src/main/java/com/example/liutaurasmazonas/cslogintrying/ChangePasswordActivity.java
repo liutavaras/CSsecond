@@ -1,49 +1,50 @@
 package com.example.liutaurasmazonas.cslogintrying;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 
 public class ChangePasswordActivity extends AppCompatActivity {
 
-    public void onCreate(Bundle savedInstanceState) {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        Button button = (Button) findViewById(R.id.bSave);
-        ChangePasswordActivityButtonListener listener = new ChangePasswordActivityButtonListener();
-        button.setOnClickListener(listener);
         setContentView(R.layout.activity_change_password);
-        //NURODOME VISUS MYGTUKUS
-        ImageButton b1=(ImageButton)findViewById(R.id.ibSettingsBlack);
-        ImageButton b2=(ImageButton)findViewById(R.id.ibLiveRates);
-        //PIRMAS MYGTUKAS
-        b1.setOnClickListener(new View.OnClickListener() {
+        final ImageButton bSettingsBlack = (ImageButton) findViewById(R.id.ibSettingsBlack);
+        final ImageButton bLiveRatesBlack = (ImageButton) findViewById(R.id.ibLiveRatesBlack);
+        final ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
+        final ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
 
+        bLiveRatesBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent myintent2 = new Intent(ChangePasswordActivity.this,SettingsActivity.class);
-                startActivity(myintent2);
-
+                Intent openliverates = new Intent(ChangePasswordActivity.this,LiveRatesActivity.class);
+                startActivity(openliverates);
             }
         });
-        //NAUJAS MYGTUKAS
-        b2.setOnClickListener(new View.OnClickListener() {
-
+        bSettingsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent myintent2 = new Intent(ChangePasswordActivity.this,LiveRatesActivity.class);
-                startActivity(myintent2);
-
+                Intent opensettings = new Intent(ChangePasswordActivity.this,SettingsActivity.class);
+                startActivity(opensettings);
             }
         });
-    }
-
-    protected void onFinishInflate() {
-
+        bEconCalBlack.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent openeconcal = new Intent(ChangePasswordActivity.this,EconomicCalendarActivity.class);
+                startActivity(openeconcal);
+            }
+        });
+        bNewsBlack.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent openhome = new Intent(ChangePasswordActivity.this,HomeActivity.class);
+                startActivity(openhome);
+            }
+        });
     }
 
     //I create Logout feature here. Ksenia

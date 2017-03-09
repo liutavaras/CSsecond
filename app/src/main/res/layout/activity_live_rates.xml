@@ -84,11 +84,11 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:id="@+id/ibNews" />
+            android:id="@+id/ibNewsBlack" />
 
         <ImageButton
             app:srcCompat="@drawable/economiccalendarbuttongrey"
-            android:id="@+id/ibEconCal"
+            android:id="@+id/ibEconCalBlack"
             android:background="#00ffffff"
             android:scaleType="fitEnd"
             android:layout_width="90dp"
@@ -108,14 +108,14 @@
             android:background="#00ffffff"
             android:scaleType="fitEnd"
             android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/ibEconCal"
-            android:layout_toEndOf="@+id/ibEconCal" />
+            android:layout_toRightOf="@+id/ibEconCalBlack"
+            android:layout_toEndOf="@+id/ibEconCalBlack" />
 
         <ImageButton
             android:layout_width="90dp"
             android:layout_height="90dp"
             app:srcCompat="@drawable/settingsbuttongrey"
-            android:id="@+id/ibSettings"
+            android:id="@+id/ibSettingsBlack"
             android:background="#00ffffff"
             android:scaleType="fitEnd"
             android:layout_alignParentTop="true"

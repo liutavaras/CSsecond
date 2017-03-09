@@ -41,8 +41,7 @@
         <activity android:name=".LiveRatesActivity" />
         <activity
             android:name=".AddProfileActivity"
-            android:label="@string/title_activity_add_profile"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="@string/title_activity_add_profile"/>
         <activity android:name=".ChangePasswordActivity"/>
 
         <activity android:name=".LogOutActivity" />
