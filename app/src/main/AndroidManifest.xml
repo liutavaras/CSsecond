@@ -11,6 +11,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".LoginPage"/>
+
+
+        <activity android:name=".SettingsActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".UserAreaActivity" />
         <!--
@@ -47,6 +56,7 @@
         <activity android:name=".MainActivity15" />
         <activity android:name=".MainActivity16" />
         <activity android:name=".MainActivity17" />
-        <activity android:name=".MainActivity18"/>
+        <activity android:name=".MainActivity18" />
     </application>
-    </manifest>
+
+</manifest>
