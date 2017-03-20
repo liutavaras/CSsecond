@@ -8,6 +8,6 @@ public class MainActivity15 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main15);
+        setContentView(R.layout.custum_row_news_item);
     }
 }
