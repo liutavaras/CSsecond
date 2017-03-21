@@ -31,7 +31,14 @@ public class ReadRss extends AsyncTask<Void,Void,Void>{
     ArrayList<FeedItem>feedItems;
     RecyclerView recyclerView;
     Context context;
-    String address="https://www.bloomberg.com/feeds/podcasts/etf_report.xml";
+    static ArrayList<String>address;
+
+    static {
+        address=new ArrayList<>();
+        address.add("https://www.bloomberg.com/politics/feeds/site.xml");
+        address.add("https://www.bloomberg.com/feeds/podcasts/etf_report.xml");
+    }
+    //String address="https://www.bloomberg.com/feeds/podcasts/etf_report.xml";
    // String address2="www.bloomberg.com/politics/feeds/site.xml";
     ProgressDialog progressDialog;
     URL url;
@@ -65,56 +72,63 @@ public class ReadRss extends AsyncTask<Void,Void,Void>{
         return null;
     }
 
-    private void ProcessXml(Document data) {
-       if (data != null){
-           feedItems=new ArrayList<>();
-           Element root=data.getDocumentElement();
-           Node channel=root.getChildNodes().item(0);
-           NodeList items=channel.getChildNodes();
-           for (int i=0;i<items.getLength();i++){
-               Node currentchild=items.item(i);
-               if (currentchild.getNodeName().equalsIgnoreCase("item")){
-                   FeedItem item=new FeedItem();
-                   NodeList itemchilds=currentchild.getChildNodes();
-                   for (int j=0;j<itemchilds.getLength();j++){
-                       Node current=itemchilds.item(j);
-                       if (current.getNodeName().equalsIgnoreCase("title")){
-                           item.setTitle(current.getTextContent());
-                       }else if (current.getNodeName().equalsIgnoreCase("itunes:summary")){
-                           item.setDescription(current.getTextContent());
-                       }else if (current.getNodeName().equalsIgnoreCase("pubDate")){
-                           item.setPubDate(current.getTextContent());
-                       }else if (current.getNodeName().equalsIgnoreCase("link")){
-                           item.setLink(current.getTextContent());
-                       }
+    private void ProcessXml(ArrayList<Document> data) {
+        if (data != null) {
+            feedItems = new ArrayList<>();
+            for (Document doc : data) {
+                Element root = doc.getDocumentElement();
+                Node channel = root.getChildNodes().item(0);
+                NodeList items = channel.getChildNodes();
+                for (int i = 0; i < items.getLength(); i++) {
+                    Node currentchild = items.item(i);
+                    if (currentchild.getNodeName().equalsIgnoreCase("item")) {
+                        FeedItem item = new FeedItem();
+                        NodeList itemchilds = currentchild.getChildNodes();
+                        for (int j = 0; j < itemchilds.getLength(); j++) {
+                            Node current = itemchilds.item(j);
+                            if (current.getNodeName().equalsIgnoreCase("title")) {
+                                item.setTitle(current.getTextContent());
+                            } else if (current.getNodeName().equalsIgnoreCase("itunes:summary")) {
+                                item.setDescription(current.getTextContent());
+                            } else if (current.getNodeName().equalsIgnoreCase("pubDate")) {
+                                item.setPubDate(current.getTextContent());
+                            } else if (current.getNodeName().equalsIgnoreCase("link")) {
+                                item.setLink(current.getTextContent());
+                            }
 
-                   }
-                   feedItems.add(item);
-                   Log.d("itemTitle", item.getTitle());
-                   Log.d("itemDescription", item.getTitle());
-                   Log.d("itemLink", item.getTitle());
-                   Log.d("itemPubDate", item.getTitle());
-               }
-           }
-       }
-    }
-
-    public Document Getdata(){
-        try {
-            url=new URL(address);
-            HttpURLConnection connection= (HttpURLConnection) url.openConnection();
-            connection.setRequestMethod("GET");
-            InputStream inputStream=connection.getInputStream();
-            DocumentBuilderFactory builderFactory=DocumentBuilderFactory.newInstance();
-            DocumentBuilder builder=builderFactory.newDocumentBuilder();
-            Document xmlDoc = builder.parse(inputStream);
-            return xmlDoc;
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
+                        }
+                        feedItems.add(item);
+                        Log.d("itemTitle", item.getTitle());
+                        Log.d("itemDescription", item.getTitle());
+                        Log.d("itemLink", item.getTitle());
+                        Log.d("itemPubDate", item.getTitle());
+                    }
+                }
+            }
         }
     }
+
+    public ArrayList<Document> Getdata(){
+        ArrayList<Document> documents = new ArrayList<>();
+        for (String addr: address) {
+            try {
+                url = new URL(addr);
+                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                connection.setRequestMethod("GET");
+                InputStream inputStream = connection.getInputStream();
+                DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
+                DocumentBuilder builder = builderFactory.newDocumentBuilder();
+                Document xmlDoc = builder.parse(inputStream);
+                documents.add(xmlDoc);
+            } catch (Exception e) {
+                e.printStackTrace();
+                return null;
+            }
+        }
+        return documents;
+    }
 }
+
 
 
 
