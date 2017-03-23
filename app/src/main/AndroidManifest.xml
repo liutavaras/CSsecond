@@ -10,15 +10,7 @@
         android:label="Uptick"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginPage">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
-
-
+        <activity android:name=".LoginPage"></activity>
         <activity android:name=".SettingsActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".UserAreaActivity" />
@@ -38,24 +30,32 @@
             android:name=".NotificationsActivity"
             android:label="@string/title_activity_notifications"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".LiveRatesActivity" />
+        <activity android:name=".LiveRatesActivity"/>
         <activity
             android:name=".AddProfileActivity"
-            android:label="@string/title_activity_add_profile"/>
-        <activity android:name=".ChangePasswordActivity"/>
-
+            android:label="@string/title_activity_add_profile" />
+        <activity android:name=".ChangePasswordActivity" />
         <activity android:name=".LogOutActivity" />
         <activity
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile"
-            android:theme="@style/AppTheme.NoActionBar"/>
-
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".EconomicCalendarActivity" />
         <activity android:name=".CurrenciesActivity" />
         <activity android:name=".SharesActivity" />
         <activity android:name=".MainActivity16" />
         <activity android:name=".MainActivity17" />
         <activity android:name=".MainActivity18" />
+        <activity
+            android:name=".live_rates_tabs"
+            android:label="@string/title_activity_live_rates_tabs"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
