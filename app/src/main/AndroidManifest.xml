@@ -10,7 +10,16 @@
         android:label="Uptick"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginPage"></activity>
+
+        <activity android:name=".LoginPage"/>
+        <activity android:name=".MainActivity14">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+
+        </activity>
         <activity android:name=".SettingsActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".UserAreaActivity" />
@@ -41,8 +50,7 @@
             android:label="@string/title_activity_profile"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".EconomicCalendarActivity" />
-        <activity android:name=".CurrenciesActivity" />
-        <activity android:name=".SharesActivity" />
+        <!--<activity android:name=".MainActivity15" />-->
         <activity android:name=".MainActivity16" />
         <activity android:name=".MainActivity17" />
         <activity android:name=".MainActivity18" />
@@ -56,6 +64,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".NewsDetails"></activity>
+        <!--<activity android:name=".CurrenciesActivity" />-->
+        <activity android:name=".SharesActivity" />
     </application>
 
 </manifest>
