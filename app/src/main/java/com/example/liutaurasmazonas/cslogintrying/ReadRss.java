@@ -88,7 +88,7 @@ public class ReadRss extends AsyncTask<Void,Void,Void>{
                             Node current = itemchilds.item(j);
                             if (current.getNodeName().equalsIgnoreCase("title")) {
                                 item.setTitle(current.getTextContent());
-                            } else if (current.getNodeName().equalsIgnoreCase("itunes:summary")) {
+                            } else if (current.getNodeName().equalsIgnoreCase("description")) {
                                 item.setDescription(current.getTextContent());
                             } else if (current.getNodeName().equalsIgnoreCase("pubDate")) {
                                 item.setPubDate(current.getTextContent());
