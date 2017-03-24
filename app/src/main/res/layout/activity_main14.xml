@@ -16,10 +16,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/recyclerview"
-        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/googleImgBtn"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="95dp">
+        android:layout_alignParentStart="true">
 
     </android.support.v7.widget.RecyclerView>
 
@@ -122,6 +122,61 @@
             android:layout_alignParentEnd="true" />
 
     </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout4">
+
+        <ImageView
+            app:srcCompat="@drawable/topbarcremebackgroundddd"
+            android:id="@+id/imageView3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_width="790dp"
+            android:scaleType="matrix"
+            android:layout_height="65dp" />
+
+        <ImageButton
+            app:srcCompat="@drawable/pluss"
+            android:id="@+id/imageButton"
+            android:background="#00ffffff"
+            android:scaleType="fitXY"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_alignBottom="@+id/imageView3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="7dp" />
+
+        <ImageView
+            app:srcCompat="@drawable/bestsearchbar"
+            android:id="@+id/imageView4"
+            android:background="#00ffffff"
+            android:scaleType="fitXY"
+            android:layout_width="210dp"
+            android:layout_alignBottom="@+id/imageButton"
+            android:layout_centerHorizontal="true"
+            android:layout_height="45dp" />
+
+        <ImageButton
+            app:srcCompat="@drawable/bell"
+            android:id="@+id/imageButton9"
+            android:background="#00ffffff"
+            android:scaleType="fitXY"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/imageView4"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="12dp"
+            android:layout_marginEnd="12dp" />
+
+    </RelativeLayout>
     <ImageButton
         android:id="@+id/googleImgBtn"
         android:layout_width="80dp"
@@ -129,11 +184,11 @@
         android:scaleType="fitCenter"
         android:background="#0000"
         android:padding="0dp"
-        android:layout_marginTop="9dp"
         app:srcCompat="@drawable/circlesgreen"
+        android:layout_marginTop="63dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_toLeftOf="@+id/imageButton7"
+        android:layout_toStartOf="@+id/imageButton7" />
 
     <ImageButton
         android:id="@+id/imageButton4"
