@@ -9,7 +9,7 @@
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
     android:paddingTop="0dp"
-    tools:context="com.example.liutaurasmazonas.cslogintrying.MainActivity14">
+    tools:context="com.example.liutaurasmazonas.cslogintrying.HomePageNews">
 
 
     <android.support.v7.widget.RecyclerView

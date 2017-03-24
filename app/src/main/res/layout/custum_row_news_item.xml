@@ -11,7 +11,7 @@
     android:id="@+id/cardview"
     app:cardBackgroundColor="@color/cardview_light_background"
     app:cardElevation="4dp"
-    tools:context="com.example.liutaurasmazonas.cslogintrying.MainActivity15">
+    tools:context="com.example.liutaurasmazonas.cslogintrying.customNewsItem">
 
     <RelativeLayout
         android:layout_width="match_parent"
