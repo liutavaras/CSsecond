@@ -95,6 +95,7 @@
     <string name="title_activity_notifications">NotificationsActivity</string>
     <string name="title_activity_add_profile">AddProfileActivity</string>
     <string name="title_activity_profile">ProfileActivity</string>
+    <string name="economic_calendar">Economic Calendar</string>
     <string name="passwordSaveButton" />
     <string name="title_activity_live_rates_tabs">live_rates_tabs</string>
     <string name="section_format">Hello World from section: %1$d</string>
