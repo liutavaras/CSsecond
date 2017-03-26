@@ -125,55 +125,92 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="70dp">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            app:srcCompat="@drawable/liveratesbarrrr"
-            android:id="@+id/imageView10"
-            android:layout_marginTop="65dp"
-            android:layout_height="70dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-    </RelativeLayout>
-
-    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="700dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
-        <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            app:srcCompat="@drawable/sharesbuttonnnn"
-            android:id="@+id/ibShares"
-            android:background="#00ffffff"
-            android:scaleType="fitXY"
-            android:layout_above="@+id/ibCurrencies"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
-
-        <ImageButton
-            app:srcCompat="@drawable/currenciesbuttonnnn"
-            android:id="@+id/ibCurrencies"
-            android:scaleType="fitXY"
-            android:background="#00ffffff"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginRight="93dp"
-            android:layout_marginEnd="93dp"
-            android:layout_marginBottom="77dp"
+        <TabHost
+            android:layout_width="200dip"
+            android:layout_height="300dip"
             android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="76dp"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@android:style/Widget.Material.Light.TabWidget" />
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/Shares"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Currencies"
+                        android:textSize="50dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Commodities"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/shares"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                app:srcCompat="@drawable/liveratesbarrrr"
+                android:id="@+id/imageView10"
+                android:layout_marginTop="65dp"
+                android:layout_height="70dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
     </RelativeLayout>
 
 </RelativeLayout>

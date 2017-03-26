@@ -18,24 +18,10 @@ public class LiveRatesActivity extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_live_rates);
-            final ImageButton bCurrencies = (ImageButton) findViewById(R.id.ibCurrencies);
-            final ImageButton bShares = (ImageButton) findViewById(R.id.ibShares);
             final ImageButton bSettingsBlack = (ImageButton) findViewById(R.id.ibSettingsBlack);
             final ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
             final ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
 
-            bCurrencies.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    Intent opencurrencies = new Intent(LiveRatesActivity.this,CurrenciesActivity.class);
-                    startActivity(opencurrencies);
-                }
-            });
-            bShares.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    Intent openshares = new Intent(LiveRatesActivity.this,SharesActivity.class);
-                    startActivity(openshares);
-                }
-            });
             bSettingsBlack.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     Intent opensettings = new Intent(LiveRatesActivity.this,SettingsActivity.class);

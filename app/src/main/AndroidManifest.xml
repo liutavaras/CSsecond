@@ -13,13 +13,9 @@
         <activity android:name=".LoginPage"/>
 
 
-        <activity android:name=".SettingsActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".SettingsActivity" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+
         <activity android:name=".RegisterActivity" />
         <activity android:name=".UserAreaActivity" />
         <!--
@@ -42,7 +38,13 @@
         <activity
             android:name=".AddProfileActivity"
             android:label="@string/title_activity_add_profile"/>
-        <activity android:name=".ChangePasswordActivity"/>
+        <activity android:name=".ChangePasswordActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
 
         <activity android:name=".LogOutActivity" />
         <activity
