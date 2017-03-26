@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "965170949427",
+    "firebase_url": "https://cssecond-92a2d.firebaseio.com",
+    "project_id": "cssecond-92a2d",
+    "storage_bucket": "cssecond-92a2d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965170949427:android:d494aa9abb7602c0",
+        "android_client_info": {
+          "package_name": "com.example.liutaurasmazonas.cslogintrying"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "965170949427-dhfse2sl3ejlih890s8ro8sjef0p04m9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.liutaurasmazonas.cslogintrying",
+            "certificate_hash": "db924520c54d5b53f056808b271fe9cc2f90cb31"
+          }
+        },
+        {
+          "client_id": "965170949427-ld3mmg7it86equ233qprbiddts7k43mv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXXsGJ_bRPqOQ_6JAhFPJCVNHCgguWUhc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "965170949427-ld3mmg7it86equ233qprbiddts7k43mv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
