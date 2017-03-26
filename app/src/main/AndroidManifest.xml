@@ -12,13 +12,7 @@
         android:theme="@style/AppTheme">
 
         <activity android:name=".LoginPage"/>
-        <activity android:name=".MainActivity14">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
+        <activity android:name=".MainActivity14" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".UserAreaActivity" />
@@ -53,6 +47,14 @@
         <activity android:name=".MainActivity16" />
         <activity android:name=".MainActivity17" />
         <activity android:name=".MainActivity18" />
+        <activity android:name=".WebViewActivity" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+
         <activity
             android:name=".live_rates_tabs"
             android:label="@string/title_activity_live_rates_tabs"
