@@ -12,11 +12,7 @@
         android:theme="@style/AppTheme">
 
         <activity android:name=".LoginPage">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
         </activity>
         <activity android:name=".HomePageNews">
 
@@ -46,7 +42,14 @@
         <activity
             android:name=".AddProfileActivity"
             android:label="@string/title_activity_add_profile" />
-        <activity android:name=".ChangePasswordActivity" />
+        <activity android:name=".ChangePasswordActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity android:name=".LogOutActivity" />
         <activity
             android:name=".ProfileActivity"
