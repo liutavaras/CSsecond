@@ -25,7 +25,7 @@ public class LoginPage extends AppCompatActivity {
 
    private EditText etCompanysID;
     private EditText etPassword;
-    private Button bLogin;
+    private ImageButton bLogin;
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -39,9 +39,9 @@ public class LoginPage extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
 //
-//         etCompanysID = (EditText) findViewById(R.id.etCompanysID);
-//        etPassword = (EditText) findViewById(R.id.etPassword);
-//        bLogin = (ImageButton) findViewById(R.id.bLogin);
+         etCompanysID = (EditText) findViewById(R.id.etCompanysID);
+        etPassword = (EditText) findViewById(R.id.etPassword);
+          bLogin = (ImageButton) findViewById(R.id.bLogin);
 //        TextView registerLink = (TextView) findViewById(R.id.tvRegisterHere);
 
         mAuthListener =new FirebaseAuth.AuthStateListener(){
