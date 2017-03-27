@@ -72,7 +72,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
             }
         });
     }
-
+//test please delete me
     private void setupCancelButton(){
         Button cancelButton = (Button) findViewById(R.id.bCancel);
         cancelButton.setOnClickListener(new View.OnClickListener() {
