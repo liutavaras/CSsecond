@@ -6,8 +6,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageButton;
 
-//import com.google.firebase.database.DatabaseReference;
-//import com.google.firebase.database.FirebaseDatabase;
 
 public class HomePageNews extends AppCompatActivity {
     RecyclerView recyclerView;
