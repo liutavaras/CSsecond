@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageButton;
 
+
 public class HomePageNews extends AppCompatActivity {
     RecyclerView recyclerView;
     ImageButton button;
@@ -24,6 +25,8 @@ public class HomePageNews extends AppCompatActivity {
         recyclerView= (RecyclerView) findViewById(R.id.recyclerview);
         ReadRss readRss=new ReadRss(this, recyclerView);
         readRss.execute();
+
+
     }
 
     View.OnClickListener imageButtonHandler = new View.OnClickListener() {
