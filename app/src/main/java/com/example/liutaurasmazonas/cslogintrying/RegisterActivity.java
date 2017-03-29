@@ -8,15 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.app.Activity;
-import android.app.Dialog;
-import android.app.ProgressDialog;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -34,10 +25,10 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register_page);
         final EditText etName = (EditText) findViewById(R.id.etName);
         final EditText etSurname = (EditText) findViewById(R.id.etSurname);
-        final EditText etCompanysID = (EditText) findViewById(R.id.etCompanysID);
+        final EditText etCompanysID = (EditText) findViewById(R.id.etEmail);
         final EditText etPassword = (EditText) findViewById(R.id.etPassword);
         final EditText etRepeatpassword = (EditText) findViewById(R.id.etRepeatpassword);
-        final Button bRegister = (Button) findViewById(R.id.bRegister);
+        final Button bRegister = (Button) findViewById(R.id.btnRegister);
         final TextView backtoLoginPageLink = (TextView) findViewById(R.id.tvBacktologin);
 
 
