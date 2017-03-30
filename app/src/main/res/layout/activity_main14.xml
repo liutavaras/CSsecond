@@ -40,7 +40,7 @@
     <ImageButton
         android:layout_width="90dp"
         android:layout_height="65dp"
-        app:srcCompat="@drawable/news"
+        app:srcCompat="@drawable/newbuttonblue"
         android:padding="0dp"
         android:scaleType="fitCenter"
         android:id="@+id/imageButton2"
@@ -53,7 +53,7 @@
     <ImageButton
         android:layout_width="90dp"
         android:layout_height="65dp"
-        app:srcCompat="@drawable/liverates"
+        app:srcCompat="@drawable/liveratesbuttongrey"
         android:padding="0dp"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"

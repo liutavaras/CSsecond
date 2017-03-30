@@ -37,7 +37,7 @@ public class live_rates_tabs extends AppCompatActivity {
 
         mSectionsPageAdapter = new SectionsPageAdapter(getSupportFragmentManager());
 
-        //Set up the ViewPager with the sections adpater.
+        //Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         setupViewPager(mViewPager);
 
