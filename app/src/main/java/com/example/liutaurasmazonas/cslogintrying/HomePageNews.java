@@ -1,5 +1,6 @@
 package com.example.liutaurasmazonas.cslogintrying;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
@@ -25,6 +26,29 @@ public class HomePageNews extends AppCompatActivity {
         recyclerView= (RecyclerView) findViewById(R.id.recyclerview);
         ReadRss readRss=new ReadRss(this, recyclerView);
         readRss.execute();
+
+        ImageButton bSettingsBlack = (ImageButton) findViewById(R.id.ibSettingsBlack);
+        ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
+        ImageButton bLiveRates = (ImageButton) findViewById(R.id.ibLiveRates);
+
+        bSettingsBlack.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent opensettings = new Intent(HomePageNews.this,SettingsActivity.class);
+                startActivity(opensettings);
+            }
+        });
+        bEconCalBlack.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent openeconcal = new Intent(HomePageNews.this,EconomicCalendarActivity.class);
+                startActivity(openeconcal);
+            }
+        });
+        bLiveRates.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent openliverates = new Intent(HomePageNews.this,LiveRatesActivity.class);
+                startActivity(openliverates);
+            }
+        });
 
 
     }

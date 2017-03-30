@@ -20,7 +20,6 @@
         <activity android:name=".SettingsActivity">
 
         </activity>
-        <activity android:name=".RegisterActivity" />
         <activity android:name=".FirstScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
