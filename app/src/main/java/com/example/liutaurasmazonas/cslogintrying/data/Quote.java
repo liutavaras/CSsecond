@@ -2,6 +2,10 @@ package com.example.liutaurasmazonas.cslogintrying.data;
 
 import org.json.JSONObject;
 
+import java.math.BigDecimal;
+
+import yahoofinance.Stock;
+
 /**
  * Created by Liutauras Mazonas on 3/26/2017.
  */
@@ -12,14 +16,14 @@ public class Quote implements JSONPopulator {
 
     private String Name;
     private String Symbol;
-    private int realtime_price;
-    private int Change;
-    private int realtime_chg_percent;
-    private int Volume;
-    private int PERatio;
-    private int DaysHigh;
-    private int DaysLow;
-    private String MarketCapitalization;
+    private BigDecimal realtime_price;
+    private BigDecimal Change;
+    private BigDecimal realtime_chg_percent;
+    private long Volume;
+    private BigDecimal PERatio;
+    private BigDecimal DaysHigh;
+    private BigDecimal DaysLow;
+    private BigDecimal MarketCapitalization;
 
     public String getName() {
         return Name;
@@ -29,42 +33,54 @@ public class Quote implements JSONPopulator {
         return Symbol;
     }
 
-    public int getRealtime_price() {
+    public BigDecimal getRealtime_price() {
         return realtime_price;
     }
 
-    public int getChange() {
+    public BigDecimal getChange() {
         return Change;
     }
 
-    public int getRealtime_chg_percent() {
+    public BigDecimal getRealtime_chg_percent() {
         return realtime_chg_percent;
     }
 
-    public int getVolume() {
+    public long getVolume() {
         return Volume;
     }
 
-    public int getPERatio() {
+    public BigDecimal getPERatio() {
         return PERatio;
     }
 
-    public int getDaysHigh() {
+    public BigDecimal getDaysHigh() {
         return DaysHigh;
     }
 
-    public int getDaysLow() {
+    public BigDecimal getDaysLow() {
         return DaysLow;
     }
 
-    public String getMarketCapitalization() {
+    public BigDecimal getMarketCapitalization() {
         return MarketCapitalization;
     }
 
     @Override
-    public void populate(JSONObject data) {
+    public void populate(Stock data) {
 
-    Name = data.optString("Name");
+        Name = data.getName();
+        Symbol = data.getSymbol();
+        realtime_price = data.getQuote().getPrice();
+        Change = data.getQuote().getChange();
+        realtime_chg_percent = data.getQuote().getChangeInPercent();
+        Volume = data.getQuote().getVolume();
+        PERatio = data.getStats().getPe();
+        DaysHigh = data.getQuote().getDayHigh();
+        DaysLow = data.getQuote().getDayLow();
+        MarketCapitalization = data.getStats().getMarketCap();
+
+
+    /*Name = data.optString("Name");
     Symbol = data.optString("Symbol");
     realtime_price = data.optInt("realtime_price");
     Change = data.optInt("Change");
@@ -73,7 +89,7 @@ public class Quote implements JSONPopulator {
     PERatio = data.optInt("PERatio");
     DaysHigh = data.optInt("DaysHigh");
     DaysLow = data.optInt("DaysLow");
-    MarketCapitalization = data.optString("MarketCapitalization");
+    MarketCapitalization = data.optString("MarketCapitalization");*/
 
     }
 }

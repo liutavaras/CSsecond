@@ -15,6 +15,7 @@ import com.example.liutaurasmazonas.cslogintrying.data.Quote;
 import com.example.liutaurasmazonas.cslogintrying.service.FinanceServiceCallback;
 import com.example.liutaurasmazonas.cslogintrying.service.YahooFinanceService;
 
+import org.w3c.dom.Text;
 
 
 public class LiveRatesActivity extends AppCompatActivity implements FinanceServiceCallback {
@@ -54,9 +55,10 @@ public class LiveRatesActivity extends AppCompatActivity implements FinanceServi
             shareperatioID = (TextView)findViewById(R.id.shareperatioID);
             sharedayshighID = (TextView)findViewById(R.id.sharedayshighID);
             sharedayslowID = (TextView)findViewById(R.id.sharedayslowID);
+            sharemarketcapID = (TextView) findViewById(R.id.sharemarketcapID);
 
             service = new YahooFinanceService(this);
-            service.refreshFinance("Shares");
+            //service.refreshFinance("Shares");
 
             dialog = new ProgressDialog(this);
             dialog.setMessage("Loading stock information...");
@@ -114,14 +116,14 @@ public class LiveRatesActivity extends AppCompatActivity implements FinanceServi
         dialog.hide();
 
         sharenameID.setText(quote.getName());
-        sharepriceID.setText(quote.getRealtime_price());
-        sharechangeID.setText(quote.getChange());
-        sharepercentagechangeID.setText(quote.getRealtime_chg_percent());
-        sharevolumeID.setText(quote.getVolume());
-        shareperatioID.setText(quote.getPERatio());
-        sharedayshighID.setText(quote.getDaysHigh());
-        sharedayslowID.setText(quote.getDaysLow());
-        sharemarketcapID.setText(quote.getMarketCapitalization());
+        sharepriceID.setText(quote.getRealtime_price().toString());
+        sharechangeID.setText(quote.getChange().toString());
+        sharepercentagechangeID.setText(quote.getRealtime_chg_percent().toString());
+        sharevolumeID.setText(String.format("%d", quote.getVolume()));
+        shareperatioID.setText(quote.getPERatio().toString());
+        sharedayshighID.setText(quote.getDaysHigh().toString());
+        sharedayslowID.setText(quote.getDaysLow().toString());
+        sharemarketcapID.setText(quote.getMarketCapitalization().toString());
         sharesymbolID.setText(service.getSymbol());
 
 
@@ -130,6 +132,6 @@ public class LiveRatesActivity extends AppCompatActivity implements FinanceServi
     @Override
     public void serviceFailure(Exception exception) {
         dialog.hide();
-        Toast.makeText(this, exception.getMessage(), Toast.LENGTH_LONG).show();
+        Toast.makeText(this, exception.getClass().toString(), Toast.LENGTH_LONG).show();
     }
 }
