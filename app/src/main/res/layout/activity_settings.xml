@@ -182,16 +182,17 @@
             android:layout_alignEnd="@+id/bNot" />
 
         <Button
-        android:text="ON"
-        android:layout_width="160dp"
-        android:layout_height="60dp"
-            android:backgroundTint="#003662"
             android:id="@+id/bNotOn"
-        android:textSize="30sp"
-        android:textColor="#FFFFFF"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
             android:layout_above="@+id/bChangePassword"
             android:layout_alignLeft="@+id/bNewsOn"
-            android:layout_alignStart="@+id/bNewsOn" />
+            android:layout_alignStart="@+id/bNewsOn"
+            android:backgroundTint="#003662"
+            android:text="ON"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
 
         <Button
             android:text="Dark"
@@ -208,27 +209,30 @@
             android:layout_marginEnd="8dp" />
 
         <Button
-        android:text="News"
-        android:layout_width="160dp"
-        android:layout_height="60dp"
-        android:id="@+id/bNews"
-        android:textSize="30sp"
-        android:textAllCaps="false"
-            android:layout_above="@+id/bNot"
-            android:layout_alignLeft="@+id/button3"
-            android:layout_alignStart="@+id/button3" />
-
-        <Button
-            android:text="ON"
+            android:id="@+id/bNews"
             android:layout_width="160dp"
             android:layout_height="60dp"
+            android:layout_above="@+id/bNot"
+            android:layout_alignLeft="@+id/button3"
+            android:layout_alignStart="@+id/button3"
+            android:onClick="true"
+            android:text="News"
+            android:textAllCaps="false"
+            android:textSize="30sp" />
+
+        <Button
             android:id="@+id/bNewsOn"
-            android:backgroundTint="#003662"
-            android:textSize="30sp"
-            android:textColor="#FFFFFF"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
             android:layout_above="@+id/bNotOn"
             android:layout_alignLeft="@+id/bDark"
-            android:layout_alignStart="@+id/bDark" />
+            android:layout_alignStart="@+id/bDark"
+            android:backgroundTint="#003662"
+            android:onClick="true"
+            android:text="ON"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
 
         <Button
         android:text="Notifications"

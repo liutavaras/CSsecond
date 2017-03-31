@@ -15,6 +15,17 @@
         <activity android:name=".MainActivity14"></activity>
         <activity android:name=".SettingsActivity" />
         <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginPage">
+
+        </activity>
+        <activity android:name=".HomePageNews">
+
+        </activity>
+        <activity android:name=".SettingsActivity">
+
+        </activity>
+        <activity android:name=".FirstScreen"></activity>
+        <activity android:name=".Register"></activity>
         <activity android:name=".UserAreaActivity" />
         <!--
  ATTENTION: This was auto-generated to add Google Play services to your project for
@@ -59,6 +70,7 @@
             android:label="@string/title_activity_live_rates_tabs"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+
         <activity android:name=".NewsDetails"></activity>
         <!--<activity android:name=".CurrenciesActivity" />-->
         <activity android:name=".SharesActivity" />

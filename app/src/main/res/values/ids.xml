@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="et" type="id" />
+    <item name="buttonURL" type="id" />
+    <item name="activity_main14" type="id" />
+    <item name="jsonData" type="id" />
+</resources>
