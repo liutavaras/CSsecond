@@ -33,20 +33,17 @@ public class HomePageNews extends AppCompatActivity {
 
         bSettingsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent opensettings = new Intent(HomePageNews.this,SettingsActivity.class);
-                startActivity(opensettings);
+                startActivity(new Intent(HomePageNews.this, SettingsActivity.class));
             }
         });
         bEconCalBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent openeconcal = new Intent(HomePageNews.this,WebViewActivity.class);
-                startActivity(openeconcal);
+                startActivity(new Intent(HomePageNews.this, WebViewActivity.class));
             }
         });
         bLiveRates.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent openliverates = new Intent(HomePageNews.this,LiveRatesActivity.class);
-                startActivity(openliverates);
+                startActivity(new Intent(HomePageNews.this, LiveRatesActivity.class));
             }
         });
 
