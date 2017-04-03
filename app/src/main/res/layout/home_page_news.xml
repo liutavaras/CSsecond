@@ -174,7 +174,7 @@
                 android:background="#0000"
                 android:padding="0dp"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/circlesamber" />
+                app:srcCompat="@drawable/circlesamber2" />
 
             <ImageButton
                 android:id="@+id/imageButton7"
@@ -186,7 +186,7 @@
                 android:background="#0000"
                 android:padding="0dp"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/circlesredvodafone" />
+                app:srcCompat="@drawable/circlesredvodafone2" />
 
             <ImageButton
                 android:id="@+id/googleImgBtn"
@@ -198,7 +198,7 @@
                 android:background="#0000"
                 android:padding="0dp"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/circlesgreen" />
+                app:srcCompat="@drawable/circlesgreen2" />
 
             <ImageButton
                 android:id="@+id/ambergrey"
@@ -210,7 +210,7 @@
                 android:background="#0000"
                 android:padding="0dp"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/circlesambergrey" />
+                app:srcCompat="@drawable/circlesambergrey2" />
 
             <ImageButton
                 android:id="@+id/googlegrey1"
@@ -222,7 +222,7 @@
                 android:background="#0000"
                 android:padding="0dp"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/circlesgooglegrey" />
+                app:srcCompat="@drawable/circlesgooglegrey2" />
 
             <ImageButton
                 android:id="@+id/greygoogle"
