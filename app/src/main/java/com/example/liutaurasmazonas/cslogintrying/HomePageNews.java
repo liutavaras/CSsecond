@@ -47,7 +47,6 @@ public class HomePageNews extends AppCompatActivity {
             }
         });
 
-
     }
 
     View.OnClickListener imageButtonHandler = new View.OnClickListener() {

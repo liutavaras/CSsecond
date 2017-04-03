@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -59,7 +60,29 @@ public class LiveRatesActivity extends AppCompatActivity implements Response.Lis
         PERatioText2 = (TextView) findViewById(R.id.PERatioTextView2);
         MarketCapText2 = (TextView) findViewById(R.id.MarketCapTextView2);
         GetRates = (Button) findViewById(R.id.Sentbutton);
+
+        ImageButton bSettingsBlack = (ImageButton) findViewById(R.id.ibSettingsBlack);
+        ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
+        ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
+
+        bSettingsBlack.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(LiveRatesActivity.this, SettingsActivity.class));
+            }
+        });
+        bEconCalBlack.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(LiveRatesActivity.this, WebViewActivity.class));
+            }
+        });
+        bNewsBlack.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(LiveRatesActivity.this, HomePageNews.class));
+            }
+        });
     }
+
+
 
     @Override
     protected void onStart() {
