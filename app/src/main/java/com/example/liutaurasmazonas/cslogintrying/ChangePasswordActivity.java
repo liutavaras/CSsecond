@@ -21,32 +21,36 @@ public class ChangePasswordActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_password);
-        final ImageButton bSettingsBlack = (ImageButton) findViewById(R.id.ibSettingsBlack);
-        final ImageButton bLiveRatesBlack = (ImageButton) findViewById(R.id.ibLiveRatesBlack);
-        final ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
-        final ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
+        ImageButton bSettingsBlack = (ImageButton) findViewById(R.id.ibSettingsBlack);
+        ImageButton bLiveRatesBlack = (ImageButton) findViewById(R.id.ibLiveRatesBlack);
+        ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
+        ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
 
         bLiveRatesBlack.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
                 Intent openliverates = new Intent(ChangePasswordActivity.this, LiveRatesActivity.class);
                 startActivity(openliverates);
             }
         });
         bSettingsBlack.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
                 Intent opensettings = new Intent(ChangePasswordActivity.this, SettingsActivity.class);
                 startActivity(opensettings);
             }
         });
         bEconCalBlack.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
                 Intent openeconcal = new Intent(ChangePasswordActivity.this, EconomicCalendarActivity.class);
                 startActivity(openeconcal);
             }
         });
         bNewsBlack.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
-                Intent openhome = new Intent(ChangePasswordActivity.this, HomeActivity.class);
+                Intent openhome = new Intent(ChangePasswordActivity.this, HomePageNews.class);
                 startActivity(openhome);
             }
         });

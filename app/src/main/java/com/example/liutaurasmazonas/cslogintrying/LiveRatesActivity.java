@@ -44,7 +44,7 @@ public class LiveRatesActivity extends AppCompatActivity implements FinanceServi
             final ImageButton bSettingsBlack = (ImageButton) findViewById(R.id.ibSettingsBlack);
             final ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
             final ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
-            //My shares attribute naming starts here...//
+            //My SharesActivity attribute naming starts here...//
 
             sharenameID = (TextView)findViewById(R.id.sharenameID);
             sharesymbolID = (TextView)findViewById(R.id.sharesymbolID);
