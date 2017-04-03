@@ -10,23 +10,20 @@
         android:label="Uptick"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity android:name=".LoginPage"/>
-        <activity android:name=".SettingsActivity"/>
-        <activity android:name=".HomePageNews"/>
-        <activity android:name=".FirstScreen">
+        <activity android:name=".SettingsActivity">
+        </activity>
+        <activity android:name=".HomePageNews">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Register"/>
+        <activity android:name=".FirstScreen"/>
+        <activity android:name=".Register" />
         <activity android:name=".UserAreaActivity" />
-        <!--
- ATTENTION: This was auto-generated to add Google Play services to your project for
-     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
-        -->
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -39,8 +36,7 @@
             android:name=".NotificationsActivity"
             android:label="@string/title_activity_notifications"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".LiveRatesActivity">
-        </activity>
+        <activity android:name=".LiveRatesActivity"/>
         <activity
             android:name=".AddProfileActivity"
             android:label="@string/title_activity_add_profile" />
@@ -55,6 +51,11 @@
         <activity android:name=".MainActivity16" />
         <activity android:name=".MainActivity17" />
         <activity android:name=".MainActivity18">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".live_rates_tabs"

@@ -100,10 +100,10 @@
     <string name="title_activity_live_rates_tabs">live_rates_tabs</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string-array name="spinner_options">
-        <item name ="Client_1">Client 1</item>
-        <item name ="Client_2">Client 2</item>
-        <item name ="Client_3">Client 3</item>
-        <item name ="Client_4">Client 4</item>
-        <item name ="Client_5">Client 5</item>
+        <item name="Client_1">Client 1</item>
+        <item name="Client_2">Client 2</item>
+        <item name="Client_3">Client 3</item>
+        <item name="Client_4">Client 4</item>
+        <item name="Client_5">Client 5</item>
     </string-array>
 </resources>

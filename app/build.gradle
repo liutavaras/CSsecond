@@ -36,6 +36,7 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    compile files('lib/YahooFinanceAPI-3.6.0.jar')
     compile 'com.android.support.constraint:constraint-layout:1.0.1'
     compile 'com.google.android.gms:play-services-appindexing:9.8.0'
     compile 'com.android.support:appcompat-v7:24.2.1'
@@ -52,6 +53,5 @@ dependencies {
     compile 'com.firebase:firebase-client-android:2.5.2'
     compile 'com.google.firebase:firebase-core:9.8.0'
     testCompile 'junit:junit:4.12'
-    compile files('lib/YahooFinanceAPI-3.6.0.jar')
 }
 apply plugin: 'com.google.gms.google-services'
