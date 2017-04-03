@@ -3,6 +3,7 @@ package com.example.liutaurasmazonas.cslogintrying;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -14,8 +15,17 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.EmailAuthProvider;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 
 public class ChangePasswordActivity extends AppCompatActivity {
+
+    private static final String TAG ="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +70,21 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
 
     }
+
+
+
+
+//    Change the password - Joe
+
+   FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+    AuthCredential credential = EmailAuthProvider.getCredential("user@example.com", "password1234");
+
+
+
+
+
+
     private void setupSaveButton(){
         Button saveButton = (Button) findViewById(R.id.bSave);
         saveButton.setOnClickListener(new View.OnClickListener() {
@@ -75,7 +100,34 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
             }
         });
+
+
+        user.reauthenticate(credential).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                EditText newPass;
+                newPass = (EditText) findViewById(R.id.etNewPasswordBox);
+
+                if (task.isSuccessful()) {
+                    user.updatePassword(String.valueOf(newPass)).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()) {
+                                Log.d(TAG, "Password updated");
+                            } else {
+                                Log.d(TAG, "Error password not updated");
+                            }
+                        }
+                    });
+                } else {
+                    Log.d(TAG, "Error auth failed");
+                }
+            }
+        });
+
+
     }
+
 //test please delete me and again and again
     private void setupCancelButton(){
         Button cancelButton = (Button) findViewById(R.id.bCancel);
