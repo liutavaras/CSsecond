@@ -39,7 +39,7 @@ public class HomePageNews extends AppCompatActivity {
         });
         bEconCalBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent openeconcal = new Intent(HomePageNews.this,EconomicCalendarActivity.class);
+                Intent openeconcal = new Intent(HomePageNews.this,WebViewActivity.class);
                 startActivity(openeconcal);
             }
         });
