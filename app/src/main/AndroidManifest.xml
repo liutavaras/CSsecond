@@ -55,11 +55,6 @@
         <activity android:name=".MainActivity16" />
         <activity android:name=".MainActivity17" />
         <activity android:name=".MainActivity18">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".live_rates_tabs"
