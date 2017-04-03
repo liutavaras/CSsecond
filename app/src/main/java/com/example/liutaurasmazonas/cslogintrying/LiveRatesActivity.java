@@ -17,6 +17,8 @@ import com.example.liutaurasmazonas.cslogintrying.service.YahooFinanceService;
 
 import org.w3c.dom.Text;
 
+import java.util.Set;
+
 
 public class LiveRatesActivity extends AppCompatActivity implements FinanceServiceCallback {
 
@@ -68,20 +70,17 @@ public class LiveRatesActivity extends AppCompatActivity implements FinanceServi
 
             bSettingsBlack.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    Intent opensettings = new Intent(LiveRatesActivity.this,SettingsActivity.class);
-                    startActivity(opensettings);
+                    startActivity(new Intent(LiveRatesActivity.this, SettingsActivity.class));
                 }
             });
             bEconCalBlack.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    Intent openeconcal = new Intent(LiveRatesActivity.this,EconomicCalendarActivity.class);
-                    startActivity(openeconcal);
+                    startActivity(new Intent(LiveRatesActivity.this, EconomicCalendarActivity.class));
                 }
             });
             bNewsBlack.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    Intent openhome = new Intent(LiveRatesActivity.this,HomeActivity.class);
-                    startActivity(openhome);
+                    startActivity(new Intent(LiveRatesActivity.this, HomePageNews.class));
                 }
             });
         }
