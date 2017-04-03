@@ -14,13 +14,14 @@
         <activity android:name=".SettingsActivity">
         </activity>
         <activity android:name=".HomePageNews">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <activity android:name=".FirstScreen"/>
+        <activity android:name=".FirstScreen">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity android:name=".Register" />
         <activity android:name=".UserAreaActivity" />
 
@@ -51,16 +52,6 @@
         <activity android:name=".MainActivity16" />
         <activity android:name=".MainActivity17" />
         <activity android:name=".MainActivity18">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".live_rates_tabs"
-            android:label="@string/title_activity_live_rates_tabs"
-            android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
         <activity android:name=".NewsDetails"/>

@@ -28,27 +28,28 @@ public class HomePageNews extends AppCompatActivity {
         readRss.execute();
 
         ImageButton bSettingsBlack = (ImageButton) findViewById(R.id.ibSettingsBlack);
-        ImageButton bLiveRatesBlack = (ImageButton) findViewById(R.id.ibLiveRatesBlack);
         ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
+        ImageButton bLiveRates = (ImageButton) findViewById(R.id.ibLiveRates);
 
-        bLiveRatesBlack.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent openliverates = new Intent(HomePageNews.this, LiveRatesActivity.class);
-                startActivity(openliverates);
-            }
-        });
         bSettingsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent opensettings = new Intent(HomePageNews.this, SettingsActivity.class);
+                Intent opensettings = new Intent(HomePageNews.this,SettingsActivity.class);
                 startActivity(opensettings);
             }
         });
         bEconCalBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent openeconcal = new Intent(HomePageNews.this, EconomicCalendarActivity.class);
+                Intent openeconcal = new Intent(HomePageNews.this,EconomicCalendarActivity.class);
                 startActivity(openeconcal);
             }
         });
+        bLiveRates.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent openliverates = new Intent(HomePageNews.this,LiveRatesActivity.class);
+                startActivity(openliverates);
+            }
+        });
+
 
     }
 
