@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_add_profile"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,5 +10,421 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.liutaurasmazonas.cslogintrying.AddProfileActivity">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView4"
+        android:layout_marginTop="12dp"
+        app:srcCompat="@drawable/thindragos" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:isScrollContainer="true"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:textSize="30sp"
+        tools:hint="Full Name.."
+        tools:textColor="?attr/actionModeSplitBackground"
+        android:layout_below="@+id/imageView3"
+        android:layout_toLeftOf="@+id/ibSettingsBlack"
+        android:layout_toStartOf="@+id/ibSettingsBlack" />
+
+    <ImageView
+        app:srcCompat="@drawable/topbarcremebackgroundddd"
+        android:id="@+id/imageView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_width="790dp"
+        android:scaleType="matrix"
+        android:layout_height="65dp" />
+
+
+    <ImageView
+        app:srcCompat="@drawable/bestsearchbar"
+        android:id="@+id/imageView4"
+        android:background="#00ffffff"
+        android:scaleType="fitXY"
+        android:layout_width="210dp"
+        android:layout_height="45dp"
+        android:layout_alignBottom="@+id/imageView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="9dp" />
+
+    <ImageButton
+        app:srcCompat="@drawable/bell"
+        android:id="@+id/imageButton9"
+        android:background="#00ffffff"
+        android:scaleType="fitXY"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/imageView4"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="12dp"
+        android:layout_marginEnd="12dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColorHint="@color/colorPrimaryDark"
+        tools:hint="Career.."
+        tools:textSize="24sp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3" />
+
+    <ImageButton
+        app:srcCompat="@drawable/pluss"
+        android:id="@+id/imageButton"
+        android:background="#00ffffff"
+        android:scaleType="fitXY"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_alignBottom="@+id/imageView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="7dp" />
+
+    <ImageButton
+        app:srcCompat="@drawable/newsbutton"
+        android:scaleType="fitEnd"
+        android:background="#00ffffff"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/ibNewsBlack" />
+
+    <ImageButton
+        app:srcCompat="@drawable/economiccalendarbuttongrey"
+        android:id="@+id/ibEconCalBlack"
+        android:background="#00ffffff"
+        android:scaleType="fitEnd"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:cropToPadding="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="90dp"
+        android:layout_marginStart="90dp" />
+
+    <ImageButton
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:srcCompat="@drawable/liveratesbuttongrey"
+        android:id="@+id/ibLiveRates"
+        android:background="#00ffffff"
+        android:scaleType="fitEnd"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/ibEconCalBlack"
+        android:layout_toEndOf="@+id/ibEconCalBlack" />
+
+    <ImageButton
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:srcCompat="@drawable/settingsbuttongrey"
+        android:id="@+id/ibSettingsBlack"
+        android:background="#00ffffff"
+        android:scaleType="fitEnd"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/thindragos"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageView5">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout6"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true">
+
+                <CheckBox
+                    android:id="@+id/nfRenewableEnergy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Renewable Energy"
+                    android:layout_alignBaseline="@+id/nfMedicine"
+                    android:layout_alignBottom="@+id/nfMedicine"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+                <CheckBox
+                    android:id="@+id/nfTechnology"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/News_Filtering_Save"
+                    android:layout_marginTop="9dp"
+                    android:text="Technology" />
+
+                <CheckBox
+                    android:id="@+id/nfMedicine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medicine"
+                    android:layout_alignBaseline="@+id/nfTechnology"
+                    android:layout_alignBottom="@+id/nfTechnology"
+                    android:layout_toRightOf="@+id/nfTechnology"
+                    android:layout_toEndOf="@+id/nfTechnology"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginStart="7dp" />
+
+                <CheckBox
+                    android:id="@+id/nfGoogle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Google"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <Button
+                    android:id="@+id/News_Filtering_Save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/News_Filtering"
+                    android:layout_alignBottom="@+id/News_Filtering"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:text="Save"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/nfTesla"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tesla"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignLeft="@+id/nfRenewableEnergy"
+                    android:layout_alignStart="@+id/nfRenewableEnergy" />
+
+                <CheckBox
+                    android:id="@+id/cfNovartis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Novartis"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignLeft="@+id/nfMedicine"
+                    android:layout_alignStart="@+id/nfMedicine" />
+
+                <TextView
+                    android:id="@+id/News_Filtering"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="News Filtering"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="24sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout7"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_below="@+id/relativeLayout6"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <CheckBox
+                    android:id="@+id/lrsAAPL"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:text="Apple"
+                    android:layout_alignTop="@+id/lrsFB"
+                    android:layout_toRightOf="@+id/lrsFB"
+                    android:layout_toEndOf="@+id/lrsFB" />
+
+                <Button
+                    android:id="@+id/Live_Rates_Filtering_Save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/Live_Rates_Filtering"
+                    android:layout_alignBottom="@+id/Live_Rates_Filtering"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:text="Save"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/lrsFB"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/Live_Rates_Filtering_Save"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toEndOf="@+id/Shares"
+                    android:layout_toRightOf="@+id/Shares"
+                    android:text="Facebook" />
+
+                <TextView
+                    android:id="@+id/Live_Rates_Filtering"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView7"
+                    android:layout_marginTop="8dp"
+                    android:text="Live Rates Filtering"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="24sp" />
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/thindragos" />
+
+                <TextView
+                    android:id="@+id/Shares"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/lrsFB"
+                    android:layout_alignBottom="@+id/lrsFB"
+                    android:text="Shares:"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/relativeLayout7"
+                android:layout_marginTop="10dp">
+
+                <CheckBox
+                    android:id="@+id/lrcuGBPEUR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignBaseline="@+id/Currencies"
+                    android:layout_alignBottom="@+id/Currencies"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/lrcuGBPUSD"
+                    android:layout_toRightOf="@+id/lrcuGBPUSD"
+                    android:text="GBP/EUR" />
+
+                <CheckBox
+                    android:id="@+id/lrcoSILVER"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:layout_alignBaseline="@+id/lrcoGOLD"
+                    android:layout_alignBottom="@+id/lrcoGOLD"
+                    android:layout_toEndOf="@+id/lrcoGOLD"
+                    android:layout_toRightOf="@+id/lrcoGOLD"
+                    android:text="Silver" />
+
+                <CheckBox
+                    android:id="@+id/lrcoGOLD"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:text="Gold"
+                    android:layout_alignTop="@+id/Commodities"
+                    android:layout_alignRight="@+id/lrcuGBPUSD"
+                    android:layout_alignEnd="@+id/lrcuGBPUSD" />
+
+                <TextView
+                    android:id="@+id/Commodities"
+                    android:layout_width="110dp"
+                    android:layout_height="30dp"
+                    android:text="Commodities:"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    android:layout_below="@+id/lrcuGBPUSD"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:id="@+id/Currencies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Currencies:"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/lrcuGBPUSD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignBaseline="@+id/Currencies"
+                    android:layout_alignBottom="@+id/Currencies"
+                    android:layout_toEndOf="@+id/Indicies"
+                    android:layout_toRightOf="@+id/Indicies"
+                    android:text="GBP/USD" />
+
+                <TextView
+                    android:id="@+id/Indicies"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="9dp"
+                    android:text="Indicies:"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    android:layout_below="@+id/Commodities"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <CheckBox
+                    android:id="@+id/lriNSDQ"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_alignTop="@+id/Indicies"
+                    android:layout_toEndOf="@+id/Commodities"
+                    android:layout_toRightOf="@+id/Commodities"
+                    android:text="NSDAQ" />
+
+                <CheckBox
+                    android:id="@+id/lriSP500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/lrcuGBPEUR"
+                    android:layout_alignStart="@+id/lrcuGBPEUR"
+                    android:layout_alignTop="@+id/lriNSDQ"
+                    android:text="S and P" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
 
 </RelativeLayout>
