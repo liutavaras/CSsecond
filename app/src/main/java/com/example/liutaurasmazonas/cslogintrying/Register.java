@@ -1,5 +1,4 @@
 package com.example.liutaurasmazonas.cslogintrying;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -15,7 +14,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class LoginPage extends AppCompatActivity {
+public class Register extends AppCompatActivity {
 
     private EditText etEmail;
     private EditText etPassword;
@@ -23,30 +22,29 @@ public class LoginPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_page);
+        setContentView(R.layout.activity_register_page);
         etEmail = (EditText) findViewById(R.id.etEmail);
         etPassword = (EditText) findViewById(R.id.etPassword);
         firebaseAuth = FirebaseAuth.getInstance();
     }
+    public void btnRegisterUser_Click(View v) {
 
-    public void btnUserLogin_Click(View v) {
-        final ProgressDialog progressDialog = ProgressDialog.show(LoginPage.this, "Please wait...", "Proccessing...", true);
-
-        (firebaseAuth.signInWithEmailAndPassword(etEmail.getText().toString(), etPassword.getText().toString()))
+        final ProgressDialog progressDialog = ProgressDialog.show(Register.this, "Please wait...", "Processing...", true);
+        (firebaseAuth.createUserWithEmailAndPassword(etEmail.getText().toString(), etPassword.getText().toString()))
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         progressDialog.dismiss();
 
                         if (task.isSuccessful()) {
-                            Toast.makeText(LoginPage.this, "Login successful", Toast.LENGTH_LONG).show();
-                            Intent i = new Intent(LoginPage.this, HomePageNews.class);
-                            i.putExtra("Email", firebaseAuth.getCurrentUser().getEmail());
+                            Toast.makeText(Register.this, "Registration successful", Toast.LENGTH_LONG).show();
+                            Intent i = new Intent(Register.this, LoginPage.class);
                             startActivity(i);
-                        } else {
+                        }
+                        else
+                        {
                             Log.e("ERROR", task.getException().toString());
-                            Toast.makeText(LoginPage.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
-
+                            Toast.makeText(Register.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
                         }
                     }
                 });

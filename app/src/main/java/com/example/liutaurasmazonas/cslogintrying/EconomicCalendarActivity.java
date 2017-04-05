@@ -1,8 +1,11 @@
 package com.example.liutaurasmazonas.cslogintrying;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -28,6 +31,31 @@ public class EconomicCalendarActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_economic_calendar);
+
+        //navigation
+        ImageButton bSettingsBlack = (ImageButton) findViewById(R.id.ibSettingsBlack);
+        ImageButton bhome = (ImageButton) findViewById(R.id.ibNewsBlack);
+        ImageButton bLiveRates = (ImageButton) findViewById(R.id.ibLiveRates);
+
+        bSettingsBlack.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent opensettings = new Intent(EconomicCalendarActivity.this,SettingsActivity.class);
+                startActivity(opensettings);
+            }
+        });
+        bhome.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent openhome = new Intent(EconomicCalendarActivity.this,HomePageNews.class);
+                startActivity(openhome);
+            }
+        });
+        bLiveRates.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent openliverates = new Intent(EconomicCalendarActivity.this,LiveRatesActivity.class);
+                startActivity(openliverates);
+            }
+        });
+
         requestQueue = Volley.newRequestQueue(this);
         results = (TextView) findViewById(R.id.jsonData);
         JsonObjectRequest getRequest = new JsonObjectRequest(
