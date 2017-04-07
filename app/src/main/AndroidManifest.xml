@@ -37,10 +37,10 @@
             android:name=".NotificationsActivity"
             android:label="@string/title_activity_notifications"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".LiveRatesActivity">
-        </activity>
-        <activity android:name=".AddProfileActivity">
-        </activity>
+        <activity android:name=".LiveRatesActivity"/>
+        <activity
+            android:name=".AddProfileActivity"
+            android:label="@string/title_activity_add_profile" />
         <activity android:name=".ChangePasswordActivity" />
         <activity android:name=".LogOutActivity" />
         <activity
@@ -61,6 +61,7 @@
 
         </activity>
         <!--<activity android:name=".CurrenciesActivity" />-->
+        <activity android:name=".SharesActivity" />
     </application>
 
 </manifest>
