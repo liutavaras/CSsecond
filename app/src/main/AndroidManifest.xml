@@ -15,7 +15,13 @@
         </activity>
         <activity android:name=".HomePageNews">
         </activity>
-        <activity android:name=".FirstScreen"/>
+        <activity android:name=".FirstScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".Register" />
         <activity android:name=".UserAreaActivity" />
 
@@ -31,13 +37,9 @@
             android:name=".NotificationsActivity"
             android:label="@string/title_activity_notifications"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".LiveRatesActivity"></activity>
+        <activity android:name=".LiveRatesActivity">
+        </activity>
         <activity android:name=".AddProfileActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
         </activity>
         <activity android:name=".ChangePasswordActivity" />
         <activity android:name=".LogOutActivity" />

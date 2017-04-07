@@ -87,7 +87,7 @@ public class LiveRatesActivity extends AppCompatActivity implements Response.Lis
     @Override
     protected void onStart() {
         super.onStart();
-        // Instantiate the RequestQueue.
+
         mQueue = CustomVolleyRequestQueue.getInstance(this.getApplicationContext())
                 .getRequestQueue();
         String url = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22FB%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=";//"http://httpbin.org/get?site=code&network=tutsplus";
@@ -97,7 +97,7 @@ public class LiveRatesActivity extends AppCompatActivity implements Response.Lis
         nQueue = CustomVolleyRequestQueue.getInstance(this.getApplicationContext())
                 .getRequestQueue();
         String url2 = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22YHOO%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=";//"http://httpbin.org/get?site=code&network=tutsplus";
-        final CustomJSONObjectRequest jsonRequest2 = new CustomJSONObjectRequest(Request.Method.GET, url2, new JSONObject(), this, this);
+        final CustomJSONObjectRequest jsonRequest2 = new CustomJSONObjectRequest(Request.Method.GET, url, new JSONObject(), this, this);
         jsonRequest2.setTag(REQUEST_TAG2);
 
         GetRates.setOnClickListener(new View.OnClickListener() {
@@ -284,7 +284,6 @@ public class LiveRatesActivity extends AppCompatActivity implements Response.Lis
         }
     }
 
-    /** Called when the user clicks the Send button */
     public void NotificationPageRequest(View view) {
         Intent intent = new Intent(this, LiveRatesActivity.class);
         startActivity(intent);
