@@ -1,136 +1,295 @@
 package com.example.liutaurasmazonas.cslogintrying;
 
-import android.app.ProgressDialog;
+
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.liutaurasmazonas.cslogintrying.data.Quote;
-import com.example.liutaurasmazonas.cslogintrying.service.FinanceServiceCallback;
-import com.example.liutaurasmazonas.cslogintrying.service.YahooFinanceService;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
 
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.w3c.dom.Text;
 
-import java.util.Set;
+
+public class LiveRatesActivity extends AppCompatActivity implements Response.Listener,
+        Response.ErrorListener {
+    public static final String REQUEST_TAG = "LiveRatesActivity";
+    private TextView LastTradePriceOnlyText;
+    private TextView SymbolText;
+    private TextView NameText;
+    private Button GetRates;
+    private RequestQueue mQueue;
+
+    public static final String REQUEST_TAG2 = "LiveRatesActivity";
+    private TextView LastTradePriceOnlyText2;
+    private TextView SymbolText2;
+    private TextView NameText2;
+    private TextView ChangeText2;
+    private TextView PercentageChangeText2;
+    private TextView DaysLowText2;
+    private TextView DaysHighText2;
+    private TextView AvgVolumeText2;
+    private TextView PERatioText2;
+    private TextView MarketCapText2;
+    private RequestQueue nQueue;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_live_rates);
+
+        LastTradePriceOnlyText = (TextView) findViewById(R.id.ResultsTextView);
+        SymbolText = (TextView) findViewById(R.id.SymbolTextView);
+        NameText = (TextView) findViewById(R.id.NameTextView);
+        LastTradePriceOnlyText2 = (TextView) findViewById(R.id.ResultsTextView2);
+        SymbolText2 = (TextView) findViewById(R.id.SymbolTextView2);
+        NameText2 = (TextView) findViewById(R.id.NameTextView2);
+        ChangeText2 = (TextView) findViewById(R.id.ChangeTextView2);
+        PercentageChangeText2 = (TextView) findViewById(R.id.PercentageChangeTextView2);
+        DaysLowText2 = (TextView) findViewById(R.id.DaysLowTextView2);
+        DaysHighText2 = (TextView) findViewById(R.id.DaysHighTextView2);
+        AvgVolumeText2 = (TextView) findViewById(R.id.AvgVolumeTextView2);
+        PERatioText2 = (TextView) findViewById(R.id.PERatioTextView2);
+        MarketCapText2 = (TextView) findViewById(R.id.MarketCapTextView2);
+        GetRates = (Button) findViewById(R.id.Sentbutton);
+
+        ImageButton bSettingsBlack = (ImageButton) findViewById(R.id.ibSettingsBlack);
+        ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
+        ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
+
+        bSettingsBlack.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(LiveRatesActivity.this, SettingsActivity.class));
+            }
+        });
+        bEconCalBlack.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(LiveRatesActivity.this, WebViewActivity.class));
+            }
+        });
+        bNewsBlack.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(LiveRatesActivity.this, HomePageNews.class));
+            }
+        });
+    }
 
 
-public class LiveRatesActivity extends AppCompatActivity implements FinanceServiceCallback {
 
-    private TextView sharenameID;
-    private TextView sharesymbolID;
-    private TextView sharepriceID;
-    private TextView sharechangeID;
-    private TextView sharepercentagechangeID;
-    private TextView sharevolumeID;
-    private TextView shareperatioID;
-    private TextView sharedayshighID;
-    private TextView sharedayslowID;
-    private TextView sharemarketcapID;
+    @Override
+    protected void onStart() {
+        super.onStart();
+        // Instantiate the RequestQueue.
+        mQueue = CustomVolleyRequestQueue.getInstance(this.getApplicationContext())
+                .getRequestQueue();
+        String url = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22FB%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=";//"http://httpbin.org/get?site=code&network=tutsplus";
+        final CustomJSONObjectRequest jsonRequest = new CustomJSONObjectRequest(Request.Method.GET, url, new JSONObject(), this, this);
+        jsonRequest.setTag(REQUEST_TAG);
 
-    private YahooFinanceService service;
-    private ProgressDialog dialog;
+        nQueue = CustomVolleyRequestQueue.getInstance(this.getApplicationContext())
+                .getRequestQueue();
+        String url2 = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22YHOO%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=";//"http://httpbin.org/get?site=code&network=tutsplus";
+        final CustomJSONObjectRequest jsonRequest2 = new CustomJSONObjectRequest(Request.Method.GET, url2, new JSONObject(), this, this);
+        jsonRequest2.setTag(REQUEST_TAG2);
 
+        GetRates.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mQueue.add(jsonRequest);
+                nQueue.add(jsonRequest2);
+            }
+        });
+    }
 
-
-
-
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_live_rates);
-            final ImageButton bSettingsBlack = (ImageButton) findViewById(R.id.ibSettingsBlack);
-            final ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
-            final ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
-            //My SharesActivity attribute naming starts here...//
-
-            sharenameID = (TextView)findViewById(R.id.sharenameID);
-            sharesymbolID = (TextView)findViewById(R.id.sharesymbolID);
-            sharepriceID = (TextView)findViewById(R.id.sharepriceID);
-            sharechangeID = (TextView)findViewById(R.id.sharechangeID);
-            sharepercentagechangeID = (TextView)findViewById(R.id.sharepercentagechangeID);
-            sharevolumeID = (TextView)findViewById(R.id.sharevolumeID);
-            shareperatioID = (TextView)findViewById(R.id.shareperatioID);
-            sharedayshighID = (TextView)findViewById(R.id.sharedayshighID);
-            sharedayslowID = (TextView)findViewById(R.id.sharedayslowID);
-            sharemarketcapID = (TextView) findViewById(R.id.sharemarketcapID);
-
-            service = new YahooFinanceService(this);
-            //service.refreshFinance("Shares");
-
-            dialog = new ProgressDialog(this);
-            dialog.setMessage("Loading stock information...");
-            dialog.show();
-
-            service.refreshFinance("GOOGL");
-
-            bSettingsBlack.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    startActivity(new Intent(LiveRatesActivity.this, SettingsActivity.class));
-                }
-            });
-            bEconCalBlack.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    startActivity(new Intent(LiveRatesActivity.this, EconomicCalendarActivity.class));
-                }
-            });
-            bNewsBlack.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    startActivity(new Intent(LiveRatesActivity.this, HomePageNews.class));
-                }
-            });
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (mQueue != null) {
+            mQueue.cancelAll(REQUEST_TAG);
         }
-
-    //I create Logout feature here. Ksenia
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch(item.getItemId()){
-            case R.id.menuLogout:
-
-                /* We need to create user in order to clear data
-                LoginPage.getInstance(this).logout();
-
-                */
-
-
-                break;
+        else if (nQueue !=null) {
+            nQueue.cancelAll(REQUEST_TAG2);
         }
-        return true;
-
     }
 
     @Override
-    public void serviceSuccess(Quote quote) {
-        dialog.hide();
-
-        sharenameID.setText(quote.getName());
-        sharepriceID.setText(quote.getRealtime_price().toString());
-        sharechangeID.setText(quote.getChange().toString());
-        sharepercentagechangeID.setText(quote.getRealtime_chg_percent().toString());
-        sharevolumeID.setText(String.format("%d", quote.getVolume()));
-        shareperatioID.setText(quote.getPERatio().toString());
-        sharedayshighID.setText(quote.getDaysHigh().toString());
-        sharedayslowID.setText(quote.getDaysLow().toString());
-        sharemarketcapID.setText(quote.getMarketCapitalization().toString());
-        sharesymbolID.setText(service.getSymbol());
-
-
+    public void onErrorResponse(VolleyError error) {
+        LastTradePriceOnlyText.setText(error.getMessage());
+        LastTradePriceOnlyText2.setText(error.getMessage());
     }
 
     @Override
-    public void serviceFailure(Exception exception) {
-        dialog.hide();
-        Toast.makeText(this, exception.getClass().toString(), Toast.LENGTH_LONG).show();
+    public void onResponse(Object response) {
+        LastTradePriceOnlyText.setText("Response is: " + response);
+        try {
+            JSONObject response2 = ((JSONObject) response).getJSONObject("query");
+            response2 = ((JSONObject) response2).getJSONObject("results");
+            response2 = ((JSONObject) response2).getJSONObject("quote");
+            String displayed_Text = ((JSONObject) response2).getString("LastTradePriceOnly");
+            LastTradePriceOnlyText.setText(displayed_Text);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        {
+            SymbolText.setText("Response is: " + response);
+            try {
+                JSONObject response2 = ((JSONObject) response).getJSONObject("query");
+                response2 = ((JSONObject) response2).getJSONObject("results");
+                response2 = ((JSONObject) response2).getJSONObject("quote");
+                String displayed_Text = ((JSONObject) response2).getString("symbol");
+                SymbolText.setText(displayed_Text);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        {
+            NameText.setText("Response is: " + response);
+            try {
+                JSONObject response2 = ((JSONObject) response).getJSONObject("query");
+                response2 = ((JSONObject) response2).getJSONObject("results");
+                response2 = ((JSONObject) response2).getJSONObject("quote");
+                String displayed_Text = ((JSONObject) response2).getString("Name");
+                NameText.setText(displayed_Text);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        {
+            NameText2.setText("Response is: " + response);
+            try {
+                JSONObject response2 = ((JSONObject) response).getJSONObject("query");
+                response2 = ((JSONObject) response2).getJSONObject("results");
+                response2 = ((JSONObject) response2).getJSONObject("quote");
+                String displayed_Text = ((JSONObject) response2).getString("Name");
+                NameText2.setText(displayed_Text);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        {
+            SymbolText2.setText("Response is: " + response);
+            try {
+                JSONObject response2 = ((JSONObject) response).getJSONObject("query");
+                response2 = ((JSONObject) response2).getJSONObject("results");
+                response2 = ((JSONObject) response2).getJSONObject("quote");
+                String displayed_Text = ((JSONObject) response2).getString("symbol");
+                SymbolText2.setText(displayed_Text);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        {
+            LastTradePriceOnlyText2.setText("Response is: " + response);
+            try {
+                JSONObject response2 = ((JSONObject) response).getJSONObject("query");
+                response2 = ((JSONObject) response2).getJSONObject("results");
+                response2 = ((JSONObject) response2).getJSONObject("quote");
+                String displayed_Text = ((JSONObject) response2).getString("LastTradePriceOnly");
+                LastTradePriceOnlyText2.setText(displayed_Text);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        {
+            ChangeText2.setText("Response is: " + response);
+            try {
+                JSONObject response2 = ((JSONObject) response).getJSONObject("query");
+                response2 = ((JSONObject) response2).getJSONObject("results");
+                response2 = ((JSONObject) response2).getJSONObject("quote");
+                String displayed_Text = ((JSONObject) response2).getString("Change");
+                ChangeText2.setText(displayed_Text);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        {
+            PercentageChangeText2.setText("Response is: " + response);
+            try {
+                JSONObject response2 = ((JSONObject) response).getJSONObject("query");
+                response2 = ((JSONObject) response2).getJSONObject("results");
+                response2 = ((JSONObject) response2).getJSONObject("quote");
+                String displayed_Text = ((JSONObject) response2).getString("PercentChange");
+                PercentageChangeText2.setText(displayed_Text);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        {
+            DaysHighText2.setText("Response is: " + response);
+            try {
+                JSONObject response2 = ((JSONObject) response).getJSONObject("query");
+                response2 = ((JSONObject) response2).getJSONObject("results");
+                response2 = ((JSONObject) response2).getJSONObject("quote");
+                String displayed_Text = ((JSONObject) response2).getString("DaysHigh");
+                DaysHighText2.setText(displayed_Text);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        {
+            DaysLowText2.setText("Response is: " + response);
+            try {
+                JSONObject response2 = ((JSONObject) response).getJSONObject("query");
+                response2 = ((JSONObject) response2).getJSONObject("results");
+                response2 = ((JSONObject) response2).getJSONObject("quote");
+                String displayed_Text = ((JSONObject) response2).getString("DaysLow");
+                DaysLowText2.setText(displayed_Text);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        {
+            AvgVolumeText2.setText("Response is: " + response);
+            try {
+                JSONObject response2 = ((JSONObject) response).getJSONObject("query");
+                response2 = ((JSONObject) response2).getJSONObject("results");
+                response2 = ((JSONObject) response2).getJSONObject("quote");
+                String displayed_Text = ((JSONObject) response2).getString("AverageDailyVolume");
+                AvgVolumeText2.setText(displayed_Text);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        {
+            PERatioText2.setText("Response is: " + response);
+            try {
+                JSONObject response2 = ((JSONObject) response).getJSONObject("query");
+                response2 = ((JSONObject) response2).getJSONObject("results");
+                response2 = ((JSONObject) response2).getJSONObject("quote");
+                String displayed_Text = ((JSONObject) response2).getString("PERatio");
+                PERatioText2.setText(displayed_Text);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        {
+            MarketCapText2.setText("Response is: " + response);
+            try {
+                JSONObject response2 = ((JSONObject) response).getJSONObject("query");
+                response2 = ((JSONObject) response2).getJSONObject("results");
+                response2 = ((JSONObject) response2).getJSONObject("quote");
+                String displayed_Text = ((JSONObject) response2).getString("MarketCapitalization");
+                MarketCapText2.setText(displayed_Text);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
     }
+
+    /** Called when the user clicks the Send button */
+    public void NotificationPageRequest(View view) {
+        Intent intent = new Intent(this, LiveRatesActivity.class);
+        startActivity(intent);
+    }
+
+
 }
+
