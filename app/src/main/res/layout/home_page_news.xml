@@ -149,11 +149,10 @@
         android:id="@+id/horizontalScrollView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_marginTop="62dp"
+        android:orientation="horizontal"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="65dp"
-        android:orientation="horizontal">
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:layout_width="wrap_content"
