@@ -8,7 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.Spinner;
-
+//HELLO KSENIJA, PRIVET, PRIVET, KAK DELA?
 public class sortingrates extends AppCompatActivity {
 
     @Override
@@ -194,6 +194,7 @@ public class sortingrates extends AppCompatActivity {
                 // TODO Auto-generated method stub
 
             }
+            //dddd
 
             @Override
             public void onItemSelected(AdapterView<?> arg0, View view, int position, long row_id) {
