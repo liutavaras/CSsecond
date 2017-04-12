@@ -321,7 +321,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/imageView5"
             android:layout_width="790dp"
             android:layout_height="65dp"
             android:layout_alignParentStart="true"
@@ -332,7 +332,7 @@
             android:id="@+id/imageView4"
             android:layout_width="210dp"
             android:layout_height="45dp"
-            android:layout_alignBottom="@+id/imageView3"
+            android:layout_alignBottom="@+id/imageView5"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="9dp"
             android:background="#00ffffff"
@@ -343,7 +343,7 @@
             android:id="@+id/imageButton"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_alignBottom="@+id/imageView3"
+            android:layout_alignBottom="@+id/imageView5"
             android:layout_alignParentStart="true"
             android:layout_marginBottom="7dp"
             android:layout_marginStart="16dp"
