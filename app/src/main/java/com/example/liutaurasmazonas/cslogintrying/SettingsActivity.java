@@ -3,6 +3,7 @@ package com.example.liutaurasmazonas.cslogintrying;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,6 +12,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.view.View.OnClickListener;
+import android.app.Activity;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.Thing;
@@ -19,12 +25,21 @@ import static android.graphics.Color.BLACK;
 import static android.graphics.Color.WHITE;
 
 
+
+
 public class SettingsActivity extends AppCompatActivity {
+
+
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+
         final Button button = (Button) findViewById(R.id.bDark);
         final Button button1 = (Button) findViewById(R.id.button3);
         final Button button2 = (Button) findViewById(R.id.bNewsOn);
@@ -32,9 +47,14 @@ public class SettingsActivity extends AppCompatActivity {
         final Button button4 = (Button) findViewById(R.id.bNotOn);
         final Button button5 = (Button) findViewById(R.id.bNot);
         final Button bChangePassword = (Button) findViewById(R.id.bChangePassword);
+        final Button bLogout = (Button) findViewById(R.id.bLogout);
         final ImageButton bLiveRatesBlack = (ImageButton) findViewById(R.id.ibLiveRatesBlack);
         final ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
         final ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
+
+        final RelativeLayout rl=(RelativeLayout) findViewById(R.id.myLayout);
+
+
 
         // first row of buttons
 
@@ -47,9 +67,15 @@ public class SettingsActivity extends AppCompatActivity {
                         button1.setText("Light");
                         button1.setTextColor(BLACK);
                         button1.getBackground().setColorFilter(Color.LTGRAY, PorterDuff.Mode.MULTIPLY);
+                        rl.setBackgroundColor(BLACK);
+
+
+
+
 
                         while (button.isSelected()) {
                             button.isEnabled();
+
                         }
                         button1.isEnabled();
                         while (button1.isSelected()) {
@@ -73,6 +99,8 @@ public class SettingsActivity extends AppCompatActivity {
                         button.setText("Dark");
                         button.setTextColor(BLACK);
                         button.getBackground().setColorFilter(Color.LTGRAY, PorterDuff.Mode.MULTIPLY);
+                        rl.setBackgroundColor(WHITE);
+
 
                         while (button1.isSelected()) {
                             button1.isEnabled();
@@ -226,6 +254,13 @@ public class SettingsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent openchangepassword = new Intent(SettingsActivity.this,ChangePasswordActivity.class);
                 startActivity(openchangepassword);
+            }
+        });
+
+        bLogout.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent openloginpage = new Intent(SettingsActivity.this,LoginPage.class);
+                startActivity(openloginpage);
             }
         });
 

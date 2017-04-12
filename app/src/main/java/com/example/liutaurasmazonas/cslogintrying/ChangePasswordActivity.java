@@ -14,8 +14,15 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
+
 
 public class ChangePasswordActivity extends AppCompatActivity {
+
+
+    private EditText etCurrentPasswordBox;
+    private EditText etNewPasswordBox;
+    private EditText etRetypeNewPasswordBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +32,14 @@ public class ChangePasswordActivity extends AppCompatActivity {
         final ImageButton bLiveRatesBlack = (ImageButton) findViewById(R.id.ibLiveRatesBlack);
         final ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
         final ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
+        final Button bSave = (Button) findViewById(R.id.bSave);
+
+
+        etCurrentPasswordBox = (EditText) findViewById(R.id.etCurrentPasswordBox);
+        etNewPasswordBox = (EditText) findViewById(R.id.etNewPasswordBox);
+        etRetypeNewPasswordBox = (EditText) findViewById(R.id.etRetypeNewPasswordBox);
+
+
 
         bLiveRatesBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
