@@ -109,4 +109,9 @@
         <item name="Client_4">Client 4</item>
         <item name="Client_5">Client 5</item>
     </string-array>
+
+    //Black theme. Ksenia
+
+    <string name="black">Black</string>
+    <string name="light">Blue</string>
 </resources>
