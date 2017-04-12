@@ -1,10 +1,8 @@
 package com.example.liutaurasmazonas.cslogintrying;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -39,7 +37,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
         bLiveRatesBlack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent openliverates = new Intent(ChangePasswordActivity.this, LiveRatesActivity.class);
+                Intent openliverates = new Intent(ChangePasswordActivity.this, SortingRatesActivity.class);
                 startActivity(openliverates);
             }
         });

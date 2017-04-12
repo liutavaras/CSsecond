@@ -206,7 +206,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         bLiveRatesBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(SettingsActivity.this, LiveRatesActivity.class));
+                startActivity(new Intent(SettingsActivity.this, SortingRatesActivity.class));
             }
         });
         bEconCalBlack.setOnClickListener(new View.OnClickListener() {

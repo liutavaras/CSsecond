@@ -11,170 +11,50 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.liutaurasmazonas.cslogintrying.AddProfileActivity">
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/relativeLayout5">
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="790dp"
-            android:layout_height="65dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:scaleType="matrix"
-            app:srcCompat="@drawable/topbarcremebackgroundddd2" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="210dp"
-            android:layout_height="45dp"
-            android:layout_alignBottom="@+id/imageView3"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="9dp"
-            android:background="#00ffffff"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/bestsearchbar" />
-
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_alignBottom="@+id/imageView3"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="7dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:background="#00ffffff"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/pluss" />
-
-        <ImageButton
-            android:id="@+id/imageButton9"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_alignBottom="@+id/imageView4"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginEnd="12dp"
-            android:layout_marginRight="12dp"
-            android:background="#00ffffff"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/bell" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="120dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true">
-
-        <ImageButton
-            android:id="@+id/ibEconCalBlack"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginLeft="90dp"
-            android:layout_marginStart="90dp"
-            android:background="#00ffffff"
-            android:cropToPadding="false"
-            android:scaleType="fitEnd"
-            app:srcCompat="@drawable/economiccalendarbuttongrey2" />
-
-        <ImageButton
-            android:id="@+id/ibLiveRates"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:layout_alignParentBottom="true"
-            android:layout_toEndOf="@+id/ibEconCalBlack"
-            android:layout_toRightOf="@+id/ibEconCalBlack"
-            android:background="#00ffffff"
-            android:scaleType="fitEnd"
-            app:srcCompat="@drawable/liveratesbuttongrey2" />
-
-        <ImageButton
-            android:id="@+id/ibNewsBlack"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:background="#00ffffff"
-            android:scaleType="fitEnd"
-            app:srcCompat="@drawable/newsbutton2" />
-
-        <ImageButton
-            android:id="@+id/ibSettingsBlack"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:background="#00ffffff"
-            android:scaleType="fitEnd"
-            app:srcCompat="@drawable/settingsbuttongrey2" />
-
-    </RelativeLayout>
-
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:layout_below="@+id/relativeLayout5"
+        android:layout_height="425dp"
+        android:layout_below="@+id/relativeLayout2"
         android:layout_alignParentStart="true">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/relativeLayout5">
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:id="@+id/relativeLayout11"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginBottom="6dp">
+                android:layout_height="105dp">
 
-                <TextView
+                <EditText
                     android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
+                    android:ems="10"
+                    android:hint="Full name"
+                    android:inputType="textPersonName"
+                    android:textSize="26sp"
                     android:layout_alignParentTop="true"
-                    android:layout_marginTop="18dp"
-                    android:isScrollContainer="true"
-                    android:paddingLeft="145dp"
-                    android:textColorHint="@color/colorPrimaryDark"
-                    android:textSize="30sp"
-                    tools:hint="Full Name.."
-                    tools:textColor="?attr/actionModeSplitBackground" />
+                    android:layout_alignParentEnd="true" />
 
-                <TextView
+                <EditText
                     android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/textView3"
-                    android:layout_alignStart="@+id/textView3"
+                    android:layout_alignParentEnd="true"
                     android:layout_below="@+id/textView3"
-                    android:layout_marginTop="15dp"
-                    android:paddingLeft="145dp"
-                    android:textColorHint="@color/colorPrimaryDark"
-                    tools:hint="Career.."
-                    tools:textSize="24sp" />
+                    android:ems="10"
+                    android:hint="Career"
+                    android:inputType="textPersonName"
+                    android:textSize="20sp" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/relativeLayout10"
                 android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/relativeLayout11">
+                android:layout_height="match_parent">
 
                 <ImageView
                     android:id="@+id/imageView5"
@@ -189,9 +69,7 @@
             <RelativeLayout
                 android:id="@+id/relativeLayout6"
                 android:layout_width="match_parent"
-                android:layout_height="123dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/relativeLayout11"
+                android:layout_height="130dp"
                 android:layout_marginTop="13dp">
 
                 <CheckBox
@@ -207,7 +85,6 @@
                     android:id="@+id/nfTechnology"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/News_Filtering_Save"
                     android:layout_marginTop="9dp"
@@ -219,10 +96,8 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@+id/nfTechnology"
                     android:layout_alignBottom="@+id/nfTechnology"
-                    android:layout_marginLeft="7dp"
                     android:layout_marginStart="7dp"
                     android:layout_toEndOf="@+id/nfTechnology"
-                    android:layout_toRightOf="@+id/nfTechnology"
                     android:text="Medicine" />
 
                 <CheckBox
@@ -230,7 +105,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
-                    android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:text="Google" />
 
@@ -241,7 +115,6 @@
                     android:layout_alignBaseline="@+id/News_Filtering"
                     android:layout_alignBottom="@+id/News_Filtering"
                     android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
                     android:text="Save"
                     android:textSize="14sp" />
 
@@ -249,7 +122,6 @@
                     android:id="@+id/nfTesla"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/nfRenewableEnergy"
                     android:layout_alignParentBottom="true"
                     android:layout_alignStart="@+id/nfRenewableEnergy"
                     android:text="Tesla" />
@@ -258,7 +130,6 @@
                     android:id="@+id/cfNovartis"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/nfMedicine"
                     android:layout_alignParentBottom="true"
                     android:layout_alignStart="@+id/nfMedicine"
                     android:text="Novartis" />
@@ -276,21 +147,25 @@
             <RelativeLayout
                 android:id="@+id/relativeLayout7"
                 android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/relativeLayout6"
-                android:layout_marginTop="8dp">
+                android:layout_height="100dp"
+                android:layout_marginTop="15dp">
+
+                <CheckBox
+                    android:id="@+id/lrsYHOO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/lrsAAPL"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@+id/lrsAAPL"
+                    android:text="YahooInc." />
 
                 <CheckBox
                     android:id="@+id/lrsAAPL"
                     android:layout_width="70dp"
                     android:layout_height="30dp"
-                    android:layout_alignTop="@+id/lrsFB"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
+                    android:layout_alignParentBottom="true"
                     android:layout_toEndOf="@+id/lrsFB"
-                    android:layout_toRightOf="@+id/lrsFB"
-                    android:text="Apple" />
+                    android:text="AppleInc." />
 
                 <Button
                     android:id="@+id/Live_Rates_Filtering_Save"
@@ -299,21 +174,17 @@
                     android:layout_alignBaseline="@+id/Live_Rates_Filtering"
                     android:layout_alignBottom="@+id/Live_Rates_Filtering"
                     android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
                     android:text="Save"
                     android:textSize="14sp" />
 
                 <CheckBox
                     android:id="@+id/lrsFB"
-                    android:layout_width="100dp"
+                    android:layout_width="120dp"
                     android:layout_height="30dp"
-                    android:layout_below="@+id/Live_Rates_Filtering_Save"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="12dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="9dp"
                     android:layout_toEndOf="@+id/Shares"
-                    android:layout_toRightOf="@+id/Shares"
-                    android:text="Facebook" />
+                    android:text="FacebookInc." />
 
                 <TextView
                     android:id="@+id/Live_Rates_Filtering"
@@ -345,9 +216,15 @@
             <RelativeLayout
                 android:id="@+id/relativeLayout3"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/relativeLayout7">
+                android:layout_height="match_parent">
+
+                <CheckBox
+                    android:id="@+id/checkBox2"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/lrcuGBPEUR"
+                    android:layout_toEndOf="@+id/lrcuGBPEUR"
+                    android:text="EUR/USD" />
 
                 <CheckBox
                     android:id="@+id/lrcuGBPEUR"
@@ -355,10 +232,8 @@
                     android:layout_height="30dp"
                     android:layout_alignBaseline="@+id/Currencies"
                     android:layout_alignBottom="@+id/Currencies"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="-4dp"
                     android:layout_toEndOf="@+id/lrcuGBPUSD"
-                    android:layout_toRightOf="@+id/lrcuGBPUSD"
                     android:text="GBP/EUR" />
 
                 <CheckBox
@@ -368,7 +243,6 @@
                     android:layout_alignBaseline="@+id/lrcoGOLD"
                     android:layout_alignBottom="@+id/lrcoGOLD"
                     android:layout_toEndOf="@+id/lrcoGOLD"
-                    android:layout_toRightOf="@+id/lrcoGOLD"
                     android:text="Silver" />
 
                 <CheckBox
@@ -376,7 +250,6 @@
                     android:layout_width="70dp"
                     android:layout_height="30dp"
                     android:layout_alignEnd="@+id/lrcuGBPUSD"
-                    android:layout_alignRight="@+id/lrcuGBPUSD"
                     android:layout_alignTop="@+id/Commodities"
                     android:text="Gold" />
 
@@ -384,7 +257,6 @@
                     android:id="@+id/Commodities"
                     android:layout_width="110dp"
                     android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/lrcuGBPUSD"
                     android:layout_marginTop="10dp"
@@ -396,7 +268,6 @@
                     android:id="@+id/Currencies"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginTop="10dp"
@@ -410,43 +281,138 @@
                     android:layout_height="30dp"
                     android:layout_alignBaseline="@+id/Currencies"
                     android:layout_alignBottom="@+id/Currencies"
-                    android:layout_toEndOf="@+id/Indicies"
-                    android:layout_toRightOf="@+id/Indicies"
+                    android:layout_marginStart="-10dp"
+                    android:layout_toEndOf="@+id/Indices"
                     android:text="GBP/USD" />
 
                 <TextView
-                    android:id="@+id/Indicies"
+                    android:id="@+id/Indices"
                     android:layout_width="100dp"
                     android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/Commodities"
                     android:layout_marginTop="9dp"
-                    android:text="Indicies:"
+                    android:text="Indices:"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="18sp" />
 
                 <CheckBox
                     android:id="@+id/lriNSDQ"
-                    android:layout_width="80dp"
+                    android:layout_width="90dp"
                     android:layout_height="30dp"
-                    android:layout_alignTop="@+id/Indicies"
+                    android:layout_alignTop="@+id/Indices"
                     android:layout_toEndOf="@+id/Commodities"
-                    android:layout_toRightOf="@+id/Commodities"
-                    android:text="NSDAQ" />
+                    android:text="NASDAQ" />
 
                 <CheckBox
                     android:id="@+id/lriSP500"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/lrcuGBPEUR"
                     android:layout_alignStart="@+id/lrcuGBPEUR"
                     android:layout_alignTop="@+id/lriNSDQ"
                     android:text="S and P" />
             </RelativeLayout>
-
-        </RelativeLayout>
+        </LinearLayout>
     </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="790dp"
+            android:layout_height="65dp"
+            android:layout_alignParentStart="true"
+            android:scaleType="matrix"
+            app:srcCompat="@drawable/topbarcremebackgroundddd2" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="210dp"
+            android:layout_height="45dp"
+            android:layout_alignBottom="@+id/imageView3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="9dp"
+            android:background="#00ffffff"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/bestsearchbar" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/imageView3"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="7dp"
+            android:layout_marginStart="16dp"
+            android:background="#00ffffff"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/pluss" />
+
+        <ImageButton
+            android:id="@+id/imageButton9"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/imageView4"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="12dp"
+            android:background="#00ffffff"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/bell" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <ImageButton
+            android:id="@+id/ibEconCalBlack"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="90dp"
+            android:background="#00ffffff"
+            android:cropToPadding="false"
+            android:scaleType="fitEnd"
+            app:srcCompat="@drawable/economiccalendarbuttongrey2" />
+
+        <ImageButton
+            android:id="@+id/ibLiveRates"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/ibEconCalBlack"
+            android:background="#00ffffff"
+            android:scaleType="fitEnd"
+            app:srcCompat="@drawable/liveratesbuttongrey2" />
+
+        <ImageButton
+            android:id="@+id/ibNewsBlack"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:background="#00ffffff"
+            android:scaleType="fitEnd"
+            app:srcCompat="@drawable/newsbutton2" />
+
+        <ImageButton
+            android:id="@+id/ibSettingsBlack"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:background="#00ffffff"
+            android:scaleType="fitEnd"
+            app:srcCompat="@drawable/settingsbuttongrey2" />
+
+    </RelativeLayout>
 
 
 </RelativeLayout>
