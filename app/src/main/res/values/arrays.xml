@@ -10,7 +10,7 @@
     <string-array name="currencies_array">
         <item>Select preferred currency:</item>
         <item>GBP/USD</item>
-        <item>GBP/EUR</item>
+        <item>USD/RUB</item>
         <item>EUR/USD</item>
     </string-array>
 
