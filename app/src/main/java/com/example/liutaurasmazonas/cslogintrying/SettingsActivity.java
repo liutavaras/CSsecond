@@ -234,20 +234,17 @@ public class SettingsActivity extends AppCompatActivity {
 
         bLiveRatesBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent myintent2 = new Intent(SettingsActivity.this,activity_sorting_rates3.class);
-                startActivity(myintent2);
+                startActivity(new Intent(SettingsActivity.this, activity_sorting_rates3.class));
             }
         });
         bEconCalBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent myintent3 = new Intent(SettingsActivity.this,WebViewActivity.class);
-                startActivity(myintent3);
+                startActivity(new Intent(SettingsActivity.this, WebViewActivity.class));
             }
         });
         bNewsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent myintent4 = new Intent(SettingsActivity.this,HomePageNews.class);
-                startActivity(myintent4);
+                startActivity(new Intent(SettingsActivity.this, HomePageNews.class));
             }
         });
         bChangePassword.setOnClickListener(new View.OnClickListener() {

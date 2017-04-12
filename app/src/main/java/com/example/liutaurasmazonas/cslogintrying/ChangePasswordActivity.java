@@ -61,8 +61,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
         });
         bNewsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent openhome = new Intent(ChangePasswordActivity.this, HomeActivity.class);
-                startActivity(openhome);
+                startActivity(new Intent(ChangePasswordActivity.this, HomePageNews.class));
             }
         });
 
