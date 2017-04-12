@@ -47,7 +47,7 @@
             android:name=".NotificationsActivity"
             android:label="@string/title_activity_notifications"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".LiveRatesActivity"/>
+
 
         <activity
             android:name=".AddProfileActivity"
@@ -69,8 +69,8 @@
         <activity android:name=".NewsDetails" />
         <activity android:name=".WebViewActivity" />
         <!-- <activity android:name=".CurrenciesActivity" /> -->
-        <activity android:name=".SortingRatesActivity3">
-        </activity>
+
+
         <activity android:name=".LiveRatesActivityhoo"></activity>
         <activity android:name=".LiveRatesActivitygbpusd"></activity>
         <activity android:name=".LiveRatesActivityfb" />
@@ -82,11 +82,7 @@
         <activity android:name=".LiveRatesActivitygold" />
         <activity android:name=".LiveRatesActivitysilver" />
         <activity android:name=".activity_sorting_rates3">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
