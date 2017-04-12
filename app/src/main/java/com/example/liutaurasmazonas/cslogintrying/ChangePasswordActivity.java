@@ -43,7 +43,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
         bLiveRatesBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent openliverates = new Intent(ChangePasswordActivity.this, LiveRatesActivity.class);
+                Intent openliverates = new Intent(ChangePasswordActivity.this, activity_sorting_rates3.class);
                 startActivity(openliverates);
             }
         });
@@ -55,7 +55,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
         });
         bEconCalBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent openeconcal = new Intent(ChangePasswordActivity.this, EconomicCalendarActivity.class);
+                Intent openeconcal = new Intent(ChangePasswordActivity.this, WebViewActivity.class);
                 startActivity(openeconcal);
             }
         });
