@@ -55,7 +55,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
         });
         bEconCalBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent openeconcal = new Intent(ChangePasswordActivity.this, EconomicCalendarActivity.class);
+                Intent openeconcal = new Intent(ChangePasswordActivity.this, WebViewActivity.class);
                 startActivity(openeconcal);
             }
         });

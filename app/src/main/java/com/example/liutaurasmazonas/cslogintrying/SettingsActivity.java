@@ -240,7 +240,7 @@ public class SettingsActivity extends AppCompatActivity {
         });
         bEconCalBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent myintent3 = new Intent(SettingsActivity.this,EconomicCalendarActivity.class);
+                Intent myintent3 = new Intent(SettingsActivity.this,WebViewActivity.class);
                 startActivity(myintent3);
             }
         });

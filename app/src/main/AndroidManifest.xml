@@ -16,9 +16,9 @@
         </activity>
         <activity android:name=".HomePageNews">
 
+
         </activity>
         <activity android:name=".SettingsActivity">
-
         </activity>
         <activity android:name=".FirstScreen">
             <intent-filter>
@@ -47,7 +47,6 @@
             android:name=".NotificationsActivity"
             android:label="@string/title_activity_notifications"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".AddProfileActivity"
             android:label="@string/title_activity_add_profile" />
@@ -60,7 +59,6 @@
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".EconomicCalendarActivity" />
         <!--<activity android:name=".MainActivity15" />-->
         <activity android:name=".MainActivity16" />
         <activity android:name=".MainActivity17" />
@@ -68,8 +66,6 @@
         <activity android:name=".NewsDetails" />
         <activity android:name=".WebViewActivity" />
         <!-- <activity android:name=".CurrenciesActivity" /> -->
-        <activity android:name=".activity_sorting_rates3">
-        </activity>
         <activity android:name=".LiveRatesActivityhoo"></activity>
         <activity android:name=".LiveRatesActivitygbpusd"></activity>
         <activity android:name=".LiveRatesActivityfb" />
@@ -80,6 +76,8 @@
         <activity android:name=".LiveRatesActivitysp" />
         <activity android:name=".LiveRatesActivitygold" />
         <activity android:name=".LiveRatesActivitysilver" />
+        <activity android:name=".activity_sorting_rates3">
+        </activity>
     </application>
 
 </manifest>
