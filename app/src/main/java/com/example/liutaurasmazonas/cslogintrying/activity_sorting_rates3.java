@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 
-public class SortingRatesActivity extends Activity {
+public class activity_sorting_rates3 extends Activity {
     Spinner spinner;
     Spinner spinner2;
     Spinner spinner3;
@@ -18,27 +18,27 @@ public class SortingRatesActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sorting_rates);
+        setContentView(R.layout.activity_sorting_rates3);
 
-    ImageButton bSettingsBlack = (ImageButton) findViewById(R.id.ibSettingsBlack);
-    ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
-    ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
+        ImageButton bSettingsBlack = (ImageButton) findViewById(R.id.ibSettingsBlack);
+        ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
+        ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
 
         bEconCalBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(SortingRatesActivity.this, WebViewActivity.class));
+                startActivity(new Intent(activity_sorting_rates3.this, WebViewActivity.class));
 
             }
         });
         bNewsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(SortingRatesActivity.this, HomePageNews.class));
+                startActivity(new Intent(activity_sorting_rates3.this, HomePageNews.class));
 
             }
         });
         bSettingsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(SortingRatesActivity.this, SettingsActivity.class));
+                startActivity(new Intent(activity_sorting_rates3.this, SettingsActivity.class));
 
             }
         });
@@ -47,8 +47,8 @@ public class SortingRatesActivity extends Activity {
 
         spinner = (Spinner) findViewById(R.id.spinner);
 
-        ArrayAdapter<String> myAdaptor = new ArrayAdapter<String>(SortingRatesActivity.this,
-                R.layout.support_simple_spinner_dropdown_item,
+        ArrayAdapter<String> myAdaptor = new ArrayAdapter<String>(activity_sorting_rates3.this,
+                R.layout.simple_spinner_item,
                 getResources().getStringArray(R.array.shares_array));
 
         myAdaptor.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -67,15 +67,15 @@ public class SortingRatesActivity extends Activity {
                 final Intent intent;
                 switch (position) {
                     case 1:
-                        intent = new Intent(SortingRatesActivity.this, LiveRatesActivityfb.class);
+                        intent = new Intent(activity_sorting_rates3.this, LiveRatesActivityfb.class);
                         startActivity(intent);
                         break;
                     case 2:
-                        intent = new Intent(SortingRatesActivity.this, LiveRatesActivityhoo.class);
+                        intent = new Intent(activity_sorting_rates3.this, LiveRatesActivityhoo.class);
                         startActivity(intent);
                         break;
                     case 3:
-                        intent = new Intent(SortingRatesActivity.this, LiveRatesActivityapple.class);
+                        intent = new Intent(activity_sorting_rates3.this, LiveRatesActivityapple.class);
                         startActivity(intent);
                         break;
 
@@ -92,11 +92,11 @@ public class SortingRatesActivity extends Activity {
         });
 
 
-    spinner2 = (Spinner) findViewById(R.id.spinner2);
+        spinner2 = (Spinner) findViewById(R.id.spinner2);
 
-    ArrayAdapter<String> myAdaptor2 = new ArrayAdapter<String>(SortingRatesActivity.this,
-            R.layout.support_simple_spinner_dropdown_item,
-            getResources().getStringArray(R.array.currencies_array));
+        ArrayAdapter<String> myAdaptor2 = new ArrayAdapter<String>(activity_sorting_rates3.this,
+                R.layout.simple_spinner_item,
+                getResources().getStringArray(R.array.currencies_array));
 
         myAdaptor2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
@@ -104,44 +104,44 @@ public class SortingRatesActivity extends Activity {
 
         spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
-        public void onClick(View v) {
-            // TODO Auto-generated method stub
-
-        }
-
-        @Override
-        public void onItemSelected(AdapterView<?> arg0, View view, int position, long row_id) {
-            final Intent intent;
-            switch (position) {
-                case 1:
-                    intent = new Intent(SortingRatesActivity.this, LiveRatesActivitygbpusd.class);
-                    startActivity(intent);
-                    break;
-                case 2:
-                    intent = new Intent(SortingRatesActivity.this, LiveRatesActivitygbpeur.class);
-                    startActivity(intent);
-                    break;
-                case 3:
-                    intent = new Intent(SortingRatesActivity.this, LiveRatesActivityeurusd.class);
-                    startActivity(intent);
-                    break;
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
 
             }
 
-        }
+            @Override
+            public void onItemSelected(AdapterView<?> arg0, View view, int position, long row_id) {
+                final Intent intent;
+                switch (position) {
+                    case 1:
+                        intent = new Intent(activity_sorting_rates3.this, LiveRatesActivitygbpusd.class);
+                        startActivity(intent);
+                        break;
+                    case 2:
+                        intent = new Intent(activity_sorting_rates3.this, LiveRatesActivitygbpeur.class);
+                        startActivity(intent);
+                        break;
+                    case 3:
+                        intent = new Intent(activity_sorting_rates3.this, LiveRatesActivityeurusd.class);
+                        startActivity(intent);
+                        break;
 
-        @Override
-        public void onNothingSelected(AdapterView<?> arg0) {
-            // TODO Auto-generated method stub
+                }
 
-        }
+            }
 
-    });
+            @Override
+            public void onNothingSelected(AdapterView<?> arg0) {
+                // TODO Auto-generated method stub
+
+            }
+
+        });
 
         spinner3 = (Spinner) findViewById(R.id.spinner3);
 
-        ArrayAdapter<String> myAdaptor3 = new ArrayAdapter<String>(SortingRatesActivity.this,
-                R.layout.support_simple_spinner_dropdown_item,
+        ArrayAdapter<String> myAdaptor3 = new ArrayAdapter<String>(activity_sorting_rates3.this,
+                R.layout.simple_spinner_item,
                 getResources().getStringArray(R.array.commodities_array));
 
         myAdaptor3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -160,11 +160,11 @@ public class SortingRatesActivity extends Activity {
                 final Intent intent;
                 switch (position) {
                     case 1:
-                        intent = new Intent(SortingRatesActivity.this, LiveRatesActivitysilver.class);
+                        intent = new Intent(activity_sorting_rates3.this, LiveRatesActivitysilver.class);
                         startActivity(intent);
                         break;
                     case 2:
-                        intent = new Intent(SortingRatesActivity.this, LiveRatesActivitygold.class);
+                        intent = new Intent(activity_sorting_rates3.this, LiveRatesActivitygold.class);
                         startActivity(intent);
                         break;
 
@@ -182,8 +182,8 @@ public class SortingRatesActivity extends Activity {
 
         spinner4 = (Spinner) findViewById(R.id.spinner4);
 
-        ArrayAdapter<String> myAdaptor4 = new ArrayAdapter<String>(SortingRatesActivity.this,
-                R.layout.support_simple_spinner_dropdown_item,
+        ArrayAdapter<String> myAdaptor4 = new ArrayAdapter<String>(activity_sorting_rates3.this,
+                R.layout.simple_spinner_item,
                 getResources().getStringArray(R.array.indices_array));
 
         myAdaptor4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -202,11 +202,11 @@ public class SortingRatesActivity extends Activity {
                 final Intent intent;
                 switch (position) {
                     case 1:
-                        intent = new Intent(SortingRatesActivity.this, LiveRatesActivitynasdaq.class);
+                        intent = new Intent(activity_sorting_rates3.this, LiveRatesActivitynasdaq.class);
                         startActivity(intent);
                         break;
                     case 2:
-                        intent = new Intent(SortingRatesActivity.this, LiveRatesActivitysp.class);
+                        intent = new Intent(activity_sorting_rates3.this, LiveRatesActivitysp.class);
                         startActivity(intent);
                         break;
 
@@ -222,6 +222,6 @@ public class SortingRatesActivity extends Activity {
 
         });
 
-}
+    }
 
 }

@@ -49,7 +49,7 @@ public class EconomicCalendarActivity extends AppCompatActivity {
         });
         bLiveRates.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent openliverates = new Intent(EconomicCalendarActivity.this,SortingRatesActivity.class);
+                Intent openliverates = new Intent(EconomicCalendarActivity.this,activity_sorting_rates3.class);
                 startActivity(openliverates);
             }
         });

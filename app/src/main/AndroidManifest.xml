@@ -11,16 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".LoginPage" />
-        <activity android:name=".SettingsActivity"></activity>
-        <activity android:name=".HomePageNews">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".FirstScreen">
-        </activity>
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".HomePageNews"></activity>
+        <activity android:name=".FirstScreen"></activity>
         <activity android:name=".Register" />
         <activity android:name=".UserAreaActivity" />
 
@@ -36,7 +29,7 @@
             android:name=".NotificationsActivity"
             android:label="@string/title_activity_notifications"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".AddProfileActivity"></activity>
+        <activity android:name=".AddProfileActivity" />
         <activity android:name=".ChangePasswordActivity" />
         <activity android:name=".LogOutActivity" />
         <activity
@@ -45,26 +38,31 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".EconomicCalendarActivity" />
         <!-- <activity android:name=".MainActivity15" /> -->
-        <activity android:name=".MainActivity16"></activity>
+        <activity android:name=".MainActivity16" />
         <activity android:name=".MainActivity17" />
-        <activity android:name=".MainActivity18"></activity>
+        <activity android:name=".MainActivity18" />
         <activity android:name=".NewsDetails" />
-        <activity android:name=".WebViewActivity"></activity>
+        <activity android:name=".WebViewActivity" />
         <!-- <activity android:name=".CurrenciesActivity" /> -->
-        <activity android:name=".SortingRatesActivity">
+        <activity android:name=".SortingRatesActivity3">
         </activity>
-        <activity android:name=".LiveRatesActivityhoo">
+        <activity android:name=".LiveRatesActivityhoo"></activity>
+        <activity android:name=".LiveRatesActivitygbpusd"></activity>
+        <activity android:name=".LiveRatesActivityfb" />
+        <activity android:name=".LiveRatesActivityeurusd" />
+        <activity android:name=".LiveRatesActivitygbpeur" />
+        <activity android:name=".LiveRatesActivityapple" />
+        <activity android:name=".LiveRatesActivitynasdaq" />
+        <activity android:name=".LiveRatesActivitysp" />
+        <activity android:name=".LiveRatesActivitygold" />
+        <activity android:name=".LiveRatesActivitysilver" />
+        <activity android:name=".activity_sorting_rates3">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".LiveRatesActivitygbpusd">
-        </activity>
-        <activity android:name=".LiveRatesActivityfb"></activity>
-        <activity android:name=".LiveRatesActivityeurusd"></activity>
-        <activity android:name=".LiveRatesActivitygbpeur"></activity>
-        <activity android:name=".LiveRatesActivityapple"></activity>
-        <activity android:name=".LiveRatesActivitynasdaq"></activity>
-        <activity android:name=".LiveRatesActivitysp"></activity>
-        <activity android:name=".LiveRatesActivitygold"></activity>
-        <activity android:name=".LiveRatesActivitysilver"></activity>
     </application>
 
 </manifest>

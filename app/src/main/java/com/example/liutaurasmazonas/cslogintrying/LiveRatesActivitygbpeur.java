@@ -67,12 +67,12 @@ public class LiveRatesActivitygbpeur extends AppCompatActivity implements Respon
         });
         BackButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(LiveRatesActivitygbpeur.this, SortingRatesActivity.class));
+                startActivity(new Intent(LiveRatesActivitygbpeur.this, activity_sorting_rates3.class));
             }
         });
         bLiveRatesBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(LiveRatesActivitygbpeur.this, SortingRatesActivity.class));
+                startActivity(new Intent(LiveRatesActivitygbpeur.this, activity_sorting_rates3.class));
             }
         });
     }

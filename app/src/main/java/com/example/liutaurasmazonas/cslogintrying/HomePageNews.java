@@ -43,7 +43,7 @@ public class HomePageNews extends AppCompatActivity {
         });
         bLiveRates.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(HomePageNews.this, SortingRatesActivity.class));
+                startActivity(new Intent(HomePageNews.this, activity_sorting_rates3.class));
             }
         });
 
