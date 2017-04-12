@@ -47,7 +47,7 @@ public class sortingrates extends AppCompatActivity {
         spinner = (Spinner) findViewById(R.id.spinner);
 
         ArrayAdapter<String> myAdaptor = new ArrayAdapter<String>(sortingrates.this,
-                R.layout.simple_spinner_item,
+                R.layout.support_simple_spinner_dropdown_item,
                 getResources().getStringArray(R.array.shares_array));
 
         myAdaptor.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
