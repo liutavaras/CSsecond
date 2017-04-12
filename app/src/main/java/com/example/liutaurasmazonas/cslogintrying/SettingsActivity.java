@@ -234,7 +234,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         bLiveRatesBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent myintent2 = new Intent(SettingsActivity.this,LiveRatesActivity.class);
+                Intent myintent2 = new Intent(SettingsActivity.this,activity_sorting_rates3.class);
                 startActivity(myintent2);
             }
         });

@@ -65,15 +65,29 @@
         <!--<activity android:name=".MainActivity15" />-->
         <activity android:name=".MainActivity16" />
         <activity android:name=".MainActivity17" />
-        <activity android:name=".MainActivity18">
+        <activity android:name=".MainActivity18" />
+        <activity android:name=".NewsDetails" />
+        <activity android:name=".WebViewActivity" />
+        <!-- <activity android:name=".CurrenciesActivity" /> -->
+        <activity android:name=".SortingRatesActivity3">
         </activity>
+        <activity android:name=".LiveRatesActivityhoo"></activity>
+        <activity android:name=".LiveRatesActivitygbpusd"></activity>
+        <activity android:name=".LiveRatesActivityfb" />
+        <activity android:name=".LiveRatesActivityeurusd" />
+        <activity android:name=".LiveRatesActivitygbpeur" />
+        <activity android:name=".LiveRatesActivityapple" />
+        <activity android:name=".LiveRatesActivitynasdaq" />
+        <activity android:name=".LiveRatesActivitysp" />
+        <activity android:name=".LiveRatesActivitygold" />
+        <activity android:name=".LiveRatesActivitysilver" />
+        <activity android:name=".activity_sorting_rates3">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <activity android:name=".NewsDetails"/>
-        <activity android:name=".WebViewActivity">
-
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <!--<activity android:name=".CurrenciesActivity" />-->
-        <activity android:name=".SharesActivity" />
     </application>
 
 </manifest>
