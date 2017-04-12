@@ -246,7 +246,7 @@ public class SettingsActivity extends AppCompatActivity {
         });
         bNewsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent myintent4 = new Intent(SettingsActivity.this,HomeActivity.class);
+                Intent myintent4 = new Intent(SettingsActivity.this,HomePageNews.class);
                 startActivity(myintent4);
             }
         });
