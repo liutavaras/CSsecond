@@ -75,12 +75,12 @@ public class LiveRatesActivityfb extends AppCompatActivity implements Response.L
         });
         BackButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(LiveRatesActivityfb.this, activity_sorting_rates3.class));
+                startActivity(new Intent(LiveRatesActivityfb.this, sortingrates.class));
             }
         });
         bLiveRatesBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(LiveRatesActivityfb.this, activity_sorting_rates3.class));
+                startActivity(new Intent(LiveRatesActivityfb.this, sortingrates.class));
             }
         });
     }

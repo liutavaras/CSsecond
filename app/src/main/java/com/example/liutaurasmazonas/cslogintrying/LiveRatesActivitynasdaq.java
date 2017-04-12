@@ -67,12 +67,12 @@ public class LiveRatesActivitynasdaq extends AppCompatActivity implements Respon
         });
         BackButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(LiveRatesActivitynasdaq.this, activity_sorting_rates3.class));
+                startActivity(new Intent(LiveRatesActivitynasdaq.this, sortingrates.class));
             }
         });
         bLiveRatesBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(LiveRatesActivitynasdaq.this, activity_sorting_rates3.class));
+                startActivity(new Intent(LiveRatesActivitynasdaq.this, sortingrates.class));
             }
         });
     }

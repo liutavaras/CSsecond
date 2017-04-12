@@ -67,12 +67,12 @@ public class LiveRatesActivitygbpusd extends AppCompatActivity implements Respon
         });
         BackButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(LiveRatesActivitygbpusd.this, activity_sorting_rates3.class));
+                startActivity(new Intent(LiveRatesActivitygbpusd.this, sortingrates.class));
             }
         });
         bLiveRatesBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(LiveRatesActivitygbpusd.this, activity_sorting_rates3.class));
+                startActivity(new Intent(LiveRatesActivitygbpusd.this, sortingrates.class));
             }
         });
     }
@@ -85,7 +85,7 @@ public class LiveRatesActivitygbpusd extends AppCompatActivity implements Respon
 
         mQueue = CustomVolleyRequestQueue.getInstance(this.getApplicationContext())
                 .getRequestQueue();
-        String url = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22GBP/USD%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=";//"http://httpbin.org/get?site=code&network=tutsplus";
+        String url = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22GBP=X%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=";//"http://httpbin.org/get?site=code&network=tutsplus";
         final CustomJSONObjectRequest jsonRequest = new CustomJSONObjectRequest(Request.Method.GET, url, new JSONObject(), this, this);
         jsonRequest.setTag(REQUEST_TAG);
 
@@ -118,7 +118,7 @@ public class LiveRatesActivitygbpusd extends AppCompatActivity implements Respon
                 JSONObject response2 = ((JSONObject) response).getJSONObject("query");
                 response2 = ((JSONObject) response2).getJSONObject("results");
                 response2 = ((JSONObject) response2).getJSONObject("quote");
-                String displayed_Text = ((JSONObject) response2).getString("symbol");
+                String displayed_Text = ((JSONObject) response2).getString("Name");
                 NameText2.setText(displayed_Text);
             } catch (JSONException e) {
                 e.printStackTrace();
