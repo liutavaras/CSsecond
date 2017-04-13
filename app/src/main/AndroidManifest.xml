@@ -15,9 +15,7 @@
         <activity android:name=".LoginPage"></activity>
         <activity android:name=".HomePageNews"></activity>
         <activity android:name=".SettingsActivity"></activity>
-        <activity android:name=".FirstScreen">
-
-        </activity>
+        <activity android:name=".FirstScreen"></activity>
         <activity android:name=".Register"></activity>
         <activity android:name=".UserAreaActivity" />
         <!--
@@ -46,7 +44,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
         <activity android:name=".ChangePasswordActivity"></activity>
