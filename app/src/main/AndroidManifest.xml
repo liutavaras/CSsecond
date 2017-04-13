@@ -6,23 +6,17 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="Uptick"
-        android:supportsRtl="true"
-        android:hardwareAccelerated="false"
         android:largeHeap="true"
+        android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginPage"></activity>
-        <activity android:name=".HomePageNews"></activity>
-        <activity android:name=".SettingsActivity"></activity>
-        <activity android:name=".FirstScreen">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".Register"></activity>
+        <activity android:name=".LoginPage" />
+        <activity android:name=".HomePageNews" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".FirstScreen"></activity>
+        <activity android:name=".Register" />
         <activity android:name=".UserAreaActivity" />
         <!--
  ATTENTION: This was auto-generated to add Google Play services to your project for
@@ -42,13 +36,14 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".AddProfileActivity"
-            android:label="@string/title_activity_add_profile" />
-        <activity android:name=".ChangePasswordActivity"></activity>
+            android:label="@string/title_activity_add_profile">
+        </activity>
+        <activity android:name=".ChangePasswordActivity" />
         <activity android:name=".LogOutActivity" />
         <activity
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <!-- <activity android:name=".MainActivity15" /> -->
         <activity android:name=".MainActivity16" />
         <activity android:name=".MainActivity17" />
@@ -66,7 +61,13 @@
         <activity android:name=".LiveRatesActivitysp" />
         <activity android:name=".LiveRatesActivitygold" />
         <activity android:name=".LiveRatesActivitysilver" />
-        <activity android:name=".sortingrates">
+        <activity android:name=".sortingrates"></activity>
+        <activity android:name=".GoogleSearchIntentActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
