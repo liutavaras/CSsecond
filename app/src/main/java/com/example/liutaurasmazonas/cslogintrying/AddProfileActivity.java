@@ -1,5 +1,6 @@
 package com.example.liutaurasmazonas.cslogintrying;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,6 +14,9 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import org.w3c.dom.Text;
 
 public class AddProfileActivity extends AppCompatActivity {
@@ -25,7 +29,6 @@ public class AddProfileActivity extends AppCompatActivity {
     CheckBox nfGoogle;
     CheckBox cfNovartis;
     CheckBox nfTesla;
-    Button News_Filtering_Save;
     CheckBox lrsFB;
     CheckBox lrsAAPL;
     CheckBox lrsYHOO;
@@ -36,7 +39,9 @@ public class AddProfileActivity extends AppCompatActivity {
     CheckBox lrcuGBPUSD;
     CheckBox lriNSDQ;
     CheckBox lriSP500;
-    Button Live_Rates_Filtering_Save;
+    Button bSave;
+
+    DatabaseReference databaseClients;
 
 
     @Override
@@ -46,6 +51,8 @@ public class AddProfileActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        databaseClients = FirebaseDatabase.getInstance().getReference("clients");
+
          etName = (EditText) findViewById(R.id.etName);
          etCareer = (EditText) findViewById(R.id.etCareer);
          cbTech = (CheckBox) findViewById(R.id.cbTech);
@@ -54,7 +61,6 @@ public class AddProfileActivity extends AppCompatActivity {
         nfGoogle = (CheckBox) findViewById(R.id.nfGoogle);
         cfNovartis = (CheckBox) findViewById(R.id.cfNovartis);
         nfTesla = (CheckBox) findViewById(R.id.nfTesla);
-        News_Filtering_Save = (Button) findViewById(R.id.News_Filtering_Save);
         lrsFB = (CheckBox) findViewById(R.id.lrsFB);
         lrsAAPL = (CheckBox) findViewById(R.id.lrsAAPL);
         lrsYHOO = (CheckBox) findViewById(R.id.lrsYHOO);
@@ -65,28 +71,54 @@ public class AddProfileActivity extends AppCompatActivity {
         lrcuGBPUSD = (CheckBox) findViewById(R.id.lrcuGBPUSD);
         lriNSDQ = (CheckBox) findViewById(R.id.lriNSDQ);
         lriSP500 = (CheckBox) findViewById(R.id.lriSP500);
-        Live_Rates_Filtering_Save = (Button) findViewById(R.id.bSave);
+        bSave = (Button) findViewById(R.id.bSave);
 
-
-        News_Filtering_Save.setOnClickListener(new View.OnClickListener(){
+        bSave.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                News_Filtering_Save();
+                bSave();
 
             }
         });
 
 
 
-
     }
 
-    private void News_Filtering_Save(){
+    private void bSave(){
         String name = etName.getText().toString().trim();
         String career = etCareer.getText().toString().trim();
-        String techcb = cbTech.getText().toString();
+        Boolean techCB = cbTech.isChecked();
+        Boolean mediCB = cbMedi.isChecked();
+        Boolean renewableEnergyNF = nfRenewableEnergy.isChecked();
+        Boolean googleNF = nfGoogle.isChecked();
+        Boolean novartisNF = cfNovartis.isChecked();
+        Boolean teslaNF = nfTesla.isChecked();
+        Boolean fbLRS = lrsFB.isChecked();
+        Boolean applLRS = lrsAAPL.isChecked();
+        Boolean yhooLRS = lrsYHOO.isChecked();
+        Boolean eurusdCB = cbEURUSD.isChecked();
+        Boolean usdrubCU = lrcuUSDRUB.isChecked();
+        Boolean silverCO = lrcoSILVER.isChecked();
+        Boolean goldCO = lrcoGOLD.isChecked();
+        Boolean gbpusdCU = lrcuGBPUSD.isChecked();
+        Boolean nsdqI = lriNSDQ.isChecked();
+        Boolean sp500I = lriSP500.isChecked();
+
 
         if(!TextUtils.isEmpty(name)){
+          String id =  databaseClients.push().getKey();
+
+            Clients clients = new Clients(id, name, career, techCB, mediCB, renewableEnergyNF, googleNF,
+                    novartisNF, teslaNF, fbLRS, applLRS, yhooLRS, eurusdCB, usdrubCU, silverCO,
+                    goldCO, gbpusdCU, nsdqI, sp500I );
+
+            databaseClients.child(id).setValue(clients);
+
+            Toast.makeText(this, "Client added", Toast.LENGTH_LONG).show();
+
+            startActivity(new Intent(AddProfileActivity.this, AddProfileActivity.class));
+
 
 
         }else{
@@ -96,4 +128,5 @@ public class AddProfileActivity extends AppCompatActivity {
 
 
     }
+
 }
