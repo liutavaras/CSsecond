@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="shares_array">
+        <item>Select preferred share:</item>
+        <item>Facebook Inc.</item>
+        <item>Yahoo Inc.</item>
+        <item>Apple Inc.</item>
+    </string-array>
+
+    <string-array name="currencies_array">
+        <item>Select preferred currency:</item>
+        <item>GBP/USD</item>
+        <item>USD/RUB</item>
+        <item>EUR/USD</item>
+    </string-array>
+
+    <string-array name="commodities_array">
+    <item>Select preferred commodity:</item>
+    <item>Silver</item>
+    <item>Gold</item>
+</string-array>
+
+    <string-array name="indices_array">
+        <item>Select preferred indice:</item>
+        <item>NASDAQ</item>
+        <item>S and P</item>
+    </string-array>
+</resources>

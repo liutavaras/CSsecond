@@ -43,7 +43,7 @@ public class HomePageNews extends AppCompatActivity {
         });
         bLiveRates.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(HomePageNews.this, LiveRatesActivity.class));
+                startActivity(new Intent(HomePageNews.this, sortingrates.class));
             }
         });
 
@@ -65,3 +65,4 @@ public class HomePageNews extends AppCompatActivity {
     };
 
 }
+//fhjdkl 

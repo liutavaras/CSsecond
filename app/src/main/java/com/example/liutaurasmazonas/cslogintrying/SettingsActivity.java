@@ -11,6 +11,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
+
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.Thing;
@@ -21,10 +23,13 @@ import static android.graphics.Color.WHITE;
 
 public class SettingsActivity extends AppCompatActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+
         final Button button = (Button) findViewById(R.id.bDark);
         final Button button1 = (Button) findViewById(R.id.button3);
         final Button button2 = (Button) findViewById(R.id.bNewsOn);
@@ -32,9 +37,14 @@ public class SettingsActivity extends AppCompatActivity {
         final Button button4 = (Button) findViewById(R.id.bNotOn);
         final Button button5 = (Button) findViewById(R.id.bNot);
         final Button bChangePassword = (Button) findViewById(R.id.bChangePassword);
+        final Button bLogout = (Button) findViewById(R.id.bLogout);
         final ImageButton bLiveRatesBlack = (ImageButton) findViewById(R.id.ibLiveRatesBlack);
         final ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
         final ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
+
+        final RelativeLayout rl=(RelativeLayout) findViewById(R.id.myLayout);
+
+
 
         // first row of buttons
 
@@ -47,9 +57,15 @@ public class SettingsActivity extends AppCompatActivity {
                         button1.setText("Light");
                         button1.setTextColor(BLACK);
                         button1.getBackground().setColorFilter(Color.LTGRAY, PorterDuff.Mode.MULTIPLY);
+                        rl.setBackgroundColor(BLACK);
+
+
+
+
 
                         while (button.isSelected()) {
                             button.isEnabled();
+
                         }
                         button1.isEnabled();
                         while (button1.isSelected()) {
@@ -73,6 +89,8 @@ public class SettingsActivity extends AppCompatActivity {
                         button.setText("Dark");
                         button.setTextColor(BLACK);
                         button.getBackground().setColorFilter(Color.LTGRAY, PorterDuff.Mode.MULTIPLY);
+                        rl.setBackgroundColor(WHITE);
+
 
                         while (button1.isSelected()) {
                             button1.isEnabled();
@@ -203,22 +221,22 @@ public class SettingsActivity extends AppCompatActivity {
         );
 
 
-
         bLiveRatesBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(SettingsActivity.this, LiveRatesActivity.class));
+                Intent myintent2 = new Intent(SettingsActivity.this,sortingrates.class);
+                startActivity(myintent2);
             }
         });
         bEconCalBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(SettingsActivity.this, WebViewActivity.class));
-
+                Intent myintent3 = new Intent(SettingsActivity.this,WebViewActivity.class);
+                startActivity(myintent3);
             }
         });
         bNewsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(SettingsActivity.this, HomePageNews.class));
-
+                Intent myintent4 = new Intent(SettingsActivity.this,HomePageNews.class);
+                startActivity(myintent4);
             }
         });
         bChangePassword.setOnClickListener(new View.OnClickListener() {
@@ -228,6 +246,12 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
+        bLogout.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent openloginpage = new Intent(SettingsActivity.this,LoginPage.class);
+                startActivity(openloginpage);
+            }
+        });
 
     }
 

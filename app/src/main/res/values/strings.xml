@@ -99,6 +99,9 @@
     <string name="passwordSaveButton" />
     <string name="title_activity_live_rates_tabs">live_rates_tabs</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="app_label">Search</string>
+    <string name="search_hint">Search Me</string>
+    <string name="search">Search</string>
     <string-array name="spinner_options">
         <item name="Client_1">Client 1</item>
         <item name="Client_2">Client 2</item>
@@ -106,4 +109,9 @@
         <item name="Client_4">Client 4</item>
         <item name="Client_5">Client 5</item>
     </string-array>
+
+    //Black theme. Ksenia
+
+    <string name="black">Black</string>
+    <string name="light">Blue</string>
 </resources>

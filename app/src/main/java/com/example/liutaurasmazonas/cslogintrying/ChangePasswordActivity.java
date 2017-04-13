@@ -1,10 +1,7 @@
 package com.example.liutaurasmazonas.cslogintrying;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -15,52 +12,52 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthCredential;
-import com.google.firebase.auth.EmailAuthProvider;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-
 
 public class ChangePasswordActivity extends AppCompatActivity {
 
-    private static final String TAG ="";
+
+    private EditText etCurrentPasswordBox;
+    private EditText etNewPasswordBox;
+    private EditText etRetypeNewPasswordBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_password);
-        ImageButton bSettingsBlack = (ImageButton) findViewById(R.id.ibSettingsBlack);
-        ImageButton bLiveRatesBlack = (ImageButton) findViewById(R.id.ibLiveRatesBlack);
-        ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
-        ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
+        final ImageButton bSettingsBlack = (ImageButton) findViewById(R.id.ibSettingsBlack);
+        final ImageButton bLiveRatesBlack = (ImageButton) findViewById(R.id.ibLiveRatesBlack);
+        final ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
+        final ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
+        final Button bSave = (Button) findViewById(R.id.bSave);
+
+
+        etCurrentPasswordBox = (EditText) findViewById(R.id.etCurrentPasswordBox);
+        etNewPasswordBox = (EditText) findViewById(R.id.etNewPasswordBox);
+        etRetypeNewPasswordBox = (EditText) findViewById(R.id.etRetypeNewPasswordBox);
+
+
 
         bLiveRatesBlack.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View v) {
-                Intent openliverates = new Intent(ChangePasswordActivity.this, LiveRatesActivity.class);
+                Intent openliverates = new Intent(ChangePasswordActivity.this, sortingrates.class);
                 startActivity(openliverates);
             }
         });
         bSettingsBlack.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View v) {
                 Intent opensettings = new Intent(ChangePasswordActivity.this, SettingsActivity.class);
                 startActivity(opensettings);
             }
         });
         bEconCalBlack.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View v) {
-                Intent openeconcal = new Intent(ChangePasswordActivity.this, EconomicCalendarActivity.class);
+                Intent openeconcal = new Intent(ChangePasswordActivity.this, WebViewActivity.class);
                 startActivity(openeconcal);
             }
         });
         bNewsBlack.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View v) {
-                Intent openhome = new Intent(ChangePasswordActivity.this, HomePageNews.class);
+                Intent openhome = new Intent(ChangePasswordActivity.this, HomeActivity.class);
                 startActivity(openhome);
             }
         });
@@ -70,21 +67,6 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
 
     }
-
-
-
-
-//    Change the password - Joe
-
-   FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-
-    AuthCredential credential = EmailAuthProvider.getCredential("user@example.com", "password1234");
-
-
-
-
-
-
     private void setupSaveButton(){
         Button saveButton = (Button) findViewById(R.id.bSave);
         saveButton.setOnClickListener(new View.OnClickListener() {
@@ -100,34 +82,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
             }
         });
-
-
-        user.reauthenticate(credential).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                EditText newPass;
-                newPass = (EditText) findViewById(R.id.etNewPasswordBox);
-
-                if (task.isSuccessful()) {
-                    user.updatePassword(String.valueOf(newPass)).addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            if (task.isSuccessful()) {
-                                Log.d(TAG, "Password updated");
-                            } else {
-                                Log.d(TAG, "Error password not updated");
-                            }
-                        }
-                    });
-                } else {
-                    Log.d(TAG, "Error auth failed");
-                }
-            }
-        });
-
-
     }
-
 //test please delete me and again and again
     private void setupCancelButton(){
         Button cancelButton = (Button) findViewById(R.id.bCancel);

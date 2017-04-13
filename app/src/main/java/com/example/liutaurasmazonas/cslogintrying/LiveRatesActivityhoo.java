@@ -16,19 +16,12 @@ import com.android.volley.VolleyError;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 
-public class LiveRatesActivity extends AppCompatActivity implements Response.Listener,
+public class LiveRatesActivityhoo extends AppCompatActivity implements Response.Listener,
         Response.ErrorListener {
-    public static final String REQUEST_TAG = "LiveRatesActivity";
-    private TextView LastTradePriceOnlyText;
-    private TextView SymbolText;
-    private TextView NameText;
+    public static final String REQUEST_TAG = "LiveRatesActivityhoo";
     private Button GetRates;
-    private RequestQueue mQueue;
-
-    public static final String REQUEST_TAG2 = "LiveRatesActivity";
     private TextView LastTradePriceOnlyText2;
     private TextView SymbolText2;
     private TextView NameText2;
@@ -39,19 +32,17 @@ public class LiveRatesActivity extends AppCompatActivity implements Response.Lis
     private TextView AvgVolumeText2;
     private TextView PERatioText2;
     private TextView MarketCapText2;
-    private RequestQueue nQueue;
+    private RequestQueue mQueue;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_live_rates);
+        setContentView(R.layout.activity_live_rateshoo);
 
-        LastTradePriceOnlyText = (TextView) findViewById(R.id.ResultsTextView);
-        SymbolText = (TextView) findViewById(R.id.SymbolTextView);
-        NameText = (TextView) findViewById(R.id.NameTextView);
-        LastTradePriceOnlyText2 = (TextView) findViewById(R.id.ResultsTextView2);
-        SymbolText2 = (TextView) findViewById(R.id.SymbolTextView2);
-        NameText2 = (TextView) findViewById(R.id.NameTextView2);
+        LastTradePriceOnlyText2 = (TextView) findViewById(R.id.ResultsTextView);
+        SymbolText2 = (TextView) findViewById(R.id.SymbolTextView);
+        NameText2 = (TextView) findViewById(R.id.NameTextView);
         ChangeText2 = (TextView) findViewById(R.id.ChangeTextView2);
         PercentageChangeText2 = (TextView) findViewById(R.id.PercentageChangeTextView2);
         DaysLowText2 = (TextView) findViewById(R.id.DaysLowTextView2);
@@ -61,23 +52,35 @@ public class LiveRatesActivity extends AppCompatActivity implements Response.Lis
         MarketCapText2 = (TextView) findViewById(R.id.MarketCapTextView2);
         GetRates = (Button) findViewById(R.id.Sentbutton);
 
+        ImageButton bLiveRatesBlack = (ImageButton) findViewById(R.id.ibLiveRatesBlack);
         ImageButton bSettingsBlack = (ImageButton) findViewById(R.id.ibSettingsBlack);
         ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
         ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
+        Button BackButton = (Button) findViewById(R.id.ibBackButton);
 
         bSettingsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(LiveRatesActivity.this, SettingsActivity.class));
+                startActivity(new Intent(LiveRatesActivityhoo.this, SettingsActivity.class));
             }
         });
         bEconCalBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(LiveRatesActivity.this, WebViewActivity.class));
+                startActivity(new Intent(LiveRatesActivityhoo.this, WebViewActivity.class));
             }
         });
         bNewsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(LiveRatesActivity.this, HomePageNews.class));
+                startActivity(new Intent(LiveRatesActivityhoo.this, HomePageNews.class));
+            }
+        });
+        BackButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(LiveRatesActivityhoo.this, sortingrates.class));
+            }
+        });
+        bLiveRatesBlack.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(LiveRatesActivityhoo.this, sortingrates.class));
             }
         });
     }
@@ -87,24 +90,18 @@ public class LiveRatesActivity extends AppCompatActivity implements Response.Lis
     @Override
     protected void onStart() {
         super.onStart();
-        // Instantiate the RequestQueue.
+
         mQueue = CustomVolleyRequestQueue.getInstance(this.getApplicationContext())
                 .getRequestQueue();
-        String url = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22FB%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=";//"http://httpbin.org/get?site=code&network=tutsplus";
+        String url = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22YHOO%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=";//"http://httpbin.org/get?site=code&network=tutsplus";
         final CustomJSONObjectRequest jsonRequest = new CustomJSONObjectRequest(Request.Method.GET, url, new JSONObject(), this, this);
         jsonRequest.setTag(REQUEST_TAG);
 
-        nQueue = CustomVolleyRequestQueue.getInstance(this.getApplicationContext())
-                .getRequestQueue();
-        String url2 = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22YHOO%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=";//"http://httpbin.org/get?site=code&network=tutsplus";
-        final CustomJSONObjectRequest jsonRequest2 = new CustomJSONObjectRequest(Request.Method.GET, url2, new JSONObject(), this, this);
-        jsonRequest2.setTag(REQUEST_TAG2);
 
         GetRates.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mQueue.add(jsonRequest);
-                nQueue.add(jsonRequest2);
             }
         });
     }
@@ -115,54 +112,15 @@ public class LiveRatesActivity extends AppCompatActivity implements Response.Lis
         if (mQueue != null) {
             mQueue.cancelAll(REQUEST_TAG);
         }
-        else if (nQueue !=null) {
-            nQueue.cancelAll(REQUEST_TAG2);
-        }
     }
 
     @Override
     public void onErrorResponse(VolleyError error) {
-        LastTradePriceOnlyText.setText(error.getMessage());
         LastTradePriceOnlyText2.setText(error.getMessage());
     }
 
     @Override
     public void onResponse(Object response) {
-        LastTradePriceOnlyText.setText("Response is: " + response);
-        try {
-            JSONObject response2 = ((JSONObject) response).getJSONObject("query");
-            response2 = ((JSONObject) response2).getJSONObject("results");
-            response2 = ((JSONObject) response2).getJSONObject("quote");
-            String displayed_Text = ((JSONObject) response2).getString("LastTradePriceOnly");
-            LastTradePriceOnlyText.setText(displayed_Text);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        {
-            SymbolText.setText("Response is: " + response);
-            try {
-                JSONObject response2 = ((JSONObject) response).getJSONObject("query");
-                response2 = ((JSONObject) response2).getJSONObject("results");
-                response2 = ((JSONObject) response2).getJSONObject("quote");
-                String displayed_Text = ((JSONObject) response2).getString("symbol");
-                SymbolText.setText(displayed_Text);
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-        {
-            NameText.setText("Response is: " + response);
-            try {
-                JSONObject response2 = ((JSONObject) response).getJSONObject("query");
-                response2 = ((JSONObject) response2).getJSONObject("results");
-                response2 = ((JSONObject) response2).getJSONObject("quote");
-                String displayed_Text = ((JSONObject) response2).getString("Name");
-                NameText.setText(displayed_Text);
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-        {
             NameText2.setText("Response is: " + response);
             try {
                 JSONObject response2 = ((JSONObject) response).getJSONObject("query");
@@ -173,7 +131,6 @@ public class LiveRatesActivity extends AppCompatActivity implements Response.Lis
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-        }
         {
             SymbolText2.setText("Response is: " + response);
             try {
@@ -284,9 +241,8 @@ public class LiveRatesActivity extends AppCompatActivity implements Response.Lis
         }
     }
 
-    /** Called when the user clicks the Send button */
     public void NotificationPageRequest(View view) {
-        Intent intent = new Intent(this, LiveRatesActivity.class);
+        Intent intent = new Intent(this, LiveRatesActivityhoo.class);
         startActivity(intent);
     }
 

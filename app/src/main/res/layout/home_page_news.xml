@@ -20,7 +20,8 @@
         android:layout_marginTop="22dp"
         android:layout_below="@+id/horizontalScrollView"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout9">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerview"
@@ -32,6 +33,7 @@
 
         </android.support.v7.widget.RecyclerView>
     </RelativeLayout>
+
 
     <RelativeLayout
         android:layout_width="300dp"
@@ -99,7 +101,7 @@
 
         <ImageView
             app:srcCompat="@drawable/topbarcremebackgroundddd2"
-            android:id="@+id/imageView3"
+            android:id="@+id/imageView5"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_width="790dp"
@@ -115,7 +117,7 @@
             android:layout_height="50dp"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
-            android:layout_alignBottom="@+id/imageView3"
+            android:layout_alignBottom="@+id/imageView5"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_marginBottom="7dp" />
@@ -149,11 +151,10 @@
         android:id="@+id/horizontalScrollView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_marginTop="62dp"
+        android:orientation="horizontal"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="65dp"
-        android:orientation="horizontal">
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:layout_width="wrap_content"
