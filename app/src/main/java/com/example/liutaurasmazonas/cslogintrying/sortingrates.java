@@ -8,7 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.Spinner;
-
+//HELLO KSENIJA, PRIVET, PRIVET, KAK DELA?
 public class sortingrates extends AppCompatActivity {
 
     @Override
