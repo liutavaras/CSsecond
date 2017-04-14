@@ -3,6 +3,7 @@ package com.example.liutaurasmazonas.cslogintrying;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,6 +12,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.view.View.OnClickListener;
+import android.app.Activity;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 
@@ -21,7 +25,13 @@ import static android.graphics.Color.BLACK;
 import static android.graphics.Color.WHITE;
 
 
+
+
 public class SettingsActivity extends AppCompatActivity {
+
+
+
+
 
 
 
@@ -221,22 +231,20 @@ public class SettingsActivity extends AppCompatActivity {
         );
 
 
+
         bLiveRatesBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent myintent2 = new Intent(SettingsActivity.this,sortingrates.class);
-                startActivity(myintent2);
+                startActivity(new Intent(SettingsActivity.this, sortingrates.class));
             }
         });
         bEconCalBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent myintent3 = new Intent(SettingsActivity.this,WebViewActivity.class);
-                startActivity(myintent3);
+                startActivity(new Intent(SettingsActivity.this, WebViewActivity.class));
             }
         });
         bNewsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent myintent4 = new Intent(SettingsActivity.this,HomePageNews.class);
-                startActivity(myintent4);
+                startActivity(new Intent(SettingsActivity.this, HomePageNews.class));
             }
         });
         bChangePassword.setOnClickListener(new View.OnClickListener() {
