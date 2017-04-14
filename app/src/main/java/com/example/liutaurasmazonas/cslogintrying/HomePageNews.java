@@ -30,6 +30,7 @@ public class HomePageNews extends AppCompatActivity {
         ImageButton bSettingsBlack = (ImageButton) findViewById(R.id.ibSettingsBlack);
         ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
         ImageButton bLiveRates = (ImageButton) findViewById(R.id.ibLiveRates);
+        ImageButton addAProfile = (ImageButton) findViewById(R.id.addAProfile);
 
         bSettingsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -44,6 +45,12 @@ public class HomePageNews extends AppCompatActivity {
         bLiveRates.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(HomePageNews.this, sortingrates.class));
+            }
+        });
+
+        addAProfile.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(HomePageNews.this, AddProfileActivity.class));
             }
         });
 

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
+import android.media.audiofx.BassBoost;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -51,6 +52,7 @@ public class SettingsActivity extends AppCompatActivity {
         final ImageButton bLiveRatesBlack = (ImageButton) findViewById(R.id.ibLiveRatesBlack);
         final ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
         final ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
+        final ImageButton addAProfile = (ImageButton) findViewById(R.id.addAProfile);
 
         final RelativeLayout rl=(RelativeLayout) findViewById(R.id.myLayout);
 
@@ -258,6 +260,11 @@ public class SettingsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent openloginpage = new Intent(SettingsActivity.this,LoginPage.class);
                 startActivity(openloginpage);
+            }
+        });
+        addAProfile.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(SettingsActivity.this, AddProfileActivity.class));
             }
         });
 

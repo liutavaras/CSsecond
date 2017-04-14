@@ -13,7 +13,13 @@
         android:largeHeap="true"
         android:theme="@style/AppTheme">
         <activity android:name=".LoginPage"></activity>
-        <activity android:name=".HomePageNews"></activity>
+        <activity android:name=".HomePageNews">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".SettingsActivity"></activity>
         <activity android:name=".FirstScreen"></activity>
         <activity android:name=".Register"></activity>
@@ -46,11 +52,7 @@
         </activity>
 
         <activity android:name=".ChangePasswordActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".LogOutActivity" />
         <activity

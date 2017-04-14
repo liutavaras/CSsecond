@@ -1,6 +1,7 @@
 package com.example.liutaurasmazonas.cslogintrying;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -45,6 +46,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
         final ImageButton bLiveRatesBlack = (ImageButton) findViewById(R.id.ibLiveRatesBlack);
         final ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
         final ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
+        final ImageButton addAProfile = (ImageButton) findViewById(R.id.addAProfile);
         final Button bSave = (Button) findViewById(R.id.bSave);
 
 
@@ -94,6 +96,11 @@ public class ChangePasswordActivity extends AppCompatActivity {
         bNewsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(ChangePasswordActivity.this, HomePageNews.class));
+            }
+        });
+        addAProfile.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(ChangePasswordActivity.this, AddProfileActivity.class));
             }
         });
 
