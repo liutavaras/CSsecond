@@ -42,14 +42,16 @@
 
         </activity>
         <activity android:name=".GoogleSearchIntentActivity">
+
+        </activity>
+
+        <activity android:name=".ChangePasswordActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".ChangePasswordActivity"></activity>
         <activity android:name=".LogOutActivity" />
         <activity
             android:name=".ProfileActivity"
