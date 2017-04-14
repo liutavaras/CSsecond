@@ -11,11 +11,61 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.liutaurasmazonas.cslogintrying.AddProfileActivity">
 
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView40"
+            android:layout_width="790dp"
+            android:layout_height="65dp"
+            android:layout_alignParentStart="true"
+            android:scaleType="matrix"
+            app:srcCompat="@drawable/topbarcremebackgroundddd2" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="210dp"
+            android:layout_height="45dp"
+            android:layout_alignBottom="@+id/imageView40"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="9dp"
+            android:background="#00ffffff"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/bestsearchbar" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/imageView40"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="7dp"
+            android:layout_marginStart="16dp"
+            android:background="#00ffffff"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/pluss" />
+
+        <ImageButton
+            android:id="@+id/imageButton9"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/imageView4"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="12dp"
+            android:background="#00ffffff"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/bell" />
+
+    </RelativeLayout>
+
     <ScrollView
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="425dp"
-        android:layout_below="@+id/relativeLayout2"
-        android:layout_alignParentStart="true">
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:isScrollContainer="false">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -28,7 +78,7 @@
                 android:layout_height="105dp">
 
                 <EditText
-                    android:id="@+id/textView3"
+                    android:id="@+id/etName"
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -39,11 +89,11 @@
                     android:layout_alignParentEnd="true" />
 
                 <EditText
-                    android:id="@+id/textView4"
+                    android:id="@+id/etCareer"
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:layout_below="@+id/textView3"
+                    android:layout_below="@+id/etName"
                     android:ems="10"
                     android:hint="Career"
                     android:inputType="textPersonName"
@@ -76,28 +126,27 @@
                     android:id="@+id/nfRenewableEnergy"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/nfMedicine"
-                    android:layout_alignBottom="@+id/nfMedicine"
-                    android:layout_toEndOf="@+id/nfMedicine"
+                    android:layout_alignBaseline="@+id/cbMedi"
+                    android:layout_alignBottom="@+id/cbMedi"
+                    android:layout_toEndOf="@+id/cbMedi"
                     android:text="Renewable Energy" />
 
                 <CheckBox
-                    android:id="@+id/nfTechnology"
+                    android:id="@+id/cbTech"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/News_Filtering_Save"
-                    android:layout_marginTop="9dp"
-                    android:text="Technology" />
+                    android:text="Technology"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true" />
 
                 <CheckBox
-                    android:id="@+id/nfMedicine"
+                    android:id="@+id/cbMedi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/nfTechnology"
-                    android:layout_alignBottom="@+id/nfTechnology"
+                    android:layout_alignBaseline="@+id/cbTech"
+                    android:layout_alignBottom="@+id/cbTech"
                     android:layout_marginStart="7dp"
-                    android:layout_toEndOf="@+id/nfTechnology"
+                    android:layout_toEndOf="@+id/cbTech"
                     android:text="Medicine" />
 
                 <CheckBox
@@ -131,7 +180,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
-                    android:layout_alignStart="@+id/nfMedicine"
+                    android:layout_alignStart="@+id/cbMedi"
                     android:text="Novartis" />
 
                 <TextView
@@ -155,36 +204,27 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignTop="@+id/lrsAAPL"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="21dp"
                     android:layout_toEndOf="@+id/lrsAAPL"
-                    android:text="YahooInc." />
+                    android:text="Yahoo" />
 
                 <CheckBox
                     android:id="@+id/lrsAAPL"
                     android:layout_width="70dp"
                     android:layout_height="30dp"
                     android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="-33dp"
                     android:layout_toEndOf="@+id/lrsFB"
-                    android:text="AppleInc." />
-
-                <Button
-                    android:id="@+id/Live_Rates_Filtering_Save"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/Live_Rates_Filtering"
-                    android:layout_alignBottom="@+id/Live_Rates_Filtering"
-                    android:layout_alignParentEnd="true"
-                    android:text="Save"
-                    android:textSize="14sp" />
+                    android:text="Apple" />
 
                 <CheckBox
                     android:id="@+id/lrsFB"
                     android:layout_width="120dp"
                     android:layout_height="30dp"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginStart="9dp"
+                    android:layout_marginLeft="30dp"
                     android:layout_toEndOf="@+id/Shares"
-                    android:text="FacebookInc." />
+                    android:text="FB" />
 
                 <TextView
                     android:id="@+id/Live_Rates_Filtering"
@@ -211,6 +251,7 @@
                     android:text="Shares:"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="18sp" />
+
             </RelativeLayout>
 
             <RelativeLayout
@@ -219,22 +260,22 @@
                 android:layout_height="match_parent">
 
                 <CheckBox
-                    android:id="@+id/checkBox2"
+                    android:id="@+id/cbEURUSD"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/lrcuGBPEUR"
-                    android:layout_toEndOf="@+id/lrcuGBPEUR"
+                    android:layout_alignTop="@+id/lrcuUSDRUB"
+                    android:layout_toEndOf="@+id/lrcuUSDRUB"
                     android:text="EUR/USD" />
 
                 <CheckBox
-                    android:id="@+id/lrcuGBPEUR"
+                    android:id="@+id/lrcuUSDRUB"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_alignBaseline="@+id/Currencies"
                     android:layout_alignBottom="@+id/Currencies"
                     android:layout_marginStart="-4dp"
                     android:layout_toEndOf="@+id/lrcuGBPUSD"
-                    android:text="GBP/EUR" />
+                    android:text="USD/RUB" />
 
                 <CheckBox
                     android:id="@+id/lrcoSILVER"
@@ -308,61 +349,30 @@
                     android:id="@+id/lriSP500"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/lrcuGBPEUR"
+                    android:layout_alignStart="@+id/lrcuUSDRUB"
                     android:layout_alignTop="@+id/lriNSDQ"
+                    android:layout_marginLeft="40dp"
                     android:text="S and P" />
+
             </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/bSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Save"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp" />
+
+            </RelativeLayout>
+
         </LinearLayout>
     </ScrollView>
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="790dp"
-            android:layout_height="65dp"
-            android:layout_alignParentStart="true"
-            android:scaleType="matrix"
-            app:srcCompat="@drawable/topbarcremebackgroundddd2" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="210dp"
-            android:layout_height="45dp"
-            android:layout_alignBottom="@+id/imageView5"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="9dp"
-            android:background="#00ffffff"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/bestsearchbar" />
-
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_alignBottom="@+id/imageView5"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="7dp"
-            android:layout_marginStart="16dp"
-            android:background="#00ffffff"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/pluss" />
-
-        <ImageButton
-            android:id="@+id/imageButton9"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_alignBottom="@+id/imageView4"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="12dp"
-            android:background="#00ffffff"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/bell" />
-
-    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="wrap_content"
