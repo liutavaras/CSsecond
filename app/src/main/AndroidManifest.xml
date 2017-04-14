@@ -41,6 +41,9 @@
         <activity
             android:name=".AddProfileActivity"
             android:label="@string/title_activity_add_profile">
+
+        </activity>
+        <activity android:name=".GoogleSearchIntentActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
