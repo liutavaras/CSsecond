@@ -6,18 +6,28 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.media.audiofx.BassBoost;
 import android.net.Uri;
+import android.support.v4.content.IntentCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.Toast;
 import android.widget.ImageButton;
 import android.view.View.OnClickListener;
 import android.app.Activity;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.Thing;
@@ -31,6 +41,9 @@ import static android.graphics.Color.WHITE;
 public class SettingsActivity extends AppCompatActivity {
 
 
+    private Button signOut;
+    private FirebaseAuth.AuthStateListener authListener;
+    private FirebaseAuth firebaseAuth;
 
 
 
@@ -48,13 +61,35 @@ public class SettingsActivity extends AppCompatActivity {
         final Button button4 = (Button) findViewById(R.id.bNotOn);
         final Button button5 = (Button) findViewById(R.id.bNot);
         final Button bChangePassword = (Button) findViewById(R.id.bChangePassword);
-        final Button bLogout = (Button) findViewById(R.id.bLogout);
         final ImageButton bLiveRatesBlack = (ImageButton) findViewById(R.id.ibLiveRatesBlack);
         final ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
         final ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
         final ImageButton addAProfile = (ImageButton) findViewById(R.id.addAProfile);
+        signOut = (Button) findViewById(R.id.bLogout);
 
         final RelativeLayout rl=(RelativeLayout) findViewById(R.id.myLayout);
+
+        //get firebase auth instance
+        firebaseAuth = FirebaseAuth.getInstance();
+
+        //get current user
+        final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        authListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                if (user == null) {
+                    // user auth state is changed - user is null
+                    // launch login activity
+                    Intent i = new Intent(SettingsActivity.this, LoginPage.class);
+                    i.addFlags(IntentCompat.FLAG_ACTIVITY_CLEAR_TASK
+                            | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(i);
+
+                }
+            }
+        };
 
 
 
@@ -256,12 +291,13 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
-        bLogout.setOnClickListener(new View.OnClickListener() {
+        signOut.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
-                Intent openloginpage = new Intent(SettingsActivity.this,LoginPage.class);
-                startActivity(openloginpage);
+                signOut();
             }
         });
+
         addAProfile.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(SettingsActivity.this, AddProfileActivity.class));
@@ -270,34 +306,17 @@ public class SettingsActivity extends AppCompatActivity {
 
     }
 
-
-
-
-
-//I create Logout feature here. Ksenia
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
-        return true;
+    //sign out method
+    public void signOut() {
+        FirebaseAuth.getInstance().signOut();
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.menuLogout:
-
-                /* We need to create user in order to clear data
-                LoginPage.getInstance(this).logout();
-
-                */
 
 
-                break;
-        }
-        return true;
 
-    }
+
+
+
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -318,12 +337,16 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
+        firebaseAuth.addAuthStateListener(authListener);
 
     }
 
     @Override
     public void onStop() {
         super.onStop();
+        if (authListener != null) {
+            firebaseAuth.removeAuthStateListener(authListener);
+        }
 
     }
 
