@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -33,6 +34,21 @@ public class LoginPage extends AppCompatActivity {
 
     public void btnUserLogin_Click(View v) {
         final ProgressDialog progressDialog = ProgressDialog.show(LoginPage.this, "Please wait...", "Proccessing...", true);
+        String email = etEmail.getText().toString().trim();
+        String password = etPassword.getText().toString().trim();
+
+        if (TextUtils.isEmpty(email)) {
+            Toast.makeText(getApplication(), "Enter your registered email ID", Toast.LENGTH_SHORT).show();
+            progressDialog.dismiss();
+            return;
+        }
+
+
+        if (TextUtils.isEmpty(password)) {
+            Toast.makeText(getApplication(), "Enter your password", Toast.LENGTH_SHORT).show();
+            progressDialog.dismiss();
+            return;
+        }
 
         (firebaseAuth.signInWithEmailAndPassword(etEmail.getText().toString(), etPassword.getText().toString()))
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -49,7 +65,9 @@ public class LoginPage extends AppCompatActivity {
                             Log.e("ERROR", task.getException().toString());
                             Toast.makeText(LoginPage.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
 
+
                         }
+
                     }
                 });
     }
