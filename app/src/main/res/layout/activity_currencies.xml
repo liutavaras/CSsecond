@@ -53,7 +53,7 @@
             app:srcCompat="@drawable/topbarcremebackgroundddd2" />
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/addAProfile"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_alignBottom="@+id/imageView5"
@@ -70,7 +70,7 @@
             android:id="@+id/imageView4"
             android:layout_width="210dp"
             android:layout_height="45dp"
-            android:layout_alignBottom="@+id/imageButton"
+            android:layout_alignBottom="@+id/addAProfile"
             android:layout_centerHorizontal="true"
             android:background="#00ffffff"
             android:scaleType="fitXY"

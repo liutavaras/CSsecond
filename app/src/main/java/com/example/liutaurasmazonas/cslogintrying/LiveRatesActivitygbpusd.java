@@ -2,6 +2,7 @@ package com.example.liutaurasmazonas.cslogintrying;
 
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -52,6 +53,7 @@ public class LiveRatesActivitygbpusd extends AppCompatActivity implements Respon
         ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
         ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
         Button BackButton = (Button) findViewById(R.id.ibBackButton);
+        ImageButton addAProfile = (ImageButton) findViewById(R.id.addAProfile);
 
         bSettingsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -76,6 +78,11 @@ public class LiveRatesActivitygbpusd extends AppCompatActivity implements Respon
         bLiveRatesBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(LiveRatesActivitygbpusd.this, sortingrates.class));
+            }
+        });
+        addAProfile.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(LiveRatesActivitygbpusd.this, AddProfileActivity.class));
             }
         });
     }

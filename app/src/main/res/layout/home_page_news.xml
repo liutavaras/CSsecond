@@ -97,30 +97,21 @@
         android:layout_height="95dp"
         android:id="@+id/relativeLayout4"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true">
+        android:layout_alignParentStart="true">
 
         <ImageView
             app:srcCompat="@drawable/topbarcremebackgroundddd2"
             android:id="@+id/imageView5"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
             android:layout_width="790dp"
             android:scaleType="matrix"
-            android:layout_height="65dp" />
+            android:layout_height="65dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignEnd="@+id/imageButton9" />
 
         <ImageButton
+            android:id="@+id/addAProfile"
             app:srcCompat="@drawable/pluss"
-            android:id="@+id/imageButton"
-            android:background="#00ffffff"
-            android:scaleType="fitXY"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_alignBottom="@+id/imageView5"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="7dp" />
+            style="@style/addaprofile" />
 
         <ImageView
             app:srcCompat="@drawable/bestsearchbar"
@@ -128,22 +119,14 @@
             android:background="#00ffffff"
             android:scaleType="fitXY"
             android:layout_width="210dp"
-            android:layout_alignBottom="@+id/imageButton"
+            android:layout_alignBottom="@+id/addAProfile"
             android:layout_centerHorizontal="true"
             android:layout_height="45dp" />
 
         <ImageButton
-            app:srcCompat="@drawable/bell"
             android:id="@+id/imageButton9"
-            android:background="#00ffffff"
-            android:scaleType="fitXY"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_alignBottom="@+id/imageView4"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginRight="12dp"
-            android:layout_marginEnd="12dp" />
+            app:srcCompat="@drawable/bell"
+            style="@style/bell" />
 
     </RelativeLayout>
 

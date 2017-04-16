@@ -19,6 +19,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import org.w3c.dom.Text;
 
+import static com.example.liutaurasmazonas.cslogintrying.R.id.addAProfile;
+
 public class AddProfileActivity extends AppCompatActivity {
 
     EditText etName;
@@ -40,6 +42,8 @@ public class AddProfileActivity extends AppCompatActivity {
     CheckBox lriNSDQ;
     CheckBox lriSP500;
     Button bSave;
+
+
 
     DatabaseReference databaseClients;
 
@@ -72,6 +76,33 @@ public class AddProfileActivity extends AppCompatActivity {
         lriNSDQ = (CheckBox) findViewById(R.id.lriNSDQ);
         lriSP500 = (CheckBox) findViewById(R.id.lriSP500);
         bSave = (Button) findViewById(R.id.bSave);
+
+
+        ImageButton bSettingsBlack = (ImageButton) findViewById(R.id.ibSettingsBlack);
+        ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
+        ImageButton bLiveRates = (ImageButton) findViewById(R.id.ibLiveRates);
+        ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
+
+        bSettingsBlack.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(AddProfileActivity.this, SettingsActivity.class));
+            }
+        });
+        bEconCalBlack.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(AddProfileActivity.this, WebViewActivity.class));
+            }
+        });
+        bLiveRates.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(AddProfileActivity.this, sortingrates.class));
+            }
+        });
+        bNewsBlack.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(AddProfileActivity.this, HomePageNews.class));
+            }
+        });
 
         bSave.setOnClickListener(new View.OnClickListener(){
             @Override
