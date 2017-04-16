@@ -55,6 +55,7 @@ public class ViewProfile extends AppCompatActivity{
                 ClientsList adapter = new ClientsList(ViewProfile.this, clientsList);
                 listviewClients.setAdapter(adapter);
             }
+            //joetest
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
