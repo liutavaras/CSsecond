@@ -14,11 +14,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".LoginPage"></activity>
         <activity android:name=".HomePageNews">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".SettingsActivity"></activity>
         <activity android:name=".FirstScreen"></activity>
@@ -78,6 +74,14 @@
         <activity android:name=".LiveRatesActivitysilver" />
         <activity android:name=".sortingrates">
         </activity>
+        <activity android:name=".ViewProfile">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>
