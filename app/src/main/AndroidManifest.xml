@@ -39,11 +39,6 @@
         <activity
             android:name=".AddProfileActivity"
             android:label="@string/title_activity_add_profile">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity android:name=".ChangePasswordActivity"></activity>
@@ -54,7 +49,13 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <!-- <activity android:name=".MainActivity15" /> -->
         <activity android:name=".MainActivity16" />
-        <activity android:name=".MainActivity17" />
+        <activity android:name=".MainActivity17">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".MainActivity18" />
         <activity android:name=".NewsDetails" />
         <activity android:name=".WebViewActivity" />
@@ -63,7 +64,8 @@
         <activity android:name=".LiveRatesActivitygbpusd" />
         <activity android:name=".LiveRatesActivityfb" />
         <activity android:name=".LiveRatesActivityeurusd" />
-        <activity android:name=".LiveRatesActivitygbpeur" />
+        <activity android:name=".LiveRatesActivitygbpeur">
+        </activity>
         <activity android:name=".LiveRatesActivityapple" />
         <activity android:name=".LiveRatesActivitynasdaq" />
         <activity android:name=".LiveRatesActivitysp" />
