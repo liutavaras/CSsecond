@@ -11,15 +11,8 @@
         android:supportsRtl="true"
         android:hardwareAccelerated="false"
         android:largeHeap="true"
-        android:theme="@style/AppTheme"
-        android:noHistory="true" >
-        <activity android:name=".LoginPage">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        android:theme="@style/AppTheme">
+        <activity android:name=".LoginPage"></activity>
         <activity android:name=".HomePageNews">
 
         </activity>
@@ -48,6 +41,11 @@
         <activity
             android:name=".AddProfileActivity"
             android:label="@string/title_activity_add_profile">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
         <activity android:name=".GoogleSearchIntentActivity">
@@ -81,6 +79,9 @@
         <activity android:name=".LiveRatesActivitysilver" />
         <activity android:name=".sortingrates">
         </activity>
+        <activity android:name=".ViewProfile">
+        </activity>
+
     </application>
 
 </manifest>

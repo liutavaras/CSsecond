@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="149dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="210dp"
+            android:text="TextView"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvCareer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="210dp"
+            android:text="TextView"
+            android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="18sp"
+        tools:text="Iterested in:" />
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Technology:"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvTech"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textView41"
+
+        android:layout_marginLeft="210dp"
+        android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medicine:"
+            android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tvMedicine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textView22"
+
+        android:layout_marginLeft="210dp"
+        android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"            android:layout_height="wrap_content"
+            android:text="Renewable Energy:"
+            android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvRenewableEnergy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textView21"
+
+        android:layout_marginLeft="210dp"
+        android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Google:"
+            android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tvGoogle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textView20"
+
+        android:layout_marginLeft="210dp"
+        android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Novartis:"
+            android:textSize="16sp" />
+    <TextView
+        android:id="@+id/tvNovartis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textView19"
+
+        android:layout_marginLeft="210dp"
+        android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tesla:"
+            android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tvTesla"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textView18"
+
+        android:layout_marginLeft="210dp"
+        android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Facebook:"
+            android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tvFacebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textView17"
+
+        android:layout_marginLeft="210dp"
+        android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apple:"
+            android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tvApple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textView16"
+
+        android:layout_marginLeft="210dp"
+        android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yahoo:"
+            android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tvYahoo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textView15"
+
+        android:layout_marginLeft="210dp"
+        android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GBP/USD:"
+            android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvGBPUSD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textView36"
+
+        android:layout_marginLeft="210dp"
+        android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView35"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="USD/RUB:"
+            android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tvUSDRUB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textView35"
+
+        android:layout_marginLeft="210dp"
+        android:text="TextView" />
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EUR/USD:"
+            android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tvEURUSD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textView34"
+
+        android:layout_marginLeft="210dp"
+        android:text="TextView" />
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gold:"
+            android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tvGold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textView33"
+
+        android:layout_marginLeft="210dp"
+        android:text="TextView" />
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Silver:"
+            android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tvSilver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textView32"
+
+        android:layout_marginLeft="210dp"
+        android:text="TextView" />
+        <TextView
+            android:id="@+id/textView39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NASDAQ:"
+            android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tvNASDAQ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textView39"
+
+        android:layout_marginLeft="210dp"
+        android:text="TextView" />
+        <TextView
+            android:id="@+id/textView38"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="S and P"
+            android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tvSP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textView38"
+
+        android:layout_marginLeft="210dp"
+        android:text="TextView" />
+</LinearLayout>
+</ScrollView>
+    </LinearLayout>
+

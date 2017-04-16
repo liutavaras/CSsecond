@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -30,6 +31,7 @@ public class LiveRatesActivitygbpusd extends AppCompatActivity implements Respon
     private TextView DaysRange;
     private TextView YearRange;
     private RequestQueue mQueue;
+    private ImageView Bell;
 
 
     @Override
@@ -44,6 +46,7 @@ public class LiveRatesActivitygbpusd extends AppCompatActivity implements Respon
         DaysRange = (TextView) findViewById(R.id.PercentageChangeTextView2);
         YearRange = (TextView) findViewById(R.id.DaysLowTextView2);
         GetRates = (Button) findViewById(R.id.Sentbutton);
+
 
         ImageButton bLiveRatesBlack = (ImageButton) findViewById(R.id.ibLiveRatesBlack);
         ImageButton bSettingsBlack = (ImageButton) findViewById(R.id.ibSettingsBlack);
