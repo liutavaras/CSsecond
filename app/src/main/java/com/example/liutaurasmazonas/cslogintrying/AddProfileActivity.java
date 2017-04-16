@@ -66,7 +66,6 @@ public class AddProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_profile);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        Spinner spinner = (Spinner) findViewById(R.id.spinner5);
 
         databaseClients = FirebaseDatabase.getInstance().getReference("clients");
 
@@ -136,7 +135,7 @@ public class AddProfileActivity extends AppCompatActivity {
             objects[i] = "" + array[i];
         }
 
-        spinner.setAdapter(new MyAdapter(AddProfileActivity.this, R.id.spinner5, objects));
+        spinner5.setAdapter(new MyAdapter(AddProfileActivity.this, R.id.spinner5, objects));
 
     }
 
@@ -203,7 +202,7 @@ public class AddProfileActivity extends AppCompatActivity {
         Boolean gbpusdCU = lrcuGBPUSD.isChecked();
         Boolean nsdqI = lriNSDQ.isChecked();
         Boolean sp500I = lriSP500.isChecked();
-        String valueOfSelectedPos = spinner5.getSelectedItem().toString();
+        String valueOfSelectedPos = spinner5.getSelectedItem().toString().trim();
 
         if(!TextUtils.isEmpty(name)){
           String id =  databaseClients.push().getKey();
