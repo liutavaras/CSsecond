@@ -2,11 +2,13 @@ package com.example.liutaurasmazonas.cslogintrying;
 
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -29,6 +31,7 @@ public class LiveRatesActivitygbpusd extends AppCompatActivity implements Respon
     private TextView DaysRange;
     private TextView YearRange;
     private RequestQueue mQueue;
+    private ImageView Bell;
 
 
     @Override
@@ -44,11 +47,13 @@ public class LiveRatesActivitygbpusd extends AppCompatActivity implements Respon
         YearRange = (TextView) findViewById(R.id.DaysLowTextView2);
         GetRates = (Button) findViewById(R.id.Sentbutton);
 
+
         ImageButton bLiveRatesBlack = (ImageButton) findViewById(R.id.ibLiveRatesBlack);
         ImageButton bSettingsBlack = (ImageButton) findViewById(R.id.ibSettingsBlack);
         ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
         ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
         Button BackButton = (Button) findViewById(R.id.ibBackButton);
+        ImageButton addAProfile = (ImageButton) findViewById(R.id.addAProfile);
 
         bSettingsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -73,6 +78,11 @@ public class LiveRatesActivitygbpusd extends AppCompatActivity implements Respon
         bLiveRatesBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(LiveRatesActivitygbpusd.this, sortingrates.class));
+            }
+        });
+        addAProfile.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(LiveRatesActivitygbpusd.this, AddProfileActivity.class));
             }
         });
     }

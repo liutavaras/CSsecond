@@ -57,6 +57,7 @@ public class LiveRatesActivityfb extends AppCompatActivity implements Response.L
         ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
         ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
         Button BackButton = (Button) findViewById(R.id.ibBackButton);
+        ImageButton addAProfile = (ImageButton) findViewById(R.id.addAProfile);
 
         bSettingsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -81,6 +82,11 @@ public class LiveRatesActivityfb extends AppCompatActivity implements Response.L
         bLiveRatesBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(LiveRatesActivityfb.this, sortingrates.class));
+            }
+        });
+        addAProfile.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(LiveRatesActivityfb.this, AddProfileActivity.class));
             }
         });
     }

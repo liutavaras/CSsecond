@@ -19,6 +19,7 @@ public class sortingrates extends AppCompatActivity {
         ImageButton bSettingsBlack = (ImageButton) findViewById(R.id.ibSettingsBlack);
         ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
         ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
+        ImageButton addAProfile = (ImageButton) findViewById(R.id.addAProfile);
 
         bEconCalBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -36,6 +37,11 @@ public class sortingrates extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(sortingrates.this, SettingsActivity.class));
 
+            }
+        });
+        addAProfile.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(sortingrates.this, AddProfileActivity.class));
             }
         });
 

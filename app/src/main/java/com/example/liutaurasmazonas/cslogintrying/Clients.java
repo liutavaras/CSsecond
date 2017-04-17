@@ -24,7 +24,9 @@ public class Clients {
     Boolean gbpusdCU;
     Boolean nsdqI;
     Boolean sp500I;
+    String valueOfSelectedPos;
 
+//    public Clients(String id, String name, String career, Boolean techCB, Boolean mediCB, Boolean renewableEnergyNF, Boolean googleNF, Boolean novartisNF, Boolean teslaNF, Boolean fbLRS, Boolean applLRS, Boolean yhooLRS, Boolean eurusdCB, Boolean usdrubCU, Boolean silverCO, Boolean goldCO, Boolean gbpusdCU, Boolean nsdqI, Boolean sp500I, String valueOfSelectedPos){ }
 
 //    public Clients(String id, String name, String career, Boolean techCB, Boolean mediCB, Boolean renewableEnergyNF, Boolean googleNF, Boolean novartisNF, Boolean teslaNF, Boolean fbLRS, Boolean applLRS, Boolean yhooLRS, Boolean eurusdCB, Boolean usdrubCU, Boolean silverCO, Boolean goldCO, Boolean gbpusdCU, Boolean nsdqI, Boolean sp500I) {
 //
@@ -32,7 +34,7 @@ public class Clients {
 
     public Clients(String id, String clientCareer, String clientName, Boolean techCB, Boolean mediCB, Boolean renewableEnergyNF,
                    Boolean googleNF, Boolean novartisNF, Boolean teslaNF, Boolean fbLRS, Boolean applLRS, Boolean yhooLRS, Boolean eurusdCB,
-                   Boolean usdrubCU, Boolean silverCO, Boolean goldCO, Boolean gbpusdCU, Boolean nsdqI, Boolean sp500I) {
+                   Boolean usdrubCU, Boolean silverCO, Boolean goldCO, Boolean gbpusdCU, Boolean nsdqI, Boolean sp500I, String valueOfSelectedPos) {
 
         this.clientName = clientName;
         this.clientCareer = clientCareer;
@@ -52,6 +54,11 @@ public class Clients {
         this.gbpusdCU = gbpusdCU;
         this.nsdqI = nsdqI;
         this.sp500I = sp500I;
+        this.valueOfSelectedPos = valueOfSelectedPos;
+    }
+
+    public String getValueOfSelectedPos() {
+        return valueOfSelectedPos;
     }
 
     public String getClientName() {

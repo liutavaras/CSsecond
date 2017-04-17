@@ -84,7 +84,7 @@ android:layout_alignParentStart="true">
 
 <ImageButton
     app:srcCompat="@drawable/pluss"
-    android:id="@+id/imageButton"
+    android:id="@+id/addAProfile"
     android:background="#00ffffff"
     android:scaleType="fitXY"
     android:layout_width="50dp"
@@ -102,7 +102,7 @@ android:layout_alignParentStart="true">
     android:background="#00ffffff"
     android:scaleType="fitXY"
     android:layout_width="210dp"
-    android:layout_alignBottom="@+id/imageButton"
+    android:layout_alignBottom="@+id/addAProfile"
     android:layout_centerHorizontal="true"
     android:layout_height="45dp" />
 
