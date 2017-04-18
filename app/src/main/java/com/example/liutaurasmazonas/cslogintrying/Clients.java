@@ -1,5 +1,7 @@
 package com.example.liutaurasmazonas.cslogintrying;
 
+import android.graphics.drawable.Drawable;
+
 /**
  * Created by Joe on 13/04/2017.
  */
@@ -24,7 +26,7 @@ public class Clients {
     Boolean gbpusdCU;
     Boolean nsdqI;
     Boolean sp500I;
-    String valueOfSelectedPos;
+    String image;
 
 //    public Clients(String id, String name, String career, Boolean techCB, Boolean mediCB, Boolean renewableEnergyNF, Boolean googleNF, Boolean novartisNF, Boolean teslaNF, Boolean fbLRS, Boolean applLRS, Boolean yhooLRS, Boolean eurusdCB, Boolean usdrubCU, Boolean silverCO, Boolean goldCO, Boolean gbpusdCU, Boolean nsdqI, Boolean sp500I, String valueOfSelectedPos){ }
 
@@ -32,9 +34,9 @@ public class Clients {
 //
 //    }
 
-    public Clients(String id, String clientCareer, String clientName, Boolean techCB, Boolean mediCB, Boolean renewableEnergyNF,
+    public Clients(String id, String clientName, String clientCareer, Boolean techCB, Boolean mediCB, Boolean renewableEnergyNF,
                    Boolean googleNF, Boolean novartisNF, Boolean teslaNF, Boolean fbLRS, Boolean applLRS, Boolean yhooLRS, Boolean eurusdCB,
-                   Boolean usdrubCU, Boolean silverCO, Boolean goldCO, Boolean gbpusdCU, Boolean nsdqI, Boolean sp500I, String valueOfSelectedPos) {
+                   Boolean usdrubCU, Boolean silverCO, Boolean goldCO, Boolean gbpusdCU, Boolean nsdqI, Boolean sp500I, String image ) {
 
         this.clientName = clientName;
         this.clientCareer = clientCareer;
@@ -54,11 +56,12 @@ public class Clients {
         this.gbpusdCU = gbpusdCU;
         this.nsdqI = nsdqI;
         this.sp500I = sp500I;
-        this.valueOfSelectedPos = valueOfSelectedPos;
+        this.image = image;
+
     }
 
-    public String getValueOfSelectedPos() {
-        return valueOfSelectedPos;
+    public String getImage() {
+        return image;
     }
 
     public String getClientName() {
