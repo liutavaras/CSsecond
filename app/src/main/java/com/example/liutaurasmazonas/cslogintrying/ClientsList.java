@@ -173,22 +173,6 @@ public class ClientsList extends ArrayAdapter<Clients> {
 
         tvName.setText(clients.getClientName());
         tvCareer.setText(clients.getClientCareer());
-        tvTech.setText(String.valueOf(clients.getTechCB()));
-        tvMedicine.setText(String.valueOf(clients.getMediCB()));
-        tvRenewableEnergy.setText(String.valueOf(clients.getRenewableEnergyNF()));
-        tvGoogle.setText(String.valueOf(clients.getGoogleNF()));
-        tvNovartis.setText(String.valueOf(clients.getNovartisNF()));
-        tvTesla.setText(String.valueOf(clients.getTeslaNF()));
-        tvFacebook.setText(String.valueOf(clients.getFbLRS()));
-        tvApple.setText(String.valueOf(clients.getApplLRS()));
-        tvYahoo.setText(String.valueOf(clients.getYhooLRS()));
-        tvGBPUSD.setText(String.valueOf(clients.getGbpusdCU()));
-        tvUSDRUB.setText(String.valueOf(clients.getUsdrubCU()));
-        tvEURUSD.setText(String.valueOf(clients.getEurusdCB()));
-        tvGold.setText(String.valueOf(clients.getGoldCO()));
-        tvSilver.setText(String.valueOf(clients.getSilverCO()));
-        tvNASDAQ.setText(String.valueOf(clients.getNsdqI()));
-        tvSP.setText(String.valueOf(clients.getSp500I()));
 
 
 

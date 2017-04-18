@@ -24,7 +24,7 @@ public class Clients {
     Boolean gbpusdCU;
     Boolean nsdqI;
     Boolean sp500I;
-    String valueOfSelectedPos;
+    Object valueOfSelectedPos;
 
 //    public Clients(String id, String name, String career, Boolean techCB, Boolean mediCB, Boolean renewableEnergyNF, Boolean googleNF, Boolean novartisNF, Boolean teslaNF, Boolean fbLRS, Boolean applLRS, Boolean yhooLRS, Boolean eurusdCB, Boolean usdrubCU, Boolean silverCO, Boolean goldCO, Boolean gbpusdCU, Boolean nsdqI, Boolean sp500I, String valueOfSelectedPos){ }
 
@@ -34,7 +34,7 @@ public class Clients {
 
     public Clients(String id, String clientCareer, String clientName, Boolean techCB, Boolean mediCB, Boolean renewableEnergyNF,
                    Boolean googleNF, Boolean novartisNF, Boolean teslaNF, Boolean fbLRS, Boolean applLRS, Boolean yhooLRS, Boolean eurusdCB,
-                   Boolean usdrubCU, Boolean silverCO, Boolean goldCO, Boolean gbpusdCU, Boolean nsdqI, Boolean sp500I, String valueOfSelectedPos) {
+                   Boolean usdrubCU, Boolean silverCO, Boolean goldCO, Boolean gbpusdCU, Boolean nsdqI, Boolean sp500I, Object valueOfSelectedPos) {
 
         this.clientName = clientName;
         this.clientCareer = clientCareer;
@@ -57,7 +57,7 @@ public class Clients {
         this.valueOfSelectedPos = valueOfSelectedPos;
     }
 
-    public String getValueOfSelectedPos() {
+    public Object getValueOfSelectedPos() {
         return valueOfSelectedPos;
     }
 

@@ -3,6 +3,7 @@ package com.example.liutaurasmazonas.cslogintrying;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.TypedArray;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -29,6 +30,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import org.w3c.dom.Text;
 
+import static com.example.liutaurasmazonas.cslogintrying.R.array.images_array;
 import static com.example.liutaurasmazonas.cslogintrying.R.id.Sentbutton;
 import static com.example.liutaurasmazonas.cslogintrying.R.id.addAProfile;
 import static com.example.liutaurasmazonas.cslogintrying.R.id.spinner;
@@ -125,11 +127,26 @@ public class AddProfileActivity extends AppCompatActivity {
             }
         });
 
+        spinner5.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+            @Override
+            public void onItemSelected(AdapterView<?> arg0, View arg1,
+                                       int arg2, long arg3) {
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> arg0) {
+                // TODO Auto-generated method stub
+
+            }
+        });
 
 
 
 
-        int[] array = getResources().getIntArray(R.array.images_array);
+
+        int[] array = getResources().getIntArray(images_array);
         String [] objects = new String[array.length];
         for(int i = 0; i != array.length; i++){
             objects[i] = "" + array[i];
@@ -166,12 +183,13 @@ public class AddProfileActivity extends AppCompatActivity {
 
         public View getCustomView(int position, View convertView, ViewGroup parent) {
 
+
             LayoutInflater inflater=getLayoutInflater();
             View row=inflater.inflate(R.layout.row, parent, false);
 
 
             ImageView icon = (ImageView) row.findViewById(R.id.icon);
-            TypedArray imgs = getResources().obtainTypedArray(R.array.images_array);
+            TypedArray imgs = getResources().obtainTypedArray(images_array);
             icon.setImageResource(imgs.getResourceId(position, -1));
 
             return row;
@@ -202,7 +220,12 @@ public class AddProfileActivity extends AppCompatActivity {
         Boolean gbpusdCU = lrcuGBPUSD.isChecked();
         Boolean nsdqI = lriNSDQ.isChecked();
         Boolean sp500I = lriSP500.isChecked();
-        String valueOfSelectedPos = spinner5.getSelectedItem().toString().trim();
+        Object valueOfSelectedPos = spinner5.getSelectedItem().toString();
+
+
+
+
+
 
         if(!TextUtils.isEmpty(name)){
           String id =  databaseClients.push().getKey();

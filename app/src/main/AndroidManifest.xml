@@ -17,12 +17,7 @@
 
         </activity>
         <activity android:name=".SettingsActivity">
-            <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
+</activity>
         <activity android:name=".FirstScreen"></activity>
         <activity android:name=".Register"></activity>
         <activity android:name=".UserAreaActivity" />
@@ -82,6 +77,11 @@
         <activity android:name=".sortingrates">
         </activity>
         <activity android:name=".ViewProfile">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
     </application>
