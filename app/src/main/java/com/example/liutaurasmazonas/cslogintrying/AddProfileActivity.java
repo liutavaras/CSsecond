@@ -1,20 +1,25 @@
 package com.example.liutaurasmazonas.cslogintrying;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.TypedArray;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 import android.media.Image;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -30,10 +35,14 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import org.w3c.dom.Text;
 
-import static com.example.liutaurasmazonas.cslogintrying.R.array.images_array;
-import static com.example.liutaurasmazonas.cslogintrying.R.id.Sentbutton;
+import java.io.InputStream;
+
+import static com.example.liutaurasmazonas.cslogintrying.R.id.add;
 import static com.example.liutaurasmazonas.cslogintrying.R.id.addAProfile;
-import static com.example.liutaurasmazonas.cslogintrying.R.id.spinner;
+import static com.example.liutaurasmazonas.cslogintrying.R.id.imageView;
+import static com.example.liutaurasmazonas.cslogintrying.R.id.imageView11;
+import static com.example.liutaurasmazonas.cslogintrying.R.id.parent;
+import static com.example.liutaurasmazonas.cslogintrying.R.layout.home_page_news;
 
 public class AddProfileActivity extends AppCompatActivity {
 
@@ -58,9 +67,18 @@ public class AddProfileActivity extends AppCompatActivity {
     Button bSave;
     Spinner spinner5;
     Button galleryspinner;
+    ImageButton bellbutton;
+    ImageView imageView10;
 
+    private ProgressDialog mProgress;
+//    String downloadAmberA = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/a_oufued.png";
+//    String downloadAmberB = "http://res.cloudinary.com/liutavaras/image/upload/v1492503937/b_eawxmg.png";
+//    String downloadAmberC = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/c_jouf2t.png";
+//    String downloadAmberD = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/d_isx7x3.png";
 
     DatabaseReference databaseClients;
+//    DatabaseReference databasePhotos;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,12 +88,13 @@ public class AddProfileActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         databaseClients = FirebaseDatabase.getInstance().getReference("clients");
+//        databasePhotos = FirebaseDatabase.getInstance().getReference("photos");
 
-         etName = (EditText) findViewById(R.id.etName);
-         etCareer = (EditText) findViewById(R.id.etCareer);
-         cbTech = (CheckBox) findViewById(R.id.cbTech);
-         cbMedi = (CheckBox) findViewById(R.id.cbMedi);
-         nfRenewableEnergy = (CheckBox) findViewById(R.id.nfRenewableEnergy);
+        etName = (EditText) findViewById(R.id.etName);
+        etCareer = (EditText) findViewById(R.id.etCareer);
+        cbTech = (CheckBox) findViewById(R.id.cbTech);
+        cbMedi = (CheckBox) findViewById(R.id.cbMedi);
+        nfRenewableEnergy = (CheckBox) findViewById(R.id.nfRenewableEnergy);
         nfGoogle = (CheckBox) findViewById(R.id.nfGoogle);
         cfNovartis = (CheckBox) findViewById(R.id.cfNovartis);
         nfTesla = (CheckBox) findViewById(R.id.nfTesla);
@@ -90,7 +109,6 @@ public class AddProfileActivity extends AppCompatActivity {
         lriNSDQ = (CheckBox) findViewById(R.id.lriNSDQ);
         lriSP500 = (CheckBox) findViewById(R.id.lriSP500);
         bSave = (Button) findViewById(R.id.bSave);
-        spinner5 = (Spinner) findViewById(R.id.spinner5);
 
 
         ImageButton bSettingsBlack = (ImageButton) findViewById(R.id.ibSettingsBlack);
@@ -119,86 +137,107 @@ public class AddProfileActivity extends AppCompatActivity {
             }
         });
 
-        bSave.setOnClickListener(new View.OnClickListener(){
+
+        bSave.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
+            public void onClick(View view) {
                 bSave();
 
             }
         });
 
-        spinner5.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
-            @Override
-            public void onItemSelected(AdapterView<?> arg0, View arg1,
-                                       int arg2, long arg3) {
 
+//        Spinner spinner5;
+//
+//        spinner5 = (Spinner) findViewById(R.id.spinner5);
+//
+//        ArrayAdapter<String> myAdaptor = new ArrayAdapter<String>(AddProfileActivity.this,
+//                R.layout.simple_spinner_item,
+//                getResources().getStringArray(R.array.letters_array));
+//
+//        myAdaptor.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//
+//        spinner5.setAdapter(myAdaptor);
+//
+//        spinner5.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//
+//            public void onClick(View v) {
+//                // TODO Auto-generated method stub
+//
+//            }
+//
+//            @Override
+//            public void onItemSelected(AdapterView<?> arg0, View view, int position, long row_id) {
+//                final Intent intent;
+//
+//
+//                switch (position) {
+//                    case 1:
+//
+////                        String image = downloadAmberA.toString();
+////
+////                        String id =  databaseClients.push().getKey();
+////                        Clients clients = new Clients(id, image);
+////
+////                        databaseClients.child(id).setValue(clients);
+//
+//
+//                        new DownloadImageTask((ImageView) findViewById(R.id.imageView10))
+//                                .execute(downloadAmberA);
+//                        break;
+//                    case 2:
+//                        new DownloadImageTask((ImageView) findViewById(R.id.imageView10))
+//                                .execute(downloadAmberB);
+//                        break;
+//                    case 3:
+//                        new DownloadImageTask((ImageView) findViewById(R.id.imageView10))
+//                                .execute(downloadAmberC);
+//                        break;
+//                    case 4:
+//                        new DownloadImageTask((ImageView) findViewById(R.id.imageView10))
+//                                .execute(downloadAmberD);
+//                        break;
+//
+//                }
+//
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> arg0) {
+//                // TODO Auto-generated method stub
+//
+//            }
+//
+//        });
+//
+
+    }
+
+    private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
+        ImageView imageView10;
+
+        public DownloadImageTask(ImageView imageView10) {
+            this.imageView10 = imageView10;
+        }
+
+        protected Bitmap doInBackground(String... urls) {
+            String urldisplay = urls[0];
+            Bitmap mIcon11 = null;
+            try {
+                InputStream in = new java.net.URL(urldisplay).openStream();
+                mIcon11 = BitmapFactory.decodeStream(in);
+            } catch (Exception e) {
+                Log.e("Error", e.getMessage());
+                e.printStackTrace();
             }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> arg0) {
-                // TODO Auto-generated method stub
-
-            }
-        });
-
-
-
-
-
-        int[] array = getResources().getIntArray(images_array);
-        String [] objects = new String[array.length];
-        for(int i = 0; i != array.length; i++){
-            objects[i] = "" + array[i];
+            return mIcon11;
         }
 
-        spinner5.setAdapter(new MyAdapter(AddProfileActivity.this, R.id.spinner5, objects));
-
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_add_profile, menu);
-        return true;
-    }
-
-    class MyAdapter extends ArrayAdapter<String>{
-
-        String[] objects;
-        public MyAdapter(Context context, int textViewResourceId,   String[] objects) {
-            super(context, textViewResourceId, objects);
-            this.objects = objects;
-        }
-
-        @Override
-        public View getDropDownView(int position, View convertView,ViewGroup parent) {
-            return getCustomView(position, convertView, parent);
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            return getCustomView(position, convertView, parent);
-        }
-
-        public View getCustomView(int position, View convertView, ViewGroup parent) {
-
-
-            LayoutInflater inflater=getLayoutInflater();
-            View row=inflater.inflate(R.layout.row, parent, false);
-
-
-            ImageView icon = (ImageView) row.findViewById(R.id.icon);
-            TypedArray imgs = getResources().obtainTypedArray(images_array);
-            icon.setImageResource(imgs.getResourceId(position, -1));
-
-            return row;
+        protected void onPostExecute(Bitmap result) {
+            imageView10.setImageBitmap(result);
         }
     }
-
-
-
-
 
 
     private void bSave(){
@@ -220,25 +259,27 @@ public class AddProfileActivity extends AppCompatActivity {
         Boolean gbpusdCU = lrcuGBPUSD.isChecked();
         Boolean nsdqI = lriNSDQ.isChecked();
         Boolean sp500I = lriSP500.isChecked();
-        Object valueOfSelectedPos = spinner5.getSelectedItem().toString();
-
-
-
+        String image = "joe";
 
 
 
         if(!TextUtils.isEmpty(name)){
-          String id =  databaseClients.push().getKey();
+            String id =  databaseClients.push().getKey();
 
-            Clients clients = new Clients(id, name, career, techCB, mediCB, renewableEnergyNF, googleNF,
+            Clients clients = new Clients (id, name, career, techCB, mediCB, renewableEnergyNF, googleNF,
                     novartisNF, teslaNF, fbLRS, applLRS, yhooLRS, eurusdCB, usdrubCU, silverCO,
-                    goldCO, gbpusdCU, nsdqI, sp500I, valueOfSelectedPos );
+                    goldCO, gbpusdCU, nsdqI, sp500I, image );
 
             databaseClients.child(id).setValue(clients);
 
             Toast.makeText(this, "Client added", Toast.LENGTH_LONG).show();
 
-            startActivity(new Intent(AddProfileActivity.this, AddProfileActivity.class));
+            Intent intent = new Intent(AddProfileActivity.this, SettingPriority.class);
+            intent.putExtra("id", id);
+            startActivity(intent);
+
+//            startActivity(new Intent(AddProfileActivity.this, SettingPriority.class));
+
 
 
 
@@ -249,6 +290,5 @@ public class AddProfileActivity extends AppCompatActivity {
 
     }
 
-    }
 
-
+}
