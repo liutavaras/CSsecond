@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -22,8 +23,13 @@ import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.io.InputStream;
 
@@ -140,7 +146,27 @@ public class SettingPriority extends AppCompatActivity {
 
         bGoBack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(SettingPriority.this, AddProfileActivity.class));
+//                startActivity(new Intent(SettingPriority.this, AddProfileActivity.class));
+//                String id = (String) getIntent().getExtras().get("id");
+//                String nom = databaseClients.child(id).child("image")
+
+
+                addValueEventListener(new ValueEventListener() {
+
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+
+                        String value = dataSnapshot.getValue(String.class);
+
+                        Toast.makeText(SettingPriority.this, "nom est : " + value, Toast.LENGTH_SHORT).show();
+                }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                    }
+
+                });
+
             }
         });
 
@@ -181,12 +207,7 @@ public class SettingPriority extends AppCompatActivity {
                         new DownloadImageTask((ImageView) findViewById(R.id.imageView11))
                                 .execute(downloadAmberA);
 
-                        RelativeLayout RL = (RelativeLayout)findViewById(R.id.activity_setting_priority);
-                        View child = getLayoutInflater().inflate(R.layout.home_page_news, null);
-                        RL.addView(child);
-
-
-                        new DownloadImageTask((ImageView) findViewById(R.id.imageView9)).execute(downloadAmberA);
+//                        new DownloadImageTask((ImageView) findViewById(R.id.imageView9)).execute(downloadAmberA);
 
                         break;
                     case 2:
