@@ -11,23 +11,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.liutaurasmazonas.cslogintrying.WebViewActivity">
 
+
     <RelativeLayout
-        android:id="@+id/relativeLayout"
+        android:id="@+id/rl1"
         android:layout_width="300dp"
         android:layout_height="90dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true">
-
-        <ImageButton
-            android:id="@+id/ibNewsBlack"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:background="#00ffffff"
-            android:scaleType="fitEnd"
-            app:srcCompat="@drawable/newsbutton2" />
 
         <ImageButton
             android:id="@+id/ibEconCalBlack"
@@ -39,27 +30,37 @@
             android:background="#00ffffff"
             android:cropToPadding="false"
             android:scaleType="fitEnd"
-            app:srcCompat="@drawable/economiccalendarbuttongrey2" />
+            android:src="@drawable/economiccalendarbuttonblue2" />
 
         <ImageButton
             android:id="@+id/ibLiveRates"
             android:layout_width="90dp"
             android:layout_height="90dp"
-            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
             android:layout_toEndOf="@+id/ibEconCalBlack"
             android:background="#00ffffff"
             android:scaleType="fitEnd"
-            app:srcCompat="@drawable/liveratesbuttonblue2" />
+            android:src="@drawable/liveratesbuttongrey2" />
+
+        <ImageButton
+            android:id="@+id/ibNewsBlack"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:background="#00ffffff"
+            android:scaleType="fitEnd"
+            android:src="@drawable/newsbutton2" />
 
         <ImageButton
             android:id="@+id/ibSettingsBlack"
             android:layout_width="90dp"
             android:layout_height="90dp"
+            android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true"
             android:background="#00ffffff"
             android:scaleType="fitEnd"
-            app:srcCompat="@drawable/settingsbuttongrey2" />
+            android:src="@drawable/settingsbuttongrey2" />
 
     </RelativeLayout>
 
@@ -76,7 +77,7 @@
             android:layout_height="65dp"
             android:layout_alignParentStart="true"
             android:scaleType="matrix"
-            app:srcCompat="@drawable/topbarcremebackgroundddd2" />
+            android:src="@drawable/topbarcremebackgroundddd2" />
 
         <ImageButton
             android:id="@+id/addAProfile"
@@ -86,9 +87,9 @@
             android:layout_alignParentStart="true"
             android:layout_marginBottom="7dp"
             android:layout_marginStart="16dp"
-            android:background="#00ffffff"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/pluss" />
+            android:background="#00ffffff"
+            android:src="@drawable/pluss" />
 
         <ImageView
             android:id="@+id/imageView4"
@@ -96,9 +97,9 @@
             android:layout_height="45dp"
             android:layout_alignBottom="@+id/addAProfile"
             android:layout_centerHorizontal="true"
-            android:background="#00ffffff"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/bestsearchbar" />
+            android:background="#00ffffff"
+            android:src="@drawable/bestsearchbar" />
 
         <ImageButton
             android:id="@+id/imageButton2"
@@ -107,16 +108,17 @@
             android:layout_alignBottom="@+id/imageView4"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="12dp"
-            android:background="#00ffffff"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/bell" />
-
-    </RelativeLayout>
+            android:background="#00ffffff"
+            android:src="@drawable/bell" />
+        </RelativeLayout>
 
     <WebView
+        android:layout_above="@+id/rl1"
+        android:layout_below="@+id/relativeLayout6"
         android:id="@+id/webView1"
-        android:layout_width="360dp"
-        android:layout_height="426dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="64dp" />

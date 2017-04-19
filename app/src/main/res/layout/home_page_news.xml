@@ -107,7 +107,7 @@
             android:scaleType="matrix"
             android:layout_height="65dp"
             android:layout_alignParentTop="true"
-            android:layout_alignEnd="@+id/imageButton9" />
+            android:layout_alignParentEnd="true" />
 
         <ImageButton
             android:id="@+id/addAProfile"
