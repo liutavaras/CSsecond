@@ -171,17 +171,17 @@
         ]]>
 
         <Button
-            android:text="Change password"
+            android:id="@+id/bChangePassword"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:id="@+id/bChangePassword"
-            android:textSize="30sp"
-            android:textAllCaps="false"
-            android:layout_alignParentBottom="true"
+            android:layout_alignEnd="@+id/bNot"
             android:layout_alignLeft="@+id/bNotOn"
-            android:layout_alignStart="@+id/bNotOn"
+            android:layout_alignParentBottom="true"
             android:layout_alignRight="@+id/bNot"
-            android:layout_alignEnd="@+id/bNot" />
+            android:layout_alignStart="@+id/bNotOn"
+            android:text="Change password"
+            android:textAllCaps="false"
+            android:textSize="23sp" />
 
         <Button
             android:id="@+id/bNotOn"
@@ -194,21 +194,20 @@
             android:text="ON"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:textSize="30sp" />
+            android:textSize="23sp" />
 
         <Button
-            android:text="Dark"
             android:id="@+id/bDark"
-            android:layout_height="60dp"
             android:layout_width="160dp"
-            android:textAllCaps="false"
-            android:textSize="30sp"
-            android:onClick="true"
+            android:layout_height="60dp"
             android:layout_above="@+id/bNewsOn"
-            android:layout_toLeftOf="@+id/button3"
-            android:layout_toStartOf="@+id/button3"
+            android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
-            android:layout_marginEnd="8dp" />
+            android:layout_toStartOf="@+id/bNews"
+            android:onClick="true"
+            android:text="Dark"
+            android:textAllCaps="false"
+            android:textSize="23sp" />
 
         <Button
             android:id="@+id/bNews"
@@ -220,7 +219,7 @@
             android:onClick="true"
             android:text="News"
             android:textAllCaps="false"
-            android:textSize="30sp" />
+            android:textSize="23sp" />
 
         <Button
             android:id="@+id/bNewsOn"
@@ -234,7 +233,7 @@
             android:text="ON"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:textSize="30sp" />
+            android:textSize="23sp" />
 
         <Button
         android:text="Notifications"
@@ -248,20 +247,20 @@
             android:layout_alignStart="@+id/bNews" />
 
         <Button
-            android:text="OFF"
-            android:layout_height="60dp"
             android:id="@+id/button3"
-            android:backgroundTint="#2B292A"
-            android:textSize="30sp"
-            android:textAllCaps="false"
             android:layout_width="160dp"
-            android:textColor="#FFFFFF"
-            android:onClick="true"
-            android:layout_marginRight="15dp"
-            android:layout_marginEnd="15dp"
+            android:layout_height="60dp"
             android:layout_above="@+id/bNews"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:backgroundTint="#2B292A"
+            android:onClick="true"
+            android:text="OFF"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="23sp" />
 
     </RelativeLayout>
 
@@ -273,7 +272,7 @@
         android:layout_centerHorizontal="true"
         android:text="Logout"
         android:textAllCaps="false"
-        android:textSize="30sp"/>
+        android:textSize="23sp" />
 
 
 </RelativeLayout>
