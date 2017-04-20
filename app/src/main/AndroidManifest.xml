@@ -5,26 +5,18 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-
         android:allowBackup="true"
         android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="Uptick"
         android:largeHeap="true"
+        android:screenOrientation="portrait"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:screenOrientation="portrait">
+        android:theme="@style/AppTheme">
 
         <activity android:name=".LoginPage" />
-        <activity android:name=".HomePageNews">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
-        <activity android:name=".SettingsActivity">
-        </activity>
+        <activity android:name=".HomePageNews" />
+        <activity android:name=".SettingsActivity" />
         <activity android:name=".FirstScreen" />
         <activity android:name=".Register" />
         <activity android:name=".UserAreaActivity" />
@@ -46,23 +38,20 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".AddProfileActivity"
-            android:label="@string/title_activity_add_profile">
+            android:label="@string/title_activity_add_profile" />
+        <activity android:name=".GoogleSearchIntentActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".GoogleSearchIntentActivity" />
         <activity android:name=".ChangePasswordActivity" />
         <activity android:name=".LogOutActivity" />
         <activity
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile"
-            android:theme="@style/AppTheme.NoActionBar">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-
-            </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <!-- <activity android:name=".MainActivity15" /> -->
         <activity android:name=".MainActivity16" />
         <activity android:name=".MainActivity17" />
@@ -81,10 +70,18 @@
         <activity android:name=".LiveRatesActivitygold" />
         <activity android:name=".LiveRatesActivitysilver" />
         <activity android:name=".sortingrates" />
-        <activity android:name=".ViewProfile" >
-            </activity>
-        <activity android:name=".SettingPriority">
-        </activity>
-    </application>
+        <activity android:name=".ViewProfile" />
+        <activity android:name=".SettingPriority" />
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
 
+    <service android:name=".FirebaseIDService">
+        <intent-filter>
+            <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+        </intent-filter>
+    </service>
+</application>
 </manifest>
