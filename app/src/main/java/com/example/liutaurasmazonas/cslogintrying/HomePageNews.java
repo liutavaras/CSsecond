@@ -288,3 +288,4 @@ public class HomePageNews extends AppCompatActivity {
     }
 
 }
+//hjk
