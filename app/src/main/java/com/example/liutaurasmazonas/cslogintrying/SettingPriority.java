@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
+import android.os.Handler;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -22,6 +24,7 @@ import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -36,6 +39,7 @@ import static com.example.liutaurasmazonas.cslogintrying.R.id.cbTech;
 import static com.example.liutaurasmazonas.cslogintrying.R.id.cfNovartis;
 import static com.example.liutaurasmazonas.cslogintrying.R.id.etCareer;
 import static com.example.liutaurasmazonas.cslogintrying.R.id.etName;
+import static com.example.liutaurasmazonas.cslogintrying.R.id.imageView11;
 import static com.example.liutaurasmazonas.cslogintrying.R.id.lrcoGOLD;
 import static com.example.liutaurasmazonas.cslogintrying.R.id.lrcoSILVER;
 import static com.example.liutaurasmazonas.cslogintrying.R.id.lrcuGBPUSD;
@@ -71,6 +75,7 @@ public class SettingPriority extends AppCompatActivity {
     CheckBox lriNSDQ;
     CheckBox lriSP500;
     Button bGoBack;
+    Spinner spinner5;
 
     String downloadAmberA = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/a_oufued.png";
     String downloadAmberB = "http://res.cloudinary.com/liutavaras/image/upload/v1492503937/b_eawxmg.png";
@@ -105,6 +110,8 @@ public class SettingPriority extends AppCompatActivity {
         lrcuGBPUSD = (CheckBox) findViewById(R.id.lrcuGBPUSD);
         lriNSDQ = (CheckBox) findViewById(R.id.lriNSDQ);
         lriSP500 = (CheckBox) findViewById(R.id.lriSP500);
+        spinner5 = (Spinner) findViewById(R.id.spinner5);
+
 
         ImageButton bSettingsBlack = (ImageButton) findViewById(R.id.ibSettingsBlack);
         ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
@@ -138,16 +145,6 @@ public class SettingPriority extends AppCompatActivity {
             }
         });
 
-        bGoBack.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                startActivity(new Intent(SettingPriority.this, AddProfileActivity.class));
-            }
-        });
-
-
-        Spinner spinner5;
-
-        spinner5 = (Spinner) findViewById(R.id.spinner5);
 
         ArrayAdapter<String> myAdaptor = new ArrayAdapter<String>(SettingPriority.this,
                 R.layout.simple_spinner_item,
@@ -166,47 +163,52 @@ public class SettingPriority extends AppCompatActivity {
 
             @Override
             public void onItemSelected(AdapterView<?> arg0, View view, int position, long row_id) {
-                final Intent intent;
 
                 switch (position) {
                     case 1:
-                        String id = (String) getIntent().getExtras().get("id");
-
-//                        String id =  databaseClients.push().getKey();
-
                         String url = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/a_oufued.png";
-
+                        String id = (String) getIntent().getExtras().get("id");
                         databaseClients.child(id).child("image").setValue(url);
-
                         new DownloadImageTask((ImageView) findViewById(R.id.imageView11))
                                 .execute(downloadAmberA);
-
-                        RelativeLayout RL = (RelativeLayout)findViewById(R.id.activity_setting_priority);
-                        View child = getLayoutInflater().inflate(R.layout.home_page_news, null);
-                        RL.addView(child);
-
-
-                        new DownloadImageTask((ImageView) findViewById(R.id.imageView9)).execute(downloadAmberA);
-
+                        Intent a = new Intent(SettingPriority.this, HomePageNews.class);
+                        a.putExtra("url", url);
+                        startActivity(a);
                         break;
                     case 2:
+                        String url2 = "http://res.cloudinary.com/liutavaras/image/upload/v1492503937/b_eawxmg.png";
+                        String id2 = (String) getIntent().getExtras().get("id");
+                        databaseClients.child(id2).child("image").setValue(url2);
                         new DownloadImageTask((ImageView) findViewById(R.id.imageView11))
                                 .execute(downloadAmberB);
+                        Intent b = new Intent(SettingPriority.this, HomePageNews.class);
+                        b.putExtra("url", url2);
+                        startActivity(b);
                         break;
                     case 3:
+                        String url3 = "http://res.cloudinary.com/liutavaras/image/upload/v1492503937/b_eawxmg.png";
+                        String id3 = (String) getIntent().getExtras().get("id");
+                        databaseClients.child(id3).child("image").setValue(url3);
                         new DownloadImageTask((ImageView) findViewById(R.id.imageView11))
-                                .execute(downloadAmberC);
+                                .execute(downloadAmberB);
+                        Intent c = new Intent(SettingPriority.this, HomePageNews.class);
+                        c.putExtra("url", url3);
+                        startActivity(c);
                         break;
                     case 4:
+                        String url4 = "http://res.cloudinary.com/liutavaras/image/upload/v1492503937/b_eawxmg.png";
+                        String id4 = (String) getIntent().getExtras().get("id");
+                        databaseClients.child(id4).child("image").setValue(url4);
                         new DownloadImageTask((ImageView) findViewById(R.id.imageView11))
-                                .execute(downloadAmberD);
+                                .execute(downloadAmberB);
+                        Intent d = new Intent(SettingPriority.this, HomePageNews.class);
+                        d.putExtra("url", url4);
+                        startActivity(d);
                         break;
 
                 }
 
             }
-
-
 
             @Override
             public void onNothingSelected(AdapterView<?> arg0) {
@@ -216,8 +218,28 @@ public class SettingPriority extends AppCompatActivity {
 
         });
 
-    }
+//        bGoBack.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                String url = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/a_oufued.png";
+//                if (spinner5.getSelectedItem().toString().equals("A")) {
+//                    Intent i = new Intent(SettingPriority.this, HomePageNews.class);
+//                    i.putExtra("url", url);
+//                    startActivity(i);
+//                }
+//                else if(spinner5.getSelectedItem().toString().equals("B")) {
+//                    Intent i = new Intent(SettingPriority.this, HomePageNews.class);
+//                    i.putExtra("url", url2);
+//                    startActivity(i);
+//                }else{
+//                    Toast.makeText(getApplication(), "No priority selected", Toast.LENGTH_SHORT).show();
+//                }
+//
+//
+//                startActivity(new Intent(SettingPriority.this, HomePageNews.class));
+//            }
+//        });
 
+    }
 
     private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
         ImageView imageView11;

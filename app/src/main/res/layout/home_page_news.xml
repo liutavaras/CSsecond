@@ -11,7 +11,6 @@
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
     android:paddingTop="0dp"
-    android:background="#f7f7f7"
     tools:context="com.example.liutaurasmazonas.cslogintrying.HomePageNews">
 
 
@@ -106,8 +105,7 @@
             android:layout_width="790dp"
             android:scaleType="matrix"
             android:layout_height="65dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentTop="true"/>
 
         <ImageButton
             android:id="@+id/addAProfile"
@@ -126,16 +124,29 @@
 
         <ImageButton
             android:id="@+id/imageButton9"
-            app:srcCompat="@drawable/bell"
-            style="@style/bell" />
+            style="@style/bell"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/addAProfile"
+            android:layout_marginEnd="16dp"
+            app:srcCompat="@drawable/bell" />
 
     </RelativeLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Refresh"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="77dp" />
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="59dp"
         android:orientation="horizontal"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true">
@@ -149,12 +160,22 @@
             android:orientation="horizontal">
 
 
+            <ImageButton
+                android:id="@+id/imageButton11"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:background="#00ffffff"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/common_google_signin_btn_icon_light_pressed" />
+
             <ImageView
                 android:id="@+id/imageView9"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_weight="1"
-                app:srcCompat="@color/colorAccent" />
+                android:background="#0000"
+                app:srcCompat="@drawable/common_google_signin_btn_icon_dark_disabled" />
 
             <ImageButton
                 android:id="@+id/imageButton4"
