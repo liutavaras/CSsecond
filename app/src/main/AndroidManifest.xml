@@ -68,10 +68,9 @@
         <activity android:name=".LiveRatesActivitysp" />
         <activity android:name=".LiveRatesActivitygold" />
         <activity android:name=".LiveRatesActivitysilver" />
-        <activity android:name=".sortingrates" />
+        <activity android:name=".sortingrates">
+        </activity>
         <activity android:name=".ViewProfile" />
-        <activity android:name=".MainActivity21" />
-        <activity android:name=".Photos" />
         <activity android:name=".SettingPriority">
         </activity>
     </application>
