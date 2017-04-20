@@ -319,7 +319,7 @@
             android:layout_toEndOf="@+id/ibEconCalBlack"
             android:background="#00ffffff"
             android:scaleType="fitEnd"
-            app:srcCompat="@drawable/liveratesbuttongrey2" />
+            app:srcCompat="@drawable/liveratesbuttonblue2" />
 
         <ImageButton
             android:id="@+id/ibSettingsBlack"
