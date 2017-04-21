@@ -14,10 +14,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".LoginPage" />
+        <activity android:name=".LoginPage">
+
+        </activity>
         <activity android:name=".HomePageNews" />
         <activity android:name=".SettingsActivity" />
-        <activity android:name=".FirstScreen" />
+        <activity android:name=".FirstScreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+        </activity>
         <activity android:name=".Register" />
         <activity android:name=".UserAreaActivity" />
         <!--
@@ -40,11 +50,7 @@
             android:name=".AddProfileActivity"
             android:label="@string/title_activity_add_profile" />
         <activity android:name=".GoogleSearchIntentActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".ChangePasswordActivity" />
         <activity android:name=".LogOutActivity" />
