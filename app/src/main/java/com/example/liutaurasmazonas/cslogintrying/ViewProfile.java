@@ -61,27 +61,6 @@ public class ViewProfile extends AppCompatActivity{
 
             }
 
-
-
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//
-//                clientsList.clear();
-//
-//                for (DataSnapshot clientsSnapshot : dataSnapshot.getChildren()) {
-//                    Clients clients = clientsSnapshot.getValue(Clients.class);
-//
-//                    clientsList.add(clients);
-//                }
-//                ClientsList adapter = new ClientsList(ViewProfile.this, clientsList);
-//                listviewClients.setAdapter(adapter);
-//            }
-//
-//            @Override
-//            public void onCancelled(FirebaseError firebaseError) {
-//
-//            }
-
         });
     }
 }

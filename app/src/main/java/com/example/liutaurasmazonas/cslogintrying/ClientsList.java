@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.content.Intent;
 
 import org.w3c.dom.Text;
 
@@ -40,13 +41,17 @@ public class ClientsList extends ArrayAdapter<Clients> {
     private Boolean tvGBPUSD;
     private Boolean tvNASDAQ;
     private Boolean tvSP;
+    private String tvID;
 
+    Intent intent = getIntent();
+    final String key = (String) getIntent().getExtras().get("key");
 
     public ClientsList(Activity context, List<Clients> clientsList){
 
         super(context, activity_profile_listview, clientsList);
         this.context = context;
         this.clientsList = clientsList;
+        this.tvID = tvID;
         this.tvTech = tvTech;
         this.tvMedicine = tvMedicine;
         this.tvRenewableEnergy = tvRenewableEnergy;
@@ -77,6 +82,10 @@ public class ClientsList extends ArrayAdapter<Clients> {
 
     public List<Clients> getClientsList() {
         return clientsList;
+    }
+
+    public String getTvID() {
+        return tvID;
     }
 
     public Boolean getTvTech() {
@@ -151,7 +160,8 @@ public class ClientsList extends ArrayAdapter<Clients> {
         View listViewItem = inflater.inflate(activity_profile_listview, null, true);
 
         TextView tvName = (TextView) listViewItem.findViewById(R.id.tvName);
-        TextView tvCareer = (TextView) listViewItem.findViewById(R.id.tvCareer) ;
+        TextView tvCareer = (TextView) listViewItem.findViewById(R.id.tvCareer);
+        TextView tvID = (TextView) listViewItem.findViewById(R.id.tvID);
         TextView tvTech = (TextView) listViewItem.findViewById(R.id.tvTech);
         TextView tvMedicine = (TextView) listViewItem.findViewById(R.id.tvMedicine);
         TextView tvRenewableEnergy = (TextView) listViewItem.findViewById(R.id.tvRenewableEnergy);
@@ -173,6 +183,23 @@ public class ClientsList extends ArrayAdapter<Clients> {
 
         tvName.setText(clients.getClientName());
         tvCareer.setText(clients.getClientCareer());
+        tvTech.setText(String.valueOf(clients.getTechCB()));
+        tvMedicine.setText(String.valueOf(clients.getMediCB()));
+        tvRenewableEnergy.setText(String.valueOf(clients.getRenewableEnergyNF()));
+        tvGoogle.setText(String.valueOf(clients.getGoogleNF()));
+        tvNovartis.setText(String.valueOf(clients.getNovartisNF()));
+        tvTesla.setText(String.valueOf(clients.getTeslaNF()));
+        tvFacebook.setText(String.valueOf(clients.getFbLRS()));
+        tvApple.setText(String.valueOf(clients.getApplLRS()));
+        tvYahoo.setText(String.valueOf(clients.getYhooLRS()));
+        tvGBPUSD.setText(String.valueOf(clients.getGbpusdCU()));
+        tvUSDRUB.setText(String.valueOf(clients.getUsdrubCU()));
+        tvEURUSD.setText(String.valueOf(clients.getEurusdCB()));
+        tvGold.setText(String.valueOf(clients.getGoldCO()));
+        tvSilver.setText(String.valueOf(clients.getSilverCO()));
+        tvNASDAQ.setText(String.valueOf(clients.getNsdqI()));
+        tvSP.setText(String.valueOf(clients.getSp500I()));
+        tvID.setText()
 
 
 
