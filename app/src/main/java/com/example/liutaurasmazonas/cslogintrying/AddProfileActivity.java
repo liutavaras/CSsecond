@@ -30,6 +30,7 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.firebase.client.Firebase;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -76,7 +77,7 @@ public class AddProfileActivity extends AppCompatActivity {
 //    String downloadAmberC = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/c_jouf2t.png";
 //    String downloadAmberD = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/d_isx7x3.png";
 
-    DatabaseReference databaseClients;
+//    DatabaseReference databaseClients;
 //    DatabaseReference databasePhotos;
 
 
@@ -87,8 +88,9 @@ public class AddProfileActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        databaseClients = FirebaseDatabase.getInstance().getReference("clients");
+//        databaseClients = FirebaseDatabase.getInstance().getReference("clients");
 //        databasePhotos = FirebaseDatabase.getInstance().getReference("photos");
+        Firebase.setAndroidContext(this);
 
         etName = (EditText) findViewById(R.id.etName);
         etCareer = (EditText) findViewById(R.id.etCareer);
@@ -264,18 +266,24 @@ public class AddProfileActivity extends AppCompatActivity {
 
 
         if(!TextUtils.isEmpty(name)){
-            String id =  databaseClients.push().getKey();
+//            String id =  databaseClients.push().getKey();
+            String address = "https://console.firebase.google.com/project/cssecond-92a2d/database/data/clients/";
+            Firebase ref = new Firebase(address);
+            Firebase newRef = ref.push();
+            String key = newRef.getKey();
 
-            Clients clients = new Clients (id, name, career, techCB, mediCB, renewableEnergyNF, googleNF,
+
+            Clients clients = new Clients (key, name, career, techCB, mediCB, renewableEnergyNF, googleNF,
                     novartisNF, teslaNF, fbLRS, applLRS, yhooLRS, eurusdCB, usdrubCU, silverCO,
                     goldCO, gbpusdCU, nsdqI, sp500I, image );
 
-            databaseClients.child(id).setValue(clients);
+            newRef.child(key).setValue(clients);
 
             Toast.makeText(this, "Client added", Toast.LENGTH_LONG).show();
 
+
             Intent intent = new Intent(AddProfileActivity.this, SettingPriority.class);
-            intent.putExtra("id", id);
+            intent.putExtra("key", key);
             startActivity(intent);
 
 //            startActivity(new Intent(AddProfileActivity.this, SettingPriority.class));
