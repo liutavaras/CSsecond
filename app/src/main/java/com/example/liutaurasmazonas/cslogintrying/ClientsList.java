@@ -43,8 +43,8 @@ public class ClientsList extends ArrayAdapter<Clients> {
     private Boolean tvSP;
     private String tvID;
 
-    Intent intent = getIntent();
-    final String key = (String) getIntent().getExtras().get("key");
+   // Intent intent = getIntent();
+   // final String key = (String) getIntent().getExtras().get("key");
 
     public ClientsList(Activity context, List<Clients> clientsList){
 
@@ -199,7 +199,7 @@ public class ClientsList extends ArrayAdapter<Clients> {
         tvSilver.setText(String.valueOf(clients.getSilverCO()));
         tvNASDAQ.setText(String.valueOf(clients.getNsdqI()));
         tvSP.setText(String.valueOf(clients.getSp500I()));
-        tvID.setText()
+  //      tvID.setText()
 
 
 
