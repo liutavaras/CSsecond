@@ -41,11 +41,6 @@
         <activity
             android:name=".AddProfileActivity"
             android:label="@string/title_activity_add_profile">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".GoogleSearchIntentActivity">
         </activity>
@@ -63,7 +58,13 @@
         <activity android:name=".MainActivity21">
         </activity>
         <activity android:name=".NewsDetails" />
-        <activity android:name=".WebViewActivity" />
+        <activity android:name=".WebViewActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <!-- <activity android:name=".CurrenciesActivity" /> -->
         <activity android:name=".LiveRatesActivityhoo" />
         <activity android:name=".LiveRatesActivitygbpusd" />

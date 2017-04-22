@@ -299,9 +299,8 @@
         android:id="@+id/relativeLayout6"
         android:layout_width="match_parent"
         android:layout_height="95dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true">
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
 
         <ImageView
             android:id="@+id/imageView5"
@@ -314,13 +313,13 @@
 
         <ImageButton
             android:id="@+id/addAProfile"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignBottom="@+id/imageView5"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginBottom="7dp"
-            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="13dp"
+            android:layout_marginLeft="12dp"
             android:layout_marginStart="16dp"
             android:background="#00ffffff"
             android:scaleType="fitXY"
@@ -328,26 +327,16 @@
 
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="210dp"
-            android:layout_height="45dp"
-            android:layout_alignBottom="@+id/addAProfile"
-            android:layout_centerHorizontal="true"
+            android:layout_width="270dp"
+            android:layout_height="42dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/addAProfile"
+            android:layout_marginBottom="3dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="9dp"
             android:background="#00ffffff"
             android:scaleType="fitXY"
             app:srcCompat="@drawable/bestsearchbar" />
-
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_alignBottom="@+id/imageView4"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginEnd="12dp"
-            android:layout_marginRight="12dp"
-            android:background="#00ffffff"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/bell" />
 
     </RelativeLayout>
 

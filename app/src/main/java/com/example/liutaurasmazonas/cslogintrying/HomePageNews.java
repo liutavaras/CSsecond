@@ -65,7 +65,8 @@ public class HomePageNews extends AppCompatActivity {
         ImageButton bLiveRates = (ImageButton) findViewById(R.id.ibLiveRates);
         ImageButton addAProfile = (ImageButton) findViewById(R.id.addAProfile);
         final Button bbutton = (Button) findViewById(R.id.button2);
-        final Button bbuttonload = (Button) findViewById(R.id.buttonload);
+//        final Button bbuttonload = (Button) findViewById(R.id.buttonload);
+
 
         bSettingsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -95,11 +96,11 @@ public class HomePageNews extends AppCompatActivity {
         final int backgroundRes2 = prefs.getInt("savedImageButton2" , R.drawable.b);
         final LinearLayout Row = (LinearLayout) findViewById(R.id.LinearLayoutScrollView);
 
-        bbuttonload.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
-            }
-        });
+//        bbuttonload.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//
+//            }
+//        });
 
 
                 bbutton.setOnClickListener(new View.OnClickListener() {
