@@ -18,7 +18,11 @@
         <activity android:name=".HomePageNews" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".FirstScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".Register" />
         <activity android:name=".UserAreaActivity" />
@@ -59,11 +63,6 @@
         </activity>
         <activity android:name=".NewsDetails" />
         <activity android:name=".WebViewActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <!-- <activity android:name=".CurrenciesActivity" /> -->
         <activity android:name=".LiveRatesActivityhoo" />
