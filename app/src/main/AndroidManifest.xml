@@ -18,11 +18,7 @@
         <activity android:name=".HomePageNews" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".FirstScreen">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Register" />
         <activity android:name=".UserAreaActivity" />
@@ -45,6 +41,11 @@
         <activity
             android:name=".AddProfileActivity"
             android:label="@string/title_activity_add_profile">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".GoogleSearchIntentActivity">
         </activity>

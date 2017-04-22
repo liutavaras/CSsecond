@@ -189,8 +189,8 @@ public class HomePageNews extends AppCompatActivity {
                                     String address = "https://console.firebase.google.com/project/cssecond-92a2d/database/data/clients/";
                                     Firebase ref = new Firebase(address);
 
-                                    Intent intent = new Intent(HomePageNews.this, ClientsList.class);
-                                    intent.putExtra("key", key);
+                              //      Intent intent = new Intent(HomePageNews.this, ClientsList.class);
+                                //    intent.putExtra("key", key);
 
 
                                   //  Toast.makeText(HomePageNews.this,"You have: " +key ,Toast.LENGTH_LONG).show();
@@ -198,8 +198,8 @@ public class HomePageNews extends AppCompatActivity {
                                     ref.addListenerForSingleValueEvent(new ValueEventListener() {
                                         @Override
                                         public void onDataChange(com.firebase.client.DataSnapshot dataSnapshot) {
-                                            String clientName = (String) dataSnapshot.child("key").getValue().toString();
-                                            Toast.makeText(HomePageNews.this,"You have: " + clientName ,Toast.LENGTH_LONG).show();
+                                         String ClientName = (String) dataSnapshot.child("key").getValue().toString();
+                                            Toast.makeText(HomePageNews.this,"You have: " + ClientName ,Toast.LENGTH_LONG).show();
 
                                         }
 
@@ -208,7 +208,7 @@ public class HomePageNews extends AppCompatActivity {
                                             Toast.makeText(HomePageNews.this,"You have: NOUT" ,Toast.LENGTH_LONG).show();
                                         }
                                     });
-                                    startActivity(intent);
+                                 //   startActivity(intent);
 
 
                                 }
