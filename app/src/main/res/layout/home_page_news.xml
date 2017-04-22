@@ -139,10 +139,11 @@
         android:id="@+id/horizontalScrollView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_marginTop="59dp"
         android:orientation="horizontal"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:paddingTop="7dp">
 
         <LinearLayout
             android:id="@+id/LinearLayoutScrollView"
@@ -231,13 +232,11 @@
     </HorizontalScrollView>
 
     <!--<Button-->
-        <!--android:id="@+id/buttonload"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_alignBottom="@+id/button2"-->
-        <!--android:layout_toStartOf="@+id/button2"-->
-        <!--android:text="LOAD" />-->
+    <!--android:id="@+id/buttonload"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignBottom="@+id/button2"-->
+    <!--android:layout_toStartOf="@+id/button2"-->
+    <!--android:text="LOAD" />-->
 
 </RelativeLayout>
-
-

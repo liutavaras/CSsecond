@@ -78,7 +78,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:scaleType="matrix"
-            android:src="@drawable/topbarcremebackgroundddd2" />
+            app:srcCompat="@drawable/topbarcremebackgroundddd2" />
 
         <ImageButton
             android:id="@+id/addAProfile"
@@ -88,26 +88,25 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_marginBottom="13dp"
-            android:layout_marginLeft="12dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginLeft="14dp"
             android:background="#00ffffff"
             android:scaleType="fitXY"
-            android:src="@drawable/pluss" />
+            app:srcCompat="@drawable/pluss" />
 
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="270dp"
+            android:layout_width="272dp"
             android:layout_height="42dp"
             android:layout_alignParentEnd="true"
             android:layout_alignTop="@+id/addAProfile"
             android:layout_marginBottom="3dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="9dp"
+            android:layout_marginRight="18dp"
             android:background="#00ffffff"
             android:scaleType="fitXY"
-            android:src="@drawable/bestsearchbar" />
+            app:srcCompat="@drawable/bestsearchbar" />
 
     </RelativeLayout>
+
     <WebView
         android:layout_above="@+id/rl1"
         android:layout_below="@+id/relativeLayout6"
