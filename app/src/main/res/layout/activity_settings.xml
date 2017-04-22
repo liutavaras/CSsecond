@@ -86,7 +86,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/relativeLayout6">
+        android:id="@+id/relativeLayout10">
 
         <ImageButton
             app:srcCompat="@drawable/newsbutton2"
