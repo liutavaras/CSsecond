@@ -166,16 +166,14 @@ public class SettingPriority extends AppCompatActivity {
 
                 switch (position) {
                     case 1:
-                        //String key = (String) getIntent().getExtras().get("key");
-
-                        String url = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/a_oufued.png";
                         String key = (String) getIntent().getExtras().get("key");
+                        String url = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/a_oufued.png";
                         databaseClients.child(key).child("image").setValue(url);
                         new DownloadImageTask((ImageView) findViewById(R.id.imageView11))
                                 .execute(downloadAmberA);
 
                         Intent intent = new Intent(SettingPriority.this, HomePageNews.class);
-                        intent.putExtra("key", key);
+//                        intent.putExtra("key", key);
                         intent.putExtra("url1", url);
                         startActivity(intent);
 //                        Intent a = new Intent(SettingPriority.this, HomePageNews.class);

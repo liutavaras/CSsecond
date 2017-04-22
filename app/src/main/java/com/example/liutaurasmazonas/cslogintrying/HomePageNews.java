@@ -98,7 +98,7 @@ public class HomePageNews extends AppCompatActivity {
                 bbutton.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
 
-                Intent a = getIntent();
+                Intent intent = getIntent();
                 Intent b = getIntent();
                 Intent c = getIntent();
                 Intent d = getIntent();
@@ -125,7 +125,7 @@ public class HomePageNews extends AppCompatActivity {
                 Intent y = getIntent();
                 Intent z = getIntent();
 
-                String url1 = a.getStringExtra("url1");
+                String url1 = intent.getStringExtra("url1");
                 String url2 = b.getStringExtra("url2");
                 String url3 = c.getStringExtra("url3");
                 String url4 = d.getStringExtra("url4");
@@ -181,39 +181,38 @@ public class HomePageNews extends AppCompatActivity {
                         my_button[Index].setId(Index);
                         my_button[Index].setBackgroundResource(backgroundRes1);
 
-                        my_button[bt].setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                if (my_button[Index].getId() == ((ImageButton) v).getId()) {
-                                     final String key = (String) getIntent().getExtras().get("key");
-                                    String address = "https://console.firebase.google.com/project/cssecond-92a2d/database/data/clients/";
-                                    Firebase ref = new Firebase(address);
 
-                              //      Intent intent = new Intent(HomePageNews.this, ClientsList.class);
-                                //    intent.putExtra("key", key);
+//                        my_button[bt].setOnClickListener(new View.OnClickListener() {
+//                            @Override
+//                            public void onClick(View v) {
+//                                if (my_button[Index].getId() == ((ImageButton) v).getId()) {
+//                                    String key = (String) getIntent().getExtras().get("key");
+//                                    String address = "https://console.firebase.google.com/project/cssecond-92a2d/database/data/clients/";
+//                                    Firebase ref = new Firebase(address);
+//
+//                                    Intent intent = new Intent(HomePageNews.this, ClientsList.class);
+//                                    intent.putExtra("key", key);
+//                                    Toast.makeText(HomePageNews.this,"You have: " +key ,Toast.LENGTH_LONG).show();
+//
+//                                    ref.addListenerForSingleValueEvent(new ValueEventListener() {
+//                                        @Override
+//                                        public void onDataChange(com.firebase.client.DataSnapshot dataSnapshot) {
+//                                         String ClientName = (String) dataSnapshot.child("key").getValue().toString();
+//                                            Toast.makeText(HomePageNews.this,"You have: " + ClientName ,Toast.LENGTH_LONG).show();
+//
+//                                        }
+//
+//                                        @Override
+//                                        public void onCancelled(FirebaseError firebaseError) {
+//                                            Toast.makeText(HomePageNews.this,"You have: NOUT" ,Toast.LENGTH_LONG).show();
+//                                        }
+//                                    });
+//                                    startActivity(intent);
 
 
-                                  //  Toast.makeText(HomePageNews.this,"You have: " +key ,Toast.LENGTH_LONG).show();
-
-                                    ref.addListenerForSingleValueEvent(new ValueEventListener() {
-                                        @Override
-                                        public void onDataChange(com.firebase.client.DataSnapshot dataSnapshot) {
-                                         String ClientName = (String) dataSnapshot.child("key").getValue().toString();
-                                            Toast.makeText(HomePageNews.this,"You have: " + ClientName ,Toast.LENGTH_LONG).show();
-
-                                        }
-
-                                        @Override
-                                        public void onCancelled(FirebaseError firebaseError) {
-                                            Toast.makeText(HomePageNews.this,"You have: NOUT" ,Toast.LENGTH_LONG).show();
-                                        }
-                                    });
-                                 //   startActivity(intent);
-
-
-                                }
-                            }
-                        });
+//                                }
+//                            }
+//                        });
 //                                    String id = (String) getIntent().getExtras().get("id");
 //                                    String name = databaseClients.child(id).child("name").toString();
 //                                    Toast.makeText(HomePageNews.this,"In your hands you have: "+ name ,Toast.LENGTH_LONG).show();
