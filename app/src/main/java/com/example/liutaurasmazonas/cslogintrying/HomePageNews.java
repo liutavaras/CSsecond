@@ -64,7 +64,7 @@ public class HomePageNews extends AppCompatActivity {
         ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
         ImageButton bLiveRates = (ImageButton) findViewById(R.id.ibLiveRates);
         ImageButton addAProfile = (ImageButton) findViewById(R.id.addAProfile);
-        final Button bbutton = (Button) findViewById(R.id.button2);
+        final ImageButton bbutton = (ImageButton) findViewById(R.id.button2);
 //        final Button bbuttonload = (Button) findViewById(R.id.buttonload);
 
 
