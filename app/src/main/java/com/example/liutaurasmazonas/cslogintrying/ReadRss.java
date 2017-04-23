@@ -35,9 +35,9 @@ public class ReadRss extends AsyncTask<Void,Void,Void>{
 
     static {
         address=new ArrayList<>();
-       // address.add("http://www.economist.com/sections/business-finance/rss.xml");
-        address.add("https://www.bloomberg.com/politics/feeds/site.xml");
-        address.add("https://www.bloomberg.com/feeds/podcasts/etf_report.xml");
+     //  address.add("http://finance.yahoo.com/rss/headline?s=yhoo,msft,tivo");
+       address.add("https://www.bloomberg.com/politics/feeds/site.xml");
+        //address.add("https://www.bloomberg.com/feeds/podcasts/etf_report.xml");
     }
     //String address="https://www.bloomberg.com/feeds/podcasts/etf_report.xml";
    // String address2="www.bloomberg.com/politics/feeds/site.xml";

@@ -91,7 +91,7 @@ public class SettingPriority extends AppCompatActivity {
 
         databaseClients = FirebaseDatabase.getInstance().getReference("clients");
 
-//        bGoBack = (Button) findViewById(R.id.bGoBack);
+        //bGoBack = (Button) findViewById(R.id.bGoBack);
         etName = (EditText) findViewById(R.id.etName);
         etCareer = (EditText) findViewById(R.id.etCareer);
         cbTech = (CheckBox) findViewById(R.id.cbTech);
