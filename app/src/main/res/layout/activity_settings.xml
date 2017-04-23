@@ -23,6 +23,17 @@
 
     // Dark and Light buttons
 
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="455dp"
+        android:text="Hello CreditSuisse!"
+        android:textColor="#FAFAFA"
+        android:textSize="17sp" />
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -249,17 +260,6 @@
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:textSize="23sp" />
-
-        <TextView
-            android:id="@+id/textView23"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="325dp"
-            android:text="Hello CreditSuisse!"
-            android:textColor="#FAFAFA"
-            android:textSize="17sp" />
 
     </RelativeLayout>
 
