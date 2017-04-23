@@ -77,7 +77,7 @@ public class AddProfileActivity extends AppCompatActivity {
 //    String downloadAmberC = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/c_jouf2t.png";
 //    String downloadAmberD = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/d_isx7x3.png";
 
-//    DatabaseReference databaseClients;
+   DatabaseReference databaseClients;
 //    DatabaseReference databasePhotos;
 
 
@@ -88,7 +88,7 @@ public class AddProfileActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-//        databaseClients = FirebaseDatabase.getInstance().getReference("clients");
+        databaseClients = FirebaseDatabase.getInstance().getReference("clients");
 //        databasePhotos = FirebaseDatabase.getInstance().getReference("photos");
         Firebase.setAndroidContext(this);
 
@@ -277,7 +277,7 @@ public class AddProfileActivity extends AppCompatActivity {
                     novartisNF, teslaNF, fbLRS, applLRS, yhooLRS, eurusdCB, usdrubCU, silverCO,
                     goldCO, gbpusdCU, nsdqI, sp500I, image );
 
-            newRef.child(key).setValue(clients);
+            databaseClients.child(key).setValue(clients);
 
             Toast.makeText(this, "Client added", Toast.LENGTH_LONG).show();
 
