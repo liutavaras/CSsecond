@@ -163,7 +163,7 @@ android:layout_height="wrap_content"
         android:layout_marginEnd="9dp"
         android:layout_weight="1"
         android:onClick="showDropDown"
-        android:src="@drawable/angledown" />
+        android:src="@drawable/angledown2" />
 
     <ImageView
         android:id="@+id/imageView15"
@@ -176,7 +176,7 @@ android:layout_height="wrap_content"
         android:layout_marginEnd="9dp"
         android:layout_weight="1"
         android:onClick="showDropDown"
-        android:src="@drawable/angledown" />
+        android:src="@drawable/angledown2" />
 
     <TextView
         android:id="@+id/Currencies"
@@ -219,7 +219,7 @@ android:layout_height="wrap_content"
         android:layout_marginEnd="9dp"
         android:layout_weight="1"
         android:onClick="showDropDown"
-        android:src="@drawable/angledown" />
+        android:src="@drawable/angledown2" />
 
     <Spinner
         android:id="@+id/spinner3"
@@ -261,7 +261,7 @@ android:layout_height="wrap_content"
                 android:layout_marginEnd="9dp"
                 android:layout_weight="1"
                 android:onClick="showDropDown"
-                android:src="@drawable/angledown"
+                android:src="@drawable/angledown2"
                 android:layout_centerVertical="true"
                 android:layout_alignParentEnd="true" />
 
