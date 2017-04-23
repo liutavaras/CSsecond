@@ -236,8 +236,8 @@ public class HomePageNews extends AppCompatActivity {
 
                     LinearLayout Row2 = (LinearLayout) findViewById(R.id.LinearLayoutScrollView);
 
-                    int width = 240;
-                    int height = 240;
+                    int width = 320;
+                    int height = 320;
 
                     final ImageButton[] my_button2 = new ImageButton[Keys2.size()];
 
