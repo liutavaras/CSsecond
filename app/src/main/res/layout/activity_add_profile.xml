@@ -76,12 +76,12 @@
                     android:id="@+id/etName"
                     android:layout_width="320dp"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
                     android:ems="10"
                     android:hint="Full name"
                     android:inputType="textPersonName"
-                    android:textSize="26sp"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true" />
+                    android:textSize="23sp" />
 
                 <EditText
                     android:id="@+id/etCareer"
@@ -172,9 +172,10 @@
                     android:id="@+id/News_Filtering"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingLeft="7dp"
                     android:text="News Filtering"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="24sp" />
+                    android:textSize="23sp" />
 
             </RelativeLayout>
 
@@ -217,6 +218,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/imageView7"
                     android:layout_marginTop="8dp"
+                    android:paddingLeft="7dp"
                     android:text="Live Rates Filtering"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="24sp" />
@@ -235,7 +237,7 @@
                     android:layout_alignBottom="@+id/lrsFB"
                     android:text="Shares:"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
             </RelativeLayout>
 
@@ -288,7 +290,7 @@
                     android:layout_marginTop="10dp"
                     android:text="Commodities:"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/Currencies"
@@ -299,7 +301,7 @@
                     android:layout_marginTop="10dp"
                     android:text="Currencies:"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <CheckBox
                     android:id="@+id/lrcuGBPUSD"
@@ -320,7 +322,7 @@
                     android:layout_marginTop="9dp"
                     android:text="Indices:"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <CheckBox
                     android:id="@+id/lriNSDQ"
