@@ -78,7 +78,6 @@ public class AddProfileActivity extends AppCompatActivity {
 //    String downloadAmberD = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/d_isx7x3.png";
 
 //    DatabaseReference databaseClients;
-//    DatabaseReference databasePhotos;
 
 
     @Override

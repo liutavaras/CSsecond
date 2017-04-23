@@ -181,6 +181,9 @@ public class HomePageNews extends AppCompatActivity {
                         my_button[Index].setId(Index);
                         my_button[Index].setBackgroundResource(backgroundRes1);
 
+                         Toast.makeText(HomePageNews.this,"The client has been added!" ,Toast.LENGTH_LONG).show();
+
+
 
 //                        my_button[bt].setOnClickListener(new View.OnClickListener() {
 //                            @Override
