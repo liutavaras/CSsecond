@@ -18,7 +18,13 @@
             android:screenOrientation="portrait"
             />
         <activity android:name=".HomePageNews"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity android:name=".SettingsActivity"
             android:screenOrientation="portrait"/>
         <activity android:name=".FirstScreen"
@@ -79,11 +85,7 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".WebViewActivity"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <!-- <activity android:name=".CurrenciesActivity" /> -->
         <activity android:name=".LiveRatesActivityhoo"
