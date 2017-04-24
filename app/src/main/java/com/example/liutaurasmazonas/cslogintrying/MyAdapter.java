@@ -4,10 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
@@ -23,10 +25,12 @@ import java.util.ArrayList;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
     ArrayList<FeedItem>feedItems;
     Context context;
-    public MyAdapter(Context context,ArrayList<FeedItem>feedItems){
-        this.feedItems=feedItems;
-        this.context=context;
-    }
+
+        public MyAdapter(Context context,ArrayList<FeedItem>feedItems){
+            this.feedItems= new ArrayList<FeedItem>(feedItems);
+            this.context=context;
+        }
+
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(context).inflate(R.layout.custum_row_news_item,parent,false);
@@ -55,7 +59,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
 
     @Override
     public int getItemCount() {
-        return feedItems.size();
+
+            return feedItems.size();
+
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
