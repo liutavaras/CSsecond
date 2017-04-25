@@ -199,6 +199,7 @@ public class ClientsList extends ArrayAdapter<Clients> {
         tvSilver.setText(String.valueOf(clients.getSilverCO()));
         tvNASDAQ.setText(String.valueOf(clients.getNsdqI()));
         tvSP.setText(String.valueOf(clients.getSp500I()));
+
   //      tvID.setText()
 
 

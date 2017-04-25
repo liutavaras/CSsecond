@@ -28,7 +28,7 @@ public class Clients {
     String image;
 
 
-
+public Clients() {}
 
 
     public Clients(String key, String clientName, String clientCareer, Boolean techCB, Boolean mediCB, Boolean renewableEnergyNF,
