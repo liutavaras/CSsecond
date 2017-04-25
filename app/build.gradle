@@ -37,6 +37,7 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile files('lib/YahooFinanceAPI-3.6.0.jar')
+
     compile 'com.android.support.constraint:constraint-layout:1.0.1'
     compile 'com.google.android.gms:play-services-appindexing:9.8.0'
     compile 'com.google.android.gms:play-services-location:9.8.0'
@@ -57,6 +58,5 @@ dependencies {
     compile 'com.google.firebase:firebase-core:9.8.0'
     compile 'com.google.firebase:firebase-storage:9.8.0'
     testCompile 'junit:junit:4.12'
-
 }
 apply plugin: 'com.google.gms.google-services'

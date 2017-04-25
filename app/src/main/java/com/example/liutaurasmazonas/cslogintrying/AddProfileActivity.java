@@ -41,7 +41,6 @@ import java.io.InputStream;
 import static com.example.liutaurasmazonas.cslogintrying.R.id.add;
 import static com.example.liutaurasmazonas.cslogintrying.R.id.addAProfile;
 import static com.example.liutaurasmazonas.cslogintrying.R.id.imageView;
-import static com.example.liutaurasmazonas.cslogintrying.R.id.imageView11;
 import static com.example.liutaurasmazonas.cslogintrying.R.id.parent;
 import static com.example.liutaurasmazonas.cslogintrying.R.layout.home_page_news;
 
@@ -77,7 +76,7 @@ public class AddProfileActivity extends AppCompatActivity {
 //    String downloadAmberC = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/c_jouf2t.png";
 //    String downloadAmberD = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/d_isx7x3.png";
 
-   DatabaseReference databaseClients;
+      DatabaseReference databaseClients;
 //    DatabaseReference databasePhotos;
 
 
@@ -281,15 +280,10 @@ public class AddProfileActivity extends AppCompatActivity {
 
             Toast.makeText(this, "Client added", Toast.LENGTH_LONG).show();
 
-
-            Intent intent = new Intent(AddProfileActivity.this, SettingPriority.class);
-            intent.putExtra("key", key);
+//Previously it has been sending us to setting priority activity with the intent.putExtra("key", key); .
+            Intent intent = new Intent(AddProfileActivity.this, HomePageNews.class);
+//            intent.putExtra("key", key);
             startActivity(intent);
-
-//            startActivity(new Intent(AddProfileActivity.this, SettingPriority.class));
-
-
-
 
         }else{
             Toast.makeText(this, "Please enter your name", Toast.LENGTH_LONG).show();
