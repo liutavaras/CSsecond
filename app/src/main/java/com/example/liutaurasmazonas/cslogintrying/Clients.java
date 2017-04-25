@@ -1,6 +1,5 @@
 package com.example.liutaurasmazonas.cslogintrying;
 
-import android.graphics.drawable.Drawable;
 
 /**
  * Created by Joe on 13/04/2017.
@@ -28,15 +27,13 @@ public class Clients {
     Boolean sp500I;
     String image;
 
-//    public Clients(String id, String name, String career, Boolean techCB, Boolean mediCB, Boolean renewableEnergyNF, Boolean googleNF, Boolean novartisNF, Boolean teslaNF, Boolean fbLRS, Boolean applLRS, Boolean yhooLRS, Boolean eurusdCB, Boolean usdrubCU, Boolean silverCO, Boolean goldCO, Boolean gbpusdCU, Boolean nsdqI, Boolean sp500I, String valueOfSelectedPos){ }
 
-//    public Clients(String id, String name, String career, Boolean techCB, Boolean mediCB, Boolean renewableEnergyNF, Boolean googleNF, Boolean novartisNF, Boolean teslaNF, Boolean fbLRS, Boolean applLRS, Boolean yhooLRS, Boolean eurusdCB, Boolean usdrubCU, Boolean silverCO, Boolean goldCO, Boolean gbpusdCU, Boolean nsdqI, Boolean sp500I) {
-//
-//    }
 
-    public Clients(String id, String clientName, String clientCareer, Boolean techCB, Boolean mediCB, Boolean renewableEnergyNF,
+
+
+    public Clients(String key, String clientName, String clientCareer, Boolean techCB, Boolean mediCB, Boolean renewableEnergyNF,
                    Boolean googleNF, Boolean novartisNF, Boolean teslaNF, Boolean fbLRS, Boolean applLRS, Boolean yhooLRS, Boolean eurusdCB,
-                   Boolean usdrubCU, Boolean silverCO, Boolean goldCO, Boolean gbpusdCU, Boolean nsdqI, Boolean sp500I, String image ) {
+                   Boolean usdrubCU, Boolean silverCO, Boolean goldCO, Boolean gbpusdCU, Boolean nsdqI, Boolean sp500I, String image) {
 
         this.clientName = clientName;
         this.clientCareer = clientCareer;
@@ -60,9 +57,7 @@ public class Clients {
 
     }
 
-    public String getImage() {
-        return image;
-    }
+
 
     public String getClientName() {
         return clientName;
@@ -135,7 +130,15 @@ public class Clients {
     public Boolean getSp500I() {
         return sp500I;
     }
+
+    public String getImage() {
+        return image;
+    }
+
+
+
 }
+
 
 
 

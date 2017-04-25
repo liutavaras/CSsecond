@@ -12,50 +12,45 @@
     tools:context="com.example.liutaurasmazonas.cslogintrying.AddProfileActivity">
 
     <RelativeLayout
-        android:id="@+id/relativeLayout2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:id="@+id/relativeLayout40"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
 
         <ImageView
-            android:id="@+id/imageView40"
+            android:id="@+id/imageView50"
             android:layout_width="790dp"
             android:layout_height="65dp"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:scaleType="matrix"
             app:srcCompat="@drawable/topbarcremebackgroundddd2" />
 
+        <ImageButton
+            android:id="@+id/addAProfile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@+id/imageView50"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="13dp"
+            android:layout_marginLeft="14dp"
+            android:background="#00ffffff"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/pluss" />
+
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="210dp"
-            android:layout_height="45dp"
-            android:layout_alignBottom="@+id/imageView40"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="9dp"
+            android:layout_width="272dp"
+            android:layout_height="42dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/addAProfile"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="18dp"
             android:background="#00ffffff"
             android:scaleType="fitXY"
             app:srcCompat="@drawable/bestsearchbar" />
-
-        <ImageButton
-            android:id="@+id/addAProfile"
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:layout_marginStart="16dp"
-            android:background="#00ffffff"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/pluss"
-            android:layout_alignTop="@+id/imageView4"
-            android:layout_alignParentStart="true" />
-
-        <ImageButton
-            android:id="@+id/imageButton11"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginEnd="15dp"
-            android:background="#00ffffff"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/bell"
-            android:layout_centerVertical="true"
-            android:layout_alignParentEnd="true" />
 
     </RelativeLayout>
 
@@ -81,12 +76,12 @@
                     android:id="@+id/etName"
                     android:layout_width="320dp"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
                     android:ems="10"
                     android:hint="Full name"
                     android:inputType="textPersonName"
-                    android:textSize="26sp"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true" />
+                    android:textSize="23sp" />
 
                 <EditText
                     android:id="@+id/etCareer"
@@ -177,9 +172,10 @@
                     android:id="@+id/News_Filtering"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingLeft="7dp"
                     android:text="News Filtering"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="24sp" />
+                    android:textSize="23sp" />
 
             </RelativeLayout>
 
@@ -203,13 +199,13 @@
                     android:layout_width="70dp"
                     android:layout_height="30dp"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginLeft="-33dp"
+                    android:layout_marginLeft="17dp"
                     android:layout_toEndOf="@+id/lrsFB"
                     android:text="Apple" />
 
                 <CheckBox
                     android:id="@+id/lrsFB"
-                    android:layout_width="120dp"
+                    android:layout_width="70dp"
                     android:layout_height="30dp"
                     android:layout_alignParentBottom="true"
                     android:layout_marginLeft="30dp"
@@ -222,6 +218,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/imageView7"
                     android:layout_marginTop="8dp"
+                    android:paddingLeft="7dp"
                     android:text="Live Rates Filtering"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="24sp" />
@@ -240,7 +237,7 @@
                     android:layout_alignBottom="@+id/lrsFB"
                     android:text="Shares:"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
             </RelativeLayout>
 
@@ -293,7 +290,7 @@
                     android:layout_marginTop="10dp"
                     android:text="Commodities:"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/Currencies"
@@ -304,7 +301,7 @@
                     android:layout_marginTop="10dp"
                     android:text="Currencies:"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <CheckBox
                     android:id="@+id/lrcuGBPUSD"
@@ -325,7 +322,7 @@
                     android:layout_marginTop="9dp"
                     android:text="Indices:"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <CheckBox
                     android:id="@+id/lriNSDQ"

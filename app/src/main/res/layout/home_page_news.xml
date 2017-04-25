@@ -15,13 +15,12 @@
 
 
     <RelativeLayout
+        android:id="@+id/relativeLayout9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:layout_below="@+id/horizontalScrollView"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/relativeLayout9">
+        android:layout_below="@+id/horizontalScrollView"
+        android:layout_marginTop="12dp">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerview"
@@ -93,89 +92,81 @@
 
     </RelativeLayout>
     <RelativeLayout
+        android:id="@+id/relativeLayout6"
         android:layout_width="match_parent"
         android:layout_height="95dp"
-        android:id="@+id/relativeLayout4"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true">
 
         <ImageView
-            app:srcCompat="@drawable/topbarcremebackgroundddd2"
             android:id="@+id/imageView5"
             android:layout_width="790dp"
-            android:scaleType="matrix"
             android:layout_height="65dp"
-            android:layout_alignParentTop="true"/>
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:scaleType="matrix"
+            app:srcCompat="@drawable/topbarcremebackgroundddd2" />
 
         <ImageButton
             android:id="@+id/addAProfile"
-            app:srcCompat="@drawable/pluss"
-            style="@style/addaprofile" />
-
-        <ImageView
-            app:srcCompat="@drawable/bestsearchbar"
-            android:id="@+id/imageView4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@+id/imageView5"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="13dp"
+            android:layout_marginLeft="14dp"
             android:background="#00ffffff"
             android:scaleType="fitXY"
-            android:layout_width="210dp"
-            android:layout_alignBottom="@+id/addAProfile"
-            android:layout_centerHorizontal="true"
-            android:layout_height="45dp" />
+            app:srcCompat="@drawable/pluss" />
 
-        <ImageButton
-            android:id="@+id/imageButton9"
-            style="@style/bell"
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="272dp"
+            android:layout_height="42dp"
             android:layout_alignParentEnd="true"
             android:layout_alignTop="@+id/addAProfile"
-            android:layout_marginEnd="16dp"
-            app:srcCompat="@drawable/bell" />
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="18dp"
+            android:background="#00ffffff"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/bestsearchbar" />
 
     </RelativeLayout>
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Refresh"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="77dp" />
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_marginTop="59dp"
         android:orientation="horizontal"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:paddingTop="7dp">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/LinearLayoutScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/relativeLayout4"
+            android:layout_marginTop="3dp"
             android:orientation="horizontal">
 
 
             <ImageButton
-                android:id="@+id/imageButton11"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:background="#00ffffff"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/common_google_signin_btn_icon_light_pressed" />
-
-            <ImageView
-                android:id="@+id/imageView9"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
+                android:id="@+id/button2"
+                android:layout_width="79dp"
+                android:layout_height="79dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
                 android:background="#0000"
-                app:srcCompat="@drawable/common_google_signin_btn_icon_dark_disabled" />
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:text="Refresh"
+                app:srcCompat="@drawable/refreshbutton" />
+
 
             <ImageButton
                 android:id="@+id/imageButton4"
@@ -226,7 +217,7 @@
                 app:srcCompat="@drawable/circlesambergrey2" />
 
             <ImageButton
-                android:id="@+id/googlegrey1"
+                android:id="@+id/imageButton11"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_below="@+id/relativeLayout4"
@@ -235,22 +226,16 @@
                 android:background="#0000"
                 android:padding="0dp"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/circlesgooglegrey2" />
-
-            <ImageButton
-                android:id="@+id/greygoogle"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_below="@+id/relativeLayout4"
-                android:layout_toLeftOf="@+id/imageButton7"
-                android:layout_toStartOf="@+id/imageButton7"
-                android:background="#0000"
-                android:padding="0dp"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/circlesambergrey" />
+                app:srcCompat="@drawable/circlesambergrey2" />
         </LinearLayout>
     </HorizontalScrollView>
 
+    <!--<Button-->
+    <!--android:id="@+id/buttonload"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignBottom="@+id/button2"-->
+    <!--android:layout_toStartOf="@+id/button2"-->
+    <!--android:text="LOAD" />-->
+
 </RelativeLayout>
-
-

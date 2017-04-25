@@ -12,6 +12,12 @@
     tools:context="com.example.liutaurasmazonas.cslogintrying.MainActivity21">
 
 
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
     <Spinner
         android:id="@+id/spinner6"
         android:layout_width="match_parent"
@@ -19,4 +25,12 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="71dp" />
+
+    <RelativeLayout
+        android:id="@+id/relativelayoutexample"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </RelativeLayout>
 </RelativeLayout>

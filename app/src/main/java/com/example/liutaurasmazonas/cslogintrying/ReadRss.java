@@ -29,17 +29,18 @@ import static android.R.attr.data;
  */
 public class ReadRss extends AsyncTask<Void,Void,Void>{
     ArrayList<FeedItem>feedItems;
+
     RecyclerView recyclerView;
     Context context;
     static ArrayList<String>address;
 
     static {
         address=new ArrayList<>();
-        address.add("https://www.bloomberg.com/politics/feeds/site.xml");
-        address.add("https://www.bloomberg.com/feeds/podcasts/etf_report.xml");
+       address.add("https://feeds.finance.yahoo.com/rss/2.0/headline?s=yhoo,msft,tivo&region=US&lang=en-US");
+       //address.add("https://www.bloomberg.com/politics/feeds/site.xml");
+        //address.add("https://www.bloomberg.com/feeds/podcasts/etf_report.xml");
     }
-    //String address="https://www.bloomberg.com/feeds/podcasts/etf_report.xml";
-   // String address2="www.bloomberg.com/politics/feeds/site.xml";
+
     ProgressDialog progressDialog;
     URL url;
     public ReadRss(Context context, RecyclerView recyclerView){
@@ -77,7 +78,7 @@ public class ReadRss extends AsyncTask<Void,Void,Void>{
             feedItems = new ArrayList<>();
             for (Document doc : data) {
                 Element root = doc.getDocumentElement();
-                Node channel = root.getChildNodes().item(0);
+                Node channel = root.getChildNodes().item(1);
                 NodeList items = channel.getChildNodes();
                 for (int i = 0; i < items.getLength(); i++) {
                     Node currentchild = items.item(i);
