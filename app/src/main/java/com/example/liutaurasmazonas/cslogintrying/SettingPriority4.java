@@ -250,17 +250,17 @@ public class SettingPriority4 extends AppCompatActivity {
                         break;
                     case 18:
                         Intent intent18 = new Intent(SettingPriority4.this, HomePageNews.class);
-                        intent18.putExtra("ggggurl9", gurl18);
+                        intent18.putExtra("ggggurl8", gurl18);
                         startActivity(intent18);
                         break;
                     case 19:
                         Intent intent19 = new Intent(SettingPriority4.this, HomePageNews.class);
-                        intent19.putExtra("ggggurl9", gurl19);
+                        intent19.putExtra("ggggurl19", gurl19);
                         startActivity(intent19);
                         break;
                     case 20:
                         Intent intent20 = new Intent(SettingPriority4.this, HomePageNews.class);
-                        intent20.putExtra("ggggurl9", gurl9);
+                        intent20.putExtra("ggggurl20", gurl20);
                         startActivity(intent20);
                         break;
                     case 21:

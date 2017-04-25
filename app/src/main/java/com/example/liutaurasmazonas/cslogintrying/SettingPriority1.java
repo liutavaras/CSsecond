@@ -250,7 +250,7 @@ public class SettingPriority1 extends AppCompatActivity {
                         break;
                     case 18:
                         Intent intent18 = new Intent(SettingPriority1.this, HomePageNews.class);
-                        intent18.putExtra("gurl9", gurl18);
+                        intent18.putExtra("gurl8", gurl18);
                         startActivity(intent18);
                         break;
                     case 19:
@@ -260,7 +260,7 @@ public class SettingPriority1 extends AppCompatActivity {
                         break;
                     case 20:
                         Intent intent20 = new Intent(SettingPriority1.this, HomePageNews.class);
-                        intent20.putExtra("gurl9", gurl9);
+                        intent20.putExtra("gur20", gurl20);
                         startActivity(intent20);
                         break;
                     case 21:
