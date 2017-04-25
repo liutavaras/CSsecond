@@ -6,13 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
-
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 public class SettingPriority1 extends AppCompatActivity {
 
@@ -439,7 +434,7 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl4);
                         Intent intent45 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                      intent41.putExtra("key", key);
-                        intent45.putExtra("aurl18", aurl18);
+                        intent45.putExtra("aurl19", aurl19);
                         startActivity(intent45);
                         break;
                     case 46:
@@ -447,7 +442,7 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl4);
                         Intent intent46 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                      intent41.putExtra("key", key);
-                        intent46.putExtra("aurl19", aurl19);
+                        intent46.putExtra("aurl20", aurl20);
                         startActivity(intent46);
                         break;
                     case 47:
@@ -455,7 +450,7 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl4);
                         Intent intent47 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                      intent41.putExtra("key", key);
-                        intent47.putExtra("aurl20", aurl20);
+                        intent47.putExtra("aurl21", aurl21);
                         startActivity(intent47);
                         break;
                     case 48:
@@ -463,7 +458,7 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl4);
                         Intent intent48 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                      intent41.putExtra("key", key);
-                        intent48.putExtra("aurl21", aurl21);
+                        intent48.putExtra("aurl22", aurl22);
                         startActivity(intent48);
                         break;
                     case 49:
@@ -471,7 +466,7 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl4);
                         Intent intent49 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                      intent41.putExtra("key", key);
-                        intent49.putExtra("aurl22", aurl22);
+                        intent49.putExtra("aurl23", aurl23);
                         startActivity(intent49);
                         break;
                     case 50:
@@ -479,7 +474,7 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl4);
                         Intent intent50 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                      intent41.putExtra("key", key);
-                        intent50.putExtra("aurl23", aurl23);
+                        intent50.putExtra("aurl24", aurl24);
                         startActivity(intent50);
                         break;
                     case 51:
@@ -487,7 +482,7 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl4);
                         Intent intent51 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                      intent41.putExtra("key", key);
-                        intent51.putExtra("aurl24", aurl24);
+                        intent51.putExtra("aurl25", aurl25);
                         startActivity(intent51);
                         break;
                     case 52:
@@ -495,23 +490,23 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl4);
                         Intent intent52 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                      intent41.putExtra("key", key);
-                        intent52.putExtra("aurl25", aurl25);
+                        intent52.putExtra("aurl26", aurl26);
                         startActivity(intent52);
                         break;
                     case 53:
-//                        String key4 = (String) getIntent().getExtras().get("key");
-//                        databaseClients.child(key).child("image").setValue(gurl4);
+                        final String key = (String) getIntent().getExtras().get("key");
+//                        databaseClients.child(key).child("image").setValue(gurl1);
                         Intent intent53 = new Intent(SettingPriority1.this, HomePageNews.class);
-//                      intent41.putExtra("key", key);
-                        intent53.putExtra("aurl26", aurl26);
+//                        intent1.putExtra("key", key);
+                        intent53.putExtra("rurl1", rurl1);
                         startActivity(intent53);
                         break;
                     case 54:
-                        final String key = (String) getIntent().getExtras().get("key");
+                        //final String key = (String) getIntent().getExtras().get("key");
 //                        databaseClients.child(key).child("image").setValue(gurl1);
                         Intent intent54 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                        intent1.putExtra("key", key);
-                        intent54.putExtra("rurl1", rurl1);
+                        intent54.putExtra("rurl2", rurl2);
                         startActivity(intent54);
                         break;
                     case 55:
@@ -519,7 +514,7 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl1);
                         Intent intent55 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                        intent1.putExtra("key", key);
-                        intent55.putExtra("rurl2", rurl2);
+                        intent55.putExtra("rurl3", rurl3);
                         startActivity(intent55);
                         break;
                     case 56:
@@ -527,7 +522,7 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl1);
                         Intent intent56 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                        intent1.putExtra("key", key);
-                        intent56.putExtra("rurl3", rurl3);
+                        intent56.putExtra("rurl4", rurl4);
                         startActivity(intent56);
                         break;
                     case 57:
@@ -535,7 +530,7 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl1);
                         Intent intent57 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                        intent1.putExtra("key", key);
-                        intent57.putExtra("rurl4", rurl4);
+                        intent57.putExtra("rurl5", rurl5);
                         startActivity(intent57);
                         break;
                     case 58:
@@ -543,7 +538,7 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl1);
                         Intent intent58 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                        intent1.putExtra("key", key);
-                        intent58.putExtra("rurl5", rurl5);
+                        intent58.putExtra("rurl6", rurl6);
                         startActivity(intent58);
                         break;
                     case 59:
@@ -551,7 +546,7 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl1);
                         Intent intent59 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                        intent1.putExtra("key", key);
-                        intent59.putExtra("rurl6", rurl6);
+                        intent59.putExtra("rurl7", rurl7);
                         startActivity(intent59);
                         break;
                     case 60:
@@ -559,7 +554,7 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl1);
                         Intent intent60 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                        intent1.putExtra("key", key);
-                        intent60.putExtra("rurl7", rurl7);
+                        intent60.putExtra("rurl8", rurl8);
                         startActivity(intent60);
                         break;
                     case 61:
@@ -567,7 +562,7 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl1);
                         Intent intent61 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                        intent1.putExtra("key", key);
-                        intent61.putExtra("rurl8", rurl8);
+                        intent61.putExtra("rurl9", rurl9);
                         startActivity(intent61);
                         break;
                     case 62:
@@ -575,7 +570,7 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl1);
                         Intent intent62 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                        intent1.putExtra("key", key);
-                        intent62.putExtra("rurl9", rurl9);
+                        intent62.putExtra("rurl10", rurl10);
                         startActivity(intent62);
                         break;
                     case 63:
@@ -583,7 +578,7 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl1);
                         Intent intent63 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                        intent1.putExtra("key", key);
-                        intent63.putExtra("rurl10", rurl10);
+                        intent63.putExtra("rurl11", rurl11);
                         startActivity(intent63);
                         break;
                     case 64:
@@ -591,7 +586,7 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl1);
                         Intent intent64 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                        intent1.putExtra("key", key);
-                        intent64.putExtra("rurl11", rurl11);
+                        intent64.putExtra("rurl12", rurl12);
                         startActivity(intent64);
                         break;
                     case 65:
@@ -599,7 +594,7 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl1);
                         Intent intent65 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                        intent1.putExtra("key", key);
-                        intent65.putExtra("rurl12", rurl12);
+                        intent65.putExtra("rurl13", rurl13);
                         startActivity(intent65);
                         break;
                     case 66:
@@ -607,7 +602,7 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl1);
                         Intent intent66 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                        intent1.putExtra("key", key);
-                        intent66.putExtra("rurl13", rurl13);
+                        intent66.putExtra("rurl14", rurl14);
                         startActivity(intent66);
                         break;
                     case 67:
@@ -615,7 +610,7 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl1);
                         Intent intent67 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                        intent1.putExtra("key", key);
-                        intent67.putExtra("rurl14", rurl14);
+                        intent67.putExtra("rurl15", rurl15);
                         startActivity(intent67);
                         break;
                     case 68:
@@ -623,7 +618,7 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl1);
                         Intent intent68 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                        intent1.putExtra("key", key);
-                        intent68.putExtra("rurl15", rurl15);
+                        intent68.putExtra("rurl16", rurl16);
                         startActivity(intent68);
                         break;
                     case 69:
@@ -631,7 +626,7 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl1);
                         Intent intent69 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                        intent1.putExtra("key", key);
-                        intent69.putExtra("rurl16", rurl16);
+                        intent69.putExtra("rurl17", rurl17);
                         startActivity(intent69);
                         break;
                     case 70:
@@ -639,7 +634,7 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl1);
                         Intent intent70 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                        intent1.putExtra("key", key);
-                        intent70.putExtra("rurl17", rurl17);
+                        intent70.putExtra("rurl18", rurl18);
                         startActivity(intent70);
                         break;
                     case 71:
@@ -647,7 +642,7 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl1);
                         Intent intent71 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                        intent1.putExtra("key", key);
-                        intent71.putExtra("rurl18", rurl18);
+                        intent71.putExtra("rurl19", rurl19);
                         startActivity(intent71);
                         break;
                     case 72:
@@ -655,7 +650,7 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl1);
                         Intent intent72 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                        intent1.putExtra("key", key);
-                        intent72.putExtra("rurl19", rurl19);
+                        intent72.putExtra("rurl20", rurl20);
                         startActivity(intent72);
                         break;
                     case 73:
@@ -663,7 +658,7 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl1);
                         Intent intent73 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                        intent1.putExtra("key", key);
-                        intent73.putExtra("rurl20", rurl20);
+                        intent73.putExtra("rurl21", rurl21);
                         startActivity(intent73);
                         break;
                     case 74:
@@ -671,7 +666,7 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl1);
                         Intent intent74 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                        intent1.putExtra("key", key);
-                        intent74.putExtra("rurl21", rurl21);
+                        intent74.putExtra("rurl22", rurl22);
                         startActivity(intent74);
                         break;
                     case 75:
@@ -679,7 +674,7 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl1);
                         Intent intent75 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                        intent1.putExtra("key", key);
-                        intent75.putExtra("rurl22", rurl22);
+                        intent75.putExtra("rurl23", rurl23);
                         startActivity(intent75);
                         break;
                     case 76:
@@ -687,7 +682,7 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl1);
                         Intent intent76 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                        intent1.putExtra("key", key);
-                        intent76.putExtra("rurl23", rurl23);
+                        intent76.putExtra("rurl24", rurl24);
                         startActivity(intent76);
                         break;
                     case 77:
@@ -695,7 +690,7 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl1);
                         Intent intent77 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                        intent1.putExtra("key", key);
-                        intent77.putExtra("rurl24", rurl24);
+                        intent77.putExtra("rurl25", rurl25);
                         startActivity(intent77);
                         break;
                     case 78:
@@ -703,16 +698,8 @@ public class SettingPriority1 extends AppCompatActivity {
 //                        databaseClients.child(key).child("image").setValue(gurl1);
                         Intent intent78 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                        intent1.putExtra("key", key);
-                        intent78.putExtra("rurl25", rurl25);
+                        intent78.putExtra("rurl26", rurl26);
                         startActivity(intent78);
-                        break;
-                    case 79:
-                        //final String key = (String) getIntent().getExtras().get("key");
-//                        databaseClients.child(key).child("image").setValue(gurl1);
-                        Intent intent79 = new Intent(SettingPriority1.this, HomePageNews.class);
-//                        intent1.putExtra("key", key);
-                        intent79.putExtra("rurl26", rurl26);
-                        startActivity(intent79);
                         break;
 
                 }

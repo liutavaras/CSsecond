@@ -24,12 +24,12 @@ public class HomePageNews extends AppCompatActivity {
     ImageButton button;
 
 
-//    private ImageButton plusgrey1;
-//    private ImageButton plusgrey2;
-//    private ImageButton plusgrey3;
-//    private ImageButton plusgrey4;
-//    private ImageButton plusgrey5;
-//    private ImageButton plusgrey6;
+    private ImageButton plusgrey1;
+    private ImageButton plusgrey2;
+    private ImageButton plusgrey3;
+    private ImageButton plusgrey4;
+    private ImageButton plusgrey5;
+    private ImageButton plusgrey6;
 
 //    DatabaseReference databaseClients;
 
@@ -89,6 +89,10 @@ public class HomePageNews extends AppCompatActivity {
         ImageButton plusgrey4 = (ImageButton) findViewById(R.id.plusgrey4);
         ImageButton plusgrey5 = (ImageButton) findViewById(R.id.plusgrey5);
         ImageButton plusgrey6 = (ImageButton) findViewById(R.id.plusgrey6);
+
+        SharedPreferences homepagenews = getSharedPreferences("MyPrefs", 0);
+
+        plusgrey1.setResource(homepagenews).getString
 
 
         //Grey buttons navigations:
@@ -254,10 +258,7 @@ public class HomePageNews extends AppCompatActivity {
                 if (gurl1 == null && gurl2 == null && gurl3 == null && gurl4 == null) {
                     Toast.makeText(getApplication(), "No new clients added!", Toast.LENGTH_SHORT).show();
                 } else if (gurl1 != null) {
-
                     new HomePageNews.DownloadImageTask((ImageButton) plusgrey1).execute(gurl1);
-
-
 
 //                    final ArrayList<String> Keys = new ArrayList<String>();
 //                    for(int ii = 0; ii < 1; ii ++){
