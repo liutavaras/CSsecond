@@ -24,12 +24,12 @@ public class HomePageNews extends AppCompatActivity {
     ImageButton button;
 
 
-//    private ImageButton plusgrey1;
-//    private ImageButton plusgrey2;
-//    private ImageButton plusgrey3;
-//    private ImageButton plusgrey4;
-//    private ImageButton plusgrey5;
-//    private ImageButton plusgrey6;
+    private ImageButton plusgrey1;
+    private ImageButton plusgrey2;
+    private ImageButton plusgrey3;
+    private ImageButton plusgrey4;
+    private ImageButton plusgrey5;
+    private ImageButton plusgrey6;
 
 //    DatabaseReference databaseClients;
 
@@ -89,6 +89,10 @@ public class HomePageNews extends AppCompatActivity {
         ImageButton plusgrey4 = (ImageButton) findViewById(R.id.plusgrey4);
         ImageButton plusgrey5 = (ImageButton) findViewById(R.id.plusgrey5);
         ImageButton plusgrey6 = (ImageButton) findViewById(R.id.plusgrey6);
+
+        SharedPreferences homepagenews = getSharedPreferences("MyPrefs", 0);
+
+        plusgrey1.setResource(homepagenews).getString
 
 
         //Grey buttons navigations:
@@ -165,33 +169,6 @@ public class HomePageNews extends AppCompatActivity {
                 Intent intent25 = getIntent();
                 Intent intent26 = getIntent();
 
-                        Intent intentt1 = getIntent();
-                        Intent intentt2 = getIntent();
-                        Intent intentt3 = getIntent();
-                        Intent intentt4 = getIntent();
-                        Intent intentt5 = getIntent();
-                        Intent intentt6 = getIntent();
-                        Intent intentt7 = getIntent();
-                        Intent intentt8 = getIntent();
-                        Intent intentt9 = getIntent();
-                        Intent intentt10 = getIntent();
-                        Intent intentt11 = getIntent();
-                        Intent intentt12 = getIntent();
-                        Intent intentt13 = getIntent();
-                        Intent intentt14 = getIntent();
-                        Intent intentt15 = getIntent();
-                        Intent intentt16 = getIntent();
-                        Intent intentt17 = getIntent();
-                        Intent intentt18 = getIntent();
-                        Intent intentt19 = getIntent();
-                        Intent intentt20 = getIntent();
-                        Intent intentt21 = getIntent();
-                        Intent intentt22 = getIntent();
-                        Intent intentt23 = getIntent();
-                        Intent intentt24 = getIntent();
-                        Intent intentt25 = getIntent();
-                        Intent intentt26 = getIntent();
-
 
                 String gurl1 = intent1.getStringExtra("gurl1");
                 String gurl2 = intent2.getStringExtra("gurl2");
@@ -220,6 +197,60 @@ public class HomePageNews extends AppCompatActivity {
                 String gurl25 = intent25.getStringExtra("gurl25");
                 String gurl26 = intent26.getStringExtra("gurl26");
 
+                        String rurl1 = intent1.getStringExtra("rurl1");
+                        String rurl2 = intent2.getStringExtra("rurl2");
+                        String rurl3 = intent3.getStringExtra("rurl3");
+                        String rurl4 = intent4.getStringExtra("rurl4");
+                        String rurl5 = intent5.getStringExtra("rurl5");
+                        String rurl6 = intent6.getStringExtra("rurl6");
+                        String rurl7 = intent7.getStringExtra("rurl7");
+                        String rurl8 = intent8.getStringExtra("rurl8");
+                        String rurl9 = intent9.getStringExtra("rurl9");
+                        String rurl10 = intent10.getStringExtra("rurl10");
+                        String rurl11 = intent11.getStringExtra("rurl11");
+                        String rurl12 = intent12.getStringExtra("rurl12");
+                        String rurl13 = intent13.getStringExtra("rurl13");
+                        String rurl14 = intent14.getStringExtra("rurl14");
+                        String rurl15 = intent15.getStringExtra("rurl15");
+                        String rurl16 = intent16.getStringExtra("rurl16");
+                        String rurl17 = intent17.getStringExtra("rurl17");
+                        String rurl18 = intent18.getStringExtra("rurl18");
+                        String rurl19 = intent19.getStringExtra("rurl19");
+                        String rurl20 = intent20.getStringExtra("rurl20");
+                        String rurl21 = intent21.getStringExtra("gurl21");
+                        String rurl22 = intent22.getStringExtra("gurl22");
+                        String rurl23 = intent23.getStringExtra("gurl23");
+                        String rurl24 = intent24.getStringExtra("gurl24");
+                        String rurl25 = intent25.getStringExtra("gurl25");
+                        String rurl26 = intent26.getStringExtra("gurl26");
+
+                        String aurl1 = intent1.getStringExtra("aurl1");
+                        String aurl2 = intent2.getStringExtra("aurl2");
+                        String aurl3 = intent3.getStringExtra("aurl3");
+                        String aurl4 = intent4.getStringExtra("aurl4");
+                        String aurl5 = intent5.getStringExtra("aurl5");
+                        String aurl6 = intent6.getStringExtra("aurl6");
+                        String aurl7 = intent7.getStringExtra("aurl7");
+                        String aurl8 = intent8.getStringExtra("aurl8");
+                        String aurl9 = intent9.getStringExtra("aurl9");
+                        String aurl10 = intent10.getStringExtra("aurl10");
+                        String aurl11 = intent11.getStringExtra("aurl11");
+                        String aurl12 = intent12.getStringExtra("aurl12");
+                        String aurl13 = intent13.getStringExtra("aurl13");
+                        String aurl14 = intent14.getStringExtra("aurl14");
+                        String aurl15 = intent15.getStringExtra("aurl15");
+                        String aurl16 = intent16.getStringExtra("aurl16");
+                        String aurl17 = intent17.getStringExtra("aurl17");
+                        String aurl18 = intent18.getStringExtra("aurl18");
+                        String aurl19 = intent19.getStringExtra("aurl19");
+                        String aurl20 = intent20.getStringExtra("aurl20");
+                        String aurl21 = intent21.getStringExtra("aurl21");
+                        String aurl22 = intent22.getStringExtra("aurl22");
+                        String aurl23 = intent23.getStringExtra("aurl23");
+                        String aurl24 = intent24.getStringExtra("aurl24");
+                        String aurl25 = intent25.getStringExtra("aurl25");
+                        String aurl26 = intent26.getStringExtra("aurl26");
+
 //                Toast.makeText(HomePageNews.this,"nom est : "+url1 ,Toast.LENGTH_SHORT).show();
 
 
@@ -227,10 +258,7 @@ public class HomePageNews extends AppCompatActivity {
                 if (gurl1 == null && gurl2 == null && gurl3 == null && gurl4 == null) {
                     Toast.makeText(getApplication(), "No new clients added!", Toast.LENGTH_SHORT).show();
                 } else if (gurl1 != null) {
-
                     new HomePageNews.DownloadImageTask((ImageButton) plusgrey1).execute(gurl1);
-
-
 
 //                    final ArrayList<String> Keys = new ArrayList<String>();
 //                    for(int ii = 0; ii < 1; ii ++){
