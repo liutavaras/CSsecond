@@ -16,7 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class SettingPriority1 extends AppCompatActivity {
 
-    Spinner spinner55;
+//    Spinner spinner5;
 
     //Green circles:
     final String gurl1 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/a_nfnlas.png";
