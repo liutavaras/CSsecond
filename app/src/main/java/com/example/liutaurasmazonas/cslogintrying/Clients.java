@@ -28,8 +28,8 @@ public class Clients {
     String image;
 
 
-public Clients() {}
 
+public Clients(){}
 
     public Clients(String key, String clientName, String clientCareer, Boolean techCB, Boolean mediCB, Boolean renewableEnergyNF,
                    Boolean googleNF, Boolean novartisNF, Boolean teslaNF, Boolean fbLRS, Boolean applLRS, Boolean yhooLRS, Boolean eurusdCB,

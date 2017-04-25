@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/activity_setting_priority"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.liutaurasmazonas.cslogintrying.SettingPriority">
-
+    tools:context="com.example.liutaurasmazonas.cslogintrying.Circlegrey4">
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -63,14 +57,14 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/relativeLayout6"
+        android:id="@+id/relativeLayout40"
         android:layout_width="match_parent"
         android:layout_height="95dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/imageView50"
             android:layout_width="790dp"
             android:layout_height="65dp"
             android:layout_alignParentLeft="true"
@@ -82,7 +76,7 @@
             android:id="@+id/addAProfile"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_alignBottom="@+id/imageView5"
+            android:layout_alignBottom="@+id/imageView50"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_marginBottom="13dp"
@@ -105,22 +99,22 @@
 
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/buttonsetpriority"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="Select user priority:"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        android:layout_marginTop="25dp"
-        android:layout_below="@+id/relativeLayout6"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/buttonlookforclient"
+        android:layout_marginTop="89dp"
+        android:text="Set priority" />
 
-    <Spinner
-        android:id="@+id/spinner5"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/buttonlookforclient"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
-        android:layout_below="@+id/textView3"
-        android:layout_alignParentStart="true" />
+        android:layout_marginTop="9dp"
+        android:text="Look for client"
+        android:layout_below="@+id/buttonsetpriority"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

@@ -169,7 +169,7 @@
 
 
             <ImageButton
-                android:id="@+id/imageButton4"
+                android:id="@+id/plusgrey1"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_alignEnd="@+id/imageButton5"
@@ -178,10 +178,10 @@
                 android:background="#0000"
                 android:padding="0dp"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/circlesamber2" />
+                app:srcCompat="@drawable/circlesplusgrey1" />
 
             <ImageButton
-                android:id="@+id/imageButton7"
+                android:id="@+id/plusgrey2"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_below="@+id/relativeLayout4"
@@ -190,43 +190,56 @@
                 android:background="#0000"
                 android:padding="0dp"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/circlesredvodafone2" />
+                app:srcCompat="@drawable/circlesplusgrey2" />
 
             <ImageButton
-                android:id="@+id/googleImgBtn"
+                android:id="@+id/plusgrey3"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_below="@+id/relativeLayout4"
-                android:layout_toLeftOf="@+id/imageButton7"
-                android:layout_toStartOf="@+id/imageButton7"
+                android:layout_toLeftOf="@+id/plusgrey2"
+                android:layout_toStartOf="@+id/plusgrey2"
                 android:background="#0000"
                 android:padding="0dp"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/circlesgreen2" />
+                app:srcCompat="@drawable/circlesplusgrey3" />
 
             <ImageButton
-                android:id="@+id/ambergrey"
+                android:id="@+id/plusgrey4"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_below="@+id/relativeLayout4"
-                android:layout_toLeftOf="@+id/imageButton7"
-                android:layout_toStartOf="@+id/imageButton7"
+                android:layout_toLeftOf="@+id/plusgrey2"
+                android:layout_toStartOf="@+id/plusgrey2"
                 android:background="#0000"
                 android:padding="0dp"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/circlesambergrey2" />
+                app:srcCompat="@drawable/circlesplusgrey4" />
 
             <ImageButton
-                android:id="@+id/imageButton11"
+                android:id="@+id/plusgrey5"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_below="@+id/relativeLayout4"
-                android:layout_toLeftOf="@+id/imageButton7"
-                android:layout_toStartOf="@+id/imageButton7"
+                android:layout_toLeftOf="@+id/plusgrey2"
+                android:layout_toStartOf="@+id/plusgrey2"
                 android:background="#0000"
                 android:padding="0dp"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/circlesambergrey2" />
+                app:srcCompat="@drawable/circlesplusgrey5" />
+
+            <ImageButton
+                android:id="@+id/plusgrey6"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@+id/relativeLayout4"
+                android:layout_toLeftOf="@+id/plusgrey2"
+                android:layout_toStartOf="@+id/plusgrey2"
+                android:layout_weight="1"
+                android:background="#0000"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/circlesplusgrey6" />
         </LinearLayout>
     </HorizontalScrollView>
 
