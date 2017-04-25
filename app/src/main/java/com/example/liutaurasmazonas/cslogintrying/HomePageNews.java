@@ -1,60 +1,55 @@
 package com.example.liutaurasmazonas.cslogintrying;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.ScrollView;
 import android.widget.Toast;
-
-import com.daimajia.easing.linear.Linear;
-import com.firebase.client.Firebase;
-import com.firebase.client.FirebaseError;
-import com.firebase.client.ValueEventListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.InputStream;
 import java.util.ArrayList;
-
-import static android.R.attr.id;
-import static android.R.attr.layout_width;
-import static java.security.AccessController.getContext;
 
 
 public class HomePageNews extends AppCompatActivity {
     RecyclerView recyclerView;
     ImageButton button;
 
-    DatabaseReference databaseClients;
 
-//    public static final String SAVE = "MySavedHomeFile";
+//    private ImageButton plusgrey1;
+//    private ImageButton plusgrey2;
+//    private ImageButton plusgrey3;
+//    private ImageButton plusgrey4;
+//    private ImageButton plusgrey5;
+//    private ImageButton plusgrey6;
+
+//    DatabaseReference databaseClients;
+
+    //                    Bitmap bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+//                    imageView.setImageBitmap(bmp);
+
+//                    String urlas = "\"http://res.cloudinary.com/liutavaras/image/upload/v1492506105/a_oufued.png\"";
+//                    try {
+//                        URL url = new URL(urlas);
+//                    } catch (MalformedURLException e) {
+//                        Toast.makeText(HomePageNews.this, "blabla", Toast.LENGTH_LONG).show();
+//                    }
+//                    byte [] imageByte = Base64.decode(urlas, Base64.DEFAULT);
+//                    Bitmap bmp = BitmapFactory.decodeStream(urlas.openConnection().getInputStream());
+//                    imageView.setImageBitmap(bmp);
 
     @Override
     protected void onCreate(Bundle savedInstantState) {
         super.onCreate(savedInstantState);
         setContentView(R.layout.home_page_news);
-
-
-        button = (ImageButton) findViewById(R.id.googleImgBtn);
-        button.setTag(1);
-        //button.setOnClickListener(imageButtonHandler);
-
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         ReadRss readRss = new ReadRss(this, recyclerView);
@@ -81,7 +76,6 @@ public class HomePageNews extends AppCompatActivity {
                 startActivity(new Intent(HomePageNews.this, sortingrates.class));
             }
         });
-
         addAProfile.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(HomePageNews.this, AddProfileActivity.class));
@@ -89,101 +83,189 @@ public class HomePageNews extends AppCompatActivity {
         });
 
 
+        final ImageButton plusgrey1 = (ImageButton) findViewById(R.id.plusgrey1);
+        ImageButton plusgrey2 = (ImageButton) findViewById(R.id.plusgrey2);
+        ImageButton plusgrey3 = (ImageButton) findViewById(R.id.plusgrey3);
+        ImageButton plusgrey4 = (ImageButton) findViewById(R.id.plusgrey4);
+        ImageButton plusgrey5 = (ImageButton) findViewById(R.id.plusgrey5);
+        ImageButton plusgrey6 = (ImageButton) findViewById(R.id.plusgrey6);
+
+
+        //Grey buttons navigations:
+        plusgrey1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(HomePageNews.this, Circlegrey1.class));
+            }
+        });
+        plusgrey2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(HomePageNews.this, Circlegrey2.class));
+            }
+        });
+        plusgrey3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+            }
+        });
+        plusgrey4.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(HomePageNews.this, Circlegrey4.class));
+            }
+        });
+        plusgrey5.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+            }
+        });
+        plusgrey6.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(HomePageNews.this, Circlegrey6.class));
+            }
+        });
+
+        final String photo1 = (String) ("http://res.cloudinary.com/liutavaras/image/upload/v1492506105/a_oufued.png");
+        final String photo2 = (String) ("http://res.cloudinary.com/liutavaras/image/upload/v1492503937/b_eawxmg.png");
+        final String photo3 = (String) ("http://res.cloudinary.com/liutavaras/image/upload/v1492506105/c_jouf2t.png");
+        final String photo4 = (String) ("http://res.cloudinary.com/liutavaras/image/upload/v1492506105/d_isx7x3.png");
+
         final SharedPreferences prefs  = getSharedPreferences("MySavedHomeFile", MODE_PRIVATE);
-        final int backgroundRes1 = prefs.getInt("savedImageButton1" , R.drawable.a);
-        final int backgroundRes2 = prefs.getInt("savedImageButton2" , R.drawable.b);
+        final String backgroundRes1 = prefs.getString("savedImageButton1", photo1);
+        final String backgroundRes2 = prefs.getString("savedImageButton2" , photo2);
+        final String backgroundRes3 = prefs.getString("savedImageButton3" , photo3);
         final LinearLayout Row = (LinearLayout) findViewById(R.id.LinearLayoutScrollView);
 
 
                 bbutton.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
 
-                Intent intent = getIntent();
-                Intent b = getIntent();
-                Intent c = getIntent();
-                Intent d = getIntent();
-                Intent e = getIntent();
-                Intent f = getIntent();
-                Intent g = getIntent();
-                Intent h = getIntent();
-                Intent i = getIntent();
-                Intent j = getIntent();
-                Intent k = getIntent();
-                Intent l = getIntent();
-                Intent m = getIntent();
-                Intent n = getIntent();
-                Intent o = getIntent();
-                Intent p = getIntent();
-                Intent q = getIntent();
-                Intent r = getIntent();
-                Intent s = getIntent();
-                Intent t = getIntent();
-                Intent u = getIntent();
-                Intent vv = getIntent();
-                Intent w = getIntent();
-                Intent x = getIntent();
-                Intent y = getIntent();
-                Intent z = getIntent();
+                Intent intent1 = getIntent();
+                Intent intent2 = getIntent();
+                Intent intent3 = getIntent();
+                Intent intent4 = getIntent();
+                Intent intent5 = getIntent();
+                Intent intent6 = getIntent();
+                Intent intent7 = getIntent();
+                Intent intent8 = getIntent();
+                Intent intent9 = getIntent();
+                Intent intent10 = getIntent();
+                Intent intent11 = getIntent();
+                Intent intent12 = getIntent();
+                Intent intent13 = getIntent();
+                Intent intent14 = getIntent();
+                Intent intent15 = getIntent();
+                Intent intent16 = getIntent();
+                Intent intent17 = getIntent();
+                Intent intent18 = getIntent();
+                Intent intent19 = getIntent();
+                Intent intent20 = getIntent();
+                Intent intent21 = getIntent();
+                Intent intent22 = getIntent();
+                Intent intent23 = getIntent();
+                Intent intent24 = getIntent();
+                Intent intent25 = getIntent();
+                Intent intent26 = getIntent();
 
-                String url1 = intent.getStringExtra("url1");
-                String url2 = b.getStringExtra("url2");
-                String url3 = c.getStringExtra("url3");
-                String url4 = d.getStringExtra("url4");
-                String url5 = e.getStringExtra("url5");
-                String url6 = f.getStringExtra("url6");
-                String url7 = g.getStringExtra("url7");
-                String url8 = h.getStringExtra("url8");
-                String url9 = i.getStringExtra("url9");
-                String url10 = j.getStringExtra("url10");
-                String url11 = k.getStringExtra("url11");
-                String url12 = l.getStringExtra("url12");
-                String url13 = m.getStringExtra("url13");
-                String url14 = n.getStringExtra("url14");
-                String url15 = o.getStringExtra("url15");
-                String url16 = p.getStringExtra("url16");
-                String url17 = q.getStringExtra("url17");
-                String url18 = r.getStringExtra("url18");
-                String url19 = s.getStringExtra("url19");
-                String url20 = t.getStringExtra("url20");
-                String url21 = u.getStringExtra("url21");
-                String url22 = vv.getStringExtra("url22");
-                String url23 = w.getStringExtra("url23");
-                String url24 = x.getStringExtra("url24");
-                String url25 = y.getStringExtra("url25");
-                String url26 = z.getStringExtra("url26");
+                        Intent intentt1 = getIntent();
+                        Intent intentt2 = getIntent();
+                        Intent intentt3 = getIntent();
+                        Intent intentt4 = getIntent();
+                        Intent intentt5 = getIntent();
+                        Intent intentt6 = getIntent();
+                        Intent intentt7 = getIntent();
+                        Intent intentt8 = getIntent();
+                        Intent intentt9 = getIntent();
+                        Intent intentt10 = getIntent();
+                        Intent intentt11 = getIntent();
+                        Intent intentt12 = getIntent();
+                        Intent intentt13 = getIntent();
+                        Intent intentt14 = getIntent();
+                        Intent intentt15 = getIntent();
+                        Intent intentt16 = getIntent();
+                        Intent intentt17 = getIntent();
+                        Intent intentt18 = getIntent();
+                        Intent intentt19 = getIntent();
+                        Intent intentt20 = getIntent();
+                        Intent intentt21 = getIntent();
+                        Intent intentt22 = getIntent();
+                        Intent intentt23 = getIntent();
+                        Intent intentt24 = getIntent();
+                        Intent intentt25 = getIntent();
+                        Intent intentt26 = getIntent();
+
+
+                String gurl1 = intent1.getStringExtra("gurl1");
+                String gurl2 = intent2.getStringExtra("gurl2");
+                String gurl3 = intent3.getStringExtra("gurl3");
+                String gurl4 = intent4.getStringExtra("gurl4");
+                String gurl5 = intent5.getStringExtra("gurl5");
+                String gurl6 = intent6.getStringExtra("gurl6");
+                String gurl7 = intent7.getStringExtra("gurl7");
+                String gurl8 = intent8.getStringExtra("gurl8");
+                String gurl9 = intent9.getStringExtra("gurl9");
+                String gurl10 = intent10.getStringExtra("gurl10");
+                String gurl11 = intent11.getStringExtra("gurl11");
+                String gurl12 = intent12.getStringExtra("gurl12");
+                String gurl13 = intent13.getStringExtra("gurl13");
+                String gurl14 = intent14.getStringExtra("gurl14");
+                String gurl15 = intent15.getStringExtra("gurl15");
+                String gurl16 = intent16.getStringExtra("gurl16");
+                String gurl17 = intent17.getStringExtra("gurl17");
+                String gurl18 = intent18.getStringExtra("gurl18");
+                String gurl19 = intent19.getStringExtra("gurl19");
+                String gurl20 = intent20.getStringExtra("gurl20");
+                String gurl21 = intent21.getStringExtra("gurl21");
+                String gurl22 = intent22.getStringExtra("gurl22");
+                String gurl23 = intent23.getStringExtra("gurl23");
+                String gurl24 = intent24.getStringExtra("gurl24");
+                String gurl25 = intent25.getStringExtra("gurl25");
+                String gurl26 = intent26.getStringExtra("gurl26");
 
 //                Toast.makeText(HomePageNews.this,"nom est : "+url1 ,Toast.LENGTH_SHORT).show();
 
-                if (url1 == null && url2 == null && url3 == null) {
+
+//                for (i = ur)
+                if (gurl1 == null && gurl2 == null && gurl3 == null && gurl4 == null) {
                     Toast.makeText(getApplication(), "No new clients added!", Toast.LENGTH_SHORT).show();
-                } else if (url1 != null) {
-                    final ArrayList<String> Keys = new ArrayList<String>();
-                    for(int ii = 0; ii < 1; ii ++){
-                        Keys.add("Keys is : " + String.valueOf(ii));
-                    }
+                } else if (gurl1 != null) {
 
-                    LinearLayout Row = (LinearLayout) findViewById(R.id.LinearLayoutScrollView);
-
-                    int width = 320;
-                    int height = 320;
-
-                    final ImageButton[] my_button = new ImageButton[Keys.size()];
-
-                    for (int bt = 0; bt < Keys.size(); bt ++) {
-                        final int Index = bt;
-
-                        my_button[Index] = new ImageButton(HomePageNews.this);
-
-                        RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(width, height);
-                        lp.addRule(RelativeLayout.ALIGN_PARENT_LEFT, R.id.imageButton11);
-
-                        my_button[Index].setLayoutParams(lp);
-                        my_button[Index].setId(Index);
-                        my_button[Index].setBackgroundResource(backgroundRes1);
-
-                         Toast.makeText(HomePageNews.this,"The client has been added!" ,Toast.LENGTH_LONG).show();
+                    new HomePageNews.DownloadImageTask((ImageButton) plusgrey1).execute(gurl1);
 
 
+
+//                    final ArrayList<String> Keys = new ArrayList<String>();
+//                    for(int ii = 0; ii < 1; ii ++){
+//                        Keys.add("Keys is : " + String.valueOf(ii));
+//                    }
+//
+//                    int width = 240;
+//                    int height = 240;
+//
+//                    final ImageButton[] my_button = new ImageButton[Keys.size()];
+//
+//                    for (int bt = 0; bt < Keys.size(); bt ++) {
+//                        final int Index = bt;
+//
+//                        my_button[Index] = new ImageButton(HomePageNews.this);
+//
+//                        RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(width, height);
+//                        lp.addRule(RelativeLayout.ALIGN_PARENT_LEFT, R.id.plusgrey6);
+//
+//                        my_button[Index].setLayoutParams(lp);
+//                        my_button[Index].setId(Index);
+////                      my_button[Index].setBackgroundResource(R.drawable.a);
+//
+//                        if (photo1 == null) {
+//                            Toast.makeText(getApplication(), "No new photo!", Toast.LENGTH_SHORT).show();
+//                        } else if (photo1 != null) {
+//
+//                            new HomePageNews.DownloadImageTask((ImageButton) my_button[Index])
+//                                    .execute(photo1);
+//                            Row.addView(my_button[Index]);
+//                        }
+//
+//                        Toast.makeText(HomePageNews.this,"The client has been added!" ,Toast.LENGTH_LONG).show();
+//
+//
 
 //                        my_button[bt].setOnClickListener(new View.OnClickListener() {
 //                            @Override
@@ -195,157 +277,200 @@ public class HomePageNews extends AppCompatActivity {
 //
 //                                    Intent intent = new Intent(HomePageNews.this, ClientsList.class);
 //                                    intent.putExtra("key", key);
-//                                    Toast.makeText(HomePageNews.this,"You have: " +key ,Toast.LENGTH_LONG).show();
 //
+//                                  Toast.makeText(HomePageNews.this,"You have: " +key ,Toast.LENGTH_LONG).show();
+
+
+
 //                                    ref.addListenerForSingleValueEvent(new ValueEventListener() {
 //                                        @Override
-//                                        public void onDataChange(com.firebase.client.DataSnapshot dataSnapshot) {
-//                                         String ClientName = (String) dataSnapshot.child("key").getValue().toString();
-//                                            Toast.makeText(HomePageNews.this,"You have: " + ClientName ,Toast.LENGTH_LONG).show();
-//
+//                                        public void onDataChange(DataSnapshot dataSnapshot) {
+//                                            for (DataSnapshot child : children) {
+//                                            HomePageNews clientName = child.getValue(HomePageNews.class);
 //                                        }
 //
 //                                        @Override
 //                                        public void onCancelled(FirebaseError firebaseError) {
-//                                            Toast.makeText(HomePageNews.this,"You have: NOUT" ,Toast.LENGTH_LONG).show();
+//                                            Log.w("Firebase Error:", "onCancelled:", firebaseError.toException());
+//                                            Toast.makeText(HomePageNews.this, "Failed to load question!", Toast.LENGTH_SHORT).show();
 //                                        }
+//
 //                                    });
-//                                    startActivity(intent);
+//
 
 
 //                                }
 //                            }
 //                        });
+
+
 //                                    String id = (String) getIntent().getExtras().get("id");
 //                                    String name = databaseClients.child(id).child("name").toString();
 //                                    Toast.makeText(HomePageNews.this,"In your hands you have: "+ name ,Toast.LENGTH_LONG).show();
 
-                        Row.addView(my_button[Index]);
-                    }
+//                        Row.addView(my_button[Index]);
 
-                    SharedPreferences prefs = getSharedPreferences("MySavedHomeFile", MODE_PRIVATE);
-                    SharedPreferences.Editor editor = prefs.edit();
-                    editor.putString("savedImageButton", getResources().getResourceName(R.drawable.a));
-                    editor.apply();
+//                    SharedPreferences.Editor editor = prefs.edit();
+//                    editor.putString("savedImageButton1", (photo1));
+//                    editor.apply();
 
-                }else if (url2 != null) {
+                }else if (gurl2 != null) {
                     final ArrayList<String> Keys2 = new ArrayList<String>();
                     for(int ee = 0; ee < 1; ee ++){
                         Keys2.add("Keys is : " + String.valueOf(ee));
                     }
 
-                    LinearLayout Row2 = (LinearLayout) findViewById(R.id.LinearLayoutScrollView);
-
-                    int width = 320;
-                    int height = 320;
+                    int width = 240;
+                    int height = 240;
 
                     final ImageButton[] my_button2 = new ImageButton[Keys2.size()];
 
-                    for (int bt2 = 0; bt2 < Keys2.size(); bt2 ++){
+                    for (int bt2 = 0; bt2 < Keys2.size(); bt2 ++) {
                         final int Index2 = bt2;
 
                         my_button2[Index2] = new ImageButton(HomePageNews.this);
 
                         RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(width, height);
-                        lp.addRule(RelativeLayout.ALIGN_PARENT_LEFT, R.id.imageButton11);
+                        lp.addRule(RelativeLayout.ALIGN_PARENT_LEFT, R.id.plusgrey6);
 
                         my_button2[Index2].setLayoutParams(lp);
                         my_button2[Index2].setId(Index2);
-                        my_button2[Index2].setBackgroundResource(backgroundRes2);
+//                      my_button2[Index2].setBackgroundResource(R.drawable.b);
 
-                        my_button2[bt2].setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                if (my_button2[Index2].getId() == ((ImageButton) v).getId()){
-                                }
-                            }
-                        });
+                        if (photo2 == null) {
+                            Toast.makeText(getApplication(), "No new photo!", Toast.LENGTH_SHORT).show();
+                        } else if (photo2 != null) {
 
-                        Row2.addView(my_button2[Index2]);
+                            new HomePageNews.DownloadImageTask((ImageButton) my_button2[Index2])
+                                    .execute(photo2);
+                            Row.addView(my_button2[Index2]);
+                        }
+
+                        Toast.makeText(HomePageNews.this, "The client has been added!", Toast.LENGTH_LONG).show();
+
+
+                        Row.addView(my_button2[Index2]);
                     }
 
-
-                    SharedPreferences prefs = getSharedPreferences("MySavedHomeFile", MODE_PRIVATE);
                     SharedPreferences.Editor editor = prefs.edit();
-                    editor.putString("savedImageButton", getResources().getResourceName(R.drawable.b));
+                    editor.putString("savedImageButton2", getResources().getResourceName(R.drawable.b));
                     editor.apply();
 
 
-                } else if (url3 != null) {
-                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
-                            .execute(url3);
-                } else if (url4 != null) {
-                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
-                            .execute(url4);
-                } else if (url5 != null) {
-                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
-                            .execute(url5);
-                } else if (url6 != null) {
-                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
-                            .execute(url6);
-                } else if (url7 != null) {
-                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
-                            .execute(url7);
-                } else if (url8 != null) {
-                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
-                            .execute(url8);
-                } else if (url9 != null) {
-                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
-                            .execute(url9);
-                } else if (url10 != null) {
-                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
-                            .execute(url10);
-                } else if (url11 != null) {
-                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
-                            .execute(url11);
-                } else if (url12 != null) {
-                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
-                            .execute(url12);
-                } else if (url13 != null) {
-                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
-                            .execute(url13);
-                } else if (url14 != null) {
-                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
-                            .execute(url14);
-                } else if (url15 != null) {
-                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
-                            .execute(url15);
-                } else if (url16 != null) {
-                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
-                            .execute(url16);
-                } else if (url17 != null) {
-                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
-                            .execute(url17);
-                } else if (url18 != null) {
-                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
-                            .execute(url18);
-                } else if (url19 != null) {
-                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
-                            .execute(url19);
-                } else if (url20 != null) {
-                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
-                            .execute(url20);
-                } else if (url21 != null) {
-                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
-                            .execute(url21);
-                } else if (url22 != null) {
-                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
-                            .execute(url22);
-                } else if (url23 != null) {
-                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
-                            .execute(url23);
-                } else if (url24 != null) {
-                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
-                            .execute(url24);
-                } else if (url25 != null) {
-                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
-                            .execute(url25);
-                } else if (url25 != null) {
-                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
-                            .execute(url25);
-                } else if (url26 != null) {
-                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
-                            .execute(url26);
+                } else if (gurl3 != null) {
+                    final ArrayList<String> Keys3 = new ArrayList<String>();
+                    for(int tt = 0; tt < 1; tt ++){
+                        Keys3.add("Keys is : " + String.valueOf(tt));
+                    }
+
+                    int width = 240;
+                    int height = 240;
+
+                    final ImageButton[] my_button3 = new ImageButton[Keys3.size()];
+
+                    for (int bt3 = 0; bt3 < Keys3.size(); bt3 ++) {
+                        final int Index3 = bt3;
+
+                        my_button3[Index3] = new ImageButton(HomePageNews.this);
+
+                        RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(width, height);
+                        lp.addRule(RelativeLayout.ALIGN_PARENT_LEFT, R.id.plusgrey6);
+
+                        my_button3[Index3].setLayoutParams(lp);
+                        my_button3[Index3].setId(Index3);
+//                      my_button3[Index3].setBackgroundResource(R.drawable.a);
+
+                        if (photo3 == null) {
+                            Toast.makeText(getApplication(), "No new photo!", Toast.LENGTH_SHORT).show();
+                        } else if (photo3 != null) {
+
+                            new HomePageNews.DownloadImageTask((ImageButton) my_button3[Index3])
+                                    .execute(photo3);
+                            Row.addView(my_button3[Index3]);
+                        }
+
+                        Toast.makeText(HomePageNews.this, "The client has been added!", Toast.LENGTH_LONG).show();
+
+
+                        Row.addView(my_button3[Index3]);
+                    }
+
+                    SharedPreferences.Editor editor = prefs.edit();
+                    editor.putString("savedImageButton3", getResources().getResourceName(R.drawable.c));
+                    editor.apply();
+
+                } else if (gurl4 != null) {
+                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.plusgrey6))
+                            .execute(gurl4);
+                } else if (gurl5 != null) {
+                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.plusgrey6))
+                            .execute(gurl5);
+                } else if (gurl6 != null) {
+                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.plusgrey6))
+                            .execute(gurl6);
+//                } else if (url7 != null) {
+//                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
+//                            .execute(url7);
+//                } else if (url8 != null) {
+//                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
+//                            .execute(url8);
+//                } else if (url9 != null) {
+//                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
+//                            .execute(url9);
+//                } else if (url10 != null) {
+//                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
+//                            .execute(url10);
+//                } else if (url11 != null) {
+//                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
+//                            .execute(url11);
+//                } else if (url12 != null) {
+//                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
+//                            .execute(url12);
+//                } else if (url13 != null) {
+//                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
+//                            .execute(url13);
+//                } else if (url14 != null) {
+//                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
+//                            .execute(url14);
+//                } else if (url15 != null) {
+//                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
+//                            .execute(url15);
+//                } else if (url16 != null) {
+//                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
+//                            .execute(url16);
+//                } else if (url17 != null) {
+//                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
+//                            .execute(url17);
+//                } else if (url18 != null) {
+//                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
+//                            .execute(url18);
+//                } else if (url19 != null) {
+//                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
+//                            .execute(url19);
+//                } else if (url20 != null) {
+//                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
+//                            .execute(url20);
+//                } else if (url21 != null) {
+//                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
+//                            .execute(url21);
+//                } else if (url22 != null) {
+//                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
+//                            .execute(url22);
+//                } else if (url23 != null) {
+//                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
+//                            .execute(url23);
+//                } else if (url24 != null) {
+//                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
+//                            .execute(url24);
+//                } else if (url25 != null) {
+//                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
+//                            .execute(url25);
+//                } else if (url25 != null) {
+//                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
+//                            .execute(url25);
+//                } else if (url26 != null) {
+//                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
+//                            .execute(url26);
 //                }else if (url27 != null) {
 //                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageView9))
 //                            .execute(url27);

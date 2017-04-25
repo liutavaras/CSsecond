@@ -13,28 +13,30 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".LoginPage"
-            android:screenOrientation="portrait"
-            />
-        <activity android:name=".HomePageNews"
+        <activity
+            android:name=".LoginPage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HomePageNews"
             android:screenOrientation="portrait">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".SettingsActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".FirstScreen"
-            android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".Register"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".UserAreaActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".SettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FirstScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Register"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserAreaActivity"
+            android:screenOrientation="portrait" />
         <!--
  ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -46,87 +48,114 @@
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".NotificationsActivity"
             android:label="@string/title_activity_notifications"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".AddProfileActivity"
             android:label="@string/title_activity_add_profile"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".GoogleSearchIntentActivity"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".ChangePasswordActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".LogOutActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GoogleSearchIntentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChangePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LogOutActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait"/>
-        <!-- <activity android:name=".MainActivity15" /> -->
-        <activity android:name=".MainActivity16"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".MainActivity17"
-            android:screenOrientation="portrait"/>
-        <!--<activity android:name=".ClientsList"/>-->
-        <activity android:name=".MainActivity18"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".MainActivity21"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".NewsDetails"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".WebViewActivity"
-            android:screenOrientation="portrait">
-
-        </activity>
-        <!-- <activity android:name=".CurrenciesActivity" /> -->
-        <activity android:name=".LiveRatesActivityhoo"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".LiveRatesActivitygbpusd"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".LiveRatesActivityfb"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".LiveRatesActivityeurusd"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".LiveRatesActivitygbpeur"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".LiveRatesActivityapple"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".LiveRatesActivitynasdaq"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".LiveRatesActivitysp"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".LiveRatesActivitygold"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".LiveRatesActivitysilver"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".sortingrates"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ViewProfile"
             android:screenOrientation="portrait"
-            >
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- <activity android:name=".MainActivity15" /> -->
+        <activity
+            android:name=".MainActivity16"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity17"
+            android:screenOrientation="portrait" />
+        <!-- <activity android:name=".ClientsList"/> -->
+        <activity
+            android:name=".MainActivity18"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity21"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NewsDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WebViewActivity"
+            android:screenOrientation="portrait" />
+        <!-- <activity android:name=".CurrenciesActivity" /> -->
+        <activity
+            android:name=".LiveRatesActivityhoo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LiveRatesActivitygbpusd"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LiveRatesActivityfb"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LiveRatesActivityeurusd"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LiveRatesActivitygbpeur"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LiveRatesActivityapple"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LiveRatesActivitynasdaq"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LiveRatesActivitysp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LiveRatesActivitygold"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LiveRatesActivitysilver"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".sortingrates"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ViewProfile"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Circlegrey1" />
+        <activity android:name=".Circlegrey2" />
+        <activity android:name=".Circlegrey3" />
+        <activity android:name=".Circlegrey4" />
+        <activity android:name=".Circlegrey5" />
+        <activity android:name=".Circlegrey6" />
+        <activity android:name=".SettingPriority1" />
+        <activity android:name=".SettingPriority2" />
+        <activity android:name=".SettingPriority3" />
+        <activity android:name=".SettingPriority4" />
+        <activity android:name=".SettingPriority5" />
+        <activity android:name=".SettingPriority6" />
+        <activity
+            android:name=".SettingPriority"
+            android:screenOrientation="portrait" />
 
-        <activity android:name=".SettingPriority"
-            android:screenOrientation="portrait"/>
         <service android:name=".MyFirebaseMessagingService">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+        <service android:name=".FirebaseIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
 
-    <service android:name=".FirebaseIDService">
-        <intent-filter>
-            <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
-        </intent-filter>
-    </service>
-</application>
 </manifest>

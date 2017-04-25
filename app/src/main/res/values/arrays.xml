@@ -57,10 +57,85 @@
 
     <string-array name="letters_array">
         <item>Select an image:</item>
-        <item>A</item>
-        <item>B</item>
-        <item>C</item>
-        <item>D</item>
+        <item>A - green</item>
+        <item>B - green</item>
+        <item>C - green</item>
+        <item>D - green</item>
+        <item>E - green</item>
+        <item>F - green</item>
+        <item>G - green</item>
+        <item>H - green</item>
+        <item>I - green</item>
+        <item>J - green</item>
+        <item>K - green</item>
+        <item>L - green</item>
+        <item>M - green</item>
+        <item>N - green</item>
+        <item>O - green</item>
+        <item>P - green</item>
+        <item>Q - green</item>
+        <item>R - green</item>
+        <item>S - green</item>
+        <item>T - green</item>
+        <item>U - green</item>
+        <item>V - green</item>
+        <item>W - green</item>
+        <item>X - green</item>
+        <item>Y - green</item>
+        <item>Z - green</item>
+        <item>A - amber</item>
+        <item>B - amber</item>
+        <item>C - amber</item>
+        <item>D - amber</item>
+        <item>E - amber</item>
+        <item>F - amber</item>
+        <item>G - amber</item>
+        <item>H - amber</item>
+        <item>I - amber</item>
+        <item>J - amber</item>
+        <item>K - amber</item>
+        <item>L - amber</item>
+        <item>M - amber</item>
+        <item>N - amber</item>
+        <item>O - amber</item>
+        <item>P - amber</item>
+        <item>Q - amber</item>
+        <item>R - amber</item>
+        <item>S - amber</item>
+        <item>T - amber</item>
+        <item>U - amber</item>
+        <item>V - amber</item>
+        <item>W - amber</item>
+        <item>X - amber</item>
+        <item>Y - amber</item>
+        <item>Z - amber</item>
+        <item>A - red</item>
+        <item>B - red</item>
+        <item>C - red</item>
+        <item>D - red</item>
+        <item>E - red</item>
+        <item>F - red</item>
+        <item>G - red</item>
+        <item>H - red</item>
+        <item>I - red</item>
+        <item>J - red</item>
+        <item>K - red</item>
+        <item>L - red</item>
+        <item>M - red</item>
+        <item>N - red</item>
+        <item>O - red</item>
+        <item>P - red</item>
+        <item>Q - red</item>
+        <item>R - red</item>
+        <item>S - red</item>
+        <item>T - red</item>
+        <item>U - red</item>
+        <item>V - red</item>
+        <item>W - red</item>
+        <item>X - red</item>
+        <item>Y - red</item>
+        <item>Z - red</item>
+
     </string-array>
 
 
