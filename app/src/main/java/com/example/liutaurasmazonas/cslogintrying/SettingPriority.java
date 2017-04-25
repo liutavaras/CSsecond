@@ -77,10 +77,10 @@ public class SettingPriority extends AppCompatActivity {
     Button bGoBack;
     Spinner spinner5;
 
-    String downloadAmberA = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/a_oufued.png";
-    String downloadAmberB = "http://res.cloudinary.com/liutavaras/image/upload/v1492503937/b_eawxmg.png";
-    String downloadAmberC = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/c_jouf2t.png";
-    String downloadAmberD = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/d_isx7x3.png";
+    final String url1 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/a_oufued.png";
+    final String url2 = "http://res.cloudinary.com/liutavaras/image/upload/v1492503937/b_eawxmg.png";
+    final String url3 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/c_jouf2t.png";
+    final String url4 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/d_isx7x3.png";
 
     DatabaseReference databaseClients;
 
@@ -136,7 +136,10 @@ public class SettingPriority extends AppCompatActivity {
         });
         bNewsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(SettingPriority.this, HomePageNews.class));
+                Intent intent = new Intent(SettingPriority.this, HomePageNews.class);
+                intent.putExtra("url1", url1);
+                startActivity(intent);
+
             }
         });
         bAddAProfile.setOnClickListener(new View.OnClickListener() {
@@ -167,48 +170,37 @@ public class SettingPriority extends AppCompatActivity {
                 switch (position) {
                     case 1:
                         String key = (String) getIntent().getExtras().get("key");
-                        String url = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/a_oufued.png";
-                        databaseClients.child(key).child("image").setValue(url);
-                        new DownloadImageTask((ImageView) findViewById(R.id.imageView11))
-                                .execute(downloadAmberA);
 
-                        Intent intent = new Intent(SettingPriority.this, HomePageNews.class);
-//                        intent.putExtra("key", key);
-                        intent.putExtra("url1", url);
-                        startActivity(intent);
-//                        Intent a = new Intent(SettingPriority.this, HomePageNews.class);
-//                        a.putExtra("url1", url);
-//                        startActivity(a);
+//                        String url = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/a_oufued.png";
+
+                        databaseClients.child(key).child("image").setValue(url1);
+//                        new DownloadImageTask((ImageView) findViewById(R.id.imageView11))
+//                                .execute(downloadAmberA);
+                        Intent intent1 = new Intent(SettingPriority.this, HomePageNews.class);
+                        intent1.putExtra("key", key);
+                        intent1.putExtra("url1", url1);
+                        startActivity(intent1);
                         break;
                     case 2:
-                        String url2 = "http://res.cloudinary.com/liutavaras/image/upload/v1492503937/b_eawxmg.png";
-                        String id2 = (String) getIntent().getExtras().get("id");
-                        databaseClients.child(id2).child("image").setValue(url2);
-                        new DownloadImageTask((ImageView) findViewById(R.id.imageView11))
-                                .execute(downloadAmberB);
-                        Intent b = new Intent(SettingPriority.this, HomePageNews.class);
-                        b.putExtra("url2", url2);
-                        startActivity(b);
+                        String key2 = (String) getIntent().getExtras().get("key");
+                        databaseClients.child(key2).child("image").setValue(url2);
+                        Intent intent2 = new Intent(SettingPriority.this, HomePageNews.class);
+                        intent2.putExtra("url2", url2);
+                        startActivity(intent2);
                         break;
                     case 3:
-                        String url3 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/c_jouf2t.png";
-                        String id3 = (String) getIntent().getExtras().get("id");
-                        databaseClients.child(id3).child("image").setValue(url3);
-                        new DownloadImageTask((ImageView) findViewById(R.id.imageView11))
-                                .execute(downloadAmberB);
-                        Intent c = new Intent(SettingPriority.this, HomePageNews.class);
-                        c.putExtra("url3", url3);
-                        startActivity(c);
+                        String key3 = (String) getIntent().getExtras().get("key");
+                        databaseClients.child(key3).child("image").setValue(url3);
+                        Intent intent3 = new Intent(SettingPriority.this, HomePageNews.class);
+                        intent3.putExtra("url3", url3);
+                        startActivity(intent3);
                         break;
                     case 4:
-                        String url4 = "http://res.cloudinary.com/liutavaras/image/upload/v1492503937/b_eawxmg.png";
-                        String id4 = (String) getIntent().getExtras().get("id");
-                        databaseClients.child(id4).child("image").setValue(url4);
-                        new DownloadImageTask((ImageView) findViewById(R.id.imageView11))
-                                .execute(downloadAmberB);
-                        Intent d = new Intent(SettingPriority.this, HomePageNews.class);
-                        d.putExtra("url4", url4);
-                        startActivity(d);
+                        String key4 = (String) getIntent().getExtras().get("key");
+                        databaseClients.child(key4).child("image").setValue(url4);
+                        Intent intent4 = new Intent(SettingPriority.this, HomePageNews.class);
+                        intent4.putExtra("url4", url4);
+                        startActivity(intent4);
                         break;
 
                 }

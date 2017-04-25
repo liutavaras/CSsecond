@@ -31,11 +31,11 @@ import com.google.firebase.auth.FirebaseUser;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.Thing;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DatabaseReference;
 
 import static android.graphics.Color.BLACK;
 import static android.graphics.Color.WHITE;
-
-
 
 
 public class SettingsActivity extends AppCompatActivity {
@@ -45,21 +45,21 @@ public class SettingsActivity extends AppCompatActivity {
     private FirebaseAuth.AuthStateListener authListener;
     private FirebaseAuth firebaseAuth;
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
+
+        final String url = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/a_oufued.png";
+
+
         final Button button = (Button) findViewById(R.id.bDark);
         final Button button1 = (Button) findViewById(R.id.button3);
-        final Button button2 = (Button) findViewById(R.id.bNewsOn);
-        final Button button3 = (Button) findViewById(R.id.bNews);
-        final Button button4 = (Button) findViewById(R.id.bNotOn);
-        final Button button5 = (Button) findViewById(R.id.bNot);
+//        final Button button2 = (Button) findViewById(R.id.bNewsOn);
+//        final Button button3 = (Button) findViewById(R.id.bNews);
+//        final Button button4 = (Button) findViewById(R.id.bNotOn);
+//        final Button button5 = (Button) findViewById(R.id.bNot);
         final Button bChangePassword = (Button) findViewById(R.id.bChangePassword);
         final ImageButton bLiveRatesBlack = (ImageButton) findViewById(R.id.ibLiveRatesBlack);
         final ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
@@ -157,115 +157,6 @@ public class SettingsActivity extends AppCompatActivity {
 
         // second row of buttons
 
-        button2.setOnClickListener(
-                new Button.OnClickListener() {
-                    public void onClick(View v) {
-                        button2.setText("ON");
-                        button2.getBackground().setColorFilter(Color.parseColor("#003662"), PorterDuff.Mode.MULTIPLY);
-                        button2.setTextColor(WHITE);
-                        button3.setText("News");
-                        button3.setTextColor(BLACK);
-                        button3.getBackground().setColorFilter(Color.LTGRAY, PorterDuff.Mode.MULTIPLY);
-
-                        while (button2.isSelected()) {
-                            button2.isEnabled();
-                        }
-                        button3.isEnabled();
-                        while (button3.isSelected()) {
-                            button3.isEnabled();
-                        }
-                        button2.isEnabled();
-                        button2.setClickable(true);
-                        button3.setClickable(true);
-
-                    }
-                }
-        );
-
-
-        button3.setOnClickListener(
-                new Button.OnClickListener() {
-                    public void onClick(View v) {
-                        button3.setText("OFF");
-                        button3.getBackground().setColorFilter(Color.parseColor("#2B292A"), PorterDuff.Mode.MULTIPLY);
-                        button3.setTextColor(WHITE);
-                        button2.setText("News");
-                        button2.setTextColor(BLACK);
-                        button2.getBackground().setColorFilter(Color.LTGRAY, PorterDuff.Mode.MULTIPLY);
-
-                        while (button3.isSelected()) {
-                            button3.isEnabled();
-                        }
-                        button2.isEnabled();
-                        while (button2.isSelected()) {
-                            button2.isEnabled();
-                        }
-                        button3.isEnabled();
-                        button3.setClickable(true);
-                        button2.setClickable(true);
-
-                    }
-                }
-
-        );
-
-        // third row of buttons
-
-        button4.setOnClickListener(
-                new Button.OnClickListener() {
-                    public void onClick(View v) {
-                        button4.setText("ON");
-                        button4.getBackground().setColorFilter(Color.parseColor("#003662"), PorterDuff.Mode.MULTIPLY);
-                        button4.setTextColor(WHITE);
-                        button4.setTextSize(30);
-                        button5.setText("Notifications");
-                        button5.setTextColor(BLACK);
-                        button5.getBackground().setColorFilter(Color.LTGRAY, PorterDuff.Mode.MULTIPLY);
-                        button5.setTextSize(23);
-
-                        while (button4.isSelected()) {
-                            button4.isEnabled();
-                        }
-                        button5.isEnabled();
-                        while (button5.isSelected()) {
-                            button5.isEnabled();
-                        }
-                        button4.isEnabled();
-                        button4.setClickable(true);
-                        button5.setClickable(true);
-
-                    }
-                }
-        );
-
-
-        button5.setOnClickListener(
-                new Button.OnClickListener() {
-                    public void onClick(View v) {
-                        button5.setText("OFF");
-                        button5.getBackground().setColorFilter(Color.parseColor("#2B292A"), PorterDuff.Mode.MULTIPLY);
-                        button5.setTextSize(30);
-                        button5.setTextColor(WHITE);
-                        button4.setText("Notifications");
-                        button4.setTextSize(23);
-                        button4.setTextColor(BLACK);
-                        button4.getBackground().setColorFilter(Color.LTGRAY, PorterDuff.Mode.MULTIPLY);
-
-                        while (button5.isSelected()) {
-                            button5.isEnabled();
-                        }
-                        button4.isEnabled();
-                        while (button4.isSelected()) {
-                            button4.isEnabled();
-                        }
-                        button5.isEnabled();
-                        button5.setClickable(true);
-                        button4.setClickable(true);
-
-                    }
-                }
-
-        );
 
 
 
@@ -274,6 +165,117 @@ public class SettingsActivity extends AppCompatActivity {
                 startActivity(new Intent(SettingsActivity.this, sortingrates.class));
             }
         });
+//        button2.setOnClickListener(
+//                new Button.OnClickListener() {
+//                    public void onClick(View v) {
+//                        button2.setText("ON");
+//                        button2.getBackground().setColorFilter(Color.parseColor("#003662"), PorterDuff.Mode.MULTIPLY);
+//                        button2.setTextColor(WHITE);
+//                        button3.setText("News");
+//                        button3.setTextColor(BLACK);
+//                        button3.getBackground().setColorFilter(Color.LTGRAY, PorterDuff.Mode.MULTIPLY);
+//
+//                        while (button2.isSelected()) {
+//                            button2.isEnabled();
+//                        }
+//                        button3.isEnabled();
+//                        while (button3.isSelected()) {
+//                            button3.isEnabled();
+//                        }
+//                        button2.isEnabled();
+//                        button2.setClickable(true);
+//                        button3.setClickable(true);
+//
+//                    }
+//                }
+//        );
+//
+//
+//        button3.setOnClickListener(
+//                new Button.OnClickListener() {
+//                    public void onClick(View v) {
+//                        button3.setText("OFF");
+//                        button3.getBackground().setColorFilter(Color.parseColor("#2B292A"), PorterDuff.Mode.MULTIPLY);
+//                        button3.setTextColor(WHITE);
+//                        button2.setText("News");
+//                        button2.setTextColor(BLACK);
+//                        button2.getBackground().setColorFilter(Color.LTGRAY, PorterDuff.Mode.MULTIPLY);
+//
+//                        while (button3.isSelected()) {
+//                            button3.isEnabled();
+//                        }
+//                        button2.isEnabled();
+//                        while (button2.isSelected()) {
+//                            button2.isEnabled();
+//                        }
+//                        button3.isEnabled();
+//                        button3.setClickable(true);
+//                        button2.setClickable(true);
+//
+//                    }
+//                }
+//
+//        );
+//
+//        // third row of buttons
+//
+//        button4.setOnClickListener(
+//                new Button.OnClickListener() {
+//                    public void onClick(View v) {
+//                        button4.setText("ON");
+//                        button4.getBackground().setColorFilter(Color.parseColor("#003662"), PorterDuff.Mode.MULTIPLY);
+//                        button4.setTextColor(WHITE);
+//                        button4.setTextSize(30);
+//                        button5.setText("Notifications");
+//                        button5.setTextColor(BLACK);
+//                        button5.getBackground().setColorFilter(Color.LTGRAY, PorterDuff.Mode.MULTIPLY);
+//                        button5.setTextSize(23);
+//
+//                        while (button4.isSelected()) {
+//                            button4.isEnabled();
+//                        }
+//                        button5.isEnabled();
+//                        while (button5.isSelected()) {
+//                            button5.isEnabled();
+//                        }
+//                        button4.isEnabled();
+//                        button4.setClickable(true);
+//                        button5.setClickable(true);
+//
+//                    }
+//                }
+//        );
+//
+//
+//        button5.setOnClickListener(
+//                new Button.OnClickListener() {
+//                    public void onClick(View v) {
+//                        button5.setText("OFF");
+//                        button5.getBackground().setColorFilter(Color.parseColor("#2B292A"), PorterDuff.Mode.MULTIPLY);
+//                        button5.setTextSize(30);
+//                        button5.setTextColor(WHITE);
+//                        button4.setText("Notifications");
+//                        button4.setTextSize(23);
+//                        button4.setTextColor(BLACK);
+//                        button4.getBackground().setColorFilter(Color.LTGRAY, PorterDuff.Mode.MULTIPLY);
+//
+//                        while (button5.isSelected()) {
+//                            button5.isEnabled();
+//                        }
+//                        button4.isEnabled();
+//                        while (button4.isSelected()) {
+//                            button4.isEnabled();
+//                        }
+//                        button5.isEnabled();
+//                        button5.setClickable(true);
+//                        button4.setClickable(true);
+//
+//                    }
+//                }
+//
+//        );
+
+
         bEconCalBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(SettingsActivity.this, WebViewActivity.class));
@@ -281,7 +283,15 @@ public class SettingsActivity extends AppCompatActivity {
         });
         bNewsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(SettingsActivity.this, HomePageNews.class));
+
+
+
+
+
+                Intent intent = new Intent(SettingsActivity.this, HomePageNews.class);
+                intent.putExtra("url1", url);
+
+                startActivity(intent);
             }
         });
         bChangePassword.setOnClickListener(new View.OnClickListener() {

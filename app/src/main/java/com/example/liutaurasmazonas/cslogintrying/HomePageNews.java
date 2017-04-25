@@ -5,11 +5,13 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -25,15 +27,20 @@ import com.daimajia.easing.linear.Linear;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 
+import static android.R.attr.drawable;
 import static android.R.attr.id;
 import static android.R.attr.layout_width;
+import static com.example.liutaurasmazonas.cslogintrying.R.id.imageView;
 import static java.security.AccessController.getContext;
 
 
@@ -41,9 +48,25 @@ public class HomePageNews extends AppCompatActivity {
     RecyclerView recyclerView;
     ImageButton button;
 
-    DatabaseReference databaseClients;
 
-//    public static final String SAVE = "MySavedHomeFile";
+    private ImageButton my_button[Index];
+
+
+
+//    DatabaseReference databaseClients;
+
+    //                    Bitmap bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+//                    imageView.setImageBitmap(bmp);
+
+//                    String urlas = "\"http://res.cloudinary.com/liutavaras/image/upload/v1492506105/a_oufued.png\"";
+//                    try {
+//                        URL url = new URL(urlas);
+//                    } catch (MalformedURLException e) {
+//                        Toast.makeText(HomePageNews.this, "blabla", Toast.LENGTH_LONG).show();
+//                    }
+//                    byte [] imageByte = Base64.decode(urlas, Base64.DEFAULT);
+//                    Bitmap bmp = BitmapFactory.decodeStream(urlas.openConnection().getInputStream());
+//                    imageView.setImageBitmap(bmp);
 
     @Override
     protected void onCreate(Bundle savedInstantState) {
@@ -88,26 +111,31 @@ public class HomePageNews extends AppCompatActivity {
             }
         });
 
+        final String photo1 = (String) ("http://res.cloudinary.com/liutavaras/image/upload/v1492506105/a_oufued.png");
+        final String photo2 = (String) ("http://res.cloudinary.com/liutavaras/image/upload/v1492503937/b_eawxmg.png");
+        final String photo3 = (String) ("http://res.cloudinary.com/liutavaras/image/upload/v1492506105/c_jouf2t.png");
+        final String photo4 = (String) ("http://res.cloudinary.com/liutavaras/image/upload/v1492506105/d_isx7x3.png");
 
         final SharedPreferences prefs  = getSharedPreferences("MySavedHomeFile", MODE_PRIVATE);
-        final int backgroundRes1 = prefs.getInt("savedImageButton1" , R.drawable.a);
-        final int backgroundRes2 = prefs.getInt("savedImageButton2" , R.drawable.b);
+        final String backgroundRes1 = prefs.getString("savedImageButton1", photo1);
+        final String backgroundRes2 = prefs.getString("savedImageButton2" , photo2);
+        final String backgroundRes3 = prefs.getString("savedImageButton3" , photo3);
         final LinearLayout Row = (LinearLayout) findViewById(R.id.LinearLayoutScrollView);
 
 
                 bbutton.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
 
-                Intent intent = getIntent();
-                Intent b = getIntent();
-                Intent c = getIntent();
-                Intent d = getIntent();
-                Intent e = getIntent();
+                Intent intent1 = getIntent();
+                Intent intent2 = getIntent();
+                Intent intent3 = getIntent();
+                Intent intent4 = getIntent();
+                Intent eee = getIntent();
                 Intent f = getIntent();
                 Intent g = getIntent();
                 Intent h = getIntent();
-                Intent i = getIntent();
-                Intent j = getIntent();
+                Intent iii = getIntent();
+                Intent jj = getIntent();
                 Intent k = getIntent();
                 Intent l = getIntent();
                 Intent m = getIntent();
@@ -125,16 +153,21 @@ public class HomePageNews extends AppCompatActivity {
                 Intent y = getIntent();
                 Intent z = getIntent();
 
-                String url1 = intent.getStringExtra("url1");
-                String url2 = b.getStringExtra("url2");
-                String url3 = c.getStringExtra("url3");
-                String url4 = d.getStringExtra("url4");
-                String url5 = e.getStringExtra("url5");
+
+                 int i =0, j = 0;
+
+
+
+                String url1 = intent1.getStringExtra("url1");
+                String url2 = intent2.getStringExtra("url2");
+                String url3 = intent3.getStringExtra("url3");
+                String url4 = intent4.getStringExtra("url4");
+                String url5 = eee.getStringExtra("url5");
                 String url6 = f.getStringExtra("url6");
                 String url7 = g.getStringExtra("url7");
                 String url8 = h.getStringExtra("url8");
-                String url9 = i.getStringExtra("url9");
-                String url10 = j.getStringExtra("url10");
+                String url9 = iii.getStringExtra("url9");
+                String url10 = jj.getStringExtra("url10");
                 String url11 = k.getStringExtra("url11");
                 String url12 = l.getStringExtra("url12");
                 String url13 = m.getStringExtra("url13");
@@ -154,7 +187,9 @@ public class HomePageNews extends AppCompatActivity {
 
 //                Toast.makeText(HomePageNews.this,"nom est : "+url1 ,Toast.LENGTH_SHORT).show();
 
-                if (url1 == null && url2 == null && url3 == null) {
+
+//                for (i = ur)
+                if (url1 == null && url2 == null && url3 == null && url4 == null) {
                     Toast.makeText(getApplication(), "No new clients added!", Toast.LENGTH_SHORT).show();
                 } else if (url1 != null) {
                     final ArrayList<String> Keys = new ArrayList<String>();
@@ -162,10 +197,8 @@ public class HomePageNews extends AppCompatActivity {
                         Keys.add("Keys is : " + String.valueOf(ii));
                     }
 
-                    LinearLayout Row = (LinearLayout) findViewById(R.id.LinearLayoutScrollView);
-
-                    int width = 320;
-                    int height = 320;
+                    int width = 240;
+                    int height = 240;
 
                     final ImageButton[] my_button = new ImageButton[Keys.size()];
 
@@ -179,9 +212,18 @@ public class HomePageNews extends AppCompatActivity {
 
                         my_button[Index].setLayoutParams(lp);
                         my_button[Index].setId(Index);
-                        my_button[Index].setBackgroundResource(backgroundRes1);
+//                      my_button[Index].setBackgroundResource(R.drawable.a);
 
-                         Toast.makeText(HomePageNews.this,"The client has been added!" ,Toast.LENGTH_LONG).show();
+                        if (photo1 == null) {
+                            Toast.makeText(getApplication(), "No new photo!", Toast.LENGTH_SHORT).show();
+                        } else if (photo1 != null) {
+
+                            new HomePageNews.DownloadImageTask((ImageButton) my_button[Index])
+                                    .execute(photo1);
+                            Row.addView(my_button[Index]);
+                        }
+
+                        Toast.makeText(HomePageNews.this,"The client has been added!" ,Toast.LENGTH_LONG).show();
 
 
 
@@ -195,37 +237,42 @@ public class HomePageNews extends AppCompatActivity {
 //
 //                                    Intent intent = new Intent(HomePageNews.this, ClientsList.class);
 //                                    intent.putExtra("key", key);
-//                                    Toast.makeText(HomePageNews.this,"You have: " +key ,Toast.LENGTH_LONG).show();
 //
+//                                  Toast.makeText(HomePageNews.this,"You have: " +key ,Toast.LENGTH_LONG).show();
+
+
+
 //                                    ref.addListenerForSingleValueEvent(new ValueEventListener() {
 //                                        @Override
-//                                        public void onDataChange(com.firebase.client.DataSnapshot dataSnapshot) {
-//                                         String ClientName = (String) dataSnapshot.child("key").getValue().toString();
-//                                            Toast.makeText(HomePageNews.this,"You have: " + ClientName ,Toast.LENGTH_LONG).show();
-//
+//                                        public void onDataChange(DataSnapshot dataSnapshot) {
+//                                            for (DataSnapshot child : children) {
+//                                            HomePageNews clientName = child.getValue(HomePageNews.class);
 //                                        }
 //
 //                                        @Override
 //                                        public void onCancelled(FirebaseError firebaseError) {
-//                                            Toast.makeText(HomePageNews.this,"You have: NOUT" ,Toast.LENGTH_LONG).show();
+//                                            Log.w("Firebase Error:", "onCancelled:", firebaseError.toException());
+//                                            Toast.makeText(HomePageNews.this, "Failed to load question!", Toast.LENGTH_SHORT).show();
 //                                        }
+//
 //                                    });
-//                                    startActivity(intent);
+//
 
 
 //                                }
 //                            }
 //                        });
+
+
 //                                    String id = (String) getIntent().getExtras().get("id");
 //                                    String name = databaseClients.child(id).child("name").toString();
 //                                    Toast.makeText(HomePageNews.this,"In your hands you have: "+ name ,Toast.LENGTH_LONG).show();
 
-                        Row.addView(my_button[Index]);
+//                        Row.addView(my_button[Index]);
                     }
 
-                    SharedPreferences prefs = getSharedPreferences("MySavedHomeFile", MODE_PRIVATE);
                     SharedPreferences.Editor editor = prefs.edit();
-                    editor.putString("savedImageButton", getResources().getResourceName(R.drawable.a));
+                    editor.putString("savedImageButton1", (photo1));
                     editor.apply();
 
                 }else if (url2 != null) {
@@ -234,14 +281,12 @@ public class HomePageNews extends AppCompatActivity {
                         Keys2.add("Keys is : " + String.valueOf(ee));
                     }
 
-                    LinearLayout Row2 = (LinearLayout) findViewById(R.id.LinearLayoutScrollView);
-
-                    int width = 320;
-                    int height = 320;
+                    int width = 240;
+                    int height = 240;
 
                     final ImageButton[] my_button2 = new ImageButton[Keys2.size()];
 
-                    for (int bt2 = 0; bt2 < Keys2.size(); bt2 ++){
+                    for (int bt2 = 0; bt2 < Keys2.size(); bt2 ++) {
                         final int Index2 = bt2;
 
                         my_button2[Index2] = new ImageButton(HomePageNews.this);
@@ -251,29 +296,70 @@ public class HomePageNews extends AppCompatActivity {
 
                         my_button2[Index2].setLayoutParams(lp);
                         my_button2[Index2].setId(Index2);
-                        my_button2[Index2].setBackgroundResource(backgroundRes2);
+//                      my_button2[Index2].setBackgroundResource(R.drawable.b);
 
-                        my_button2[bt2].setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                if (my_button2[Index2].getId() == ((ImageButton) v).getId()){
-                                }
-                            }
-                        });
+                        if (photo2 == null) {
+                            Toast.makeText(getApplication(), "No new photo!", Toast.LENGTH_SHORT).show();
+                        } else if (photo2 != null) {
 
-                        Row2.addView(my_button2[Index2]);
+                            new HomePageNews.DownloadImageTask((ImageButton) my_button2[Index2])
+                                    .execute(photo2);
+                            Row.addView(my_button2[Index2]);
+                        }
+
+                        Toast.makeText(HomePageNews.this, "The client has been added!", Toast.LENGTH_LONG).show();
+
+
+                        Row.addView(my_button2[Index2]);
                     }
 
-
-                    SharedPreferences prefs = getSharedPreferences("MySavedHomeFile", MODE_PRIVATE);
                     SharedPreferences.Editor editor = prefs.edit();
-                    editor.putString("savedImageButton", getResources().getResourceName(R.drawable.b));
+                    editor.putString("savedImageButton2", getResources().getResourceName(R.drawable.b));
                     editor.apply();
 
 
                 } else if (url3 != null) {
-                    new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
-                            .execute(url3);
+                    final ArrayList<String> Keys3 = new ArrayList<String>();
+                    for(int tt = 0; tt < 1; tt ++){
+                        Keys3.add("Keys is : " + String.valueOf(tt));
+                    }
+
+                    int width = 240;
+                    int height = 240;
+
+                    final ImageButton[] my_button3 = new ImageButton[Keys3.size()];
+
+                    for (int bt3 = 0; bt3 < Keys3.size(); bt3 ++) {
+                        final int Index3 = bt3;
+
+                        my_button3[Index3] = new ImageButton(HomePageNews.this);
+
+                        RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(width, height);
+                        lp.addRule(RelativeLayout.ALIGN_PARENT_LEFT, R.id.imageButton11);
+
+                        my_button3[Index3].setLayoutParams(lp);
+                        my_button3[Index3].setId(Index3);
+//                      my_button3[Index3].setBackgroundResource(R.drawable.a);
+
+                        if (photo3 == null) {
+                            Toast.makeText(getApplication(), "No new photo!", Toast.LENGTH_SHORT).show();
+                        } else if (photo3 != null) {
+
+                            new HomePageNews.DownloadImageTask((ImageButton) my_button3[Index3])
+                                    .execute(photo3);
+                            Row.addView(my_button3[Index3]);
+                        }
+
+                        Toast.makeText(HomePageNews.this, "The client has been added!", Toast.LENGTH_LONG).show();
+
+
+                        Row.addView(my_button3[Index3]);
+                    }
+
+                    SharedPreferences.Editor editor = prefs.edit();
+                    editor.putString("savedImageButton3", getResources().getResourceName(R.drawable.c));
+                    editor.apply();
+
                 } else if (url4 != null) {
                     new HomePageNews.DownloadImageTask((ImageButton) findViewById(R.id.imageButton11))
                             .execute(url4);
