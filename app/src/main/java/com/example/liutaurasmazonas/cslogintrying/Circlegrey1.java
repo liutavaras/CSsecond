@@ -50,7 +50,7 @@ public class Circlegrey1 extends AppCompatActivity {
 
         buttonsetpriority.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(Circlegrey1.this, SettingPriority6.class));
+                startActivity(new Intent(Circlegrey1.this, SettingPriority1.class));
             }
         });
     }
