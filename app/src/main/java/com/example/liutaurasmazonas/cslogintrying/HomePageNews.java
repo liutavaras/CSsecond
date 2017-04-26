@@ -92,7 +92,7 @@ public class HomePageNews extends AppCompatActivity {
 
         SharedPreferences homepagenews = getSharedPreferences("MyPrefs", 0);
 
-        plusgrey1.setResource(homepagenews).getString
+      //  plusgrey1.setResource(homepagenews).getString
 
 
         //Grey buttons navigations:
