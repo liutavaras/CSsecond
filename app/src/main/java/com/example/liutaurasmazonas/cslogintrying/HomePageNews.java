@@ -1899,6 +1899,835 @@ public class HomePageNews extends AppCompatActivity {
                         }else{
                             Toast.makeText(HomePageNews.this,"BOOM",Toast.LENGTH_SHORT).show();
                         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        if (gggurl1 == null && gggurl2 == null && gggurl3 == null && gggurl4 == null && gggurl5 == null && gggurl6 == null  && gggurl7 == null  && gggurl8 == null  && gggurl9 == null  && gggurl10 == null  && gggurl11 == null  && gggurl12 == null  && gggurl13 == null  && gggurl14 == null  && gggurl15 == null  && gggurl16 == null  && gggurl17 == null  && gggurl18 == null  && gggurl19 == null  && gggurl20 == null  && gggurl21 == null  && gggurl22 == null  && gggurl23 == null  && gggurl24 == null  && gggurl25 == null  && gggurl26 == null &&
+                                aaaurl1 == null && aaaurl2 == null && aaaurl3 == null && aaaurl4 == null && aaaurl5 == null && aaaurl6 == null  && aaaurl7 == null  && aaaurl8 == null  && aaaurl9 == null  && aaaurl10 == null  && aaaurl11 == null  && aaaurl12 == null  && aaaurl13 == null  && aaaurl14 == null  && aaaurl15 == null  && aaaurl16 == null  && aaaurl17 == null  && aaaurl18 == null  && aaaurl19 == null  && aaaurl20 == null  && aaaurl21 == null  && aaaurl22 == null  && aaaurl23 == null  && aaaurl24 == null  && aaaurl25 == null  && aaaurl26 == null &&
+                                rrrurl1 == null && rrrurl2 == null && rrrurl3 == null && rrrurl4 == null && rrrurl5 == null && rrrurl6 == null  && rrrurl7 == null  && rrrurl8 == null  && rrrurl9 == null  && rrrurl10 == null  && rrrurl11 == null  && rurl12 == null  && rurl13 == null  && rurl14 == null  && rurl15 == null  && rurl16 == null  && rurl17 == null  && rurl18 == null  && rurl19 == null  && rurl20 == null  && rurl21 == null  && rurl22 == null  && rurl23 == null  && rurl24 == null  && rurl25 == null  && rurl26 == null) {
+                            Toast.makeText(getApplication(), "No new clients added!", Toast.LENGTH_SHORT).show();
+                        } else if (gggurl1 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggurl1", gggurl1);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        }else if (gggurl2 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggurl2", gggurl2);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (gggurl3 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggurl3", gggurl3);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (gggurl4 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggurl4", gggurl4);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (gggurl5 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggurl5", gggurl5);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (gggurl6 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggurl6", gggurl6);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (gggurl7 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggurl7", gggurl7);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (gggurl8 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggurl8", gggurl8);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (gggurl9 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggurl9", gggurl9);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (gggurl10 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggurl10", gggurl10);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (gggurl11 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggurl11", gggurl11);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (gggurl12 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggurl2", gggurl2);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (gggurl13 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggurl13", gggurl13);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (gggurl14 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggurl14", gggurl14);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (gggurl15 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggurl15", gggurl15);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (gggurl16 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggurl16", gggurl16);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (gggurl17 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggurl17", gggurl17);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (gggurl18 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggurl18", gggurl18);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (gggurl19 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggurl19", gggurl19);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (gggurl20 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggurl20", gggurl20);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (gggurl21 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggurl21", gggurl21);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (gggurl22 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggurl22", gggurl22);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (gggurl23 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggurl23", gggurl23);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (gggurl24 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggurl24", gggurl24);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (gggurl25 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggurl25", gggurl25);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (gggurl26 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggurl26", gggurl26);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (aaaurl1 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaurl1", aaaurl1);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        }else if (aaaurl2 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaurl2", aaaurl2);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (aaaurl3 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaurl3", aaaurl3);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (aaaurl4 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaurl4", aaaurl4);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (aaaurl5 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaurl5", aaaurl5);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (aaaurl6 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaurl6", aaaurl6);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (aaaurl7 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaurl7", aaaurl7);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (aaaurl8 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaurl8", aaaurl8);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (aaaurl10 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaurl10", aaaurl10);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (aaaurl11 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaurl11", aaaurl11);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (aaaurl12 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaurl2", aaaurl2);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (aaaurl13 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaurl3", aaaurl3);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (aaaurl14 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaurl4", aaaurl4);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (aaaurl15 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaurl5", aaaurl5);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (aaaurl16 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaurl6", aaaurl6);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (aaaurl17 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaurl7", aaaurl7);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        }else if (aaaurl18 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaurl8", aaaurl8);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        }else if (aaaurl19 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaurl9", aaaurl9);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        }else if (aaaurl20 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaurl20", aaaurl20);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        }else if (aaaurl21 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaurl21", aaaurl21);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        }else if (aaaurl22 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaurl22", aaaurl22);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        }else if (aaaurl23 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaurl23", aaaurl23);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        }else if (aaaurl24 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaurl24", aaaurl24);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        }else if (aaaurl25 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaurl25", aaaurl25);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        }else if (aaaurl26 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaurl26", aaaurl26);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (rrrurl1 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrurl1", rrrurl1);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        }else if (rrrurl2 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrurl2", rrrurl2);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (rrrurl3 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrurl3", rrrurl3);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (rrrurl4 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrurl4", rrrurl4);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (rrrurl5 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrurl5", rrrurl5);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (rrrurl6 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrurl6", rrrurl6);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (rrrurl7 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrurl7", rrrurl7);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (rrrurl8 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrurl8", rrrurl8);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (rrrurl10 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrurl10", rrrurl10);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (rrrurl11 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrurl11", rrrurl11);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (rrrurl12 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrurl2", rrrurl2);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (rrrurl13 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrurl3", rrrurl3);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (rrrurl14 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrurl4", rrrurl4);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (rrrurl15 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrurl5", rrrurl5);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (rrrurl16 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrurl6", rrrurl6);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        } else if (rrrurl17 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrurl7", gurl7);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        }else if (rrrurl18 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrurl8", rrrurl8);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        }else if (rrrurl19 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrurl9", rrrurl9);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        }else if (rrrurl20 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrurl20", rrrurl20);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        }else if (rrrurl21 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrurl21", rrrurl21);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        }else if (rrrurl22 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrurl22", rrrurl22);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        }else if (rrrurl23 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrurl23", rrrurl23);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        }else if (rrrurl24 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrurl24", rrrurl24);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        }else if (rrrurl25 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrurl25", rrrurl25);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        }else if (rrrurl26 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrurl26", rrrurl26);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey3.class));
+                                }
+                            });
+                        }else{
+                            Toast.makeText(HomePageNews.this,"BOOM",Toast.LENGTH_SHORT).show();
+
+
+
               }
         });
 
