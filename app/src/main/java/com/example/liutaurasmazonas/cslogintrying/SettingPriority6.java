@@ -36,12 +36,7 @@ public class SettingPriority6 extends AppCompatActivity {
     CheckBox lriSP500;
     Spinner spinner5;
 
-    final String url1 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/a_oufued.png";
-    final String url2 = "http://res.cloudinary.com/liutavaras/image/upload/v1492503937/b_eawxmg.png";
-    final String url3 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/c_jouf2t.png";
-    final String url4 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/d_isx7x3.png";
-
-    //CIRCLES
+    //Green circles:
     final String gurl1 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/a_nfnlas.png";
     final String gurl2 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/b_bkkac4.png";
     final String gurl3 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/c_km2vhn.png";
@@ -69,68 +64,69 @@ public class SettingPriority6 extends AppCompatActivity {
     final String gurl25 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/y_mpckvd.png";
     final String gurl26 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/z_hhktgn.png";
 
-    //Red circles:
-    final String rurl1 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/a_oufued.png";
-    final String rurl2 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/b_bkkac4.png";
-    final String rurl3 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/c_km2vhn.png";
-    final String rurl4 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/d_cftn9n.png";
-    final String rurl5 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/e_cemsct.png";
-    final String rurl6 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/f_kf5vxe.png";
-    final String rurl7 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/g_uoyw17.png";
-    final String rurl8 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/h_utmd5c.png";
-    final String rurl9 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/i_drprth.png";
-    final String rurl10 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/j_i9ho4x.png";
-    final String rurl11 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/k_vegzk9.png";
-    final String rurl12 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/l_r3dus1.png";
-    final String rurl13 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/m_oazvm5.png";
-    final String rurl14 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/n_ctnj8t.png";
-    final String rurl15 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/o_rukxmy.png";
-    final String rurl16 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/p_vqfcmu.png";
-    final String rurl17 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/q_xdbpk8.png";
-    final String rurl18 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/r_ywn7hj.png";
-    final String rurl19 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/s_cbvhxu.png";
-    final String rurl20 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/t_ioz19h.png";
-    final String rurl21 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/u_gxaa6k.png";
-    final String rurl22 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/v_hmupzd.png";
-    final String rurl23 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/w_npdliu.png";
-    final String rurl24 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/x_nsglrk.png";
-    final String rurl25 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/y_mpckvd.png";
-    final String rurl26 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/z_hhktgn.png";
-
     //Amber circles:
     final String aurl1 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/a_oufued.png";
-    final String aurl2 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/b_bkkac4.png";
-    final String aurl3 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/c_km2vhn.png";
-    final String aurl4 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/d_cftn9n.png";
-    final String aurl5 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/e_cemsct.png";
-    final String aurl6 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/f_kf5vxe.png";
-    final String aurl7 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/g_uoyw17.png";
-    final String aurl8 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/h_utmd5c.png";
-    final String aurl9 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/i_drprth.png";
-    final String aurl10 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/j_i9ho4x.png";
-    final String aurl11 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/k_vegzk9.png";
-    final String aurl12 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/l_r3dus1.png";
-    final String aurl13 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/m_oazvm5.png";
-    final String aurl14 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/n_ctnj8t.png";
-    final String aurl15 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/o_rukxmy.png";
-    final String aurl16 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/p_vqfcmu.png";
-    final String aurl17 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/q_xdbpk8.png";
-    final String aurl18 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/r_ywn7hj.png";
-    final String aurl19 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/s_cbvhxu.png";
-    final String aurl20 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/t_ioz19h.png";
-    final String aurl21 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/u_gxaa6k.png";
-    final String aurl22 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/v_hmupzd.png";
-    final String aurl23 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/w_npdliu.png";
-    final String aurl24 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/x_nsglrk.png";
-    final String aurl25 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/y_mpckvd.png";
-    final String aurl26 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/z_hhktgn.png";
+    final String aurl2 = "http://res.cloudinary.com/liutavaras/image/upload/v1492503937/b_eawxmg.png”";
+    final String aurl3 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/c_jouf2t.png";
+    final String aurl4 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/d_isx7x3.png";
+    final String aurl5 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/e_gddfiw.png";
+    final String aurl6 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/f_qdqk2b.png";
+    final String aurl7 = "“http://res.cloudinary.com/liutavaras/image/upload/v1492506105/g_qtlk5b.png";
+    final String aurl8 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506106/h_rhbqin.png";
+    final String aurl9 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506106/i_ukqnpy.png";
+    final String aurl10 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506106/j_v6efpt.png";
+    final String aurl11 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506106/k_ilzlxg.png";
+    final String aurl12 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506106/l_rzjwdu.png";
+    final String aurl13 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506106/m_warnsa.png";
+    final String aurl14 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506106/n_ysuei3.png";
+    final String aurl15 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506106/o_duhgg3.png";
+    final String aurl16 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506106/p_ejntwq.png";
+    final String aurl17 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506106/q_zdqnwe.png";
+    final String aurl18 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506106/r_q4ziyc.png";
+    final String aurl19 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506106/s_o6meec.png";
+    final String aurl20 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506107/t_vqz1o8.png";
+    final String aurl21 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506107/u_pgjt19.png";
+    final String aurl22 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506106/v_mzeuhc.png";
+    final String aurl23 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506107/w_vg898p.png";
+    final String aurl24 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506107/x_vgmvs0.png";
+    final String aurl25 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506107/y_w006fy.png”";
+    final String aurl26 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506107/z_t6dff0.png";
+
+    //Red circles:
+    final String rurl1 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125461/aa_hihdzw.png";
+    final String rurl2 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125461/bb_di27ze.png";
+    final String rurl3 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125461/cc_vuxgvm.png";
+    final String rurl4 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125462/d_yv3bwj.png";
+    final String rurl5 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125461/e_qkyrmn.png";
+    final String rurl6 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125461/f_k5fvar.png";
+    final String rurl7 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125462/g_iyyufx.png";
+    final String rurl8 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125462/h_itx30n.png”";
+    final String rurl9 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125462/I_coawhk.png";
+    final String rurl10 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125462/J_spwqks.png";
+    final String rurl11 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125462/K_ivdxc4.png";
+    final String rurl12 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125462/L_ee4vna.png";
+    final String rurl13 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125462/m_rmagxn.png";
+    final String rurl14 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125463/n_s5xbwm.png";
+    final String rurl15 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125463/o_lgwrfe.png";
+    final String rurl16 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125463/P_zujqmb.png”";
+    final String rurl17 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125463/q_aljiez.png";
+    final String rurl18 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125463/r_k7y1fg.png";
+    final String rurl19 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125463/s_fgm7ap.png";
+    final String rurl20 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125463/t_p3prna.png";
+    final String rurl21 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125463/u_xpitjw.png";
+    final String rurl22 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125463/v_rskswx.png";
+    final String rurl23 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125464/w_mlqkao.png";
+    final String rurl24 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125464/x_jc2kqh.png";
+    final String rurl25 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125464/y_iodvtp.png";
+    final String rurl26 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125464/z_ll2nhm.png";
+
 
     DatabaseReference databaseClients;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_setting_priority3);
+        setContentView(R.layout.activity_setting_priority6);
 
         databaseClients = FirebaseDatabase.getInstance().getReference("clients");
 
@@ -181,7 +177,6 @@ public class SettingPriority6 extends AppCompatActivity {
         bNewsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(SettingPriority6.this, HomePageNews.class);
-                intent.putExtra("url1", url1);
                 startActivity(intent);
 
             }

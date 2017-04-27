@@ -36,13 +36,7 @@ public class SettingPriority3 extends AppCompatActivity {
     CheckBox lriSP500;
     Spinner spinner5;
 
-    final String url1 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/a_oufued.png";
-    final String url2 = "http://res.cloudinary.com/liutavaras/image/upload/v1492503937/b_eawxmg.png";
-    final String url3 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/c_jouf2t.png";
-    final String url4 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/d_isx7x3.png";
-
-    //Red Circles
-
+    //Green circles:
     final String gurl1 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/a_nfnlas.png";
     final String gurl2 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/b_bkkac4.png";
     final String gurl3 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/c_km2vhn.png";
@@ -70,70 +64,69 @@ public class SettingPriority3 extends AppCompatActivity {
     final String gurl25 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/y_mpckvd.png";
     final String gurl26 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/z_hhktgn.png";
 
-    //Red circles:
-    final String rurl1 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/a_oufued.png";
-    final String rurl2 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/b_bkkac4.png";
-    final String rurl3 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/c_km2vhn.png";
-    final String rurl4 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/d_cftn9n.png";
-    final String rurl5 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/e_cemsct.png";
-    final String rurl6 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/f_kf5vxe.png";
-    final String rurl7 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/g_uoyw17.png";
-    final String rurl8 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/h_utmd5c.png";
-    final String rurl9 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/i_drprth.png";
-    final String rurl10 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/j_i9ho4x.png";
-    final String rurl11 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/k_vegzk9.png";
-    final String rurl12 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/l_r3dus1.png";
-    final String rurl13 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/m_oazvm5.png";
-    final String rurl14 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/n_ctnj8t.png";
-    final String rurl15 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/o_rukxmy.png";
-    final String rurl16 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/p_vqfcmu.png";
-    final String rurl17 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/q_xdbpk8.png";
-    final String rurl18 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/r_ywn7hj.png";
-    final String rurl19 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/s_cbvhxu.png";
-    final String rurl20 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/t_ioz19h.png";
-    final String rurl21 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/u_gxaa6k.png";
-    final String rurl22 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/v_hmupzd.png";
-    final String rurl23 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/w_npdliu.png";
-    final String rurl24 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/x_nsglrk.png";
-    final String rurl25 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/y_mpckvd.png";
-    final String rurl26 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/z_hhktgn.png";
-
     //Amber circles:
     final String aurl1 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/a_oufued.png";
-    final String aurl2 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/b_bkkac4.png";
-    final String aurl3 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/c_km2vhn.png";
-    final String aurl4 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/d_cftn9n.png";
-    final String aurl5 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/e_cemsct.png";
-    final String aurl6 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/f_kf5vxe.png";
-    final String aurl7 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/g_uoyw17.png";
-    final String aurl8 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/h_utmd5c.png";
-    final String aurl9 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/i_drprth.png";
-    final String aurl10 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/j_i9ho4x.png";
-    final String aurl11 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/k_vegzk9.png";
-    final String aurl12 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/l_r3dus1.png";
-    final String aurl13 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/m_oazvm5.png";
-    final String aurl14 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/n_ctnj8t.png";
-    final String aurl15 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/o_rukxmy.png";
-    final String aurl16 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/p_vqfcmu.png";
-    final String aurl17 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/q_xdbpk8.png";
-    final String aurl18 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125481/r_ywn7hj.png";
-    final String aurl19 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/s_cbvhxu.png";
-    final String aurl20 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/t_ioz19h.png";
-    final String aurl21 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/u_gxaa6k.png";
-    final String aurl22 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/v_hmupzd.png";
-    final String aurl23 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/w_npdliu.png";
-    final String aurl24 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/x_nsglrk.png";
-    final String aurl25 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/y_mpckvd.png";
-    final String aurl26 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125482/z_hhktgn.png";
+    final String aurl2 = "http://res.cloudinary.com/liutavaras/image/upload/v1492503937/b_eawxmg.png”";
+    final String aurl3 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/c_jouf2t.png";
+    final String aurl4 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/d_isx7x3.png";
+    final String aurl5 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/e_gddfiw.png";
+    final String aurl6 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/f_qdqk2b.png";
+    final String aurl7 = "“http://res.cloudinary.com/liutavaras/image/upload/v1492506105/g_qtlk5b.png";
+    final String aurl8 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506106/h_rhbqin.png";
+    final String aurl9 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506106/i_ukqnpy.png";
+    final String aurl10 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506106/j_v6efpt.png";
+    final String aurl11 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506106/k_ilzlxg.png";
+    final String aurl12 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506106/l_rzjwdu.png";
+    final String aurl13 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506106/m_warnsa.png";
+    final String aurl14 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506106/n_ysuei3.png";
+    final String aurl15 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506106/o_duhgg3.png";
+    final String aurl16 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506106/p_ejntwq.png";
+    final String aurl17 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506106/q_zdqnwe.png";
+    final String aurl18 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506106/r_q4ziyc.png";
+    final String aurl19 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506106/s_o6meec.png";
+    final String aurl20 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506107/t_vqz1o8.png";
+    final String aurl21 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506107/u_pgjt19.png";
+    final String aurl22 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506106/v_mzeuhc.png";
+    final String aurl23 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506107/w_vg898p.png";
+    final String aurl24 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506107/x_vgmvs0.png";
+    final String aurl25 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506107/y_w006fy.png”";
+    final String aurl26 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506107/z_t6dff0.png";
 
-    DatabaseReference databaseClients;
+    //Red circles:
+    final String rurl1 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125461/aa_hihdzw.png";
+    final String rurl2 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125461/bb_di27ze.png";
+    final String rurl3 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125461/cc_vuxgvm.png";
+    final String rurl4 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125462/d_yv3bwj.png";
+    final String rurl5 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125461/e_qkyrmn.png";
+    final String rurl6 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125461/f_k5fvar.png";
+    final String rurl7 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125462/g_iyyufx.png";
+    final String rurl8 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125462/h_itx30n.png”";
+    final String rurl9 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125462/I_coawhk.png";
+    final String rurl10 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125462/J_spwqks.png";
+    final String rurl11 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125462/K_ivdxc4.png";
+    final String rurl12 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125462/L_ee4vna.png";
+    final String rurl13 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125462/m_rmagxn.png";
+    final String rurl14 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125463/n_s5xbwm.png";
+    final String rurl15 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125463/o_lgwrfe.png";
+    final String rurl16 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125463/P_zujqmb.png”";
+    final String rurl17 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125463/q_aljiez.png";
+    final String rurl18 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125463/r_k7y1fg.png";
+    final String rurl19 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125463/s_fgm7ap.png";
+    final String rurl20 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125463/t_p3prna.png";
+    final String rurl21 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125463/u_xpitjw.png";
+    final String rurl22 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125463/v_rskswx.png";
+    final String rurl23 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125464/w_mlqkao.png";
+    final String rurl24 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125464/x_jc2kqh.png";
+    final String rurl25 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125464/y_iodvtp.png";
+    final String rurl26 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125464/z_ll2nhm.png";
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting_priority3);
 
-        databaseClients = FirebaseDatabase.getInstance().getReference("clients");
 
         //bGoBack = (Button) findViewById(R.id.bGoBack);
         etName = (EditText) findViewById(R.id.etName);
@@ -181,9 +174,7 @@ public class SettingPriority3 extends AppCompatActivity {
         });
         bNewsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(SettingPriority3.this, HomePageNews.class);
-                intent.putExtra("url1", url1);
-                startActivity(intent);
+                startActivity(new Intent(SettingPriority3.this, sortingrates.class));
 
             }
         });
@@ -214,189 +205,131 @@ public class SettingPriority3 extends AppCompatActivity {
 
                 switch (position) {
                     case 1:
-                        String key = (String) getIntent().getExtras().get("key");
-
-//                        String url = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/a_oufued.png";
-
-                        databaseClients.child(key).child("image").setValue(gurl1);
-//                        new DownloadImageTask((ImageView) findViewById(R.id.imageView11))
-//                                .execute(downloadAmberA);
                         Intent intent1 = new Intent(SettingPriority3.this, HomePageNews.class);
-                        intent1.putExtra("key", key);
                         intent1.putExtra("gggurl1", gurl1);
                         startActivity(intent1);
                         break;
                     case 2:
-                        String key2 = (String) getIntent().getExtras().get("key");
-                        databaseClients.child(key2).child("image").setValue(gurl2);
                         Intent intent2 = new Intent(SettingPriority3.this, HomePageNews.class);
                         intent2.putExtra("gggurl2", gurl2);
                         startActivity(intent2);
                         break;
                     case 3:
-                        String key3 = (String) getIntent().getExtras().get("key");
-                        databaseClients.child(key3).child("image").setValue(gurl3);
                         Intent intent3 = new Intent(SettingPriority3.this, HomePageNews.class);
                         intent3.putExtra("gggurl3", gurl3);
                         startActivity(intent3);
                         break;
                     case 4:
-                        String key4 = (String) getIntent().getExtras().get("key");
-                        databaseClients.child(key4).child("image").setValue(gurl4);
                         Intent intent4 = new Intent(SettingPriority3.this, HomePageNews.class);
                         intent4.putExtra("gggurl4", gurl4);
                         startActivity(intent4);
                         break;
                     case 5:
-                        String key5 = (String) getIntent().getExtras().get("key");
-                        databaseClients.child(key5).child("image").setValue(gurl5);
                         Intent intent5 = new Intent(SettingPriority3.this, HomePageNews.class);
                         intent5.putExtra("gggurl5", gurl5);
                         startActivity(intent5);
                         break;
                     case 6:
-                        String key6 = (String) getIntent().getExtras().get("key");
-                        databaseClients.child(key6).child("image").setValue(gurl6);
                         Intent intent6 = new Intent(SettingPriority3.this, HomePageNews.class);
                         intent6.putExtra("gggurl6", gurl6);
                         startActivity(intent6);
                         break;
                     case 7:
-                        String key7 = (String) getIntent().getExtras().get("key");
-                        databaseClients.child(key7).child("image").setValue(gurl7);
                         Intent intent7 = new Intent(SettingPriority3.this, HomePageNews.class);
                         intent7.putExtra("gggurl7", gurl7);
                         startActivity(intent7);
                         break;
                     case 8:
-                        String key8 = (String) getIntent().getExtras().get("key");
-                        databaseClients.child(key8).child("image").setValue(gurl8);
                         Intent intent8 = new Intent(SettingPriority3.this, HomePageNews.class);
                         intent8.putExtra("gggurl8", gurl8);
                         startActivity(intent8);
                         break;
                     case 9:
-                        String key9 = (String) getIntent().getExtras().get("key");
-                        databaseClients.child(key9).child("image").setValue(gurl9);
                         Intent intent9 = new Intent(SettingPriority3.this, HomePageNews.class);
                         intent9.putExtra("gggurl9", gurl9);
                         startActivity(intent9);
                         break;
                     case 10:
-                        String key10 = (String) getIntent().getExtras().get("key");
-                        databaseClients.child(key10).child("image").setValue(gurl10);
                         Intent intent10 = new Intent(SettingPriority3.this, HomePageNews.class);
                         intent10.putExtra("gggurl10", gurl10);
                         startActivity(intent10);
                         break;
                     case 11:
-                        String key11 = (String) getIntent().getExtras().get("key");
-                        databaseClients.child(key11).child("image").setValue(gurl11);
                         Intent intent11 = new Intent(SettingPriority3.this, HomePageNews.class);
                         intent11.putExtra("gggurl11", gurl11);
                         startActivity(intent11);
                         break;
                     case 12:
-                        String key12 = (String) getIntent().getExtras().get("key");
-                        databaseClients.child(key12).child("image").setValue(gurl12);
                         Intent intent12 = new Intent(SettingPriority3.this, HomePageNews.class);
                         intent12.putExtra("gggurl12", gurl12);
                         startActivity(intent12);
                         break;
                     case 13:
-                        String key13 = (String) getIntent().getExtras().get("key");
-                        databaseClients.child(key13).child("image").setValue(gurl13);
                         Intent intent13 = new Intent(SettingPriority3.this, HomePageNews.class);
                         intent13.putExtra("gggurl13", gurl13);
                         startActivity(intent13);
                         break;
                     case 14:
-                        String key14 = (String) getIntent().getExtras().get("key");
-                        databaseClients.child(key14).child("image").setValue(gurl14);
                         Intent intent14 = new Intent(SettingPriority3.this, HomePageNews.class);
                         intent14.putExtra("gggurl14", gurl14);
                         startActivity(intent14);
                         break;
                     case 15:
-                        String key15 = (String) getIntent().getExtras().get("key");
-                        databaseClients.child(key15).child("image").setValue(gurl15);
                         Intent intent15 = new Intent(SettingPriority3.this, HomePageNews.class);
                         intent15.putExtra("gggurl15", gurl15);
                         startActivity(intent15);
                         break;
                     case 16:
-                        String key16 = (String) getIntent().getExtras().get("key");
-                        databaseClients.child(key16).child("image").setValue(gurl16);
                         Intent intent16 = new Intent(SettingPriority3.this, HomePageNews.class);
                         intent16.putExtra("gggurl16", gurl16);
                         startActivity(intent16);
                         break;
                     case 17:
-                        String key17 = (String) getIntent().getExtras().get("key");
-                        databaseClients.child(key17).child("image").setValue(gurl17);
                         Intent intent17 = new Intent(SettingPriority3.this, HomePageNews.class);
                         intent17.putExtra("gggurl17", gurl17);
                         startActivity(intent17);
                         break;
                     case 18:
-                        String key18 = (String) getIntent().getExtras().get("key");
-                        databaseClients.child(key18).child("image").setValue(gurl18);
                         Intent intent18 = new Intent(SettingPriority3.this, HomePageNews.class);
                         intent18.putExtra("gggurl8", gurl18);
                         startActivity(intent18);
                         break;
                     case 19:
-                        String key19 = (String) getIntent().getExtras().get("key");
-                        databaseClients.child(key19).child("image").setValue(gurl19);
                         Intent intent19 = new Intent(SettingPriority3.this, HomePageNews.class);
                         intent19.putExtra("gggurl9", gurl19);
                         startActivity(intent19);
                         break;
                     case 20:
-                        String key20 = (String) getIntent().getExtras().get("key");
-                        databaseClients.child(key20).child("image").setValue(gurl20);
                         Intent intent20 = new Intent(SettingPriority3.this, HomePageNews.class);
                         intent20.putExtra("gggurl20", gurl20);
                         startActivity(intent20);
                         break;
                     case 21:
-                        String key21 = (String) getIntent().getExtras().get("key");
-                        databaseClients.child(key21).child("image").setValue(gurl21);
                         Intent intent21 = new Intent(SettingPriority3.this, HomePageNews.class);
                         intent21.putExtra("gggurl21", gurl21);
                         startActivity(intent21);
                         break;
                     case 22:
-                        String key22 = (String) getIntent().getExtras().get("key");
-                        databaseClients.child(key22).child("image").setValue(gurl22);
                         Intent intent22 = new Intent(SettingPriority3.this, HomePageNews.class);
                         intent22.putExtra("gggurl22", gurl22);
                         startActivity(intent22);
                         break;
                     case 23:
-                        String key23 = (String) getIntent().getExtras().get("key");
-                        databaseClients.child(key23).child("image").setValue(gurl23);
                         Intent intent23 = new Intent(SettingPriority3.this, HomePageNews.class);
                         intent23.putExtra("gggurl23", gurl23);
                         startActivity(intent23);
                         break;
                     case 24:
-                        String key24 = (String) getIntent().getExtras().get("key");
-                        databaseClients.child(key24).child("image").setValue(gurl24);
                         Intent intent24 = new Intent(SettingPriority3.this, HomePageNews.class);
                         intent24.putExtra("gggurl24", gurl24);
                         startActivity(intent24);
                         break;
                     case 25:
-                        String key25 = (String) getIntent().getExtras().get("key");
-                        databaseClients.child(key25).child("image").setValue(gurl25);
                         Intent intent25 = new Intent(SettingPriority3.this, HomePageNews.class);
                         intent25.putExtra("gggurl25", gurl25);
                         startActivity(intent25);
                         break;
                     case 26:
-                        String key26 = (String) getIntent().getExtras().get("key");
-                        databaseClients.child(key26).child("image").setValue(gurl26);
                         Intent intent26 = new Intent(SettingPriority3.this, HomePageNews.class);
                         intent26.putExtra("gggurl26", gurl26);
                         startActivity(intent26);
@@ -407,18 +340,12 @@ public class SettingPriority3 extends AppCompatActivity {
                         startActivity(intent27);
                         break;
                     case 28:
-//                        String key4 = (String) getIntent().getExtras().get("key");
-//                        databaseClients.child(key).child("image").setValue(gurl4);
                         Intent intent28 = new Intent(SettingPriority3.this, HomePageNews.class);
-//                        intent4.putExtra("key", key);
                         intent28.putExtra("aaaurl2", aurl2);
                         startActivity(intent28);
                         break;
                     case 29:
-//                        String key4 = (String) getIntent().getExtras().get("key");
-//                        databaseClients.child(key).child("image").setValue(gurl4);
                         Intent intent29 = new Intent(SettingPriority3.this, HomePageNews.class);
-//                        intent4.putExtra("key", key);
                         intent29.putExtra("aaaurl3", aurl3);
                         startActivity(intent29);
                         break;
