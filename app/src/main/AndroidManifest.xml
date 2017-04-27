@@ -16,21 +16,24 @@
         <activity
             android:name=".LoginPage"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".HomePageNews"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:screenOrientation="portrait"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+
         <activity
             android:name=".SettingsActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".FirstScreen"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity
             android:name=".Register"
             android:screenOrientation="portrait" />
