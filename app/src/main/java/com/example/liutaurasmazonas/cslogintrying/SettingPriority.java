@@ -117,6 +117,7 @@ public class SettingPriority extends AppCompatActivity {
         ImageButton bLiveRates = (ImageButton) findViewById(R.id.ibLiveRates);
         ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
         ImageButton bAddAProfile = (ImageButton) findViewById(R.id.addAProfile);
+        final ImageButton ibSearch = (ImageButton) findViewById(R.id.ibSearch);
 
         bSettingsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -145,6 +146,12 @@ public class SettingPriority extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(SettingPriority.this, AddProfileActivity.class));
             }
+        });
+        ibSearch.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                startActivity(new Intent(SettingPriority.this, GoogleSearchIntentActivity.class));
+            }
+
         });
 
 

@@ -116,6 +116,7 @@ public class AddProfileActivity extends AppCompatActivity {
         ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
         ImageButton bLiveRates = (ImageButton) findViewById(R.id.ibLiveRates);
         ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
+        ImageButton ibSearch = (ImageButton) findViewById(R.id.ibSearch);
 
         bSettingsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -136,6 +137,12 @@ public class AddProfileActivity extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(AddProfileActivity.this, HomePageNews.class));
             }
+        });
+        ibSearch.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                startActivity(new Intent(AddProfileActivity.this, GoogleSearchIntentActivity.class));
+            }
+
         });
 
 

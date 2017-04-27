@@ -69,6 +69,7 @@ public class HomePageNews extends AppCompatActivity {
         ImageButton bLiveRates = (ImageButton) findViewById(R.id.ibLiveRates);
         ImageButton addAProfile = (ImageButton) findViewById(R.id.addAProfile);
         final ImageButton bbutton = (ImageButton) findViewById(R.id.button2);
+        final ImageButton ibSearch = (ImageButton) findViewById(R.id.ibSearch);
 
         bSettingsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -90,6 +91,13 @@ public class HomePageNews extends AppCompatActivity {
                 startActivity(new Intent(HomePageNews.this, AddProfileActivity.class));
             }
         });
+        ibSearch.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                startActivity(new Intent (HomePageNews.this, GoogleSearchIntentActivity.class));
+            }
+
+        });
+
 
         //Intializing Circles:
         final ImageButton plusgrey1 = (ImageButton) findViewById(R.id.plusgrey1);
@@ -171,6 +179,92 @@ public class HomePageNews extends AppCompatActivity {
 
                         String gurl111 = sharedPref.getString("gurl1", "");
                         String gurl211 = sharedPref.getString("gurl2", "");
+                        String gurl311 = sharedPref.getString("gurl3", "");
+                        String gurl411 = sharedPref.getString("gurl4", "");
+                        String gurl511 = sharedPref.getString("gurl5", "");
+                        String gurl611 = sharedPref.getString("gurl6", "");
+                        String gurl711 = sharedPref.getString("gurl7", "");
+                        String gurl811 = sharedPref.getString("gurl8", "");
+                        String gurl911 = sharedPref.getString("gurl9", "");
+                        String gurl1011 = sharedPref.getString("gurl10", "");
+                        String gurl1111 = sharedPref.getString("gurl11", "");
+                        String gurl1211 = sharedPref.getString("gurl12", "");
+                        String gurl1311 = sharedPref.getString("gurl13", "");
+                        String gurl1411 = sharedPref.getString("gurl14", "");
+                        String gurl1511 = sharedPref.getString("gurl15", "");
+                        String gurl1611 = sharedPref.getString("gurl16", "");
+                        String gurl1711 = sharedPref.getString("gurl17", "");
+                        String gurl1811 = sharedPref.getString("gurl18", "");
+                        String gurl1911 = sharedPref.getString("gurl19", "");
+                        String gurl2011 = sharedPref.getString("gurl20", "");
+                        String gurl2111 = sharedPref.getString("gurl21", "");
+                        String gurl2211 = sharedPref.getString("gurl22", "");
+                        String gurl2311 = sharedPref.getString("gurl23", "");
+                        String gurl2411 = sharedPref.getString("gurl24", "");
+                        String gurl2511 = sharedPref.getString("gurl25", "");
+                        String gurl2611 = sharedPref.getString("gurl26", "");
+
+
+
+                        //amber
+                        String aurl111 = sharedPref.getString("aurl1", "");
+                        String aurl211 = sharedPref.getString("aurl2", "");
+                        String aurl311 = sharedPref.getString("aurl3", "");
+                        String aurl411 = sharedPref.getString("aurl4", "");
+                        String aurl511 = sharedPref.getString("aurl5", "");
+                        String aurl611 = sharedPref.getString("aurl6", "");
+                        String aurl711 = sharedPref.getString("aurl7", "");
+                        String aurl811 = sharedPref.getString("aurl8", "");
+                        String aurl911 = sharedPref.getString("aurl9", "");
+                        String aurl1011 = sharedPref.getString("aurl10", "");
+                        String aurl1111 = sharedPref.getString("aurl11", "");
+                        String aurl1211 = sharedPref.getString("aurl12", "");
+                        String aurl1311 = sharedPref.getString("aurl13", "");
+                        String aurl1411 = sharedPref.getString("aurl14", "");
+                        String aurl1511 = sharedPref.getString("aurl15", "");
+                        String aurl1611 = sharedPref.getString("aurl16", "");
+                        String aurl1711 = sharedPref.getString("aurl17", "");
+                        String aurl1811 = sharedPref.getString("aurl18", "");
+                        String aurl1911 = sharedPref.getString("aurl19", "");
+                        String aurl2011 = sharedPref.getString("aurl20", "");
+                        String aurl2111 = sharedPref.getString("aurl21", "");
+                        String aurl2211 = sharedPref.getString("aurl22", "");
+                        String aurl2311 = sharedPref.getString("aurl23", "");
+                        String aurl2411 = sharedPref.getString("aurl24", "");
+                        String aurl2511 = sharedPref.getString("aurl25", "");
+                        String aurl2611 = sharedPref.getString("aurl26", "");
+
+                        //red
+
+                        String rurl111 = sharedPref.getString("rurl1", "");
+                        String rurl211 = sharedPref.getString("rurl2", "");
+                        String rurl311 = sharedPref.getString("rurl3", "");
+                        String rurl411 = sharedPref.getString("rurl4", "");
+                        String rurl511 = sharedPref.getString("rurl5", "");
+                        String rurl611 = sharedPref.getString("rurl6", "");
+                        String rurl711 = sharedPref.getString("rurl7", "");
+                        String rurl811 = sharedPref.getString("rurl8", "");
+                        String rurl911 = sharedPref.getString("rurl9", "");
+                        String rurl1011 = sharedPref.getString("rurl10", "");
+                        String rurl1111 = sharedPref.getString("rurl11", "");
+                        String rurl1211 = sharedPref.getString("rurl12", "");
+                        String rurl1311 = sharedPref.getString("rurl13", "");
+                        String rurl1411 = sharedPref.getString("rurl14", "");
+                        String rurl1511 = sharedPref.getString("rurl15", "");
+                        String rurl1611 = sharedPref.getString("rurl16", "");
+                        String rurl1711 = sharedPref.getString("rurl17", "");
+                        String rurl1811 = sharedPref.getString("rurl18", "");
+                        String rurl1911 = sharedPref.getString("rurl19", "");
+                        String rurl2011 = sharedPref.getString("rurl20", "");
+                        String rurl2111 = sharedPref.getString("rurl21", "");
+                        String rurl2211 = sharedPref.getString("rurl22", "");
+                        String rurl2311 = sharedPref.getString("rurl23", "");
+                        String rurl2411 = sharedPref.getString("rurl24", "");
+                        String rurl2511 = sharedPref.getString("rurl25", "");
+                        String rurl2611 = sharedPref.getString("rurl26", "");
+
+
+
                         if (gurl111 == "" && gurl211 == "") {
                             Toast.makeText(HomePageNews.this, "Haha", Toast.LENGTH_LONG);
                         } else if (gurl111 != "") {

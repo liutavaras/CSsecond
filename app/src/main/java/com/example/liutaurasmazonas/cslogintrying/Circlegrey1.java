@@ -25,6 +25,7 @@ public class Circlegrey1 extends AppCompatActivity {
         Button buttonlookforclient = (Button) findViewById(R.id.buttonlookforclient);
         Button buttonsetpriority = (Button) findViewById(R.id.buttonsetpriority);
         Button buttonclearcache = (Button) findViewById(R.id.buttonclearcache);
+        final ImageButton ibSearch = (ImageButton) findViewById(R.id.ibSearch);
 
         bSettingsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -65,6 +66,12 @@ public class Circlegrey1 extends AppCompatActivity {
                 editor.commit();
                 startActivity(new Intent(Circlegrey1.this, HomePageNews.class));
             }
+        });
+        ibSearch.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                startActivity(new Intent(Circlegrey1.this, GoogleSearchIntentActivity.class));
+            }
+
         });
 
     }

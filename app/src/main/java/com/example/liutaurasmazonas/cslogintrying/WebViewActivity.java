@@ -23,6 +23,7 @@ public class WebViewActivity extends Activity {
         ImageButton bLiveRates = (ImageButton) findViewById(R.id.ibLiveRates);
         ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
         ImageButton addAProfile = (ImageButton) findViewById(R.id.addAProfile);
+        final ImageButton ibSearch = (ImageButton) findViewById(R.id.ibSearch);
 
         bSettingsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -48,6 +49,12 @@ public class WebViewActivity extends Activity {
             public void onClick(View v) {
                 startActivity(new Intent(WebViewActivity.this, AddProfileActivity.class));
             }
+        });
+        ibSearch.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                startActivity(new Intent(WebViewActivity.this, GoogleSearchIntentActivity.class));
+            }
+
         });
 
 

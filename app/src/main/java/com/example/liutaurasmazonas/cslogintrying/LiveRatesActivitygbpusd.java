@@ -54,6 +54,7 @@ public class LiveRatesActivitygbpusd extends AppCompatActivity implements Respon
         ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
         Button BackButton = (Button) findViewById(R.id.ibBackButton);
         ImageButton addAProfile = (ImageButton) findViewById(R.id.addAProfile);
+        final ImageButton ibSearch = (ImageButton) findViewById(R.id.ibSearch);
 
         bSettingsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -84,6 +85,12 @@ public class LiveRatesActivitygbpusd extends AppCompatActivity implements Respon
             public void onClick(View v) {
                 startActivity(new Intent(LiveRatesActivitygbpusd.this, AddProfileActivity.class));
             }
+        });
+        ibSearch.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                startActivity(new Intent(LiveRatesActivitygbpusd.this, GoogleSearchIntentActivity.class));
+            }
+
         });
     }
 

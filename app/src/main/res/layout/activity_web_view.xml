@@ -93,8 +93,8 @@
             android:scaleType="fitXY"
             android:src="@drawable/pluss" />
 
-        <ImageView
-            android:id="@+id/imageView4"
+        <ImageButton
+            android:id="@+id/ibSearch"
             android:layout_width="272dp"
             android:layout_height="42dp"
             android:layout_alignParentEnd="true"
@@ -103,8 +103,7 @@
             android:layout_marginRight="18dp"
             android:background="#00ffffff"
             android:scaleType="fitXY"
-            android:src="@drawable/bestsearchbar" />
-
+            app:srcCompat="@drawable/bestsearchbar" />
     </RelativeLayout>
 
     <WebView

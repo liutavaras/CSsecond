@@ -18,6 +18,7 @@ public class Circlegrey5 extends AppCompatActivity {
         ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
         ImageButton bLiveRates = (ImageButton) findViewById(R.id.ibLiveRates);
         ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
+        final ImageButton ibSearch = (ImageButton) findViewById(R.id.ibSearch);
 
         bSettingsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -52,6 +53,12 @@ public class Circlegrey5 extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(Circlegrey5.this, SettingPriority5.class));
             }
+        });
+        ibSearch.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                startActivity(new Intent(Circlegrey5.this, GoogleSearchIntentActivity.class));
+            }
+
         });
     }
 }

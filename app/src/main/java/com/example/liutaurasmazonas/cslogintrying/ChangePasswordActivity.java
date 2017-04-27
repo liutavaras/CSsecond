@@ -48,6 +48,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
         final ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
         final ImageButton addAProfile = (ImageButton) findViewById(R.id.addAProfile);
         final Button bSave = (Button) findViewById(R.id.bSave);
+        final ImageButton ibSearch = (ImageButton) findViewById(R.id.ibSearch);
 
 
         etCurrentPasswordBox = (EditText) findViewById(R.id.etCurrentPasswordBox);
@@ -102,6 +103,12 @@ public class ChangePasswordActivity extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(ChangePasswordActivity.this, AddProfileActivity.class));
             }
+        });
+        ibSearch.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                startActivity(new Intent(ChangePasswordActivity.this, GoogleSearchIntentActivity.class));
+            }
+
         });
 
         setupSaveButton();
