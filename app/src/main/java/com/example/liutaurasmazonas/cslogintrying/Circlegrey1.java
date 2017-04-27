@@ -1,6 +1,8 @@
 package com.example.liutaurasmazonas.cslogintrying;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +15,8 @@ public class Circlegrey1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_circlegrey1);
+        final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+
 
         ImageButton bSettingsBlack = (ImageButton) findViewById(R.id.ibSettingsBlack);
         ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
@@ -20,6 +24,7 @@ public class Circlegrey1 extends AppCompatActivity {
         ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
         Button buttonlookforclient = (Button) findViewById(R.id.buttonlookforclient);
         Button buttonsetpriority = (Button) findViewById(R.id.buttonsetpriority);
+        Button buttonclearcache = (Button) findViewById(R.id.buttonclearcache);
 
         bSettingsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -50,9 +55,18 @@ public class Circlegrey1 extends AppCompatActivity {
 
         buttonsetpriority.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(Circlegrey1.this, SettingPriority6.class));
+                startActivity(new Intent(Circlegrey1.this, SettingPriority1.class));
             }
         });
+        buttonclearcache.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {SharedPreferences.Editor editor = sharedPref.edit();
+                editor.remove("gurl1");
+                editor.remove("gurl2");
+                editor.commit();
+                startActivity(new Intent(Circlegrey1.this, HomePageNews.class));
+            }
+        });
+
     }
 
 }
