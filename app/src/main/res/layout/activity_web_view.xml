@@ -103,7 +103,7 @@
             android:layout_marginRight="18dp"
             android:background="#00ffffff"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/bestsearchbar" />
+            android:src="@drawable/bestsearchbar" />
     </RelativeLayout>
 
     <WebView
