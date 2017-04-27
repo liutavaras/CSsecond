@@ -16,26 +16,6 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class SettingPriority5 extends AppCompatActivity {
 
-    EditText etName;
-    EditText etCareer;
-    CheckBox cbTech;
-    CheckBox cbMedi;
-    CheckBox nfRenewableEnergy;
-    CheckBox nfGoogle;
-    CheckBox cfNovartis;
-    CheckBox nfTesla;
-    CheckBox lrsFB;
-    CheckBox lrsAAPL;
-    CheckBox lrsYHOO;
-    CheckBox cbEURUSD;
-    CheckBox lrcuUSDRUB;
-    CheckBox lrcoSILVER;
-    CheckBox lrcoGOLD;
-    CheckBox lrcuGBPUSD;
-    CheckBox lriNSDQ;
-    CheckBox lriSP500;
-    Spinner spinner5;
-
     //Green circles:
     final String gurl1 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/a_nfnlas.png";
     final String gurl2 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/b_bkkac4.png";
@@ -120,36 +100,14 @@ public class SettingPriority5 extends AppCompatActivity {
     final String rurl25 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125464/y_iodvtp.png";
     final String rurl26 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125464/z_ll2nhm.png";
 
-    DatabaseReference databaseClients;
+//    DatabaseReference databaseClients;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting_priority5);
 
-        databaseClients = FirebaseDatabase.getInstance().getReference("clients");
-
-        //bGoBack = (Button) findViewById(R.id.bGoBack);
-        etName = (EditText) findViewById(R.id.etName);
-        etCareer = (EditText) findViewById(R.id.etCareer);
-        cbTech = (CheckBox) findViewById(R.id.cbTech);
-        cbMedi = (CheckBox) findViewById(R.id.cbMedi);
-        nfRenewableEnergy = (CheckBox) findViewById(R.id.nfRenewableEnergy);
-        nfGoogle = (CheckBox) findViewById(R.id.nfGoogle);
-        cfNovartis = (CheckBox) findViewById(R.id.cfNovartis);
-        nfTesla = (CheckBox) findViewById(R.id.nfTesla);
-        lrsFB = (CheckBox) findViewById(R.id.lrsFB);
-        lrsAAPL = (CheckBox) findViewById(R.id.lrsAAPL);
-        lrsYHOO = (CheckBox) findViewById(R.id.lrsYHOO);
-        cbEURUSD = (CheckBox) findViewById(R.id.cbEURUSD);
-        lrcuUSDRUB = (CheckBox) findViewById(R.id.lrcuUSDRUB);
-        lrcoSILVER = (CheckBox) findViewById(R.id.lrcoSILVER);
-        lrcoGOLD = (CheckBox) findViewById(R.id.lrcoGOLD);
-        lrcuGBPUSD = (CheckBox) findViewById(R.id.lrcuGBPUSD);
-        lriNSDQ = (CheckBox) findViewById(R.id.lriNSDQ);
-        lriSP500 = (CheckBox) findViewById(R.id.lriSP500);
-        spinner5 = (Spinner) findViewById(R.id.spinner5);
-
+//        databaseClients = FirebaseDatabase.getInstance().getReference("clients");
 
         ImageButton bSettingsBlack = (ImageButton) findViewById(R.id.ibSettingsBlack);
         ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
