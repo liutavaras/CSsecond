@@ -1,5 +1,6 @@
 package com.example.liutaurasmazonas.cslogintrying;
 
+import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -15,6 +16,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -31,6 +33,7 @@ import java.util.ArrayList;
 public class HomePageNews extends AppCompatActivity {
     RecyclerView recyclerView;
     ImageButton button;
+    private EditText editTextInput;
 
 //    private ImageButton plusgrey1;
 //    private ImageButton plusgrey2;
@@ -57,6 +60,8 @@ public class HomePageNews extends AppCompatActivity {
     protected void onCreate(Bundle savedInstantState) {
         super.onCreate(savedInstantState);
         setContentView(R.layout.home_page_news);
+
+        editTextInput = (EditText) findViewById(R.id.editTextInput);
 
         final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
 
@@ -4690,6 +4695,19 @@ public class HomePageNews extends AppCompatActivity {
                  });
 
              }
+
+    public void onSearchClick(View v)
+    {
+        try {
+            Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+            String term = editTextInput.getText().toString();
+            intent.putExtra(SearchManager.QUERY, term);
+            startActivity(intent);
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+
+    }
 
 //    View.OnClickListener imageButtonHandler = new View.OnClickListener() {
 //
