@@ -2522,6 +2522,16 @@ public class HomePageNews extends AppCompatActivity {
                             });
                         } else if (rurl10 != null) {
                             SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rurl9", rurl9);
+                            editor.commit();
+
+                            plusgrey1.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey1.class));
+                                }
+                            });
+                        } else if (rurl10 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
                             editor.putString("rurl10", rurl10);
                             editor.commit();
 
@@ -2542,7 +2552,7 @@ public class HomePageNews extends AppCompatActivity {
                             });
                         } else if (rurl12 != null) {
                             SharedPreferences.Editor editor = sharedPref.edit();
-                            editor.putString("rurl2", rurl2);
+                            editor.putString("rurl12", rurl12);
                             editor.commit();
 
                             plusgrey1.setOnClickListener(new View.OnClickListener() {
@@ -2552,7 +2562,7 @@ public class HomePageNews extends AppCompatActivity {
                             });
                         } else if (rurl13 != null) {
                             SharedPreferences.Editor editor = sharedPref.edit();
-                            editor.putString("rurl3", rurl3);
+                            editor.putString("rurl31", rurl13);
                             editor.commit();
 
                             plusgrey1.setOnClickListener(new View.OnClickListener() {
@@ -2562,7 +2572,7 @@ public class HomePageNews extends AppCompatActivity {
                             });
                         } else if (rurl14 != null) {
                             SharedPreferences.Editor editor = sharedPref.edit();
-                            editor.putString("rurl4", rurl4);
+                            editor.putString("rurl14", rurl14);
                             editor.commit();
 
                             plusgrey1.setOnClickListener(new View.OnClickListener() {
@@ -2572,7 +2582,7 @@ public class HomePageNews extends AppCompatActivity {
                             });
                         } else if (rurl15 != null) {
                             SharedPreferences.Editor editor = sharedPref.edit();
-                            editor.putString("rurl5", rurl5);
+                            editor.putString("rurl15", rurl15);
                             editor.commit();
 
                             plusgrey1.setOnClickListener(new View.OnClickListener() {
@@ -2582,7 +2592,7 @@ public class HomePageNews extends AppCompatActivity {
                             });
                         } else if (rurl16 != null) {
                             SharedPreferences.Editor editor = sharedPref.edit();
-                            editor.putString("rurl6", rurl6);
+                            editor.putString("rurl16", rurl16);
                             editor.commit();
 
                             plusgrey1.setOnClickListener(new View.OnClickListener() {
@@ -2592,7 +2602,7 @@ public class HomePageNews extends AppCompatActivity {
                             });
                         } else if (rurl17 != null) {
                             SharedPreferences.Editor editor = sharedPref.edit();
-                            editor.putString("rurl7", gurl7);
+                            editor.putString("rurl17", gurl17);
                             editor.commit();
 
                             plusgrey1.setOnClickListener(new View.OnClickListener() {
@@ -2602,7 +2612,7 @@ public class HomePageNews extends AppCompatActivity {
                             });
                         } else if (rurl18 != null) {
                             SharedPreferences.Editor editor = sharedPref.edit();
-                            editor.putString("rurl8", rurl8);
+                            editor.putString("rurl18", rurl18);
                             editor.commit();
 
                             plusgrey1.setOnClickListener(new View.OnClickListener() {
@@ -2612,7 +2622,7 @@ public class HomePageNews extends AppCompatActivity {
                             });
                         } else if (rurl19 != null) {
                             SharedPreferences.Editor editor = sharedPref.edit();
-                            editor.putString("rurl9", rurl9);
+                            editor.putString("rurl19", rurl19);
                             editor.commit();
 
                             plusgrey1.setOnClickListener(new View.OnClickListener() {
