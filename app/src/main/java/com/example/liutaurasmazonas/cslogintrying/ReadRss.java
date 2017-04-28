@@ -4,9 +4,11 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.provider.DocumentsContract;
+import android.support.annotation.RequiresPermission;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.widget.Toast;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -34,9 +36,10 @@ public class ReadRss extends AsyncTask<Void,Void,Void>{
     Context context;
     static ArrayList<String>address;
 
+
     static {
         address=new ArrayList<>();
-       address.add("https://feeds.finance.yahoo.com/rss/2.0/headline?s=yhoo,msft,tivo&region=US&lang=en-US");
+       address.add("https://feeds.finance.yahoo.com/rss/2.0/headline?s=yhoo,msft,tivo,goog,fb,sp,^ixic,gc=f,tsla,amzn,nvs,aapl,gbpusd=x,^eur,&region=US&lang=en-US");
        //address.add("https://www.bloomberg.com/politics/feeds/site.xml");
         //address.add("https://www.bloomberg.com/feeds/podcasts/etf_report.xml");
     }
@@ -109,6 +112,7 @@ public class ReadRss extends AsyncTask<Void,Void,Void>{
         }
     }
 
+
     public ArrayList<Document> Getdata(){
         ArrayList<Document> documents = new ArrayList<>();
         for (String addr: address) {
@@ -122,6 +126,7 @@ public class ReadRss extends AsyncTask<Void,Void,Void>{
                 Document xmlDoc = builder.parse(inputStream);
                 documents.add(xmlDoc);
             } catch (Exception e) {
+//                Toast.makeText(context, "Please check your internet connection", Toast.LENGTH_LONG).show();
                 e.printStackTrace();
                 return null;
             }
