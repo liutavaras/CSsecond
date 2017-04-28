@@ -498,7 +498,7 @@ public class SettingPriority1 extends AppCompatActivity {
                         startActivity(intent52);
                         break;
                     case 53:
-                        final String key = (String) getIntent().getExtras().get("key");
+                   //     final String key = (String) getIntent().getExtras().get("key");
 //                        databaseClients.child(key).child("image").setValue(gurl1);
                         Intent intent53 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                        intent1.putExtra("key", key);
