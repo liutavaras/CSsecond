@@ -45,12 +45,12 @@ public class SettingPriority1 extends AppCompatActivity {
 
     //Amber circles:
     final String aurl1 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/a_oufued.png";
-    final String aurl2 = "http://res.cloudinary.com/liutavaras/image/upload/v1492503937/b_eawxmg.png”";
+    final String aurl2 = "http://res.cloudinary.com/liutavaras/image/upload/v1492503937/b_eawxmg.png";
     final String aurl3 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/c_jouf2t.png";
     final String aurl4 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/d_isx7x3.png";
     final String aurl5 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/e_gddfiw.png";
     final String aurl6 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/f_qdqk2b.png";
-    final String aurl7 = "“http://res.cloudinary.com/liutavaras/image/upload/v1492506105/g_qtlk5b.png";
+    final String aurl7 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/g_qtlk5b.png";
     final String aurl8 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506106/h_rhbqin.png";
     final String aurl9 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506106/i_ukqnpy.png";
     final String aurl10 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506106/j_v6efpt.png";
@@ -68,7 +68,7 @@ public class SettingPriority1 extends AppCompatActivity {
     final String aurl22 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506106/v_mzeuhc.png";
     final String aurl23 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506107/w_vg898p.png";
     final String aurl24 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506107/x_vgmvs0.png";
-    final String aurl25 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506107/y_w006fy.png”";
+    final String aurl25 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506107/y_w006fy.png";
     final String aurl26 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506107/z_t6dff0.png";
 
     //Red circles:
@@ -79,7 +79,7 @@ public class SettingPriority1 extends AppCompatActivity {
     final String rurl5 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125461/e_qkyrmn.png";
     final String rurl6 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125461/f_k5fvar.png";
     final String rurl7 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125462/g_iyyufx.png";
-    final String rurl8 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125462/h_itx30n.png”";
+    final String rurl8 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125462/h_itx30n.png";
     final String rurl9 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125462/I_coawhk.png";
     final String rurl10 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125462/J_spwqks.png";
     final String rurl11 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125462/K_ivdxc4.png";
@@ -87,7 +87,7 @@ public class SettingPriority1 extends AppCompatActivity {
     final String rurl13 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125462/m_rmagxn.png";
     final String rurl14 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125463/n_s5xbwm.png";
     final String rurl15 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125463/o_lgwrfe.png";
-    final String rurl16 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125463/P_zujqmb.png”";
+    final String rurl16 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125463/P_zujqmb.png";
     final String rurl17 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125463/q_aljiez.png";
     final String rurl18 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125463/r_k7y1fg.png";
     final String rurl19 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125463/s_fgm7ap.png";
@@ -498,7 +498,7 @@ public class SettingPriority1 extends AppCompatActivity {
                         startActivity(intent52);
                         break;
                     case 53:
-                        final String key = (String) getIntent().getExtras().get("key");
+//                        final String key = (String) getIntent().getExtras().get("key");
 //                        databaseClients.child(key).child("image").setValue(gurl1);
                         Intent intent53 = new Intent(SettingPriority1.this, HomePageNews.class);
 //                        intent1.putExtra("key", key);
