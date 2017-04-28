@@ -2529,7 +2529,7 @@ public class HomePageNews extends AppCompatActivity {
                                     startActivity(new Intent(HomePageNews.this, Circlegrey1.class));
                                 }
                             });
-                        } else if (rurl10 != null) {
+                        } else if (rurl9 != null) {
                             SharedPreferences.Editor editor = sharedPref.edit();
                             editor.putString("rurl9", rurl9);
                             editor.commit();
