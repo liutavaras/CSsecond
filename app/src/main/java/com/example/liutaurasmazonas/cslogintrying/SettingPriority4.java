@@ -16,6 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class SettingPriority4 extends AppCompatActivity {
 
+    private EditText editTextInput;
     //Green circles:
     final String gurl1 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/a_nfnlas.png";
     final String gurl2 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/b_bkkac4.png";
@@ -116,7 +117,6 @@ public class SettingPriority4 extends AppCompatActivity {
         ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
         ImageButton bAddAProfile = (ImageButton) findViewById(R.id.addAProfile);
         Spinner spinner5 = (Spinner) findViewById(R.id.spinner5);
-        final ImageButton ibSearch = (ImageButton) findViewById(R.id.ibSearch);
 
         bSettingsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -144,12 +144,7 @@ public class SettingPriority4 extends AppCompatActivity {
                 startActivity(new Intent(SettingPriority4.this, AddProfileActivity.class));
             }
         });
-        ibSearch.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                startActivity(new Intent(SettingPriority4.this, GoogleSearchIntentActivity.class));
-            }
 
-        });
 
         ArrayAdapter<String> myAdaptor = new ArrayAdapter<String>(SettingPriority4.this,
                 R.layout.simple_spinner_item,

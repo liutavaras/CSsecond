@@ -1,14 +1,17 @@
 package com.example.liutaurasmazonas.cslogintrying;
 
 import android.app.Activity;
+import android.app.SearchManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
+import android.widget.EditText;
 import android.widget.ImageButton;
 
 public class WebViewActivity extends Activity {
     private WebView webView;
+    private EditText editTextInput;
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_view);
@@ -23,7 +26,7 @@ public class WebViewActivity extends Activity {
         ImageButton bLiveRates = (ImageButton) findViewById(R.id.ibLiveRates);
         ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
         ImageButton addAProfile = (ImageButton) findViewById(R.id.addAProfile);
-        final ImageButton ibSearch = (ImageButton) findViewById(R.id.ibSearch);
+
 
         bSettingsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -50,13 +53,21 @@ public class WebViewActivity extends Activity {
                 startActivity(new Intent(WebViewActivity.this, AddProfileActivity.class));
             }
         });
-        ibSearch.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                startActivity(new Intent(WebViewActivity.this, GoogleSearchIntentActivity.class));
-            }
 
-        });
 
+
+    }
+
+    public void onSearchClick(View v)
+    {
+        try {
+            Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+            String term = editTextInput.getText().toString();
+            intent.putExtra(SearchManager.QUERY, term);
+            startActivity(intent);
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
 
     }
 }
