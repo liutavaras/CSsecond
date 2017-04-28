@@ -7,8 +7,9 @@
     tools:context="com.example.liutaurasmazonas.cslogintrying.Circlegrey5">
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="wrap_content"
-        android:layout_height="120dp"
+        android:layout_height="77dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true">
 
@@ -57,6 +58,46 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="470dp"
+        android:layout_above="@+id/relativeLayout"
+        android:layout_alignParentStart="true">
+
+        <ImageButton
+            android:id="@+id/buttonsetpriority"
+            android:layout_width="wrap_content"
+            android:layout_height="153dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="#00ffffff"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/buttonsetpriority2" />
+
+        <ImageButton
+            android:id="@+id/buttonlookforclient"
+            android:layout_width="wrap_content"
+            android:layout_height="153dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/buttonsetpriority"
+            android:layout_marginTop="3dp"
+            android:background="#00ffffff"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/buttonlookforclient2" />
+
+        <ImageButton
+            android:id="@+id/buttonclearcache"
+            android:layout_width="wrap_content"
+            android:layout_height="158dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/buttonlookforclient"
+            android:layout_marginTop="3dp"
+            android:background="#00ffffff"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/buttonclearcache2" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
         android:id="@+id/relativeLayout40"
         android:layout_width="match_parent"
         android:layout_height="95dp"
@@ -99,30 +140,5 @@
 
     </RelativeLayout>
 
-    <Button
-        android:id="@+id/buttonsetpriority"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/buttonlookforclient"
-        android:layout_marginTop="89dp"
-        android:text="Set priority" />
-
-    <Button
-        android:id="@+id/buttonlookforclient"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
-        android:text="Look for client"
-        android:layout_below="@+id/buttonsetpriority"
-        android:layout_centerHorizontal="true" />
-    <Button
-        android:id="@+id/buttonclearcache"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/buttonlookforclient"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:text="Remove priority" />
 
 </RelativeLayout>

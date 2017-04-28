@@ -44,9 +44,9 @@ public class Circlegrey3 extends AppCompatActivity {
             }
         });
 
-        Button buttonlookforclient = (Button) findViewById(R.id.buttonlookforclient);
-        Button buttonsetpriority = (Button) findViewById(R.id.buttonsetpriority);
-        Button buttonclearcache = (Button) findViewById(R.id.buttonclearcache);
+        ImageButton buttonlookforclient = (ImageButton) findViewById(R.id.buttonlookforclient);
+        ImageButton buttonsetpriority = (ImageButton) findViewById(R.id.buttonsetpriority);
+        ImageButton buttonclearcache = (ImageButton) findViewById(R.id.buttonclearcache);
         buttonlookforclient.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(Circlegrey3.this, ViewProfile.class));

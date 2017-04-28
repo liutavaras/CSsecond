@@ -138,13 +138,11 @@
         <activity android:name=".Circlegrey3" />
         <activity android:name=".Circlegrey4" />
         <activity android:name=".Circlegrey5" />
-        <activity android:name=".Circlegrey6" />
         <activity android:name=".SettingPriority1" />
         <activity android:name=".SettingPriority2" />
         <activity android:name=".SettingPriority3" />
         <activity android:name=".SettingPriority4" />
         <activity android:name=".SettingPriority5" />
-        <activity android:name=".SettingPriority6" />
         <activity
             android:name=".SettingPriority"
             android:screenOrientation="portrait" />
