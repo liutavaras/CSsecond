@@ -133,16 +133,26 @@
         <activity
             android:name=".ViewProfile"
             android:screenOrientation="portrait" />
-        <activity android:name=".Circlegrey1" />
-        <activity android:name=".Circlegrey2" />
-        <activity android:name=".Circlegrey3" />
-        <activity android:name=".Circlegrey4" />
-        <activity android:name=".Circlegrey5" />
-        <activity android:name=".SettingPriority1" />
-        <activity android:name=".SettingPriority2" />
-        <activity android:name=".SettingPriority3" />
-        <activity android:name=".SettingPriority4" />
-        <activity android:name=".SettingPriority5" />
+        <activity android:name=".Circlegrey1"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Circlegrey2"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Circlegrey3"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Circlegrey4"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Circlegrey5"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SettingPriority1"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SettingPriority2"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SettingPriority3"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SettingPriority4"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SettingPriority5"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".SettingPriority"
             android:screenOrientation="portrait" />
