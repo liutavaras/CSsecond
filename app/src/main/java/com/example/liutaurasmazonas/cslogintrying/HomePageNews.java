@@ -74,7 +74,6 @@ public class HomePageNews extends AppCompatActivity {
         ImageButton bLiveRates = (ImageButton) findViewById(R.id.ibLiveRates);
         ImageButton addAProfile = (ImageButton) findViewById(R.id.addAProfile);
         final ImageButton bbutton = (ImageButton) findViewById(R.id.button2);
-        final ImageButton ibSearch = (ImageButton) findViewById(R.id.ibSearch);
 
 
         bSettingsBlack.setOnClickListener(new View.OnClickListener() {
@@ -97,12 +96,7 @@ public class HomePageNews extends AppCompatActivity {
                 startActivity(new Intent(HomePageNews.this, AddProfileActivity.class));
             }
         });
-        ibSearch.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                startActivity(new Intent(HomePageNews.this, GoogleSearchIntentActivity.class));
-            }
 
-        });
 
 
         //Intializing Circles:
@@ -5833,6 +5827,19 @@ public class HomePageNews extends AppCompatActivity {
         protected void onPostExecute(Bitmap result) {
             imageButton9.setImageBitmap(result);
 
+
+        }
+
+        public void onSearchClick(View v)
+        {
+            try {
+                Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+                String term = editTextInput.getText().toString();
+                intent.putExtra(SearchManager.QUERY, term);
+                startActivity(intent);
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
 
         }
 

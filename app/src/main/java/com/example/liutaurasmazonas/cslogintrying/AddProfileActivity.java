@@ -1,6 +1,7 @@
 package com.example.liutaurasmazonas.cslogintrying;
 
 import android.app.ProgressDialog;
+import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.TypedArray;
@@ -69,7 +70,7 @@ public class AddProfileActivity extends AppCompatActivity {
     Button galleryspinner;
     ImageButton bellbutton;
     ImageView imageView10;
-
+    private EditText editTextInput;
     private ProgressDialog mProgress;
 //    String downloadAmberA = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/a_oufued.png";
 //    String downloadAmberB = "http://res.cloudinary.com/liutavaras/image/upload/v1492503937/b_eawxmg.png";
@@ -86,6 +87,7 @@ public class AddProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_profile);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        editTextInput = (EditText) findViewById(R.id.editTextInput);
 
         databaseClients = FirebaseDatabase.getInstance().getReference("clients");
 //        databasePhotos = FirebaseDatabase.getInstance().getReference("photos");
@@ -116,7 +118,6 @@ public class AddProfileActivity extends AppCompatActivity {
         ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
         ImageButton bLiveRates = (ImageButton) findViewById(R.id.ibLiveRates);
         ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
-        ImageButton ibSearch = (ImageButton) findViewById(R.id.ibSearch);
 
         bSettingsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -137,12 +138,6 @@ public class AddProfileActivity extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(AddProfileActivity.this, HomePageNews.class));
             }
-        });
-        ibSearch.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                startActivity(new Intent(AddProfileActivity.this, GoogleSearchIntentActivity.class));
-            }
-
         });
 
 
@@ -295,6 +290,20 @@ public class AddProfileActivity extends AppCompatActivity {
         }else{
             Toast.makeText(this, "Please enter your name", Toast.LENGTH_LONG).show();
 
+        }
+
+    }
+
+
+    public void onSearchClick(View v)
+    {
+        try {
+            Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+            String term = editTextInput.getText().toString();
+            intent.putExtra(SearchManager.QUERY, term);
+            startActivity(intent);
+        } catch (Exception e) {
+            // TODO: handle exception
         }
 
     }

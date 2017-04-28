@@ -6,12 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 
 public class SettingPriority1 extends AppCompatActivity {
 
     Spinner spinner5;
+    private EditText editTextInput;
 
     //Green circles:
     final String gurl1 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/a_nfnlas.png";
@@ -110,7 +112,7 @@ public class SettingPriority1 extends AppCompatActivity {
         ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
         ImageButton bAddAProfile = (ImageButton) findViewById(R.id.addAProfile);
         Spinner spinner5 = (Spinner) findViewById(R.id.spinner5);
-        final ImageButton ibSearch = (ImageButton) findViewById(R.id.ibSearch);
+
 
         bSettingsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -138,12 +140,7 @@ public class SettingPriority1 extends AppCompatActivity {
                 startActivity(new Intent(SettingPriority1.this, AddProfileActivity.class));
             }
         });
-        ibSearch.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                startActivity(new Intent(SettingPriority1.this, GoogleSearchIntentActivity.class));
-            }
 
-        });
 
 
         ArrayAdapter<String> myAdaptor = new ArrayAdapter<String>(SettingPriority1.this,

@@ -1,5 +1,6 @@
 package com.example.liutaurasmazonas.cslogintrying;
 
+import android.app.SearchManager;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
@@ -37,7 +38,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
     private CheckBox cbShowEmail;
     private EditText etNewPasswordBox;
     private EditText etRetypeNewPasswordBox;
-
+    private EditText editTextInput;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +49,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
         final ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
         final ImageButton addAProfile = (ImageButton) findViewById(R.id.addAProfile);
         final Button bSave = (Button) findViewById(R.id.bSave);
-        final ImageButton ibSearch = (ImageButton) findViewById(R.id.ibSearch);
+
 
 
         etCurrentPasswordBox = (EditText) findViewById(R.id.etCurrentPasswordBox);
@@ -104,12 +105,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
                 startActivity(new Intent(ChangePasswordActivity.this, AddProfileActivity.class));
             }
         });
-        ibSearch.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                startActivity(new Intent(ChangePasswordActivity.this, GoogleSearchIntentActivity.class));
-            }
 
-        });
 
         setupSaveButton();
         setupCancelButton();
@@ -176,6 +172,19 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
 
 
+
+    public void onSearchClick(View v)
+    {
+        try {
+            Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+            String term = editTextInput.getText().toString();
+            intent.putExtra(SearchManager.QUERY, term);
+            startActivity(intent);
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+
+    }
 
 }
 

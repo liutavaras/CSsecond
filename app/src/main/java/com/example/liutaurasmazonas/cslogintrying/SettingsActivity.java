@@ -40,7 +40,7 @@ import static android.graphics.Color.WHITE;
 
 public class SettingsActivity extends AppCompatActivity {
 
-
+    private EditText editTextInput;
     private Button signOut;
     private FirebaseAuth.AuthStateListener authListener;
     private FirebaseAuth firebaseAuth;
@@ -66,7 +66,7 @@ public class SettingsActivity extends AppCompatActivity {
         final ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
         final ImageButton addAProfile = (ImageButton) findViewById(R.id.addAProfile);
         signOut = (Button) findViewById(R.id.bLogout);
-        final ImageButton ibSearch = (ImageButton) findViewById(R.id.ibSearch);
+
 
         final RelativeLayout rl=(RelativeLayout) findViewById(R.id.myLayout);
 
@@ -314,12 +314,7 @@ public class SettingsActivity extends AppCompatActivity {
                 startActivity(new Intent(SettingsActivity.this, AddProfileActivity.class));
             }
         });
-        ibSearch.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                startActivity(new Intent(SettingsActivity.this, GoogleSearchIntentActivity.class));
-            }
 
-        });
 
     }
 

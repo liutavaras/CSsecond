@@ -1,11 +1,13 @@
 package com.example.liutaurasmazonas.cslogintrying;
 
 
+import android.app.SearchManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -29,7 +31,7 @@ public class LiveRatesActivitynasdaq extends AppCompatActivity implements Respon
     private TextView DaysRange;
     private TextView ChangeInPercent;
     private RequestQueue mQueue;
-
+    private EditText editTextInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +52,7 @@ public class LiveRatesActivitynasdaq extends AppCompatActivity implements Respon
         ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
         Button BackButton = (Button) findViewById(R.id.ibBackButton);
         ImageButton addAProfile = (ImageButton) findViewById(R.id.addAProfile);
-        final ImageButton ibSearch = (ImageButton) findViewById(R.id.ibSearch);
+
 
 
         bSettingsBlack.setOnClickListener(new View.OnClickListener() {
@@ -83,12 +85,7 @@ public class LiveRatesActivitynasdaq extends AppCompatActivity implements Respon
                 startActivity(new Intent(LiveRatesActivitynasdaq.this, AddProfileActivity.class));
             }
         });
-        ibSearch.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                startActivity(new Intent(LiveRatesActivitynasdaq.this, GoogleSearchIntentActivity.class));
-            }
 
-        });
     }
 
 
@@ -205,6 +202,18 @@ public class LiveRatesActivitynasdaq extends AppCompatActivity implements Respon
         startActivity(intent);
     }
 
+    public void onSearchClick(View v)
+    {
+        try {
+            Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+            String term = editTextInput.getText().toString();
+            intent.putExtra(SearchManager.QUERY, term);
+            startActivity(intent);
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+
+    }
 
 }
 
