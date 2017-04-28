@@ -71,7 +71,7 @@
             android:layout_alignParentTop="true"
             android:background="#00ffffff"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/buttonsetpriority2" />
+            app:srcCompat="@drawable/circlesbuttonsetpriority3" />
 
         <ImageButton
             android:id="@+id/buttonlookforclient"
@@ -82,7 +82,7 @@
             android:layout_marginTop="3dp"
             android:background="#00ffffff"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/buttonlookforclient2" />
+            app:srcCompat="@drawable/clientlist3" />
 
         <ImageButton
             android:id="@+id/buttonclearcache"
@@ -93,7 +93,7 @@
             android:layout_marginTop="3dp"
             android:background="#00ffffff"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/buttonclearcache2" />
+            app:srcCompat="@drawable/removeprioritypng3" />
 
     </RelativeLayout>
 
