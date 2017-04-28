@@ -1,5 +1,6 @@
 package com.example.liutaurasmazonas.cslogintrying;
 
+import android.app.SearchManager;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -75,6 +76,7 @@ public class SettingPriority extends AppCompatActivity {
     CheckBox lriSP500;
     Button bGoBack;
     Spinner spinner5;
+    private EditText editTextInput;
 
     final String url1 = "http://res.cloudinary.com/liutavaras/image/upload/v1492506105/a_oufued.png";
     final String url2 = "http://res.cloudinary.com/liutavaras/image/upload/v1492503937/b_eawxmg.png";
@@ -117,7 +119,7 @@ public class SettingPriority extends AppCompatActivity {
         ImageButton bLiveRates = (ImageButton) findViewById(R.id.ibLiveRates);
         ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
         ImageButton bAddAProfile = (ImageButton) findViewById(R.id.addAProfile);
-        final ImageButton ibSearch = (ImageButton) findViewById(R.id.ibSearch);
+
 
         bSettingsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -147,12 +149,7 @@ public class SettingPriority extends AppCompatActivity {
                 startActivity(new Intent(SettingPriority.this, AddProfileActivity.class));
             }
         });
-        ibSearch.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                startActivity(new Intent(SettingPriority.this, GoogleSearchIntentActivity.class));
-            }
 
-        });
 
 
         ArrayAdapter<String> myAdaptor = new ArrayAdapter<String>(SettingPriority.this,
@@ -269,5 +266,18 @@ public class SettingPriority extends AppCompatActivity {
 
 
         }
+    }
+
+    public void onSearchClick(View v)
+    {
+        try {
+            Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+            String term = editTextInput.getText().toString();
+            intent.putExtra(SearchManager.QUERY, term);
+            startActivity(intent);
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+
     }
 }

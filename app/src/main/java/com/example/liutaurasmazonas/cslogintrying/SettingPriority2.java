@@ -35,6 +35,7 @@ public class SettingPriority2 extends AppCompatActivity {
     CheckBox lriNSDQ;
     CheckBox lriSP500;
     Spinner spinner5;
+    private EditText editTextInput;
 
     //Green circles:
     final String gurl1 = "http://res.cloudinary.com/liutavaras/image/upload/v1493125480/a_nfnlas.png";
@@ -159,7 +160,7 @@ public class SettingPriority2 extends AppCompatActivity {
         ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
         ImageButton bAddAProfile = (ImageButton) findViewById(R.id.addAProfile);
         Spinner spinner5 = (Spinner) findViewById(R.id.spinner5);
-        final ImageButton ibSearch = (ImageButton) findViewById(R.id.ibSearch);
+
 
         bSettingsBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -188,12 +189,7 @@ public class SettingPriority2 extends AppCompatActivity {
                 startActivity(new Intent(SettingPriority2.this, AddProfileActivity.class));
             }
         });
-        ibSearch.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                startActivity(new Intent(SettingPriority2.this, GoogleSearchIntentActivity.class));
-            }
 
-        });
 
 
         ArrayAdapter<String> myAdaptor = new ArrayAdapter<String>(SettingPriority2.this,

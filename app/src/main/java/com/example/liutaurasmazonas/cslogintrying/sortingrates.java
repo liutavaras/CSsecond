@@ -6,11 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 //HELLO KSENIJA, PRIVET, PRIVET, KAK DELA?
 public class sortingrates extends AppCompatActivity {
-
+    private EditText editTextInput;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +21,7 @@ public class sortingrates extends AppCompatActivity {
         ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
         ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
         ImageButton addAProfile = (ImageButton) findViewById(R.id.addAProfile);
-        final ImageButton ibSearch = (ImageButton) findViewById(R.id.ibSearch);
+
 
         bEconCalBlack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -45,12 +46,7 @@ public class sortingrates extends AppCompatActivity {
                 startActivity(new Intent(sortingrates.this, AddProfileActivity.class));
             }
         });
-        ibSearch.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                startActivity(new Intent(sortingrates.this, GoogleSearchIntentActivity.class));
-            }
 
-        });
 
         Spinner spinner;
         Spinner spinner2;
