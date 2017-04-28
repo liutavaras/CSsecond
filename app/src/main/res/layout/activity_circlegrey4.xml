@@ -82,7 +82,7 @@
             android:layout_marginTop="3dp"
             android:background="#00ffffff"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/clientlist4" />
+            app:srcCompat="@drawable/clientlist5" />
 
         <ImageButton
             android:id="@+id/buttonclearcache"
@@ -93,7 +93,7 @@
             android:layout_marginTop="3dp"
             android:background="#00ffffff"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/removeprioritypng4" />
+            app:srcCompat="@drawable/remove5" />
 
     </RelativeLayout>
 
@@ -142,4 +142,3 @@
 
 
 </RelativeLayout>
-
