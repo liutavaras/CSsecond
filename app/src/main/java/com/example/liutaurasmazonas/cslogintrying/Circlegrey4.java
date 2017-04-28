@@ -17,7 +17,7 @@ public class Circlegrey4 extends AppCompatActivity {
         setContentView(R.layout.activity_circlegrey4);
 
         final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-        Button buttonclearcache = (Button) findViewById(R.id.buttonclearcache);
+        ImageButton buttonclearcache = (ImageButton) findViewById(R.id.buttonclearcache);
 
         ImageButton bSettingsBlack = (ImageButton) findViewById(R.id.ibSettingsBlack);
         ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
@@ -46,8 +46,8 @@ public class Circlegrey4 extends AppCompatActivity {
             }
         });
 
-        Button buttonlookforclient = (Button) findViewById(R.id.buttonlookforclient);
-        Button buttonsetpriority = (Button) findViewById(R.id.buttonsetpriority);
+        ImageButton buttonlookforclient = (ImageButton) findViewById(R.id.buttonlookforclient);
+        ImageButton buttonsetpriority = (ImageButton) findViewById(R.id.buttonsetpriority);
 
         buttonlookforclient.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

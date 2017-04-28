@@ -111,7 +111,6 @@ public class HomePageNews extends AppCompatActivity {
         final ImageButton plusgrey3 = (ImageButton) findViewById(R.id.plusgrey3);
         final ImageButton plusgrey4 = (ImageButton) findViewById(R.id.plusgrey4);
         final ImageButton plusgrey5 = (ImageButton) findViewById(R.id.plusgrey5);
-        final ImageButton plusgrey6 = (ImageButton) findViewById(R.id.plusgrey6);
 
 //        final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
 //        SharedPreferences.Editor editor = sharedPref.edit();
@@ -168,16 +167,9 @@ public class HomePageNews extends AppCompatActivity {
                 startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
             }
         });
-        plusgrey6.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                startActivity(new Intent(HomePageNews.this, Circlegrey6.class));
-            }
-        });
-
 
 
         final LinearLayout Row = (LinearLayout) findViewById(R.id.LinearLayoutScrollView);
-
 
                 bbutton.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
@@ -498,6 +490,88 @@ public class HomePageNews extends AppCompatActivity {
                         String rrrrurl2411 = sharedPref.getString("rrrrurl24", "");
                         String rrrrurl2511 = sharedPref.getString("rrrrurl25", "");
                         String rrrrurl2611 = sharedPref.getString("rrrrurl26", "");
+
+
+                        String gggggurl111 = sharedPref.getString("gggggurl1", "");
+                        String gggggurl211 = sharedPref.getString("gggggurl2", "");
+                        String gggggurl311 = sharedPref.getString("gggggurl3", "");
+                        String gggggurl411 = sharedPref.getString("gggggurl4", "");
+                        String gggggurl511 = sharedPref.getString("gggggurl5", "");
+                        String gggggurl611 = sharedPref.getString("gggggurl6", "");
+                        String gggggurl711 = sharedPref.getString("gggggurl7", "");
+                        String gggggurl811 = sharedPref.getString("gggggurl8", "");
+                        String gggggurl911 = sharedPref.getString("gggggurl9", "");
+                        String gggggurl1011 = sharedPref.getString("gggggurl10", "");
+                        String gggggurl1111 = sharedPref.getString("gggggurl11", "");
+                        String gggggurl1211 = sharedPref.getString("gggggurl12", "");
+                        String gggggurl1311 = sharedPref.getString("gggggurl13", "");
+                        String gggggurl1411 = sharedPref.getString("gggggurl14", "");
+                        String gggggurl1511 = sharedPref.getString("gggggurl15", "");
+                        String gggggurl1611 = sharedPref.getString("gggggurl16", "");
+                        String gggggurl1711 = sharedPref.getString("gggggurl17", "");
+                        String gggggurl1811 = sharedPref.getString("gggggurl18", "");
+                        String gggggurl1911 = sharedPref.getString("gggggurl19", "");
+                        String gggggurl2011 = sharedPref.getString("gggggurl20", "");
+                        String gggggurl2111 = sharedPref.getString("gggggurl21", "");
+                        String gggggurl2211 = sharedPref.getString("gggggurl22", "");
+                        String gggggurl2311 = sharedPref.getString("gggggurl23", "");
+                        String gggggurl2411 = sharedPref.getString("gggggurl24", "");
+                        String gggggurl2511 = sharedPref.getString("gggggurl25", "");
+                        String gggggurl2611 = sharedPref.getString("gggggurl26", "");
+                        String aaaaaurl111 = sharedPref.getString("aaaaaurl1", "");
+                        String aaaaaurl211 = sharedPref.getString("aaaaaurl2", "");
+                        String aaaaaurl311 = sharedPref.getString("aaaaaurl3", "");
+                        String aaaaaurl411 = sharedPref.getString("aaaaaurl4", "");
+                        String aaaaaurl511 = sharedPref.getString("aaaaaurl5", "");
+                        String aaaaaurl611 = sharedPref.getString("aaaaaurl6", "");
+                        String aaaaaurl711 = sharedPref.getString("aaaaaurl7", "");
+                        String aaaaaurl811 = sharedPref.getString("aaaaaurl8", "");
+                        String aaaaaurl911 = sharedPref.getString("aaaaaurl9", "");
+                        String aaaaaurl1011 = sharedPref.getString("aaaaaurl10", "");
+                        String aaaaaurl1111 = sharedPref.getString("aaaaaurl11", "");
+                        String aaaaaurl1211 = sharedPref.getString("aaaaaurl12", "");
+                        String aaaaaurl1311 = sharedPref.getString("aaaaaurl13", "");
+                        String aaaaaurl1411 = sharedPref.getString("aaaaaurl14", "");
+                        String aaaaaurl1511 = sharedPref.getString("aaaaaurl15", "");
+                        String aaaaaurl1611 = sharedPref.getString("aaaaaurl16", "");
+                        String aaaaaurl1711 = sharedPref.getString("aaaaaurl17", "");
+                        String aaaaaurl1811 = sharedPref.getString("aaaaaurl18", "");
+                        String aaaaaurl1911 = sharedPref.getString("aaaaaurl19", "");
+                        String aaaaaurl2011 = sharedPref.getString("aaaaaurl20", "");
+                        String aaaaaurl2111 = sharedPref.getString("aaaaaurl21", "");
+                        String aaaaaurl2211 = sharedPref.getString("aaaaaurl22", "");
+                        String aaaaaurl2311 = sharedPref.getString("aaaaaurl23", "");
+                        String aaaaaurl2411 = sharedPref.getString("aaaaaurl24", "");
+                        String aaaaaurl2511 = sharedPref.getString("aaaaaurl25", "");
+                        String aaaaaurl2611 = sharedPref.getString("aaaaaurl26", "");
+                        String rrrrrurl111 = sharedPref.getString("rrrrrurl1", "");
+                        String rrrrrurl211 = sharedPref.getString("rrrrrurl2", "");
+                        String rrrrrurl311 = sharedPref.getString("rrrrrurl3", "");
+                        String rrrrrurl411 = sharedPref.getString("rrrrrurl4", "");
+                        String rrrrrurl511 = sharedPref.getString("rrrrrurl5", "");
+                        String rrrrrurl611 = sharedPref.getString("rrrrrurl6", "");
+                        String rrrrrurl711 = sharedPref.getString("rrrrrurl7", "");
+                        String rrrrrurl811 = sharedPref.getString("rrrrrurl8", "");
+                        String rrrrrurl911 = sharedPref.getString("rrrrrurl9", "");
+                        String rrrrrurl1011 = sharedPref.getString("rrrrrurl10", "");
+                        String rrrrrurl1111 = sharedPref.getString("rrrrrurl11", "");
+                        String rrrrrurl1211 = sharedPref.getString("rrrrrurl12", "");
+                        String rrrrrurl1311 = sharedPref.getString("rrrrrurl13", "");
+                        String rrrrrurl1411 = sharedPref.getString("rrrrrurl14", "");
+                        String rrrrrurl1511 = sharedPref.getString("rrrrrurl15", "");
+                        String rrrrrurl1611 = sharedPref.getString("rrrrrurl16", "");
+                        String rrrrrurl1711 = sharedPref.getString("rrrrrurl17", "");
+                        String rrrrrurl1811 = sharedPref.getString("rrrrrurl18", "");
+                        String rrrrrurl1911 = sharedPref.getString("rrrrrurl19", "");
+                        String rrrrrurl2011 = sharedPref.getString("rrrrrurl20", "");
+                        String rrrrrurl2111 = sharedPref.getString("rrrrrurl21", "");
+                        String rrrrrurl2211 = sharedPref.getString("rrrrrurl22", "");
+                        String rrrrrurl2311 = sharedPref.getString("rrrrrurl23", "");
+                        String rrrrrurl2411 = sharedPref.getString("rrrrrurl24", "");
+                        String rrrrrurl2511 = sharedPref.getString("rrrrrurl25", "");
+                        String rrrrrurl2611 = sharedPref.getString("rrrrrurl26", "");
+
+
 
                         if (gurl111 == "" && gurl211 == "" && gurl311 == "" && gurl411 == "" && gurl511 == "" && gurl611 == "" && gurl711 == "" &&
                                 gurl811 == "" && gurl911 == "" && gurl1011 == "" && gurl1111 == "" && gurl1211 == "" && gurl1311 == "" && gurl1411 == "" &&
@@ -842,190 +916,190 @@ public class HomePageNews extends AppCompatActivity {
                             new HomePageNews.DownloadImageTask((ImageButton) plusgrey2).execute(rrurl2611);
                         }
 
-                    if (gggurl111 ==""&&gggurl211 ==""&&gggurl311 ==""&&gggurl411 ==""&&gggurl511 ==""&&gggurl611 ==""&&gggurl711 ==""&&
-                    gggurl811 ==""&&gggurl911 ==""&&gggurl1011 ==""&&gggurl1111 ==""&&gggurl1211 ==""&&gggurl1311 ==""&&gggurl1411 ==""&&
-                    gggurl1511 ==""&&gggurl1611 ==""&&gggurl1711 ==""&&gggurl1811 ==""&&gggurl1911 ==""&&gggurl2011 ==""&&gggurl2111 ==""&&
-                    gggurl2211 ==""&&gggurl2311 ==""&&gggurl2411 ==""&&gggurl2511 ==""&&gggurl2611 ==""&&
-                    rrrurl111 ==""&&rrrurl211 ==""&&rrrurl311 ==""&&rrrurl411 ==""&&rrrurl511 ==""&&rrrurl611 ==""&&rrrurl711 ==""&&
-                    rrrurl811 ==""&&rrrurl911 ==""&&rrrurl1011 ==""&&rrrurl1111 ==""&&rrrurl1211 ==""&&rrrurl1311 ==""&&rrrurl1411 ==""&&
-                    rrrurl1511 ==""&&rrrurl1611 ==""&&rrrurl1711 ==""&&rrrurl1811 ==""&&rrrurl1911 ==""&&rrrurl2011 ==""&&rrrurl2111 ==""&&
-                    rrrurl2211 ==""&&rrrurl2311 ==""&&rrrurl2411 ==""&&rrrurl2511 ==""&&rrrurl2611 ==""&&
-                    aaaurl111 ==""&&aaaurl211 ==""&&aaaurl311 ==""&&aaaurl411 ==""&&aaaurl511 ==""&&aaaurl611 ==""&&aaaurl711 ==""&&
-                    aaaurl811 ==""&&aaaurl911 ==""&&aaaurl1011 ==""&&aaaurl1111 ==""&&aaaurl1211 ==""&&aaaurl1311 ==""&&aaaurl1411 ==""&&
-                    aaaurl1511 ==""&&aaaurl1611 ==""&&aaaurl1711 ==""&&aaaurl1811 ==""&&aaaurl1911 ==""&&aaaurl2011 ==""&&aaaurl2111 ==""&&
-                    aaaurl2211 ==""&&aaaurl2311 ==""&&aaaurl2411 ==""&&aaaurl2511 ==""&&aaaurl2611 =="") {
-                        Toast.makeText(HomePageNews.this, "Haha", Toast.LENGTH_LONG);
-                    } else if (gggurl111 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl111);
-                    } else if (gggurl211 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl211);
-                    } else if (gggurl311 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl311);
-                    } else if (gggurl411 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl411);
-                    } else if (gggurl511 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl511);
-                    } else if (gggurl611 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl611);
-                    } else if (gggurl711 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl711);
-                    } else if (gggurl811 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl811);
-                    } else if (gggurl911 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl911);
-                    } else if (gggurl1011 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl1011);
-                    } else if (gggurl1111 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl1111);
-                    } else if (gggurl1211 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl1211);
-                    } else if (gggurl1311 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl1311);
-                    } else if (gggurl1411 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl1411);
-                    } else if (gggurl1511 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl1511);
-                    } else if (gggurl1611 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl1611);
-                    } else if (gggurl1711 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl1711);
-                    } else if (gggurl1811 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl1811);
-                    } else if (gggurl1911 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl1911);
-                    } else if (gggurl2011 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl2011);
-                    } else if (gggurl2111 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl2111);
-                    } else if (gggurl2211 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl2211);
-                    } else if (gggurl2311 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl2311);
-                    } else if (gggurl2411 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl2411);
-                    } else if (gggurl2511 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl2511);
-                    } else if (gggurl2611 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl2611);
-                    } else if (aaaurl111 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl111);
-                    } else if (aaaurl211 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl211);
-                    } else if (aaaurl311 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl311);
-                    } else if (aaaurl411 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl411);
-                    } else if (aaaurl511 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl511);
-                    } else if (aaaurl611 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl611);
-                    } else if (aaaurl711 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl711);
-                    } else if (aaaurl811 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl811);
-                    } else if (aaaurl911 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl911);
-                    } else if (aaaurl1011 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl1011);
-                    } else if (aaaurl1111 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl1111);
-                    } else if (aaaurl1211 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl1211);
-                    } else if (aaaurl1311 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl1311);
-                    } else if (aaaurl1411 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl1411);
-                    } else if (aaaurl1511 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl1511);
-                    } else if (aaaurl1611 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl1611);
-                    } else if (aaaurl1711 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl1711);
-                    } else if (aaaurl1811 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl1811);
-                    } else if (aaaurl1911 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl1911);
-                    } else if (aaaurl2011 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl2011);
-                    } else if (aaaurl2111 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl2111);
-                    } else if (aaaurl2211 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl2211);
-                    } else if (aaaurl2311 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl2311);
-                    } else if (aaaurl2411 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl2411);
-                    } else if (aaaurl2511 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl2511);
-                    } else if (aaaurl2611 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl2611);
-                    } else if (rrrurl111 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl111);
-                    } else if (rrrurl211 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl211);
-                    } else if (rrrurl311 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl311);
-                    } else if (rrrurl411 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl411);
-                    } else if (rrrurl511 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl511);
-                    } else if (rrrurl611 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl611);
-                    } else if (rrrurl711 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl711);
-                    } else if (rrrurl811 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl811);
-                    } else if (rrrurl911 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl911);
-                    } else if (rrrurl1011 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl1011);
-                    } else if (rrrurl1111 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl1111);
-                    } else if (rrrurl1211 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl1211);
-                    } else if (rrrurl1311 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl1311);
-                    } else if (rrrurl1411 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl1411);
-                    } else if (rrrurl1511 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl1511);
-                    } else if (rrrurl1611 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl1611);
-                    } else if (rrrurl1711 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl1711);
-                    } else if (rrrurl1811 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl1811);
-                    } else if (rrrurl1911 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl1911);
-                    } else if (rrrurl2011 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl2011);
-                    } else if (rrrurl2111 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl2111);
-                    } else if (rrrurl2211 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl2211);
-                    } else if (rrrurl2311 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl2311);
-                    } else if (rrrurl2411 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl2411);
-                    } else if (rrrurl2511 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl2511);
-                    } else if (rrrurl2611 != "") {
-                        new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl2611);
-                    }
+                        if (gggurl111 == "" && gggurl211 == "" && gggurl311 == "" && gggurl411 == "" && gggurl511 == "" && gggurl611 == "" && gggurl711 == "" &&
+                                gggurl811 == "" && gggurl911 == "" && gggurl1011 == "" && gggurl1111 == "" && gggurl1211 == "" && gggurl1311 == "" && gggurl1411 == "" &&
+                                gggurl1511 == "" && gggurl1611 == "" && gggurl1711 == "" && gggurl1811 == "" && gggurl1911 == "" && gggurl2011 == "" && gggurl2111 == "" &&
+                                gggurl2211 == "" && gggurl2311 == "" && gggurl2411 == "" && gggurl2511 == "" && gggurl2611 == "" &&
+                                rrrurl111 == "" && rrrurl211 == "" && rrrurl311 == "" && rrrurl411 == "" && rrrurl511 == "" && rrrurl611 == "" && rrrurl711 == "" &&
+                                rrrurl811 == "" && rrrurl911 == "" && rrrurl1011 == "" && rrrurl1111 == "" && rrrurl1211 == "" && rrrurl1311 == "" && rrrurl1411 == "" &&
+                                rrrurl1511 == "" && rrrurl1611 == "" && rrrurl1711 == "" && rrrurl1811 == "" && rrrurl1911 == "" && rrrurl2011 == "" && rrrurl2111 == "" &&
+                                rrrurl2211 == "" && rrrurl2311 == "" && rrrurl2411 == "" && rrrurl2511 == "" && rrrurl2611 == "" &&
+                                aaaurl111 == "" && aaaurl211 == "" && aaaurl311 == "" && aaaurl411 == "" && aaaurl511 == "" && aaaurl611 == "" && aaaurl711 == "" &&
+                                aaaurl811 == "" && aaaurl911 == "" && aaaurl1011 == "" && aaaurl1111 == "" && aaaurl1211 == "" && aaaurl1311 == "" && aaaurl1411 == "" &&
+                                aaaurl1511 == "" && aaaurl1611 == "" && aaaurl1711 == "" && aaaurl1811 == "" && aaaurl1911 == "" && aaaurl2011 == "" && aaaurl2111 == "" &&
+                                aaaurl2211 == "" && aaaurl2311 == "" && aaaurl2411 == "" && aaaurl2511 == "" && aaaurl2611 == "") {
+                            Toast.makeText(HomePageNews.this, "Haha", Toast.LENGTH_LONG);
+                        } else if (gggurl111 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl111);
+                        } else if (gggurl211 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl211);
+                        } else if (gggurl311 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl311);
+                        } else if (gggurl411 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl411);
+                        } else if (gggurl511 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl511);
+                        } else if (gggurl611 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl611);
+                        } else if (gggurl711 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl711);
+                        } else if (gggurl811 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl811);
+                        } else if (gggurl911 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl911);
+                        } else if (gggurl1011 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl1011);
+                        } else if (gggurl1111 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl1111);
+                        } else if (gggurl1211 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl1211);
+                        } else if (gggurl1311 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl1311);
+                        } else if (gggurl1411 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl1411);
+                        } else if (gggurl1511 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl1511);
+                        } else if (gggurl1611 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl1611);
+                        } else if (gggurl1711 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl1711);
+                        } else if (gggurl1811 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl1811);
+                        } else if (gggurl1911 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl1911);
+                        } else if (gggurl2011 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl2011);
+                        } else if (gggurl2111 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl2111);
+                        } else if (gggurl2211 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl2211);
+                        } else if (gggurl2311 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl2311);
+                        } else if (gggurl2411 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl2411);
+                        } else if (gggurl2511 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl2511);
+                        } else if (gggurl2611 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(gggurl2611);
+                        } else if (aaaurl111 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl111);
+                        } else if (aaaurl211 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl211);
+                        } else if (aaaurl311 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl311);
+                        } else if (aaaurl411 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl411);
+                        } else if (aaaurl511 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl511);
+                        } else if (aaaurl611 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl611);
+                        } else if (aaaurl711 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl711);
+                        } else if (aaaurl811 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl811);
+                        } else if (aaaurl911 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl911);
+                        } else if (aaaurl1011 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl1011);
+                        } else if (aaaurl1111 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl1111);
+                        } else if (aaaurl1211 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl1211);
+                        } else if (aaaurl1311 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl1311);
+                        } else if (aaaurl1411 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl1411);
+                        } else if (aaaurl1511 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl1511);
+                        } else if (aaaurl1611 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl1611);
+                        } else if (aaaurl1711 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl1711);
+                        } else if (aaaurl1811 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl1811);
+                        } else if (aaaurl1911 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl1911);
+                        } else if (aaaurl2011 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl2011);
+                        } else if (aaaurl2111 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl2111);
+                        } else if (aaaurl2211 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl2211);
+                        } else if (aaaurl2311 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl2311);
+                        } else if (aaaurl2411 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl2411);
+                        } else if (aaaurl2511 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl2511);
+                        } else if (aaaurl2611 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(aaaurl2611);
+                        } else if (rrrurl111 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl111);
+                        } else if (rrrurl211 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl211);
+                        } else if (rrrurl311 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl311);
+                        } else if (rrrurl411 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl411);
+                        } else if (rrrurl511 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl511);
+                        } else if (rrrurl611 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl611);
+                        } else if (rrrurl711 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl711);
+                        } else if (rrrurl811 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl811);
+                        } else if (rrrurl911 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl911);
+                        } else if (rrrurl1011 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl1011);
+                        } else if (rrrurl1111 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl1111);
+                        } else if (rrrurl1211 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl1211);
+                        } else if (rrrurl1311 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl1311);
+                        } else if (rrrurl1411 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl1411);
+                        } else if (rrrurl1511 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl1511);
+                        } else if (rrrurl1611 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl1611);
+                        } else if (rrrurl1711 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl1711);
+                        } else if (rrrurl1811 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl1811);
+                        } else if (rrrurl1911 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl1911);
+                        } else if (rrrurl2011 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl2011);
+                        } else if (rrrurl2111 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl2111);
+                        } else if (rrrurl2211 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl2211);
+                        } else if (rrrurl2311 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl2311);
+                        } else if (rrrurl2411 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl2411);
+                        } else if (rrrurl2511 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl2511);
+                        } else if (rrrurl2611 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey3).execute(rrrurl2611);
+                        }
 
 
                         if (ggggurl111 == "" && ggggurl211 == "" && ggggurl311 == "" && ggggurl411 == "" && ggggurl511 == "" && ggggurl611 == "" && ggggurl711 == "" &&
-                            ggggurl811 == "" && ggggurl911 == "" && ggggurl1011 == "" && ggggurl1111 == "" && ggggurl1211 == "" && ggggurl1311 == "" && ggggurl1411 == "" &&
-                            ggggurl1511 == "" && ggggurl1611 == "" && ggggurl1711 == "" && ggggurl1811 == "" && ggggurl1911 == "" && ggggurl2011 == "" && ggggurl2111 == "" &&
-                            ggggurl2211 == "" && ggggurl2311 == "" && ggggurl2411 == "" && ggggurl2511 == "" && ggggurl2611 == "" &&
-                            rrrrurl111 == "" && rrrrurl211 == "" && rrrrurl311 == "" && rrrrurl411 == "" && rrrrurl511 == "" && rrrrurl611 == "" && rrrrurl711 == "" &&
-                            rrrrurl811 == "" && rrrrurl911 == "" && rrrrurl1011 == "" && rrrrurl1111 == "" && rrrrurl1211 == "" && rrrrurl1311 == "" && rrrrurl1411 == "" &&
-                            rrrrurl1511 == "" && rrrrurl1611 == "" && rrrrurl1711 == "" && rrrrurl1811 == "" && rrrrurl1911 == "" && rrrrurl2011 == "" && rrrrurl2111 == "" &&
-                            rrrrurl2211 == "" && rrrrurl2311 == "" && rrrrurl2411 == "" && rrrrurl2511 == "" && rrrrurl2611 == "" &&
-                            aaaaurl111 == "" && aaaaurl211 == "" && aaaaurl311 == "" && aaaaurl411 == "" && aaaaurl511 == "" && aaaaurl611 == "" && aaaaurl711 == "" &&
-                            aaaaurl811 == "" && aaaaurl911 == "" && aaaaurl1011 == "" && aaaaurl1111 == "" && aaaaurl1211 == "" && aaaaurl1311 == "" && aaaaurl1411 == "" &&
-                            aaaaurl1511 == "" && aaaaurl1611 == "" && aaaaurl1711 == "" && aaaaurl1811 == "" && aaaaurl1911 == "" && aaaaurl2011 == "" && aaaaurl2111 == "" &&
-                            aaaaurl2211 == "" && aaaaurl2311 == "" && aaaaurl2411 == "" && aaaaurl2511 == "" && aaaaurl2611 == ""){
+                                ggggurl811 == "" && ggggurl911 == "" && ggggurl1011 == "" && ggggurl1111 == "" && ggggurl1211 == "" && ggggurl1311 == "" && ggggurl1411 == "" &&
+                                ggggurl1511 == "" && ggggurl1611 == "" && ggggurl1711 == "" && ggggurl1811 == "" && ggggurl1911 == "" && ggggurl2011 == "" && ggggurl2111 == "" &&
+                                ggggurl2211 == "" && ggggurl2311 == "" && ggggurl2411 == "" && ggggurl2511 == "" && ggggurl2611 == "" &&
+                                rrrrurl111 == "" && rrrrurl211 == "" && rrrrurl311 == "" && rrrrurl411 == "" && rrrrurl511 == "" && rrrrurl611 == "" && rrrrurl711 == "" &&
+                                rrrrurl811 == "" && rrrrurl911 == "" && rrrrurl1011 == "" && rrrrurl1111 == "" && rrrrurl1211 == "" && rrrrurl1311 == "" && rrrrurl1411 == "" &&
+                                rrrrurl1511 == "" && rrrrurl1611 == "" && rrrrurl1711 == "" && rrrrurl1811 == "" && rrrrurl1911 == "" && rrrrurl2011 == "" && rrrrurl2111 == "" &&
+                                rrrrurl2211 == "" && rrrrurl2311 == "" && rrrrurl2411 == "" && rrrrurl2511 == "" && rrrrurl2611 == "" &&
+                                aaaaurl111 == "" && aaaaurl211 == "" && aaaaurl311 == "" && aaaaurl411 == "" && aaaaurl511 == "" && aaaaurl611 == "" && aaaaurl711 == "" &&
+                                aaaaurl811 == "" && aaaaurl911 == "" && aaaaurl1011 == "" && aaaaurl1111 == "" && aaaaurl1211 == "" && aaaaurl1311 == "" && aaaaurl1411 == "" &&
+                                aaaaurl1511 == "" && aaaaurl1611 == "" && aaaaurl1711 == "" && aaaaurl1811 == "" && aaaaurl1911 == "" && aaaaurl2011 == "" && aaaaurl2111 == "" &&
+                                aaaaurl2211 == "" && aaaaurl2311 == "" && aaaaurl2411 == "" && aaaaurl2511 == "" && aaaaurl2611 == "") {
                             Toast.makeText(HomePageNews.this, "Haha", Toast.LENGTH_LONG);
                         } else if (ggggurl111 != "") {
                             new HomePageNews.DownloadImageTask((ImageButton) plusgrey4).execute(ggggurl111);
@@ -1183,6 +1257,178 @@ public class HomePageNews extends AppCompatActivity {
                             new HomePageNews.DownloadImageTask((ImageButton) plusgrey4).execute(rrrrurl2511);
                         } else if (rrrrurl2611 != "") {
                             new HomePageNews.DownloadImageTask((ImageButton) plusgrey4).execute(rrrrurl2611);
+                        }
+
+
+                        if (gggggurl111 == "" && gggggurl211 == "" && gggggurl311 == "" && gggggurl411 == "" && gggggurl511 == "" && gggggurl611 == "" && gggggurl711 == "" &&
+                                gggggurl811 == "" && gggggurl911 == "" && gggggurl1011 == "" && gggggurl1111 == "" && gggggurl1211 == "" && gggggurl1311 == "" && gggggurl1411 == "" &&
+                                gggggurl1511 == "" && gggggurl1611 == "" && gggggurl1711 == "" && gggggurl1811 == "" && gggggurl1911 == "" && gggggurl2011 == "" && gggggurl2111 == "" &&
+                                gggggurl2211 == "" && gggggurl2311 == "" && gggggurl2411 == "" && gggggurl2511 == "" && gggggurl2611 == "" &&
+                                rrrrrurl111 == "" && rrrrrurl211 == "" && rrrrrurl311 == "" && rrrrrurl411 == "" && rrrrrurl511 == "" && rrrrrurl611 == "" && rrrrrurl711 == "" &&
+                                rrrrrurl811 == "" && rrrrrurl911 == "" && rrrrrurl1011 == "" && rrrrrurl1111 == "" && rrrrrurl1211 == "" && rrrrrurl1311 == "" && rrrrrurl1411 == "" &&
+                                rrrrrurl1511 == "" && rrrrrurl1611 == "" && rrrrrurl1711 == "" && rrrrrurl1811 == "" && rrrrrurl1911 == "" && rrrrrurl2011 == "" && rrrrrurl2111 == "" &&
+                                rrrrrurl2211 == "" && rrrrrurl2311 == "" && rrrrrurl2411 == "" && rrrrrurl2511 == "" && rrrrrurl2611 == "" &&
+                                aaaaaurl111 == "" && aaaaaurl211 == "" && aaaaaurl311 == "" && aaaaaurl411 == "" && aaaaaurl511 == "" && aaaaaurl611 == "" && aaaaaurl711 == "" &&
+                                aaaaaurl811 == "" && aaaaaurl911 == "" && aaaaaurl1011 == "" && aaaaaurl1111 == "" && aaaaaurl1211 == "" && aaaaaurl1311 == "" && aaaaaurl1411 == "" &&
+                                aaaaaurl1511 == "" && aaaaaurl1611 == "" && aaaaaurl1711 == "" && aaaaaurl1811 == "" && aaaaaurl1911 == "" && aaaaaurl2011 == "" && aaaaaurl2111 == "" &&
+                                aaaaaurl2211 == "" && aaaaaurl2311 == "" && aaaaaurl2411 == "" && aaaaaurl2511 == "" && aaaaaurl2611 == "") {
+                            Toast.makeText(HomePageNews.this, "Haha", Toast.LENGTH_LONG);
+                        } else if (gggggurl111 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(gggggurl111);
+                        } else if (gggggurl211 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(gggggurl211);
+                        } else if (gggggurl311 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(gggggurl311);
+                        } else if (gggggurl411 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(gggggurl411);
+                        } else if (gggggurl511 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(gggggurl511);
+                        } else if (gggggurl611 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(gggggurl611);
+                        } else if (gggggurl711 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(gggggurl711);
+                        } else if (gggggurl811 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(gggggurl811);
+                        } else if (gggggurl911 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(gggggurl911);
+                        } else if (gggggurl1011 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(gggggurl1011);
+                        } else if (gggggurl1111 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(gggggurl1111);
+                        } else if (gggggurl1211 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(gggggurl1211);
+                        } else if (gggggurl1311 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(gggggurl1311);
+                        } else if (gggggurl1411 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(gggggurl1411);
+                        } else if (gggggurl1511 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(gggggurl1511);
+                        } else if (gggggurl1611 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(gggggurl1611);
+                        } else if (gggggurl1711 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(gggggurl1711);
+                        } else if (gggggurl1811 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(gggggurl1811);
+                        } else if (gggggurl1911 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(gggggurl1911);
+                        } else if (gggggurl2011 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(gggggurl2011);
+                        } else if (gggggurl2111 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(gggggurl2111);
+                        } else if (gggggurl2211 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(gggggurl2211);
+                        } else if (gggggurl2311 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(gggggurl2311);
+                        } else if (gggggurl2411 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(gggggurl2411);
+                        } else if (gggggurl2511 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(gggggurl2511);
+                        } else if (gggggurl2611 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(gggggurl2611);
+                        } else if (aaaaaurl111 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(aaaaaurl111);
+                        } else if (aaaaaurl211 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(aaaaaurl211);
+                        } else if (aaaaaurl311 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(aaaaaurl311);
+                        } else if (aaaaaurl411 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(aaaaaurl411);
+                        } else if (aaaaaurl511 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(aaaaaurl511);
+                        } else if (aaaaaurl611 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(aaaaaurl611);
+                        } else if (aaaaaurl711 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(aaaaaurl711);
+                        } else if (aaaaaurl811 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(aaaaaurl811);
+                        } else if (aaaaaurl911 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(aaaaaurl911);
+                        } else if (aaaaaurl1011 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(aaaaaurl1011);
+                        } else if (aaaaaurl1111 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(aaaaaurl1111);
+                        } else if (aaaaaurl1211 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(aaaaaurl1211);
+                        } else if (aaaaaurl1311 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(aaaaaurl1311);
+                        } else if (aaaaaurl1411 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(aaaaaurl1411);
+                        } else if (aaaaaurl1511 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(aaaaaurl1511);
+                        } else if (aaaaaurl1611 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(aaaaaurl1611);
+                        } else if (aaaaaurl1711 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(aaaaaurl1711);
+                        } else if (aaaaaurl1811 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(aaaaaurl1811);
+                        } else if (aaaaaurl1911 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(aaaaaurl1911);
+                        } else if (aaaaaurl2011 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(aaaaaurl2011);
+                        } else if (aaaaaurl2111 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(aaaaaurl2111);
+                        } else if (aaaaaurl2211 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(aaaaaurl2211);
+                        } else if (aaaaaurl2311 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(aaaaaurl2311);
+                        } else if (aaaaaurl2411 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(aaaaaurl2411);
+                        } else if (aaaaaurl2511 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(aaaaaurl2511);
+                        } else if (aaaaaurl2611 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(aaaaaurl2611);
+                        } else if (rrrrrurl111 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(rrrrrurl111);
+                        } else if (rrrrrurl211 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(rrrrrurl211);
+                        } else if (rrrrrurl311 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(rrrrrurl311);
+                        } else if (rrrrrurl411 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(rrrrrurl411);
+                        } else if (rrrrrurl511 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(rrrrrurl511);
+                        } else if (rrrrrurl611 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(rrrrrurl611);
+                        } else if (rrrrrurl711 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(rrrrrurl711);
+                        } else if (rrrrrurl811 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(rrrrrurl811);
+                        } else if (rrrrrurl911 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(rrrrrurl911);
+                        } else if (rrrrrurl1011 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(rrrrrurl1011);
+                        } else if (rrrrrurl1111 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(rrrrrurl1111);
+                        } else if (rrrrrurl1211 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(rrrrrurl1211);
+                        } else if (rrrrrurl1311 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(rrrrrurl1311);
+                        } else if (rrrrrurl1411 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(rrrrrurl1411);
+                        } else if (rrrrrurl1511 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(rrrrrurl1511);
+                        } else if (rrrrrurl1611 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(rrrrrurl1611);
+                        } else if (rrrrrurl1711 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(rrrrrurl1711);
+                        } else if (rrrrrurl1811 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(rrrrrurl1811);
+                        } else if (rrrrrurl1911 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(rrrrrurl1911);
+                        } else if (rrrrrurl2011 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(rrrrrurl2011);
+                        } else if (rrrrrurl2111 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(rrrrrurl2111);
+                        } else if (rrrrrurl2211 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(rrrrrurl2211);
+                        } else if (rrrrrurl2311 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(rrrrrurl2311);
+                        } else if (rrrrrurl2411 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(rrrrrurl2411);
+                        } else if (rrrrrurl2511 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(rrrrrurl2511);
+                        } else if (rrrrrurl2611 != "") {
+                            new HomePageNews.DownloadImageTask((ImageButton) plusgrey5).execute(rrrrrurl2611);
                         }
 
 
@@ -1351,9 +1597,6 @@ public class HomePageNews extends AppCompatActivity {
                         String rurl26 = intent26.getStringExtra("rurl26");
 
 
-
-
-
                         String ggurl1 = intent1.getStringExtra("ggurl1");
                         String ggurl2 = intent2.getStringExtra("ggurl2");
                         String ggurl3 = intent3.getStringExtra("ggurl3");
@@ -1437,8 +1680,6 @@ public class HomePageNews extends AppCompatActivity {
                         String rrurl26 = intent26.getStringExtra("rrurl26");
 
 
-
-
                         String gggurl1 = intent1.getStringExtra("gggurl1");
                         String gggurl2 = intent2.getStringExtra("gggurl2");
                         String gggurl3 = intent3.getStringExtra("gggurl3");
@@ -1495,7 +1736,6 @@ public class HomePageNews extends AppCompatActivity {
                         String aaaurl26 = intent26.getStringExtra("aaaurl26");
 
 
-
                         String rrrurl1 = intent1.getStringExtra("rrrurl1");
                         String rrrurl2 = intent2.getStringExtra("rrrurl2");
                         String rrrurl3 = intent3.getStringExtra("rrrurl3");
@@ -1522,7 +1762,6 @@ public class HomePageNews extends AppCompatActivity {
                         String rrrurl24 = intent24.getStringExtra("rrrurl24");
                         String rrrurl25 = intent25.getStringExtra("rrrurl25");
                         String rrrurl26 = intent26.getStringExtra("rrrurl26");
-
 
 
                         String ggggurl1 = intent1.getStringExtra("ggggurl1");
@@ -1607,13 +1846,94 @@ public class HomePageNews extends AppCompatActivity {
                         String rrrrurl26 = intent26.getStringExtra("rrrrurl26");
 
 
+                        String gggggurl1 = intent1.getStringExtra("gggggurl1");
+                        String gggggurl2 = intent2.getStringExtra("gggggurl2");
+                        String gggggurl3 = intent3.getStringExtra("gggggurl3");
+                        String gggggurl4 = intent4.getStringExtra("gggggurl4");
+                        String gggggurl5 = intent5.getStringExtra("gggggurl5");
+                        String gggggurl6 = intent6.getStringExtra("gggggurl6");
+                        String gggggurl7 = intent7.getStringExtra("gggggurl7");
+                        String gggggurl8 = intent8.getStringExtra("gggggurl8");
+                        String gggggurl9 = intent9.getStringExtra("gggggurl9");
+                        String gggggurl10 = intent10.getStringExtra("gggggurl10");
+                        String gggggurl11 = intent11.getStringExtra("gggggurl11");
+                        String gggggurl12 = intent12.getStringExtra("gggggurl12");
+                        String gggggurl13 = intent13.getStringExtra("gggggurl13");
+                        String gggggurl14 = intent14.getStringExtra("gggggurl14");
+                        String gggggurl15 = intent15.getStringExtra("gggggurl15");
+                        String gggggurl16 = intent16.getStringExtra("gggggurl16");
+                        String gggggurl17 = intent17.getStringExtra("gggggurl17");
+                        String gggggurl18 = intent18.getStringExtra("gggggurl18");
+                        String gggggurl19 = intent19.getStringExtra("gggggurl19");
+                        String gggggurl20 = intent20.getStringExtra("gggggurl20");
+                        String gggggurl21 = intent21.getStringExtra("gggggurl21");
+                        String gggggurl22 = intent22.getStringExtra("gggggurl22");
+                        String gggggurl23 = intent23.getStringExtra("gggggurl23");
+                        String gggggurl24 = intent24.getStringExtra("gggggurl24");
+                        String gggggurl25 = intent25.getStringExtra("gggggurl25");
+                        String gggggurl26 = intent26.getStringExtra("gggggurl26");
+
+                        String aaaaaurl1 = intent1.getStringExtra("aaaaaurl1");
+                        String aaaaaurl2 = intent2.getStringExtra("aaaaaurl2");
+                        String aaaaaurl3 = intent3.getStringExtra("aaaaaurl3");
+                        String aaaaaurl4 = intent4.getStringExtra("aaaaaurl4");
+                        String aaaaaurl5 = intent5.getStringExtra("aaaaaurl5");
+                        String aaaaaurl6 = intent6.getStringExtra("aaaaaurl6");
+                        String aaaaaurl7 = intent7.getStringExtra("aaaaaurl7");
+                        String aaaaaurl8 = intent8.getStringExtra("aaaaaurl8");
+                        String aaaaaurl9 = intent9.getStringExtra("aaaaaurl9");
+                        String aaaaaurl10 = intent10.getStringExtra("aaaaaurl10");
+                        String aaaaaurl11 = intent11.getStringExtra("aaaaaurl11");
+                        String aaaaaurl12 = intent12.getStringExtra("aaaaaurl12");
+                        String aaaaaurl13 = intent13.getStringExtra("aaaaaurl13");
+                        String aaaaaurl14 = intent14.getStringExtra("aaaaaurl14");
+                        String aaaaaurl15 = intent15.getStringExtra("aaaaaurl15");
+                        String aaaaaurl16 = intent16.getStringExtra("aaaaaurl16");
+                        String aaaaaurl17 = intent17.getStringExtra("aaaaaurl17");
+                        String aaaaaurl18 = intent18.getStringExtra("aaaaaurl18");
+                        String aaaaaurl19 = intent19.getStringExtra("aaaaaurl19");
+                        String aaaaaurl20 = intent20.getStringExtra("aaaaaurl20");
+                        String aaaaaurl21 = intent21.getStringExtra("aaaaaurl21");
+                        String aaaaaurl22 = intent22.getStringExtra("aaaaaurl22");
+                        String aaaaaurl23 = intent23.getStringExtra("aaaaaurl23");
+                        String aaaaaurl24 = intent24.getStringExtra("aaaaaurl24");
+                        String aaaaaurl25 = intent25.getStringExtra("aaaaaurl25");
+                        String aaaaaurl26 = intent26.getStringExtra("aaaaaurl26");
+
+                        String rrrrrurl1 = intent1.getStringExtra("rrrrrurl1");
+                        String rrrrrurl2 = intent2.getStringExtra("rrrrrurl2");
+                        String rrrrrurl3 = intent3.getStringExtra("rrrrrurl3");
+                        String rrrrrurl4 = intent4.getStringExtra("rrrrrurl4");
+                        String rrrrrurl5 = intent5.getStringExtra("rrrrrurl5");
+                        String rrrrrurl6 = intent6.getStringExtra("rrrrrurl6");
+                        String rrrrrurl7 = intent7.getStringExtra("rrrrrurl7");
+                        String rrrrrurl8 = intent8.getStringExtra("rrrrrurl8");
+                        String rrrrrurl9 = intent9.getStringExtra("rrrrrurl9");
+                        String rrrrrurl10 = intent10.getStringExtra("rrrrrurl10");
+                        String rrrrrurl11 = intent11.getStringExtra("rrrrrurl11");
+                        String rrrrrurl12 = intent12.getStringExtra("rrrrrurl12");
+                        String rrrrrurl13 = intent13.getStringExtra("rrrrrurl13");
+                        String rrrrrurl14 = intent14.getStringExtra("rrrrrurl14");
+                        String rrrrrurl15 = intent15.getStringExtra("rrrrrurl15");
+                        String rrrrrurl16 = intent16.getStringExtra("rrrrrurl16");
+                        String rrrrrurl17 = intent17.getStringExtra("rrrrrurl17");
+                        String rrrrrurl18 = intent18.getStringExtra("rrrrrurl18");
+                        String rrrrrurl19 = intent19.getStringExtra("rrrrrurl19");
+                        String rrrrrurl20 = intent20.getStringExtra("rrrrrurl20");
+                        String rrrrrurl21 = intent21.getStringExtra("rrrrrurl21");
+                        String rrrrrurl22 = intent22.getStringExtra("rrrrrurl22");
+                        String rrrrrurl23 = intent23.getStringExtra("rrrrrurl23");
+                        String rrrrrurl24 = intent24.getStringExtra("rrrrrurl24");
+                        String rrrrrurl25 = intent25.getStringExtra("rrrrrurl25");
+                        String rrrrrurl26 = intent26.getStringExtra("rrrrrurl26");
+
 
 //                Toast.makeText(HomePageNews.this,"nom est : "+url1 ,Toast.LENGTH_SHORT).show();
 
 
                         if (gurl1 == null && gurl2 == null && gurl3 == null && gurl4 == null && gurl5 == null && gurl6 == null && gurl7 == null && gurl8 == null && gurl9 == null && gurl10 == null && gurl11 == null && gurl12 == null && gurl13 == null && gurl14 == null && gurl15 == null && gurl16 == null && gurl17 == null && gurl18 == null && gurl19 == null && gurl20 == null && gurl21 == null && gurl22 == null && gurl23 == null && gurl24 == null && gurl25 == null && gurl26 == null &&
                                 aurl1 == null && aurl2 == null && aurl3 == null && aurl4 == null && aurl5 == null && aurl6 == null && aurl7 == null && aurl8 == null && aurl9 == null && aurl10 == null && aurl11 == null && aurl12 == null && aurl13 == null && aurl14 == null && aurl15 == null && aurl16 == null && aurl17 == null && aurl18 == null && aurl19 == null && aurl20 == null && aurl21 == null && aurl22 == null && aurl23 == null && aurl24 == null && aurl25 == null && aurl26 == null &&
-                                rurl1 == null && rurl2 == null && rurl3 == null && rurl4 == null && rurl5 == null && rurl6 == null && rurl7 == null && rurl8 == null && rurl9 == null && rurl10 == null && rurl11 == null && rurl12 == null && rurl13 == null && rurl14 == null && rurl15 == null && rurl16 == null && rurl17 == null && rurl18 == null && rurl19 == null && rurl20 == null && rurl21 == null && rurl22 == null && rurl23 == null && rurl24 == null && rurl25 == null && rurl26 == null){
+                                rurl1 == null && rurl2 == null && rurl3 == null && rurl4 == null && rurl5 == null && rurl6 == null && rurl7 == null && rurl8 == null && rurl9 == null && rurl10 == null && rurl11 == null && rurl12 == null && rurl13 == null && rurl14 == null && rurl15 == null && rurl16 == null && rurl17 == null && rurl18 == null && rurl19 == null && rurl20 == null && rurl21 == null && rurl22 == null && rurl23 == null && rurl24 == null && rurl25 == null && rurl26 == null) {
                             Toast.makeText(getApplication(), "No new clients added!", Toast.LENGTH_SHORT).show();
                         } else if (gurl1 != null) {
                             SharedPreferences.Editor editor = sharedPref.edit();
@@ -2379,10 +2699,9 @@ public class HomePageNews extends AppCompatActivity {
                         }
 
 
-
                         if (ggurl1 == null && ggurl2 == null && ggurl3 == null && ggurl4 == null && ggurl5 == null && ggurl6 == null && ggurl7 == null && ggurl8 == null && ggurl9 == null && ggurl10 == null && ggurl11 == null && ggurl12 == null && ggurl13 == null && ggurl14 == null && ggurl15 == null && ggurl16 == null && ggurl17 == null && ggurl18 == null && ggurl19 == null && ggurl20 == null && ggurl21 == null && ggurl22 == null && ggurl23 == null && ggurl24 == null && ggurl25 == null && ggurl26 == null &&
                                 aaurl1 == null && aaurl2 == null && aaurl3 == null && aaurl4 == null && aaurl5 == null && aaurl6 == null && aaurl7 == null && aaurl8 == null && aaurl9 == null && aaurl10 == null && aaurl11 == null && aaurl12 == null && aaurl13 == null && aaurl14 == null && aaurl15 == null && aaurl16 == null && aaurl17 == null && aaurl18 == null && aaurl19 == null && aaurl20 == null && aaurl21 == null && aaurl22 == null && aaurl23 == null && aaurl24 == null && aaurl25 == null && aaurl26 == null &&
-                                rrurl1 == null && rrurl2 == null && rrurl3 == null && rrurl4 == null && rrurl5 == null && rrurl6 == null && rrurl7 == null && rrurl8 == null && rrurl9 == null && rrurl10 == null && rrurl11 == null && rrurl12 == null && rrurl13 == null && rrurl14 == null && rrurl15 == null && rrurl16 == null && rrurl17 == null && rrurl18 == null && rrurl19 == null && rrurl20 == null && rrurl21 == null && rrurl22 == null && rrurl23 == null && rrurl24 == null && rrurl25 == null && rrurl26 == null){
+                                rrurl1 == null && rrurl2 == null && rrurl3 == null && rrurl4 == null && rrurl5 == null && rrurl6 == null && rrurl7 == null && rrurl8 == null && rrurl9 == null && rrurl10 == null && rrurl11 == null && rrurl12 == null && rrurl13 == null && rrurl14 == null && rrurl15 == null && rrurl16 == null && rrurl17 == null && rrurl18 == null && rrurl19 == null && rrurl20 == null && rrurl21 == null && rrurl22 == null && rrurl23 == null && rrurl24 == null && rrurl25 == null && rrurl26 == null) {
 
                         } else if (ggurl1 != null) {
                             SharedPreferences.Editor editor = sharedPref.edit();
@@ -3139,7 +3458,7 @@ public class HomePageNews extends AppCompatActivity {
                             editor.putString("rrurl26", rrurl26);
                             editor.commit();
 
-                            plusgrey2.setOnClickListener(new View.OnClickListener() {
+                            plusgrey2.setOnClickListener(   new View.OnClickListener() {
                                 public void onClick(View v) {
                                     startActivity(new Intent(HomePageNews.this, Circlegrey2.class));
                                 }
@@ -3149,7 +3468,7 @@ public class HomePageNews extends AppCompatActivity {
 
                         if (gggurl1 == null && gggurl2 == null && gggurl3 == null && gggurl4 == null && gggurl5 == null && gggurl6 == null && gggurl7 == null && gggurl8 == null && gggurl9 == null && gggurl10 == null && gggurl11 == null && gggurl12 == null && gggurl13 == null && gggurl14 == null && gggurl15 == null && gggurl16 == null && gggurl17 == null && gggurl18 == null && gggurl19 == null && gggurl20 == null && gggurl21 == null && gggurl22 == null && gggurl23 == null && gggurl24 == null && gggurl25 == null && gggurl26 == null &&
                                 aaaurl1 == null && aaaurl2 == null && aaaurl3 == null && aaaurl4 == null && aaaurl5 == null && aaaurl6 == null && aaaurl7 == null && aaaurl8 == null && aaaurl9 == null && aaaurl10 == null && aaaurl11 == null && aaaurl12 == null && aaaurl13 == null && aaaurl14 == null && aaaurl15 == null && aaaurl16 == null && aaaurl17 == null && aaaurl18 == null && aaaurl19 == null && aaaurl20 == null && aaaurl21 == null && aaaurl22 == null && aaaurl23 == null && aaaurl24 == null && aaaurl25 == null && aaaurl26 == null &&
-                                rrrurl1 == null && rrrurl2 == null && rrrurl3 == null && rrrurl4 == null && rrrurl5 == null && rrrurl6 == null && rrrurl7 == null && rrrurl8 == null && rrrurl9 == null && rrrurl10 == null && rrrurl11 == null && rrrurl12 == null && rrrurl13 == null && rrrurl14 == null && rrrurl15 == null && rrrurl16 == null && rrrurl17 == null && rrrurl18 == null && rrrurl19 == null && rrrurl20 == null && rrrurl21 == null && rrrurl22 == null && rrrurl23 == null && rrrurl24 == null && rrrurl25 == null && rrrurl26 == null){
+                                rrrurl1 == null && rrrurl2 == null && rrrurl3 == null && rrrurl4 == null && rrrurl5 == null && rrrurl6 == null && rrrurl7 == null && rrrurl8 == null && rrrurl9 == null && rrrurl10 == null && rrrurl11 == null && rrrurl12 == null && rrrurl13 == null && rrrurl14 == null && rrrurl15 == null && rrrurl16 == null && rrrurl17 == null && rrrurl18 == null && rrrurl19 == null && rrrurl20 == null && rrrurl21 == null && rrrurl22 == null && rrrurl23 == null && rrrurl24 == null && rrrurl25 == null && rrrurl26 == null) {
 
                         } else if (gggurl1 != null) {
                             SharedPreferences.Editor editor = sharedPref.edit();
@@ -3925,8 +4244,8 @@ public class HomePageNews extends AppCompatActivity {
 
 
                         if (ggggurl1 == null && ggggurl2 == null && ggggurl3 == null && ggggurl4 == null && ggggurl5 == null && ggggurl6 == null && ggggurl7 == null && ggggurl8 == null && ggggurl9 == null && ggggurl10 == null && ggggurl11 == null && ggggurl12 == null && ggggurl13 == null && ggggurl14 == null && ggggurl15 == null && ggggurl16 == null && ggggurl17 == null && ggggurl18 == null && ggggurl19 == null && ggggurl20 == null && ggggurl21 == null && ggggurl22 == null && ggggurl23 == null && ggggurl24 == null && ggggurl25 == null && ggggurl26 == null &&
-                            aaaaurl1 == null && aaaaurl2 == null && aaaaurl3 == null && aaaaurl4 == null && aaaaurl5 == null && aaaaurl6 == null && aaaaurl7 == null && aaaaurl8 == null && aaaaurl9 == null && aaaaurl10 == null && aaaaurl11 == null && aaaaurl12 == null && aaaaurl13 == null && aaaaurl14 == null && aaaaurl15 == null && aaaaurl16 == null && aaaaurl17 == null && aaaaurl18 == null && aaaaurl19 == null && aaaaurl20 == null && aaaaurl21 == null && aaaaurl22 == null && aaaaurl23 == null && aaaaurl24 == null && aaaaurl25 == null && aaaaurl26 == null &&
-                            rrrrurl1 == null && rrrrurl2 == null && rrrrurl3 == null && rrrrurl4 == null && rrrrurl5 == null && rrrrurl6 == null && rrrrurl7 == null && rrrrurl8 == null && rrrrurl9 == null && rrrrurl10 == null && rrrrurl11 == null && rrrrurl12 == null && rrrrurl13 == null && rrrrurl14 == null && rrrrurl15 == null && rrrrurl16 == null && rrrrurl17 == null && rrrrurl18 == null && rrrrurl19 == null && rrrrurl20 == null && rrrrurl21 == null && rrrrurl22 == null && rrrrurl23 == null && rrrrurl24 == null && rrrrurl25 == null && rrrrurl26 == null){
+                                aaaaurl1 == null && aaaaurl2 == null && aaaaurl3 == null && aaaaurl4 == null && aaaaurl5 == null && aaaaurl6 == null && aaaaurl7 == null && aaaaurl8 == null && aaaaurl9 == null && aaaaurl10 == null && aaaaurl11 == null && aaaaurl12 == null && aaaaurl13 == null && aaaaurl14 == null && aaaaurl15 == null && aaaaurl16 == null && aaaaurl17 == null && aaaaurl18 == null && aaaaurl19 == null && aaaaurl20 == null && aaaaurl21 == null && aaaaurl22 == null && aaaaurl23 == null && aaaaurl24 == null && aaaaurl25 == null && aaaaurl26 == null &&
+                                rrrrurl1 == null && rrrrurl2 == null && rrrrurl3 == null && rrrrurl4 == null && rrrrurl5 == null && rrrrurl6 == null && rrrrurl7 == null && rrrrurl8 == null && rrrrurl9 == null && rrrrurl10 == null && rrrrurl11 == null && rrrrurl12 == null && rrrrurl13 == null && rrrrurl14 == null && rrrrurl15 == null && rrrrurl16 == null && rrrrurl17 == null && rrrrurl18 == null && rrrrurl19 == null && rrrrurl20 == null && rrrrurl21 == null && rrrrurl22 == null && rrrrurl23 == null && rrrrurl24 == null && rrrrurl25 == null && rrrrurl26 == null) {
                         } else if (ggggurl1 != null) {
                             SharedPreferences.Editor editor = sharedPref.edit();
                             editor.putString("ggggurl1", ggggurl1);
@@ -4687,14 +5006,780 @@ public class HomePageNews extends AppCompatActivity {
                                     startActivity(new Intent(HomePageNews.this, Circlegrey4.class));
                                 }
                             });
-                        } else {
-                            Toast.makeText(HomePageNews.this, "BOOM", Toast.LENGTH_SHORT).show();
                         }
 
-                    }
-                 });
 
-             }
+                        if (gggggurl1 == null && gggggurl2 == null && gggggurl3 == null && gggggurl4 == null && gggggurl5 == null && gggggurl6 == null && gggggurl7 == null && gggggurl8 == null && gggggurl9 == null && gggggurl10 == null && gggggurl11 == null && gggggurl12 == null && gggggurl13 == null && gggggurl14 == null && gggggurl15 == null && gggggurl16 == null && gggggurl17 == null && gggggurl18 == null && gggggurl19 == null && gggggurl20 == null && gggggurl21 == null && gggggurl22 == null && gggggurl23 == null && gggggurl24 == null && gggggurl25 == null && gggggurl26 == null &&
+                                aaaaaurl1 == null && aaaaaurl2 == null && aaaaaurl3 == null && aaaaaurl4 == null && aaaaaurl5 == null && aaaaaurl6 == null && aaaaaurl7 == null && aaaaaurl8 == null && aaaaaurl9 == null && aaaaaurl10 == null && aaaaaurl11 == null && aaaaaurl12 == null && aaaaaurl13 == null && aaaaaurl14 == null && aaaaaurl15 == null && aaaaaurl16 == null && aaaaaurl17 == null && aaaaaurl18 == null && aaaaaurl19 == null && aaaaaurl20 == null && aaaaaurl21 == null && aaaaaurl22 == null && aaaaaurl23 == null && aaaaaurl24 == null && aaaaaurl25 == null && aaaaaurl26 == null &&
+                                rrrrrurl1 == null && rrrrrurl2 == null && rrrrrurl3 == null && rrrrrurl4 == null && rrrrrurl5 == null && rrrrrurl6 == null && rrrrrurl7 == null && rrrrrurl8 == null && rrrrrurl9 == null && rrrrrurl10 == null && rrrrrurl11 == null && rrrrrurl12 == null && rrrrrurl13 == null && rrrrrurl14 == null && rrrrrurl15 == null && rrrrrurl16 == null && rrrrrurl17 == null && rrrrrurl18 == null && rrrrrurl19 == null && rrrrrurl20 == null && rrrrrurl21 == null && rrrrrurl22 == null && rrrrrurl23 == null && rrrrrurl24 == null && rrrrrurl25 == null && rrrrrurl26 == null) {
+
+                        } else if (gggggurl1 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggggurl1", gggggurl1);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (gggggurl2 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggggurl2", gggggurl2);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (gggggurl3 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggggurl3", gggggurl3);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (gggggurl4 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggggurl4", gggggurl4);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (gggggurl5 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggggurl5", gggggurl5);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (gggggurl6 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggggurl6", gggggurl6);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (gggggurl7 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggggurl7", gggggurl7);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (gggggurl8 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggggurl8", gggggurl8);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (gggggurl9 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggggurl9", gggggurl9);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (gggggurl10 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggggurl10", gggggurl10);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (gggggurl11 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggggurl11", gggggurl11);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (gggggurl12 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggggurl2", gggggurl2);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (gggggurl13 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggggurl13", gggggurl13);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (gggggurl14 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggggurl14", gggggurl14);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (gggggurl15 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggggurl15", gggggurl15);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (gggggurl16 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggggurl16", gggggurl16);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (gggggurl17 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggggurl17", gggggurl17);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (gggggurl18 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggggurl18", gggggurl18);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (gggggurl19 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggggurl19", gggggurl19);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (gggggurl20 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggggurl20", gggggurl20);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (gggggurl21 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggggurl21", gggggurl21);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (gggggurl22 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggggurl2", gggggurl22);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (gggggurl23 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggggurl23", gggggurl23);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (gggggurl24 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggggurl24", gggggurl24);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (gggggurl25 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggggurl25", gggggurl25);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (gggggurl26 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("gggggurl26", ggurl26);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (aaaaaurl1 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaaaurl1", aaaaaurl1);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (aaaaaurl2 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaaaurl2", aaaaaurl2);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (aaaaaurl3 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaaaurl3", aaaaaurl3);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (aaaaaurl4 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaaaurl4", aaaaaurl4);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (aaaaaurl5 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaaaurl5", aaaaaurl5);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (aaaaaurl6 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaaaurl6", aaaaaurl6);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (aaaaaurl7 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaaaurl7", aaaaaurl7);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (aaaaaurl8 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaaaurl8", aaaaaurl8);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (aaaaaurl10 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaaaurl10", aaaaaurl10);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (aaaaaurl11 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaaaurl11", aaaaaurl11);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (aaaaaurl12 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaaaurl2", aaaaaurl2);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (aaaaaurl13 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaaaurl3", aaaaaurl3);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (aaaaaurl14 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaaaurl4", aaaaaurl4);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (aaaaaurl15 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaaaurl5", aaaaaurl5);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (aaaaaurl16 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaaaurl6", aaaaaurl6);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (aaaaaurl17 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaaaurl7", aaaaaurl7);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (aaaaaurl18 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaaaurl8", aaaaaurl8);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (aaaaaurl19 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaaaurl9", aaaaaurl9);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (aaaaaurl20 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaaaurl20", aaaaaurl20);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (aaaaaurl21 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaaaurl21", aaaaaurl21);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (aaaaaurl22 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaaaurl22", aaaaaurl22);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (aaaaaurl23 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaaaurl23", aaaaaurl23);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (aaaaaurl24 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaaaurl24", aaaaaurl24);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (aaaaaurl25 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaaaurl25", aaaaaurl25);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (aaaaaurl26 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("aaaaaurl26", aaaaaurl26);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (rrrrrurl1 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrrrurl1", rrrrrurl1);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (rrrrrurl2 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrrrurl2", rrrrrurl2);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (rrrrrurl3 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrrrurl3", rrrrrurl3);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (rrrrrurl4 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrrrurl4", rrrrrurl4);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (rrrrrurl5 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrrrurl5", rrrrrurl5);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (rrrrrurl6 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrrrurl6", rrrrrurl6);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (rrrrrurl7 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrrrurl7", rrrrrurl7);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (rrrrrurl8 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrrrurl8", rrrrrurl8);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (rrrrrurl10 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrrrurl10", rrrrrurl10);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (rrrrrurl11 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrrrurl11", rrrrrurl11);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (rrrrrurl12 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrrrurl2", rrrrrurl2);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (rrrrrurl13 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrrrurl3", rrrrrurl3);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (rrrrrurl14 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrrrurl4", rrrrrurl4);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (rrrrrurl15 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrrrurl5", rrrrrurl5);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (rrrrrurl16 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrrrurl6", rrrrrurl6);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (rrrrrurl17 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrrrurl7", ggurl7);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (rrrrrurl18 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrrrurl8", rrrrrurl8);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (rrrrrurl19 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrrrurl9", rrrrrurl9);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (rrrrrurl20 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrrrurl20", rrrrrurl20);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (rrrrrurl21 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrrrurl21", rrrrrurl21);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (rrrrrurl22 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrrrurl22", rrrrrurl22);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (rrrrrurl23 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrrrurl23", rrrrrurl23);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (rrrrrurl24 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrrrurl24", rrrrrurl24);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (rrrrrurl25 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrrrurl25", rrrrrurl25);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        } else if (rrrrrurl26 != null) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("rrrrrurl26", rrrrrurl26);
+                            editor.commit();
+
+                            plusgrey5.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    startActivity(new Intent(HomePageNews.this, Circlegrey5.class));
+                                }
+                            });
+                        }else{
+                            Toast.makeText(HomePageNews.this, "BOOM", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+
+    }
 
     public void onSearchClick(View v)
     {

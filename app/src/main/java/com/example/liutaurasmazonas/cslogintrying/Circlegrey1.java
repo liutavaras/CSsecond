@@ -22,9 +22,9 @@ public class Circlegrey1 extends AppCompatActivity {
         ImageButton bEconCalBlack = (ImageButton) findViewById(R.id.ibEconCalBlack);
         ImageButton bLiveRates = (ImageButton) findViewById(R.id.ibLiveRates);
         ImageButton bNewsBlack = (ImageButton) findViewById(R.id.ibNewsBlack);
-        Button buttonlookforclient = (Button) findViewById(R.id.buttonlookforclient);
-        Button buttonsetpriority = (Button) findViewById(R.id.buttonsetpriority);
-        Button buttonclearcache = (Button) findViewById(R.id.buttonclearcache);
+        ImageButton buttonlookforclient = (ImageButton) findViewById(R.id.buttonlookforclient);
+        ImageButton buttonsetpriority = (ImageButton) findViewById(R.id.buttonsetpriority);
+        ImageButton buttonclearcache = (ImageButton) findViewById(R.id.buttonclearcache);
         final ImageButton ibSearch = (ImageButton) findViewById(R.id.ibSearch);
 
         bSettingsBlack.setOnClickListener(new View.OnClickListener() {
