@@ -114,7 +114,7 @@ android:layout_alignParentEnd="true"
             android:layout_marginTop="16dp"
             android:background="@color/cardview_light_background">
 
-            <requestFocus></requestFocus>
+
 
         </EditText>
 
