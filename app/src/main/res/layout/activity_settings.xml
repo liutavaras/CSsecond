@@ -275,12 +275,12 @@
             android:id="@+id/textView23"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/textView24"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="28dp"
+            android:layout_marginBottom="8dp"
             android:text="Hello CreditSuisse!"
             android:textColor="#FAFAFA"
-            android:textSize="17sp" />
+            android:textSize="17sp"
+            android:layout_above="@+id/textView24"
+            android:layout_centerHorizontal="true" />
 
     </RelativeLayout>
 
