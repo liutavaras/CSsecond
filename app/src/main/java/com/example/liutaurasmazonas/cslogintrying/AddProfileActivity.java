@@ -66,6 +66,9 @@ public class AddProfileActivity extends AppCompatActivity {
     CheckBox lriNSDQ;
     CheckBox lriSP500;
     Button bSave;
+    EditText etEmail;
+    EditText etPhoneNo;
+
     Spinner spinner5;
     Button galleryspinner;
     ImageButton bellbutton;
@@ -112,6 +115,8 @@ public class AddProfileActivity extends AppCompatActivity {
         lriNSDQ = (CheckBox) findViewById(R.id.lriNSDQ);
         lriSP500 = (CheckBox) findViewById(R.id.lriSP500);
         bSave = (Button) findViewById(R.id.bSave);
+        etEmail = (EditText) findViewById(R.id.etEmail) ;
+        etPhoneNo = (EditText) findViewById(R.id.etPhoneNo) ;
 
 
         ImageButton bSettingsBlack = (ImageButton) findViewById(R.id.ibSettingsBlack);
@@ -263,6 +268,8 @@ public class AddProfileActivity extends AppCompatActivity {
         Boolean nsdqI = lriNSDQ.isChecked();
         Boolean sp500I = lriSP500.isChecked();
         String image = "joe";
+        String email = etEmail.getText().toString().trim();
+        String phoneNo = etPhoneNo.getText().toString().trim();
 
 
 
@@ -276,7 +283,7 @@ public class AddProfileActivity extends AppCompatActivity {
 
             Clients clients = new Clients (key, name, career, techCB, mediCB, renewableEnergyNF, googleNF,
                     novartisNF, teslaNF, fbLRS, applLRS, yhooLRS, eurusdCB, usdrubCU, silverCO,
-                    goldCO, gbpusdCU, nsdqI, sp500I, image );
+                    goldCO, gbpusdCU, nsdqI, sp500I, image, email, phoneNo );
 
             databaseClients.child(key).setValue(clients);
 

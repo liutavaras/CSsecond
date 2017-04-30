@@ -58,10 +58,9 @@
             android:layout_alignParentTop="true"
             android:layout_marginEnd="55dp"
             android:layout_marginTop="16dp"
-            android:background="@color/cardview_light_background"
-            android:cursorVisible="false">
+            android:background="@color/cardview_light_background">
 
-
+            <requestFocus></requestFocus>
 
         </EditText>
 
@@ -82,10 +81,10 @@
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="425dp"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true"
         android:isScrollContainer="false"
-        android:id="@+id/scrollView3">
+        android:id="@+id/scrollView3"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -101,12 +100,11 @@
                     android:id="@+id/etName"
                     android:layout_width="320dp"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
                     android:ems="10"
                     android:hint="Full name"
                     android:inputType="textPersonName"
-                    android:textSize="23sp" />
+                    android:textSize="23sp"
+                    android:layout_centerHorizontal="true" />
 
                 <EditText
                     android:id="@+id/etCareer"
@@ -115,8 +113,9 @@
                     android:ems="10"
                     android:hint="Career"
                     android:inputType="textPersonName"
-                    android:textSize="20sp"
-                    android:layout_below="@+id/etName"
+                    android:textSize="23sp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@id/etName"
                     android:layout_alignStart="@+id/etName" />
 
             </RelativeLayout>
@@ -126,15 +125,37 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="wrap_content"
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="320dp"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="false"
-                    android:layout_alignParentTop="false"
-                    app:srcCompat="@drawable/thindragos2" />
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:ems="10"
+                    android:hint="Email"
+                    android:inputType="textPersonName"
+                    android:textSize="23sp" />
+
+                <EditText
+                    android:id="@+id/etPhoneNo"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etEmail"
+                    android:ems="10"
+                    android:hint="Phone Number"
+                    android:inputType="textPersonName"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="23sp" />
 
             </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentTop="false"
+                app:srcCompat="@drawable/thindragos2" />
 
             <RelativeLayout
                 android:id="@+id/relativeLayout6"
@@ -435,7 +456,6 @@
             app:srcCompat="@drawable/settingsbuttongrey2" />
 
     </RelativeLayout>
-
 
 
 </RelativeLayout>

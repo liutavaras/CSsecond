@@ -42,6 +42,8 @@ public class ClientsList extends ArrayAdapter<Clients> {
     private Boolean tvNASDAQ;
     private Boolean tvSP;
     private String tvID;
+    private String tvEmail;
+    private String tvPhoneNo;
 
    // Intent intent = getIntent();
    // final String key = (String) getIntent().getExtras().get("key");
@@ -69,19 +71,33 @@ public class ClientsList extends ArrayAdapter<Clients> {
         this.tvGBPUSD = tvGBPUSD;
         this.tvNASDAQ = tvNASDAQ;
         this.tvSP = tvSP;
+        this.tvEmail = tvEmail;
+        this.tvPhoneNo = tvPhoneNo;
+
 
 
 
     }
 
+
+
     @NonNull
     @Override
+
     public Activity getContext() {
         return context;
     }
 
     public List<Clients> getClientsList() {
         return clientsList;
+    }
+
+    public String getTvEmail() {
+        return tvEmail;
+    }
+
+    public String getTvPhoneNo() {
+        return tvPhoneNo;
     }
 
     public String getTvID() {
@@ -161,7 +177,6 @@ public class ClientsList extends ArrayAdapter<Clients> {
 
         TextView tvName = (TextView) listViewItem.findViewById(R.id.tvName);
         TextView tvCareer = (TextView) listViewItem.findViewById(R.id.tvCareer);
-        TextView tvID = (TextView) listViewItem.findViewById(R.id.tvID);
         TextView tvTech = (TextView) listViewItem.findViewById(R.id.tvTech);
         TextView tvMedicine = (TextView) listViewItem.findViewById(R.id.tvMedicine);
         TextView tvRenewableEnergy = (TextView) listViewItem.findViewById(R.id.tvRenewableEnergy);
@@ -178,6 +193,8 @@ public class ClientsList extends ArrayAdapter<Clients> {
         TextView tvSilver = (TextView) listViewItem.findViewById(R.id.tvSilver);
         TextView tvNASDAQ = (TextView) listViewItem.findViewById(R.id.tvNASDAQ);
         TextView tvSP = (TextView) listViewItem.findViewById(R.id.tvSP);
+        TextView tvEmail = (TextView) listViewItem.findViewById(R.id.tvEmail);
+        TextView tvPhoneNo = (TextView) listViewItem.findViewById(R.id.tvPhoneNo);
 
         Clients clients = clientsList.get(position);
 
@@ -199,8 +216,10 @@ public class ClientsList extends ArrayAdapter<Clients> {
         tvSilver.setText(String.valueOf(clients.getSilverCO()));
         tvNASDAQ.setText(String.valueOf(clients.getNsdqI()));
         tvSP.setText(String.valueOf(clients.getSp500I()));
+        tvEmail.setText(String.valueOf(clients.getEmail()));
+        tvPhoneNo.setText(String.valueOf(clients.getPhoneNo()));
 
-  //      tvID.setText()
+
 
 
 

@@ -26,6 +26,9 @@ public class Clients {
     Boolean nsdqI;
     Boolean sp500I;
     String image;
+    String email;
+    String phoneNo;
+
 
 
 
@@ -33,7 +36,7 @@ public Clients(){}
 
     public Clients(String key, String clientName, String clientCareer, Boolean techCB, Boolean mediCB, Boolean renewableEnergyNF,
                    Boolean googleNF, Boolean novartisNF, Boolean teslaNF, Boolean fbLRS, Boolean applLRS, Boolean yhooLRS, Boolean eurusdCB,
-                   Boolean usdrubCU, Boolean silverCO, Boolean goldCO, Boolean gbpusdCU, Boolean nsdqI, Boolean sp500I, String image) {
+                   Boolean usdrubCU, Boolean silverCO, Boolean goldCO, Boolean gbpusdCU, Boolean nsdqI, Boolean sp500I, String image, String email, String phoneNo) {
 
         this.clientName = clientName;
         this.clientCareer = clientCareer;
@@ -54,10 +57,19 @@ public Clients(){}
         this.nsdqI = nsdqI;
         this.sp500I = sp500I;
         this.image = image;
+        this.email = email;
+        this.phoneNo = phoneNo;
+
 
     }
 
+    public String getEmail() {
+        return email;
+    }
 
+    public String getPhoneNo() {
+        return phoneNo;
+    }
 
     public String getClientName() {
         return clientName;
